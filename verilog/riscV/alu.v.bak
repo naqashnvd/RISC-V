@@ -1,0 +1,35 @@
+module riscv#(parameter width = 32)(
+ input [width-1:0]dataA,
+ input [width-1:0]dataB,
+ input [3:0]func,
+ input [2:0]aluOp,
+ output reg [width-1:0]aluResult,
+ output reg branchFromAlu
+);
+
+always@(*)begin
+	
+	case(aluOp)
+	3'b000: aluResult = dataA + dataB;
+	3'b001: aluResult = dataA - dataB;
+	3'b010: begin
+		case(func)
+		4'b0000: aluResult = dataA + dataB;
+		4'b1000:	aluResult = dataA - dataB;
+		4'h4:	aluResult = dataA ^ dataB;
+		4'h6:	aluResult = dataA | dataB;
+		4'h7:	aluResult = dataA & dataB;
+		default: aluResult = 32'b0;
+	end
+	default: aluResult = 32'b0;
+	
+	
+	endcase
+
+
+
+end
+
+
+
+endmodule

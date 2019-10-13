@@ -1,4 +1,3 @@
-
 module regFile #(parameter width = 32,parameter addrWidth = 5) (
 	input clock,
 	input	regWriteEnable,
@@ -49,5 +48,3 @@ module register #(parameter width = 32)(
 	end
 
 endmodule
-
-

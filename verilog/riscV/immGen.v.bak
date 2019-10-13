@@ -1,0 +1,23 @@
+module immGen#(parameter width = 32)(
+	input [width-1:0] I,
+	input [1:0] immSel,
+	output [width-1:0]imm 
+);
+always@(*)begin
+if(immSel == 0)begin //I type
+	[11:0]imm = [30:20]I;
+
+end else if(immSel == 1)begin //S type
+
+
+end else if (immSel == 2)begin //B type
+
+
+end else begin
+	imm = 32'd0;
+end
+
+
+end
+
+endmodule

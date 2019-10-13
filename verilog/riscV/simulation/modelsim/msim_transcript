@@ -1,0 +1,73 @@
+# Reading C:/altera/13.0sp1/modelsim_ase/tcl/vsim/pref.tcl 
+# do riscv_run_msim_rtl_verilog.do 
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Copying C:\altera\13.0sp1\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# ** Warning: Copied C:\altera\13.0sp1\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini.
+#          Updated modelsim.ini.
+# 
+# vlog -vlog01compat -work work +incdir+C:/Users/naqas/Desktop/FPGA/riscV {C:/Users/naqas/Desktop/FPGA/riscV/riscv.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module riscv
+# 
+# Top level modules:
+# 	riscv
+# vlog -vlog01compat -work work +incdir+C:/Users/naqas/Desktop/FPGA/riscV {C:/Users/naqas/Desktop/FPGA/riscV/regFile.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module regFile
+# -- Compiling module register
+# 
+# Top level modules:
+# 	regFile
+# 
+vlog -reportprogress 300 -work work C:/Users/naqas/Desktop/FPGA/riscV/immGen.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module immGen
+# 
+# Top level modules:
+# 	immGen
+vlog -reportprogress 300 -work work C:/Users/naqas/Desktop/FPGA/riscV/immGen.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module immGen
+# 
+# Top level modules:
+# 	immGen
+vlog -reportprogress 300 -work work C:/Users/naqas/Desktop/FPGA/riscV/immGen.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module immGen
+# 
+# Top level modules:
+# 	immGen
+vsim +altera -do riscv_run_msim_rtl_verilog.do -l msim_transcript -gui work.immGen
+# vsim +altera -do riscv_run_msim_rtl_verilog.do -l msim_transcript -gui work.immGen 
+# Loading work.immGen
+# do riscv_run_msim_rtl_verilog.do 
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Modifying modelsim.ini
+# 
+# vlog -vlog01compat -work work +incdir+C:/Users/naqas/Desktop/FPGA/riscV {C:/Users/naqas/Desktop/FPGA/riscV/riscv.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module riscv
+# 
+# Top level modules:
+# 	riscv
+# vlog -vlog01compat -work work +incdir+C:/Users/naqas/Desktop/FPGA/riscV {C:/Users/naqas/Desktop/FPGA/riscV/regFile.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module regFile
+# -- Compiling module register
+# 
+# Top level modules:
+# 	regFile
+# 
+add wave -position end  sim:/immGen/I
+add wave -position end  sim:/immGen/immSel
+add wave -position end  sim:/immGen/imm
+add wave -position end  sim:/immGen/i

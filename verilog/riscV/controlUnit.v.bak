@@ -1,0 +1,15 @@
+module controlUnit(
+input [6:0]opcode,
+output reg [10:0]signals; //0-1 imm sel , 2 AluSrc , 3 Mem to Reg , 4 RegWrite , 5 MemRead , 6 MemWrite , 7 Branch ,8-10 AluOP
+);
+
+always@(*)begin
+	if(opcode == 7'x33) signals = 11'x210;
+	else if(opcode == 7'x13) signals = 11'x214;
+	else if(opcode == 7'x03) signals = 11'x03d;
+	else if(opcode == 7'd23) signals = 11'd045;
+	else if(opcode == 7'd63) signals = 11'd482;
+	else signals = 11'0;
+end
+
+endmodule
