@@ -1,4 +1,4 @@
-module riscv#(parameter width = 32)(
+module alu#(parameter width = 32)(
  input [width-1:0]dataA,
  input [width-1:0]dataB,
  input [3:0]func,
