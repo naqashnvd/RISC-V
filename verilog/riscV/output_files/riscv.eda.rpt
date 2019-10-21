@@ -1,5 +1,5 @@
 EDA Netlist Writer report for riscv
-Thu Oct 10 14:11:41 2019
+Mon Oct 21 23:03:50 2019
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -36,7 +36,7 @@ applicable agreement for further details.
 +-------------------------------------------------------------------+
 ; EDA Netlist Writer Summary                                        ;
 +---------------------------+---------------------------------------+
-; EDA Netlist Writer Status ; Successful - Thu Oct 10 14:11:41 2019 ;
+; EDA Netlist Writer Status ; Successful - Mon Oct 21 23:03:50 2019 ;
 ; Revision Name             ; riscv                                 ;
 ; Top-level Entity Name     ; riscv                                 ;
 ; Family                    ; Cyclone II                            ;
@@ -66,16 +66,16 @@ applicable agreement for further details.
 +---------------------------------------------------------------------------------------------------+---------------------------+
 
 
-+------------------------------------------------------------------------+
-; Simulation Generated Files                                             ;
-+------------------------------------------------------------------------+
-; Generated Files                                                        ;
-+------------------------------------------------------------------------+
-; C:/Users/naqas/Desktop/FPGA/riscV/simulation/modelsim/riscv.vo         ;
-; C:/Users/naqas/Desktop/FPGA/riscV/simulation/modelsim/riscv_fast.vo    ;
-; C:/Users/naqas/Desktop/FPGA/riscV/simulation/modelsim/riscv_v.sdo      ;
-; C:/Users/naqas/Desktop/FPGA/riscV/simulation/modelsim/riscv_v_fast.sdo ;
-+------------------------------------------------------------------------+
++-----------------------------------------------------------------------------------------+
+; Simulation Generated Files                                                              ;
++-----------------------------------------------------------------------------------------+
+; Generated Files                                                                         ;
++-----------------------------------------------------------------------------------------+
+; C:/Users/naqas/Desktop/Github/RISC-V/verilog/riscV/simulation/modelsim/riscv.vo         ;
+; C:/Users/naqas/Desktop/Github/RISC-V/verilog/riscV/simulation/modelsim/riscv_fast.vo    ;
+; C:/Users/naqas/Desktop/Github/RISC-V/verilog/riscV/simulation/modelsim/riscv_v.sdo      ;
+; C:/Users/naqas/Desktop/Github/RISC-V/verilog/riscV/simulation/modelsim/riscv_v_fast.sdo ;
++-----------------------------------------------------------------------------------------+
 
 
 +-----------------------------+
@@ -84,13 +84,13 @@ applicable agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit EDA Netlist Writer
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Thu Oct 10 14:11:39 2019
+    Info: Processing started: Mon Oct 21 23:03:50 2019
 Info: Command: quartus_eda --read_settings_files=off --write_settings_files=off riscv -c riscv
-Info (204026): Generated files "riscv.vo", "riscv_fast.vo", "riscv_v.sdo" and "riscv_v_fast.sdo" in directory "C:/Users/naqas/Desktop/FPGA/riscV/simulation/modelsim/" for EDA simulation tool
+Info (204026): Generated files "riscv.vo", "riscv_fast.vo", "riscv_v.sdo" and "riscv_v_fast.sdo" in directory "C:/Users/naqas/Desktop/Github/RISC-V/verilog/riscV/simulation/modelsim/" for EDA simulation tool
 Info: Quartus II 64-Bit EDA Netlist Writer was successful. 0 errors, 0 warnings
-    Info: Peak virtual memory: 4548 megabytes
-    Info: Processing ended: Thu Oct 10 14:11:41 2019
-    Info: Elapsed time: 00:00:02
-    Info: Total CPU time (on all processors): 00:00:02
+    Info: Peak virtual memory: 4527 megabytes
+    Info: Processing ended: Mon Oct 21 23:03:50 2019
+    Info: Elapsed time: 00:00:00
+    Info: Total CPU time (on all processors): 00:00:00
 
 

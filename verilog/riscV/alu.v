@@ -12,6 +12,9 @@ module alu#(parameter width = 32)(
 	wire [width-1:0]orr;
 	wire [width-1:0]xorr;
 	
+	wire [2:0]func3 = func[2:0];
+	wire func7 = func[3];
+	
 	assign add = dataA + dataB;
 	assign sub = dataA - dataB;
 	assign andd = dataA & dataB;
@@ -23,23 +26,27 @@ module alu#(parameter width = 32)(
 	3'b000: aluResult = add;
 	3'b001: aluResult = sub;
 	3'b010: begin
-		case(func)
-		4'b0000: aluResult = add;
-		4'b1000:	aluResult = sub;
-		4'h4:	aluResult = orr;
-		4'h6:	aluResult = xorr;
-		4'h7:	aluResult = andd;
+		case(func3)
+		3'h0: begin
+				case(func7)
+					1'b0:aluResult = add;
+					1'b1:aluResult = sub;
+				endcase
+				end
+		3'h4:	aluResult = orr;
+		3'h6:	aluResult = xorr;
+		3'h7:	aluResult = andd;
 		default: aluResult = 32'b0;
 		endcase
 	end
 	default: aluResult = 32'b0;
 	endcase
 	
-	case(func)
-		4'h0: branchFromAlu = (dataA == dataB);
-		4'h1: branchFromAlu = ~(dataA == dataB);
-		4'h4:	branchFromAlu = (dataA < dataB);
-		4'h5:	branchFromAlu = (dataA >= dataB);
+	case(func3)
+		3'h0: branchFromAlu = (dataA == dataB);
+		3'h1: branchFromAlu = ~(dataA == dataB);
+		3'h4:	branchFromAlu = (dataA < dataB);
+		3'h5:	branchFromAlu = (dataA >= dataB);
 		default:	branchFromAlu = 0;
 	endcase
 end

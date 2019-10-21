@@ -13,7 +13,7 @@ module regFile #(parameter width = 32,parameter addrWidth = 5) (
 	reg [width-1:0]Rin;
 	wire [width-1:0]Rout[0:width-1];
 	
-	register r0 (0,Rin[0],clock,0,Rout[0]);
+	register r0 (dataD,Rin[0],clock,1'b0,Rout[0]);
 	
 	generate
 		genvar i;

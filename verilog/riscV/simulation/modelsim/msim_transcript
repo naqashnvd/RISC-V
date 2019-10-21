@@ -62,12 +62,9 @@ vsim +altera -do riscv_run_msim_rtl_verilog.do -l msim_transcript -gui work.risc
 # ** Warning: (vsim-3015) C:/Users/naqas/Desktop/Github/RISC-V/verilog/riscV/riscv.v(17): [PCDPC] - Port size (1 or 1) does not match connection size (32) for port 'enable'. The port definition is at: C:/Users/naqas/Desktop/Github/RISC-V/verilog/riscV/pc.v(3).
 # 
 #         Region: /riscv/pc1
-# ** Warning: (vsim-3015) C:/Users/naqas/Desktop/Github/RISC-V/verilog/riscV/riscv.v(25): [PCDPC] - Port size (1 or 1) does not match connection size (32) for port 'we'. The port definition is at: C:/Users/naqas/Desktop/Github/RISC-V/verilog/riscV/riscv.v(104).
+# ** Warning: (vsim-3015) C:/Users/naqas/Desktop/Github/RISC-V/verilog/riscV/riscv.v(31): [PCDPC] - Port size (1 or 1) does not match connection size (32) for port 'we'. The port definition is at: C:/Users/naqas/Desktop/Github/RISC-V/verilog/riscV/riscv.v(110).
 # 
 #         Region: /riscv/imem
-# ** Warning: (vsim-3015) C:/Users/naqas/Desktop/Github/RISC-V/verilog/riscV/regFile.v(16): [PCDPC] - Port size (1 or 1) does not match connection size (32) for port 'clear'. The port definition is at: C:/Users/naqas/Desktop/Github/RISC-V/verilog/riscV/regFile.v(40).
-# 
-#         Region: /riscv/rf/r0
 # do riscv_run_msim_rtl_verilog.do 
 # if {[file exists rtl_work]} {
 # 	vdel -lib rtl_work -all
@@ -125,6 +122,7 @@ add wave -position end  sim:/riscv/aluResult
 add wave -position end  sim:/riscv/dmemOut
 add wave -position end  sim:/riscv/aluB
 add wave -position end  sim:/riscv/dataD
+add wave -position end  sim:/riscv/pcIn
 add wave -position end  sim:/riscv/Rs1
 add wave -position end  sim:/riscv/Rs2
 add wave -position end  sim:/riscv/Rd
@@ -133,49 +131,21 @@ add wave -position end  sim:/riscv/signals
 add wave -position end  sim:/riscv/immGenOut
 add wave -position end  sim:/riscv/branchFromAlu
 force -freeze sim:/riscv/clock 1 0, 0 {50 ps} -r 100
-run
-force -freeze sim:/riscv/clear 1 0 -cancel 0.05
-# (vish-168) The time value, 0.05, is smaller than the simulator resolution so it has been truncated to 0.
-# ** Error: (vish-4004) The -cancel option requires a time period argument.
-# Usage: force [-freeze | -drive | -deposit] [-cancel <time>] [-repeat <time>] <object_name> {<value> [[@]<time>[<unit>]]}...
+force -freeze sim:/riscv/clear 0 0 -cancel 100
 run
 force -freeze sim:/riscv/clear 1 0
+run
+force -freeze sim:/riscv/I 11111110000000000000110011100011 0
+run
+run
+run
+run
+run
+run
+noforce sim:/riscv/clear
+run
 run
 force -freeze sim:/riscv/clear 0 0
 run
-add wave -position end  sim:/riscv/pc1/data
-add wave -position end  sim:/riscv/pc1/enable
-add wave -position end  sim:/riscv/pc1/clock
-add wave -position end  sim:/riscv/pc1/clear
-add wave -position end  sim:/riscv/pc1/out
-run
-run
-run
-run
-run
-run
-run
-run
 force -freeze sim:/riscv/clear 1 0
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-noforce sim:/riscv/I
-force -freeze sim:/riscv/I 100000000000100010011 0
 run

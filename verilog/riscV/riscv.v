@@ -1,20 +1,26 @@
 module riscv (input clock,input clear);
 
 wire [31:0]dataA,dataB,imemAddr,I,aluResult,dmemOut;
-reg [31:0]aluB,dataD;
+reg [31:0]aluB,dataD,pcIn;
 wire [4:0]Rs1,Rs2,Rd;
 wire [6:0]opcode;
-wire [10:0]signals;
+wire [10:0]signals; //CU signals
 wire [31:0]immGenOut;
 wire branchFromAlu;
 
 pc pc1(
-	.data(imemAddr),
+	.data(pcIn),
 	.enable(1),
 	.clock(~clock),
 	.clear(clear),
 	.out(imemAddr)
 );
+
+
+always@(*)begin
+	if(branchFromAlu&signals[7]) pcIn = imemAddr+immGenOut;
+	else pcIn = imemAddr;
+end
 
 single_port_ram imem(
 	.data(),
