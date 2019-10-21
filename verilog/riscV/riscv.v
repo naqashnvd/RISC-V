@@ -1,4 +1,4 @@
-module riscv (input clock,input clear);
+module riscv (input [1:0]KEY,output [9:0]LEDR);
 
 wire [31:0]dataA,dataB,imemAddr,I,aluResult,dmemOut;
 reg [31:0]aluB,dataD,pcIn;
@@ -7,6 +7,10 @@ wire [6:0]opcode;
 wire [10:0]signals; //CU signals
 wire [31:0]immGenOut;
 wire branchFromAlu;
+wire clock = KEY[0];
+wire clear = KEY[1];
+
+assign LEDR = signals[9:0];
 
 pc pc1(
 	.data(pcIn),

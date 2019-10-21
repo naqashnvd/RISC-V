@@ -1,6 +1,16 @@
 |riscv
-clock => clock.IN2
-clear => clear.IN2
+KEY[0] => clock.IN2
+KEY[1] => clear.IN2
+LEDR[0] <= signals[0].DB_MAX_OUTPUT_PORT_TYPE
+LEDR[1] <= signals[1].DB_MAX_OUTPUT_PORT_TYPE
+LEDR[2] <= controlUnit:CU.signals
+LEDR[3] <= controlUnit:CU.signals
+LEDR[4] <= signals[4].DB_MAX_OUTPUT_PORT_TYPE
+LEDR[5] <= controlUnit:CU.signals
+LEDR[6] <= signals[6].DB_MAX_OUTPUT_PORT_TYPE
+LEDR[7] <= controlUnit:CU.signals
+LEDR[8] <= signals[8].DB_MAX_OUTPUT_PORT_TYPE
+LEDR[9] <= signals[9].DB_MAX_OUTPUT_PORT_TYPE
 
 
 |riscv|pc:pc1

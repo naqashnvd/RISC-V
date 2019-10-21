@@ -1,5 +1,5 @@
 Analysis & Synthesis report for riscv
-Tue Oct 22 00:20:11 2019
+Tue Oct 22 00:34:48 2019
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -13,47 +13,47 @@ Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edit
   5. Analysis & Synthesis Source Files Read
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
-  8. General Register Statistics
-  9. Parameter Settings for User Entity Instance: pc:pc1
- 10. Parameter Settings for User Entity Instance: single_port_ram:imem
- 11. Parameter Settings for User Entity Instance: regFile:rf
- 12. Parameter Settings for User Entity Instance: regFile:rf|register:r0
- 13. Parameter Settings for User Entity Instance: regFile:rf|register:r[1].r
- 14. Parameter Settings for User Entity Instance: regFile:rf|register:r[2].r
- 15. Parameter Settings for User Entity Instance: regFile:rf|register:r[3].r
- 16. Parameter Settings for User Entity Instance: regFile:rf|register:r[4].r
- 17. Parameter Settings for User Entity Instance: regFile:rf|register:r[5].r
- 18. Parameter Settings for User Entity Instance: regFile:rf|register:r[6].r
- 19. Parameter Settings for User Entity Instance: regFile:rf|register:r[7].r
- 20. Parameter Settings for User Entity Instance: regFile:rf|register:r[8].r
- 21. Parameter Settings for User Entity Instance: regFile:rf|register:r[9].r
- 22. Parameter Settings for User Entity Instance: regFile:rf|register:r[10].r
- 23. Parameter Settings for User Entity Instance: regFile:rf|register:r[11].r
- 24. Parameter Settings for User Entity Instance: regFile:rf|register:r[12].r
- 25. Parameter Settings for User Entity Instance: regFile:rf|register:r[13].r
- 26. Parameter Settings for User Entity Instance: regFile:rf|register:r[14].r
- 27. Parameter Settings for User Entity Instance: regFile:rf|register:r[15].r
- 28. Parameter Settings for User Entity Instance: regFile:rf|register:r[16].r
- 29. Parameter Settings for User Entity Instance: regFile:rf|register:r[17].r
- 30. Parameter Settings for User Entity Instance: regFile:rf|register:r[18].r
- 31. Parameter Settings for User Entity Instance: regFile:rf|register:r[19].r
- 32. Parameter Settings for User Entity Instance: regFile:rf|register:r[20].r
- 33. Parameter Settings for User Entity Instance: regFile:rf|register:r[21].r
- 34. Parameter Settings for User Entity Instance: regFile:rf|register:r[22].r
- 35. Parameter Settings for User Entity Instance: regFile:rf|register:r[23].r
- 36. Parameter Settings for User Entity Instance: regFile:rf|register:r[24].r
- 37. Parameter Settings for User Entity Instance: regFile:rf|register:r[25].r
- 38. Parameter Settings for User Entity Instance: regFile:rf|register:r[26].r
- 39. Parameter Settings for User Entity Instance: regFile:rf|register:r[27].r
- 40. Parameter Settings for User Entity Instance: regFile:rf|register:r[28].r
- 41. Parameter Settings for User Entity Instance: regFile:rf|register:r[29].r
- 42. Parameter Settings for User Entity Instance: regFile:rf|register:r[30].r
- 43. Parameter Settings for User Entity Instance: regFile:rf|register:r[31].r
- 44. Parameter Settings for User Entity Instance: immGen:immGen
- 45. Parameter Settings for User Entity Instance: alu:alu
- 46. Parameter Settings for User Entity Instance: single_port_ram:dmem
- 47. Port Connectivity Checks: "single_port_ram:dmem"
- 48. Port Connectivity Checks: "controlUnit:CU"
+  8. Registers Removed During Synthesis
+  9. General Register Statistics
+ 10. Parameter Settings for User Entity Instance: pc:pc1
+ 11. Parameter Settings for User Entity Instance: single_port_ram:imem
+ 12. Parameter Settings for User Entity Instance: regFile:rf
+ 13. Parameter Settings for User Entity Instance: regFile:rf|register:r0
+ 14. Parameter Settings for User Entity Instance: regFile:rf|register:r[1].r
+ 15. Parameter Settings for User Entity Instance: regFile:rf|register:r[2].r
+ 16. Parameter Settings for User Entity Instance: regFile:rf|register:r[3].r
+ 17. Parameter Settings for User Entity Instance: regFile:rf|register:r[4].r
+ 18. Parameter Settings for User Entity Instance: regFile:rf|register:r[5].r
+ 19. Parameter Settings for User Entity Instance: regFile:rf|register:r[6].r
+ 20. Parameter Settings for User Entity Instance: regFile:rf|register:r[7].r
+ 21. Parameter Settings for User Entity Instance: regFile:rf|register:r[8].r
+ 22. Parameter Settings for User Entity Instance: regFile:rf|register:r[9].r
+ 23. Parameter Settings for User Entity Instance: regFile:rf|register:r[10].r
+ 24. Parameter Settings for User Entity Instance: regFile:rf|register:r[11].r
+ 25. Parameter Settings for User Entity Instance: regFile:rf|register:r[12].r
+ 26. Parameter Settings for User Entity Instance: regFile:rf|register:r[13].r
+ 27. Parameter Settings for User Entity Instance: regFile:rf|register:r[14].r
+ 28. Parameter Settings for User Entity Instance: regFile:rf|register:r[15].r
+ 29. Parameter Settings for User Entity Instance: regFile:rf|register:r[16].r
+ 30. Parameter Settings for User Entity Instance: regFile:rf|register:r[17].r
+ 31. Parameter Settings for User Entity Instance: regFile:rf|register:r[18].r
+ 32. Parameter Settings for User Entity Instance: regFile:rf|register:r[19].r
+ 33. Parameter Settings for User Entity Instance: regFile:rf|register:r[20].r
+ 34. Parameter Settings for User Entity Instance: regFile:rf|register:r[21].r
+ 35. Parameter Settings for User Entity Instance: regFile:rf|register:r[22].r
+ 36. Parameter Settings for User Entity Instance: regFile:rf|register:r[23].r
+ 37. Parameter Settings for User Entity Instance: regFile:rf|register:r[24].r
+ 38. Parameter Settings for User Entity Instance: regFile:rf|register:r[25].r
+ 39. Parameter Settings for User Entity Instance: regFile:rf|register:r[26].r
+ 40. Parameter Settings for User Entity Instance: regFile:rf|register:r[27].r
+ 41. Parameter Settings for User Entity Instance: regFile:rf|register:r[28].r
+ 42. Parameter Settings for User Entity Instance: regFile:rf|register:r[29].r
+ 43. Parameter Settings for User Entity Instance: regFile:rf|register:r[30].r
+ 44. Parameter Settings for User Entity Instance: regFile:rf|register:r[31].r
+ 45. Parameter Settings for User Entity Instance: immGen:immGen
+ 46. Parameter Settings for User Entity Instance: alu:alu
+ 47. Parameter Settings for User Entity Instance: single_port_ram:dmem
+ 48. Port Connectivity Checks: "single_port_ram:dmem"
  49. Port Connectivity Checks: "regFile:rf|register:r0"
  50. Port Connectivity Checks: "single_port_ram:imem"
  51. Port Connectivity Checks: "pc:pc1"
@@ -85,7 +85,7 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Tue Oct 22 00:20:11 2019           ;
+; Analysis & Synthesis Status        ; Successful - Tue Oct 22 00:34:48 2019           ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; riscv                                           ;
 ; Top-level Entity Name              ; riscv                                           ;
@@ -94,7 +94,7 @@ applicable agreement for further details.
 ;     Total combinational functions  ; 0                                               ;
 ;     Dedicated logic registers      ; 0                                               ;
 ; Total registers                    ; 0                                               ;
-; Total pins                         ; 2                                               ;
+; Total pins                         ; 12                                              ;
 ; Total virtual pins                 ; 0                                               ;
 ; Total memory bits                  ; 0                                               ;
 ; Embedded Multiplier 9-bit elements ; 0                                               ;
@@ -232,7 +232,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ;     -- Dedicated logic registers            ; 0     ;
 ;     -- I/O registers                        ; 0     ;
 ;                                             ;       ;
-; I/O pins                                    ; 2     ;
+; I/O pins                                    ; 12    ;
 ; Embedded Multiplier 9-bit elements          ; 0     ;
 +---------------------------------------------+-------+
 
@@ -242,9 +242,20 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+
 ; Compilation Hierarchy Node ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name ; Library Name ;
 +----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+
-; |riscv                     ; 0 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 2    ; 0            ; |riscv              ; work         ;
+; |riscv                     ; 0 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 12   ; 0            ; |riscv              ; work         ;
 +----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++---------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                              ;
++----------------------------------------+----------------------------------------+
+; Register name                          ; Reason for Removal                     ;
++----------------------------------------+----------------------------------------+
+; single_port_ram:imem|addr_reg[0]       ; Stuck at GND due to stuck port data_in ;
+; pc:pc1|out[2..31]                      ; Lost fanout                            ;
+; Total Number of Removed Registers = 31 ;                                        ;
++----------------------------------------+----------------------------------------+
 
 
 +------------------------------------------------------+
@@ -654,15 +665,6 @@ Note: In order to hide this table in the UI and the text report file, please set
 +------+-------+----------+------------------------+
 
 
-+----------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "controlUnit:CU"                                                                           ;
-+------------+--------+----------+-------------------------------------------------------------------------------------+
-; Port       ; Type   ; Severity ; Details                                                                             ;
-+------------+--------+----------+-------------------------------------------------------------------------------------+
-; signals[5] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+------------+--------+----------+-------------------------------------------------------------------------------------+
-
-
 +----------------------------------------------------+
 ; Port Connectivity Checks: "regFile:rf|register:r0" ;
 +-------+-------+----------+-------------------------+
@@ -708,7 +710,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Tue Oct 22 00:20:09 2019
+    Info: Processing started: Tue Oct 22 00:34:47 2019
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off riscv -c riscv
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (12021): Found 2 design units, including 2 entities, in source file riscv.v
@@ -733,7 +735,7 @@ Warning (10240): Verilog HDL Always Construct warning at pc.v(8): inferring latc
 Info (10041): Inferred latch for "out[0]" at pc.v(8)
 Info (10041): Inferred latch for "out[1]" at pc.v(8)
 Info (12128): Elaborating entity "single_port_ram" for hierarchy "single_port_ram:imem"
-Warning (10259): Verilog HDL error at riscv.v(115): constant value overflow
+Warning (10259): Verilog HDL error at riscv.v(119): constant value overflow
 Info (12128): Elaborating entity "regFile" for hierarchy "regFile:rf"
 Info (12128): Elaborating entity "register" for hierarchy "regFile:rf|register:r0"
 Info (12128): Elaborating entity "immGen" for hierarchy "immGen:immGen"
@@ -741,19 +743,31 @@ Warning (10240): Verilog HDL Always Construct warning at immGen.v(7): inferring 
 Info (12128): Elaborating entity "controlUnit" for hierarchy "controlUnit:CU"
 Info (12128): Elaborating entity "alu" for hierarchy "alu:alu"
 Warning (12241): 2 hierarchies have connectivity warnings - see the Connectivity Checks report folder
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "LEDR[0]" is stuck at GND
+    Warning (13410): Pin "LEDR[1]" is stuck at GND
+    Warning (13410): Pin "LEDR[2]" is stuck at GND
+    Warning (13410): Pin "LEDR[3]" is stuck at GND
+    Warning (13410): Pin "LEDR[4]" is stuck at GND
+    Warning (13410): Pin "LEDR[5]" is stuck at GND
+    Warning (13410): Pin "LEDR[6]" is stuck at GND
+    Warning (13410): Pin "LEDR[7]" is stuck at GND
+    Warning (13410): Pin "LEDR[8]" is stuck at GND
+    Warning (13410): Pin "LEDR[9]" is stuck at GND
+Info (17049): 30 registers lost all their fanouts during netlist optimizations.
 Info (144001): Generated suppressed messages file C:/Users/naqas/Desktop/Github/RISC-V/verilog/riscV/output_files/riscv.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
 Warning (21074): Design contains 2 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "clock"
-    Warning (15610): No output dependent on input pin "clear"
-Info (21057): Implemented 2 device resources after synthesis - the final resource count might be different
+    Warning (15610): No output dependent on input pin "KEY[0]"
+    Warning (15610): No output dependent on input pin "KEY[1]"
+Info (21057): Implemented 12 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 2 input pins
-    Info (21059): Implemented 0 output pins
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 8 warnings
+    Info (21059): Implemented 10 output pins
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 19 warnings
     Info: Peak virtual memory: 4605 megabytes
-    Info: Processing ended: Tue Oct 22 00:20:11 2019
-    Info: Elapsed time: 00:00:02
+    Info: Processing ended: Tue Oct 22 00:34:48 2019
+    Info: Elapsed time: 00:00:01
     Info: Total CPU time (on all processors): 00:00:01
 
 
