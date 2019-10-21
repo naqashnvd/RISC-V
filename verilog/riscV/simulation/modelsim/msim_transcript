@@ -10,37 +10,64 @@
 # ** Warning: Copied C:\altera\13.0sp1\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini.
 #          Updated modelsim.ini.
 # 
+# vlog -vlog01compat -work work +incdir+C:/Users/naqas/Desktop/Github/RISC-V/verilog/riscV {C:/Users/naqas/Desktop/Github/RISC-V/verilog/riscV/riscv.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module riscv
+# -- Compiling module single_port_ram
+# 
+# Top level modules:
+# 	riscv
+# vlog -vlog01compat -work work +incdir+C:/Users/naqas/Desktop/Github/RISC-V/verilog/riscV {C:/Users/naqas/Desktop/Github/RISC-V/verilog/riscV/pc.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module pc
+# 
+# Top level modules:
+# 	pc
+# vlog -vlog01compat -work work +incdir+C:/Users/naqas/Desktop/Github/RISC-V/verilog/riscV {C:/Users/naqas/Desktop/Github/RISC-V/verilog/riscV/regFile.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module regFile
+# -- Compiling module register
+# 
+# Top level modules:
+# 	regFile
+# vlog -vlog01compat -work work +incdir+C:/Users/naqas/Desktop/Github/RISC-V/verilog/riscV {C:/Users/naqas/Desktop/Github/RISC-V/verilog/riscV/controlUnit.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module controlUnit
+# 
+# Top level modules:
+# 	controlUnit
+# vlog -vlog01compat -work work +incdir+C:/Users/naqas/Desktop/Github/RISC-V/verilog/riscV {C:/Users/naqas/Desktop/Github/RISC-V/verilog/riscV/immGen.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module immGen
+# 
+# Top level modules:
+# 	immGen
 # vlog -vlog01compat -work work +incdir+C:/Users/naqas/Desktop/Github/RISC-V/verilog/riscV {C:/Users/naqas/Desktop/Github/RISC-V/verilog/riscV/alu.v}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
-# -- Compiling module riscv
+# -- Compiling module alu
 # 
 # Top level modules:
-# 	riscv
+# 	alu
 # 
-vlog -reportprogress 300 -work work C:/Users/naqas/Desktop/Github/RISC-V/verilog/riscV/alu.v
-# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
-# -- Compiling module riscv
-# 
-# Top level modules:
-# 	riscv
-dataset reload -f
-# wrong number of args for "dataset info".
-# Usage: dataset info <option> <dataset_name>
-vlog -reportprogress 300 -work work C:/Users/naqas/Desktop/Github/RISC-V/verilog/riscV/alu.v
-# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
-# -- Compiling module riscv
-# 
-# Top level modules:
-# 	riscv
-vlog -reportprogress 300 -work work C:/Users/naqas/Desktop/Github/RISC-V/verilog/riscV/alu.v
-# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
-# -- Compiling module riscv
-# 
-# Top level modules:
-# 	riscv
 vsim +altera -do riscv_run_msim_rtl_verilog.do -l msim_transcript -gui work.riscv
 # vsim +altera -do riscv_run_msim_rtl_verilog.do -l msim_transcript -gui work.riscv 
 # Loading work.riscv
+# Loading work.pc
+# Loading work.single_port_ram
+# Loading work.regFile
+# Loading work.register
+# Loading work.immGen
+# Loading work.controlUnit
+# Loading work.alu
+# ** Warning: (vsim-3015) C:/Users/naqas/Desktop/Github/RISC-V/verilog/riscV/riscv.v(17): [PCDPC] - Port size (1 or 1) does not match connection size (32) for port 'enable'. The port definition is at: C:/Users/naqas/Desktop/Github/RISC-V/verilog/riscV/pc.v(3).
+# 
+#         Region: /riscv/pc1
+# ** Warning: (vsim-3015) C:/Users/naqas/Desktop/Github/RISC-V/verilog/riscV/riscv.v(25): [PCDPC] - Port size (1 or 1) does not match connection size (32) for port 'we'. The port definition is at: C:/Users/naqas/Desktop/Github/RISC-V/verilog/riscV/riscv.v(104).
+# 
+#         Region: /riscv/imem
+# ** Warning: (vsim-3015) C:/Users/naqas/Desktop/Github/RISC-V/verilog/riscV/regFile.v(16): [PCDPC] - Port size (1 or 1) does not match connection size (32) for port 'clear'. The port definition is at: C:/Users/naqas/Desktop/Github/RISC-V/verilog/riscV/regFile.v(40).
+# 
+#         Region: /riscv/rf/r0
 # do riscv_run_msim_rtl_verilog.do 
 # if {[file exists rtl_work]} {
 # 	vdel -lib rtl_work -all
@@ -49,77 +76,106 @@ vsim +altera -do riscv_run_msim_rtl_verilog.do -l msim_transcript -gui work.risc
 # vmap work rtl_work
 # Modifying modelsim.ini
 # 
-# vlog -vlog01compat -work work +incdir+C:/Users/naqas/Desktop/Github/RISC-V/verilog/riscV {C:/Users/naqas/Desktop/Github/RISC-V/verilog/riscV/alu.v}
+# vlog -vlog01compat -work work +incdir+C:/Users/naqas/Desktop/Github/RISC-V/verilog/riscV {C:/Users/naqas/Desktop/Github/RISC-V/verilog/riscV/riscv.v}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 # -- Compiling module riscv
+# -- Compiling module single_port_ram
 # 
 # Top level modules:
 # 	riscv
-# 
-vsim +altera -do riscv_run_msim_rtl_verilog.do -l msim_transcript -gui work.riscv
-# vsim +altera -do riscv_run_msim_rtl_verilog.do -l msim_transcript -gui work.riscv 
-# Loading work.riscv
-# do riscv_run_msim_rtl_verilog.do 
-# if {[file exists rtl_work]} {
-# 	vdel -lib rtl_work -all
-# }
-# vlib rtl_work
-# vmap work rtl_work
-# Modifying modelsim.ini
-# 
-# vlog -vlog01compat -work work +incdir+C:/Users/naqas/Desktop/Github/RISC-V/verilog/riscV {C:/Users/naqas/Desktop/Github/RISC-V/verilog/riscV/alu.v}
+# vlog -vlog01compat -work work +incdir+C:/Users/naqas/Desktop/Github/RISC-V/verilog/riscV {C:/Users/naqas/Desktop/Github/RISC-V/verilog/riscV/pc.v}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
-# -- Compiling module riscv
+# -- Compiling module pc
 # 
 # Top level modules:
-# 	riscv
-# 
-vsim +altera -do riscv_run_msim_rtl_verilog.do -l msim_transcript -gui work.riscv
-# vsim +altera -do riscv_run_msim_rtl_verilog.do -l msim_transcript -gui work.riscv 
-# Loading work.riscv
-# do riscv_run_msim_rtl_verilog.do 
-# if {[file exists rtl_work]} {
-# 	vdel -lib rtl_work -all
-# }
-# vlib rtl_work
-# vmap work rtl_work
-# Modifying modelsim.ini
-# 
-# vlog -vlog01compat -work work +incdir+C:/Users/naqas/Desktop/Github/RISC-V/verilog/riscV {C:/Users/naqas/Desktop/Github/RISC-V/verilog/riscV/alu.v}
+# 	pc
+# vlog -vlog01compat -work work +incdir+C:/Users/naqas/Desktop/Github/RISC-V/verilog/riscV {C:/Users/naqas/Desktop/Github/RISC-V/verilog/riscV/regFile.v}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
-# -- Compiling module riscv
+# -- Compiling module regFile
+# -- Compiling module register
 # 
 # Top level modules:
-# 	riscv
-# 
-vsim +altera -do riscv_run_msim_rtl_verilog.do -l msim_transcript -gui work.riscv
-# vsim +altera -do riscv_run_msim_rtl_verilog.do -l msim_transcript -gui work.riscv 
-# Loading work.riscv
-# do riscv_run_msim_rtl_verilog.do 
-# if {[file exists rtl_work]} {
-# 	vdel -lib rtl_work -all
-# }
-# vlib rtl_work
-# vmap work rtl_work
-# Modifying modelsim.ini
-# 
-# vlog -vlog01compat -work work +incdir+C:/Users/naqas/Desktop/Github/RISC-V/verilog/riscV {C:/Users/naqas/Desktop/Github/RISC-V/verilog/riscV/alu.v}
+# 	regFile
+# vlog -vlog01compat -work work +incdir+C:/Users/naqas/Desktop/Github/RISC-V/verilog/riscV {C:/Users/naqas/Desktop/Github/RISC-V/verilog/riscV/controlUnit.v}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
-# -- Compiling module riscv
+# -- Compiling module controlUnit
 # 
 # Top level modules:
-# 	riscv
+# 	controlUnit
+# vlog -vlog01compat -work work +incdir+C:/Users/naqas/Desktop/Github/RISC-V/verilog/riscV {C:/Users/naqas/Desktop/Github/RISC-V/verilog/riscV/immGen.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module immGen
 # 
-add wave sim:/riscv/*
-force -freeze sim:/riscv/dataA 1 0
+# Top level modules:
+# 	immGen
+# vlog -vlog01compat -work work +incdir+C:/Users/naqas/Desktop/Github/RISC-V/verilog/riscV {C:/Users/naqas/Desktop/Github/RISC-V/verilog/riscV/alu.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module alu
+# 
+# Top level modules:
+# 	alu
+# 
+add wave -position end  sim:/riscv/clock
+add wave -position end  sim:/riscv/clear
+add wave -position end  sim:/riscv/dataA
+add wave -position end  sim:/riscv/dataB
+add wave -position end  sim:/riscv/imemAddr
+add wave -position end  sim:/riscv/I
+add wave -position end  sim:/riscv/aluResult
+add wave -position end  sim:/riscv/dmemOut
+add wave -position end  sim:/riscv/aluB
+add wave -position end  sim:/riscv/dataD
+add wave -position end  sim:/riscv/Rs1
+add wave -position end  sim:/riscv/Rs2
+add wave -position end  sim:/riscv/Rd
+add wave -position end  sim:/riscv/opcode
+add wave -position end  sim:/riscv/signals
+add wave -position end  sim:/riscv/immGenOut
+add wave -position end  sim:/riscv/branchFromAlu
+force -freeze sim:/riscv/clock 1 0, 0 {50 ps} -r 100
 run
-force -freeze sim:/riscv/func 0 0
+force -freeze sim:/riscv/clear 1 0 -cancel 0.05
+# (vish-168) The time value, 0.05, is smaller than the simulator resolution so it has been truncated to 0.
+# ** Error: (vish-4004) The -cancel option requires a time period argument.
+# Usage: force [-freeze | -drive | -deposit] [-cancel <time>] [-repeat <time>] <object_name> {<value> [[@]<time>[<unit>]]}...
 run
-force -freeze sim:/riscv/aluOp 0 0
+force -freeze sim:/riscv/clear 1 0
 run
-force -freeze sim:/riscv/dataB 1 0
+force -freeze sim:/riscv/clear 0 0
 run
-force -freeze sim:/riscv/dataA 100 0
+add wave -position end  sim:/riscv/pc1/data
+add wave -position end  sim:/riscv/pc1/enable
+add wave -position end  sim:/riscv/pc1/clock
+add wave -position end  sim:/riscv/pc1/clear
+add wave -position end  sim:/riscv/pc1/out
 run
-force -freeze sim:/riscv/func 101 0
+run
+run
+run
+run
+run
+run
+run
+force -freeze sim:/riscv/clear 1 0
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+noforce sim:/riscv/I
+force -freeze sim:/riscv/I 100000000000100010011 0
 run

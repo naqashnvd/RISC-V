@@ -1,5 +1,6 @@
 module regFile #(parameter width = 32,parameter addrWidth = 5) (
 	input clock,
+	input clear,
 	input	regWriteEnable,
 	input	[addrWidth-1:0]addrA,
 	input	[addrWidth-1:0]addrB,
@@ -9,22 +10,23 @@ module regFile #(parameter width = 32,parameter addrWidth = 5) (
 	output reg[width-1:0]dataB
 );
 	
-	wire clear = 1;
 	reg [width-1:0]Rin;
 	wire [width-1:0]Rout[0:width-1];
 	
+	register r0 (0,Rin[0],clock,0,Rout[0]);
+	
 	generate
 		genvar i;
-		for(i=0;i<width;i=i+1)begin:r
+		for(i=1;i<width;i=i+1)begin:r
 		register r (dataD,Rin[i],clock,clear,Rout[i]);
 		end
 	endgenerate
 	
 	always@(*)begin
 	
-	 dataA <= Rout[addrA];
-	 dataB <= Rout[addrB];
-	 Rin <= regWriteEnable << addrD;
+	 dataA = Rout[addrA];
+	 dataB = Rout[addrB];
+	 Rin = regWriteEnable << addrD;
 
 	end
 	
