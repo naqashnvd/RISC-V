@@ -18,5 +18,5 @@ Sim dir               :  simulation\modelsim
 
 Info: Starting NativeLink simulation with ModelSim-Altera software
 Sourced NativeLink script c:/altera/13.0sp1/quartus/common/tcl/internal/nativelink/modelsim.tcl
-Warning: File riscv_run_msim_rtl_verilog.do already exists - backing up current file as riscv_run_msim_rtl_verilog.do.bak6
+Warning: File riscv_run_msim_rtl_verilog.do already exists - backing up current file as riscv_run_msim_rtl_verilog.do.bak8
 Info: Spawning ModelSim-Altera Simulation software 

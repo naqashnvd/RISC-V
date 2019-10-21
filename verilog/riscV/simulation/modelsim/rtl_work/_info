@@ -2,65 +2,24 @@ m255
 K3
 13
 cModel Technology
-Z0 dC:\Users\naqas\Desktop\FPGA\riscV\simulation\modelsim
-vregFile
-!i10b 1
-!s100 oF6]cVVQ]39Me7Z8=C8i?1
-ICd>HIhkYc1ihN6THBF:9[2
-V0zXzSI`mK^=MDbZ]K;7?:0
-Z1 dC:\Users\naqas\Desktop\FPGA\riscV\simulation\modelsim
-Z2 w1570707431
-Z3 8C:/Users/naqas/Desktop/FPGA/riscV/regFile.v
-Z4 FC:/Users/naqas/Desktop/FPGA/riscV/regFile.v
-L0 1
-Z5 OV;L;10.1d;51
-r1
-!s85 0
-31
-Z6 !s108 1570712598.902000
-Z7 !s107 C:/Users/naqas/Desktop/FPGA/riscV/regFile.v|
-Z8 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/naqas/Desktop/FPGA/riscV|C:/Users/naqas/Desktop/FPGA/riscV/regFile.v|
-!s101 -O0
-Z9 o-vlog01compat -work work -O0
-Z10 !s92 -vlog01compat -work work +incdir+C:/Users/naqas/Desktop/FPGA/riscV -O0
-nreg@file
-vregister
-!i10b 1
-!s100 =P9HOfkV_I02hV<[ldaDX0
-IVn[Q6>kc?FZ;X;V5Jf]J91
-VEk;o04]hz1z@35>Z>T0T`3
-R1
-R2
-R3
-R4
-L0 34
-R5
-r1
-!s85 0
-31
-R6
-R7
-R8
-!s101 -O0
-R9
-R10
+Z0 dC:\Users\naqas\Desktop\Github\RISC-V\verilog\riscV\simulation\modelsim
 vriscv
-Iba2O=T=jn7cMK6AgFQNLI1
-V6c35WEa;lo_jSL2CKd<QT2
-R1
-w1570710761
-8C:/Users/naqas/Desktop/FPGA/riscV/riscv.v
-FC:/Users/naqas/Desktop/FPGA/riscV/riscv.v
-L0 1
-R5
-r1
-31
-R9
 !i10b 1
-!s100 ?Z3Yz2C8?:5`4U[l0l0Ai1
+!s100 z2kNFHJ??Oge]LPf3O1dJ1
+IHPHjSJi<nME<Q[5LAz8_L3
+VQKaST42di2N1`ZI>^8]UB3
+Z1 dC:\Users\naqas\Desktop\Github\RISC-V\verilog\riscV\simulation\modelsim
+w1571662479
+8C:/Users/naqas/Desktop/Github/RISC-V/verilog/riscV/alu.v
+FC:/Users/naqas/Desktop/Github/RISC-V/verilog/riscV/alu.v
+L0 1
+OV;L;10.1d;51
+r1
 !s85 0
-!s108 1570712598.749000
-!s107 C:/Users/naqas/Desktop/FPGA/riscV/riscv.v|
-!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/naqas/Desktop/FPGA/riscV|C:/Users/naqas/Desktop/FPGA/riscV/riscv.v|
+31
+!s108 1571662770.233000
+!s107 C:/Users/naqas/Desktop/Github/RISC-V/verilog/riscV/alu.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/naqas/Desktop/Github/RISC-V/verilog/riscV|C:/Users/naqas/Desktop/Github/RISC-V/verilog/riscV/alu.v|
 !s101 -O0
-R10
+o-vlog01compat -work work -O0
+!s92 -vlog01compat -work work +incdir+C:/Users/naqas/Desktop/Github/RISC-V/verilog/riscV -O0

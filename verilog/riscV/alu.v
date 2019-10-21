@@ -1,4 +1,4 @@
-module alu#(parameter width = 32)(
+module riscv#(parameter width = 32)(
  input [width-1:0]dataA,
  input [width-1:0]dataB,
  input [3:0]func,
@@ -19,7 +19,6 @@ module alu#(parameter width = 32)(
 	assign xorr = dataA ^ dataB;
 	
 	always@(*)begin
-	
 	case(aluOp)
 	3'b000: aluResult = add;
 	3'b001: aluResult = sub;
@@ -34,13 +33,17 @@ module alu#(parameter width = 32)(
 		endcase
 	end
 	default: aluResult = 32'b0;
-	
-	
 	endcase
-
-
-
+	
+	case(func)
+		4'h0: branchFromAlu = (dataA == dataB);
+		4'h1: branchFromAlu = ~(dataA == dataB);
+		4'h4:	branchFromAlu = (dataA < dataB);
+		4'h5:	branchFromAlu = (dataA >= dataB);
+		default:	branchFromAlu = 0;
+	endcase
 end
+
 
 
 
