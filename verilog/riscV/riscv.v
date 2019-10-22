@@ -14,7 +14,7 @@ wire clear = KEY[1];
 pc pc1(
 	.data(pcIn),
 	.enable(1),
-	.clock(clock),
+	.clock(~clock),
 	.clear(clear),
 	.out(imemAddr)
 );
@@ -127,19 +127,15 @@ input wren, clear, clk
 );
 reg [width-1:0] MEM [2**(addrWidth)-1:0];
 
-reg [addrWidth-1:0] RAM_ADDR;
-
-always @(posedge clk or negedge clear)
-if(~clear)
-RAM_ADDR <= 0;
-else
-RAM_ADDR <= ADDR;
 
 
-//integer i;
+integer i;
 initial begin
-//for(i=0; i<(2**(addrWidth)-1); i=i+1)
-//	MEM[i] = 0;
+for(i=0; i<(2**(addrWidth)-1); i=i+1)
+	MEM[i] = 0;
+//{MEM[3],MEM[2],MEM[1],MEM[0]}=32'h00002083;
+//{MEM[7],MEM[6],MEM[5],MEM[4]}=32'h00402103;
+
 {MEM[3],MEM[2],MEM[1],MEM[0]}=32'h00a00093;
 {MEM[7],MEM[6],MEM[5],MEM[4]}=32'h01400113;
 {MEM[11],MEM[10],MEM[9],MEM[8]}=32'h00102023;
@@ -147,7 +143,7 @@ initial begin
 {MEM[19],MEM[18],MEM[17],MEM[16]}=32'h00002183;
 {MEM[23],MEM[22],MEM[21],MEM[20]}=32'h00402203;
 {MEM[27],MEM[26],MEM[25],MEM[24]}=32'h004182b3;
-//{MEM[31],MEM[30],MEM[29],MEM[28]}=32'h004182b3;
+{MEM[31],MEM[30],MEM[29],MEM[28]}=32'h004182b3;
 
 end
 
@@ -165,37 +161,30 @@ endmodule
 
 //Data Memory
 module DataRAM #(parameter width = 8,parameter addrWidth = 8)(
-output reg  [(width*4)-1:0] DOUT,
+output [(width*4)-1:0] DOUT,
 input [addrWidth-1:0] ADDR,
 input [(width*4)-1:0] DIN,
 input wren, clear, clk
 );
 reg [width-1:0] MEM [2**(addrWidth)-1:0];
 
-reg [addrWidth-1:0] RAM_ADDR;
-
-always @(posedge clk or negedge clear)
-if(~clear)
-RAM_ADDR <= 0;
-else
-RAM_ADDR <= ADDR;
-
-//integer i;
+integer i;
 initial begin
-//for(i=0; i<(2**(addrWidth)-1); i=i+1)
-//	MEM[i] = 0;
+for(i=0; i<(2**(addrWidth)-1); i=i+1)
+	MEM[i] = 0;
+{MEM[3],MEM[2],MEM[1],MEM[0]}=32'h1;
+{MEM[7],MEM[6],MEM[5],MEM[4]}=32'h2;
+
 
 end
 
-always @(posedge clk or negedge clear) begin
-if(~clear)
-DOUT <= 0;
-else begin
-DOUT <= {MEM[ADDR+3],MEM[ADDR+2],MEM[ADDR+1],MEM[ADDR]};
-if(wren)
-{MEM[ADDR+3],MEM[ADDR+2],MEM[ADDR+1],MEM[ADDR]} <= DIN;
+always @(posedge clk ) begin
+//DOUT <= {MEM[ADDR+3],MEM[ADDR+2],MEM[ADDR+1],MEM[ADDR]};
+if(wren) {MEM[ADDR+3],MEM[ADDR+2],MEM[ADDR+1],MEM[ADDR]} <= DIN;
 end
-end
+
+assign DOUT = {MEM[ADDR+3],MEM[ADDR+2],MEM[ADDR+1],MEM[ADDR]};
+
 endmodule
 
 
@@ -206,8 +195,8 @@ module tb;
 reg reset,clk;
 riscv riscv0(.KEY({reset,clk}));
 initial begin
-//$dumpfile("test.vcd");
-//$dumpvars(0, tb);
+$dumpfile("test.vcd");
+$dumpvars(0, tb);
 
 #0 reset = 1; clk = 0;
 #1 reset = 0; #1 reset = 1;
