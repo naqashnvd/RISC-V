@@ -2,7 +2,6 @@ library verilog;
 use verilog.vl_types.all;
 entity riscv is
     port(
-        clock           : in     vl_logic;
-        clear           : in     vl_logic
+        KEY             : in     vl_logic_vector(1 downto 0)
     );
 end riscv;

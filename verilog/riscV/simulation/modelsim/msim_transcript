@@ -13,10 +13,12 @@
 # vlog -vlog01compat -work work +incdir+C:/Users/naqas/Desktop/Github/RISC-V/verilog/riscV {C:/Users/naqas/Desktop/Github/RISC-V/verilog/riscV/riscv.v}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 # -- Compiling module riscv
-# -- Compiling module single_port_ram
+# -- Compiling module IRAM
+# -- Compiling module DataRAM
+# -- Compiling module tb
 # 
 # Top level modules:
-# 	riscv
+# 	tb
 # vlog -vlog01compat -work work +incdir+C:/Users/naqas/Desktop/Github/RISC-V/verilog/riscV {C:/Users/naqas/Desktop/Github/RISC-V/verilog/riscV/pc.v}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 # -- Compiling module pc
@@ -49,22 +51,30 @@
 # Top level modules:
 # 	alu
 # 
-vsim +altera -do riscv_run_msim_rtl_verilog.do -l msim_transcript -gui work.riscv
-# vsim +altera -do riscv_run_msim_rtl_verilog.do -l msim_transcript -gui work.riscv 
+vsim +altera -do riscv_run_msim_rtl_verilog.do -l msim_transcript -gui work.tb
+# vsim +altera -do riscv_run_msim_rtl_verilog.do -l msim_transcript -gui work.tb 
+# Loading work.tb
 # Loading work.riscv
 # Loading work.pc
-# Loading work.single_port_ram
+# Loading work.IRAM
 # Loading work.regFile
 # Loading work.register
 # Loading work.immGen
 # Loading work.controlUnit
 # Loading work.alu
-# ** Warning: (vsim-3015) C:/Users/naqas/Desktop/Github/RISC-V/verilog/riscV/riscv.v(17): [PCDPC] - Port size (1 or 1) does not match connection size (32) for port 'enable'. The port definition is at: C:/Users/naqas/Desktop/Github/RISC-V/verilog/riscV/pc.v(3).
+# Loading work.DataRAM
+# ** Warning: (vsim-3015) C:/Users/naqas/Desktop/Github/RISC-V/verilog/riscV/riscv.v(20): [PCDPC] - Port size (1 or 1) does not match connection size (32) for port 'enable'. The port definition is at: C:/Users/naqas/Desktop/Github/RISC-V/verilog/riscV/pc.v(3).
 # 
-#         Region: /riscv/pc1
-# ** Warning: (vsim-3015) C:/Users/naqas/Desktop/Github/RISC-V/verilog/riscV/riscv.v(31): [PCDPC] - Port size (1 or 1) does not match connection size (32) for port 'we'. The port definition is at: C:/Users/naqas/Desktop/Github/RISC-V/verilog/riscV/riscv.v(110).
+#         Region: /tb/riscv0/pc1
+# ** Warning: (vsim-3015) C:/Users/naqas/Desktop/Github/RISC-V/verilog/riscV/riscv.v(43): [PCDPC] - Port size (8 or 8) does not match connection size (32) for port 'ADDR'. The port definition is at: C:/Users/naqas/Desktop/Github/RISC-V/verilog/riscV/riscv.v(124).
 # 
-#         Region: /riscv/imem
+#         Region: /tb/riscv0/imem
+# ** Warning: (vsim-3015) C:/Users/naqas/Desktop/Github/RISC-V/verilog/riscV/riscv.v(43): [PCDPC] - Port size (1 or 1) does not match connection size (32) for port 'wren'. The port definition is at: C:/Users/naqas/Desktop/Github/RISC-V/verilog/riscV/riscv.v(126).
+# 
+#         Region: /tb/riscv0/imem
+# ** Warning: (vsim-3015) C:/Users/naqas/Desktop/Github/RISC-V/verilog/riscV/riscv.v(110): [PCDPC] - Port size (8 or 8) does not match connection size (32) for port 'ADDR'. The port definition is at: C:/Users/naqas/Desktop/Github/RISC-V/verilog/riscV/riscv.v(169).
+# 
+#         Region: /tb/riscv0/dmem
 # do riscv_run_msim_rtl_verilog.do 
 # if {[file exists rtl_work]} {
 # 	vdel -lib rtl_work -all
@@ -76,10 +86,12 @@ vsim +altera -do riscv_run_msim_rtl_verilog.do -l msim_transcript -gui work.risc
 # vlog -vlog01compat -work work +incdir+C:/Users/naqas/Desktop/Github/RISC-V/verilog/riscV {C:/Users/naqas/Desktop/Github/RISC-V/verilog/riscV/riscv.v}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 # -- Compiling module riscv
-# -- Compiling module single_port_ram
+# -- Compiling module IRAM
+# -- Compiling module DataRAM
+# -- Compiling module tb
 # 
 # Top level modules:
-# 	riscv
+# 	tb
 # vlog -vlog01compat -work work +incdir+C:/Users/naqas/Desktop/Github/RISC-V/verilog/riscV {C:/Users/naqas/Desktop/Github/RISC-V/verilog/riscV/pc.v}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 # -- Compiling module pc
@@ -94,6 +106,8 @@ vsim +altera -do riscv_run_msim_rtl_verilog.do -l msim_transcript -gui work.risc
 # Top level modules:
 # 	regFile
 # vlog -vlog01compat -work work +incdir+C:/Users/naqas/Desktop/Github/RISC-V/verilog/riscV {C:/Users/naqas/Desktop/Github/RISC-V/verilog/riscV/controlUnit.v}
+add wave -position end  sim:/tb/reset
+add wave -position end  sim:/tb/clk
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 # -- Compiling module controlUnit
 # 
@@ -112,40 +126,47 @@ vsim +altera -do riscv_run_msim_rtl_verilog.do -l msim_transcript -gui work.risc
 # Top level modules:
 # 	alu
 # 
-add wave -position end  sim:/riscv/clock
-add wave -position end  sim:/riscv/clear
-add wave -position end  sim:/riscv/dataA
-add wave -position end  sim:/riscv/dataB
-add wave -position end  sim:/riscv/imemAddr
-add wave -position end  sim:/riscv/I
-add wave -position end  sim:/riscv/aluResult
-add wave -position end  sim:/riscv/dmemOut
-add wave -position end  sim:/riscv/aluB
-add wave -position end  sim:/riscv/dataD
-add wave -position end  sim:/riscv/pcIn
-add wave -position end  sim:/riscv/Rs1
-add wave -position end  sim:/riscv/Rs2
-add wave -position end  sim:/riscv/Rd
-add wave -position end  sim:/riscv/opcode
-add wave -position end  sim:/riscv/signals
-add wave -position end  sim:/riscv/immGenOut
-add wave -position end  sim:/riscv/branchFromAlu
-force -freeze sim:/riscv/clock 1 0, 0 {50 ps} -r 100
-force -freeze sim:/riscv/clear 0 0 -cancel 100
+add wave -position end  sim:/tb/riscv0/KEY
+add wave -position end  sim:/tb/riscv0/dataA
+add wave -position end  sim:/tb/riscv0/dataB
+add wave -position end  sim:/tb/riscv0/imemAddr
+add wave -position end  sim:/tb/riscv0/I
+add wave -position end  sim:/tb/riscv0/aluResult
+add wave -position end  sim:/tb/riscv0/dmemOut
+add wave -position end  sim:/tb/riscv0/aluB
+add wave -position end  sim:/tb/riscv0/dataD
+add wave -position end  sim:/tb/riscv0/pcIn
+add wave -position end  sim:/tb/riscv0/Rs1
+add wave -position end  sim:/tb/riscv0/Rs2
+add wave -position end  sim:/tb/riscv0/Rd
+add wave -position end  sim:/tb/riscv0/opcode
+add wave -position end  sim:/tb/riscv0/signals
+add wave -position end  sim:/tb/riscv0/immGenOut
+add wave -position end  sim:/tb/riscv0/branchFromAlu
+add wave -position end  sim:/tb/riscv0/clock
+add wave -position end  sim:/tb/riscv0/clear
+add wave -position end  sim:/tb/riscv0/dmem/DOUT
+add wave -position end  sim:/tb/riscv0/dmem/ADDR
+add wave -position end  sim:/tb/riscv0/dmem/DIN
+add wave -position end  sim:/tb/riscv0/dmem/wren
+add wave -position end  sim:/tb/riscv0/dmem/clear
+add wave -position end  sim:/tb/riscv0/dmem/clk
+add wave -position end  sim:/tb/riscv0/dmem/RAM_ADDR
 run
-force -freeze sim:/riscv/clear 1 0
+add wave -position end  sim:/tb/riscv0/dmem/#ALWAYS#190/width
+add wave -position end  sim:/tb/riscv0/dmem/#ALWAYS#190/addrWidth
+add wave -position end  sim:/tb/riscv0/dmem/#ALWAYS#190/DOUT
+add wave -position end  sim:/tb/riscv0/dmem/#ALWAYS#190/MEM
+add wave -position end  sim:/tb/riscv0/dmem/#ALWAYS#190/RAM_ADDR
+add wave -position end  sim:/tb/riscv0/rf/r[3]/r/#ALWAYS#43/width
+add wave -position end  sim:/tb/riscv0/rf/r[3]/r/#ALWAYS#43/out
 run
-force -freeze sim:/riscv/I 11111110000000000000110011100011 0
+add wave -position end  sim:/tb/riscv0/rf/r[4]/r/#ALWAYS#43/width
+add wave -position end  sim:/tb/riscv0/rf/r[4]/r/#ALWAYS#43/out
 run
+step
+step -over
+# Break key hit 
+run -continue
 run
-run
-run
-run
-run
-noforce sim:/riscv/clear
-run
-run
-force -freeze sim:/riscv/clear 0 0
-run
-force -freeze sim:/riscv/clear 1 0
-run
+run -all

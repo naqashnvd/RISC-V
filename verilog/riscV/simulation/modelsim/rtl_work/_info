@@ -17,17 +17,17 @@ Z2 OV;L;10.1d;51
 r1
 !s85 0
 31
-!s108 1571683698.268000
+!s108 1571772803.888000
 !s107 C:/Users/naqas/Desktop/Github/RISC-V/verilog/riscV/alu.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/naqas/Desktop/Github/RISC-V/verilog/riscV|C:/Users/naqas/Desktop/Github/RISC-V/verilog/riscV/alu.v|
 !s101 -O0
 Z3 o-vlog01compat -work work -O0
 Z4 !s92 -vlog01compat -work work +incdir+C:/Users/naqas/Desktop/Github/RISC-V/verilog/riscV -O0
 vcontrolUnit
-I@?[cVel^AZJ]24VZOR65W1
+I4ZC_HCBQ3aL1DLn[88Ll02
 VlC2<60@?7>S_ZBj0E4ZLc3
 R1
-w1570708129
+w1571760457
 8C:/Users/naqas/Desktop/Github/RISC-V/verilog/riscV/controlUnit.v
 FC:/Users/naqas/Desktop/Github/RISC-V/verilog/riscV/controlUnit.v
 L0 1
@@ -38,11 +38,32 @@ R3
 R4
 ncontrol@unit
 !i10b 1
-!s100 nULm`QVb@K>JLzfdhO1UW1
+!s100 ZkPg13`nEWjFLleRK>Yaz3
 !s85 0
-!s108 1571683697.941000
+!s108 1571772803.244000
 !s107 C:/Users/naqas/Desktop/Github/RISC-V/verilog/riscV/controlUnit.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/naqas/Desktop/Github/RISC-V/verilog/riscV|C:/Users/naqas/Desktop/Github/RISC-V/verilog/riscV/controlUnit.v|
+!s101 -O0
+vDataRAM
+Ikg57zZ[o0OCMdE2F1]c8A3
+VKIJoSCLLMV<KARlJ^OUgK0
+R1
+Z5 w1571772732
+Z6 8C:/Users/naqas/Desktop/Github/RISC-V/verilog/riscV/riscv.v
+Z7 FC:/Users/naqas/Desktop/Github/RISC-V/verilog/riscV/riscv.v
+L0 167
+R2
+r1
+31
+Z8 !s108 1571772802.585000
+Z9 !s107 C:/Users/naqas/Desktop/Github/RISC-V/verilog/riscV/riscv.v|
+Z10 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/naqas/Desktop/Github/RISC-V/verilog/riscV|C:/Users/naqas/Desktop/Github/RISC-V/verilog/riscV/riscv.v|
+R3
+R4
+n@data@r@a@m
+!i10b 1
+!s100 1Fb=XGWD33:ma7d0`@QBK1
+!s85 0
 !s101 -O0
 vimmGen
 Ii4bNl3:n5Lh:WBCeFGG6C0
@@ -61,15 +82,36 @@ nimm@gen
 !i10b 1
 !s100 lG`MiIF4lo0L8KCQN<AoY2
 !s85 0
-!s108 1571683698.105000
+!s108 1571772803.733000
 !s107 C:/Users/naqas/Desktop/Github/RISC-V/verilog/riscV/immGen.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/naqas/Desktop/Github/RISC-V/verilog/riscV|C:/Users/naqas/Desktop/Github/RISC-V/verilog/riscV/immGen.v|
+!s101 -O0
+vIRAM
+IZVATjngR4;K5C>11z_6dF3
+VdS^lPdd2[KA1ZdF=V3oGA2
+R1
+R5
+R6
+R7
+L0 122
+R2
+r1
+31
+R8
+R9
+R10
+R3
+R4
+n@i@r@a@m
+!i10b 1
+!s100 ?YB1:b05@`XMT^Ld`i4:c2
+!s85 0
 !s101 -O0
 vpc
 I6C_RVSlSYB5AB33=gma=d3
 V_Wb?o8;YbA?3nNkBfgUXj2
 R1
-w1571675313
+w1571754187
 8C:/Users/naqas/Desktop/Github/RISC-V/verilog/riscV/pc.v
 FC:/Users/naqas/Desktop/Github/RISC-V/verilog/riscV/pc.v
 L0 1
@@ -81,7 +123,7 @@ R4
 !i10b 1
 !s100 Dl_CV9@d8m@^45QY0`BKZ1
 !s85 0
-!s108 1571683697.539000
+!s108 1571772802.895000
 !s107 C:/Users/naqas/Desktop/Github/RISC-V/verilog/riscV/pc.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/naqas/Desktop/Github/RISC-V/verilog/riscV|C:/Users/naqas/Desktop/Github/RISC-V/verilog/riscV/pc.v|
 !s101 -O0
@@ -89,16 +131,16 @@ vregFile
 IFz@;27<]Z@M1aU8@eoO]O0
 VYVL`7YZoRBL^3H<=CHO^Y2
 R1
-Z5 w1571681535
-Z6 8C:/Users/naqas/Desktop/Github/RISC-V/verilog/riscV/regFile.v
-Z7 FC:/Users/naqas/Desktop/Github/RISC-V/verilog/riscV/regFile.v
+Z11 w1571681535
+Z12 8C:/Users/naqas/Desktop/Github/RISC-V/verilog/riscV/regFile.v
+Z13 FC:/Users/naqas/Desktop/Github/RISC-V/verilog/riscV/regFile.v
 L0 1
 R2
 r1
 31
-Z8 !s108 1571683697.716000
-Z9 !s107 C:/Users/naqas/Desktop/Github/RISC-V/verilog/riscV/regFile.v|
-Z10 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/naqas/Desktop/Github/RISC-V/verilog/riscV|C:/Users/naqas/Desktop/Github/RISC-V/verilog/riscV/regFile.v|
+Z14 !s108 1571772803.044000
+Z15 !s107 C:/Users/naqas/Desktop/Github/RISC-V/verilog/riscV/regFile.v|
+Z16 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/naqas/Desktop/Github/RISC-V/verilog/riscV|C:/Users/naqas/Desktop/Github/RISC-V/verilog/riscV/regFile.v|
 R3
 R4
 nreg@file
@@ -110,50 +152,10 @@ vregister
 IifF@QYn^k0K>WcAhC8Xb20
 VEk;o04]hz1z@35>Z>T0T`3
 R1
-R5
-R6
-R7
-L0 36
-R2
-r1
-31
-R8
-R9
-R10
-R3
-R4
-!i10b 1
-!s100 ^[=`1TPR=9c6;c<7:I3R>1
-!s85 0
-!s101 -O0
-vriscv
-IBQ=K0L@<:JIVUg=Vc@h<N2
-VkzfEVY;1QQBFl27>zcSL13
-R1
-Z11 w1571682079
-Z12 8C:/Users/naqas/Desktop/Github/RISC-V/verilog/riscV/riscv.v
-Z13 FC:/Users/naqas/Desktop/Github/RISC-V/verilog/riscV/riscv.v
-L0 1
-R2
-r1
-31
-Z14 !s108 1571683697.318000
-Z15 !s107 C:/Users/naqas/Desktop/Github/RISC-V/verilog/riscV/riscv.v|
-Z16 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/naqas/Desktop/Github/RISC-V/verilog/riscV|C:/Users/naqas/Desktop/Github/RISC-V/verilog/riscV/riscv.v|
-R3
-R4
-!i10b 1
-!s100 T^]z7;kkeaNW64:dDdBml3
-!s85 0
-!s101 -O0
-vsingle_port_ram
-I138>PboU0Oo<94]a[Im_`1
-Vj9a<1I2AY4;a4Z=DFP0`_0
-R1
 R11
 R12
 R13
-L0 105
+L0 36
 R2
 r1
 31
@@ -163,6 +165,46 @@ R16
 R3
 R4
 !i10b 1
-!s100 5@Q8M7d6;[;MDLOAKQ4Od3
+!s100 ^[=`1TPR=9c6;c<7:I3R>1
+!s85 0
+!s101 -O0
+vriscv
+IbRk_8V32R>lW;?<[<<O901
+V0KBBUKkR_HHkcP^@8>ONb0
+R1
+R5
+R6
+R7
+L0 1
+R2
+r1
+31
+R8
+R9
+R10
+R3
+R4
+!i10b 1
+!s100 JhIFOO`NmzbUEO@M==Lm61
+!s85 0
+!s101 -O0
+vtb
+I>jQoEb<b9JN2oNCDcJlGO1
+VV@Xn<HnSRM[I5c1?BH]3a3
+R1
+R5
+R6
+R7
+L0 205
+R2
+r1
+31
+R8
+R9
+R10
+R3
+R4
+!i10b 1
+!s100 ^bf@eB76mU6[=]LcZF0D81
 !s85 0
 !s101 -O0

@@ -9,7 +9,7 @@ module pc #(parameter width = 32)(
 			if(~clear) out <=0;
 			else begin 
 				if(enable) out <=out + 4;
-				else out <=out;
+				else out <= out;
 			end
 	end
 endmodule

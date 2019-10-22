@@ -1,4 +1,4 @@
-module riscv (input [1:0]KEY,output [9:0]LEDR);
+module riscv (input [1:0]KEY);
 
 wire [31:0]dataA,dataB,imemAddr,I,aluResult,dmemOut;
 reg [31:0]aluB,dataD,pcIn;
@@ -10,12 +10,11 @@ wire branchFromAlu;
 wire clock = KEY[0];
 wire clear = KEY[1];
 
-assign LEDR = signals[9:0];
 
 pc pc1(
 	.data(pcIn),
 	.enable(1),
-	.clock(~clock),
+	.clock(clock),
 	.clear(clear),
 	.out(imemAddr)
 );
@@ -26,13 +25,26 @@ always@(*)begin
 	else pcIn = imemAddr;
 end
 
-single_port_ram imem(
-	.data(),
-	.addr(imemAddr),
-	.we(0), 
-	.clk(clock),
-	.q(I)
+//single_port_ram imem(
+//	.data(),
+//	.addr(imemAddr),
+//	.we(0), 
+//	.clk(clock),
+//	.q(I)
+//);
+
+IRAM imem(
+.DOUT(I),
+.ADDR(imemAddr),
+.DIN(),
+.wren(0),
+.clear(clear),
+.clk(clock)
 );
+
+
+
+
 
 assign opcode = I[6:0];
 assign Rd = I[11:7];
@@ -80,13 +92,23 @@ alu alu(
 );
 
 
-single_port_ram dmem(
-	.data(),
-	.addr(aluResult),
-	.we(signals[6]), 
-	.clk(clock),
-	.q(dmemOut)
+//single_port_ram dmem(
+//	.data(),
+//	.addr(aluResult),
+//	.we(signals[6]), 
+//	.clk(clock),
+//	.q(dmemOut)
+//);
+
+DataRAM dmem(
+.DOUT(dmemOut),
+.ADDR(aluResult),
+.DIN(dataB),
+.wren(signals[6]),
+.clear(clear),
+.clk(clock)
 );
+
 
 always@(*)begin
 	if(signals[3]) dataD = dmemOut;
@@ -96,43 +118,115 @@ end
 
 endmodule
 
-
-
-
-
-
-
-
-// Quartus II Verilog Template
-// Single port RAM with single read/write address 
-
-module single_port_ram 
-#(parameter DATA_WIDTH=32, parameter ADDR_WIDTH=32)
-(
-	input [(DATA_WIDTH-1):0] data,
-	input [(ADDR_WIDTH-1):0] addr,
-	input we, clk,
-	output [(DATA_WIDTH-1):0] q
+//Instruction Memory
+module IRAM #(parameter width = 8,parameter addrWidth = 8)(
+output reg  [(width*4)-1:0] DOUT,
+input [addrWidth-1:0] ADDR,
+input [(width*4)-1:0] DIN,
+input wren, clear, clk
 );
+reg [width-1:0] MEM [2**(addrWidth)-1:0];
 
-	// Declare the RAM variable
-	reg [DATA_WIDTH-1:0] ram[2**ADDR_WIDTH-1:0];
+reg [addrWidth-1:0] RAM_ADDR;
 
-	// Variable to hold the registered read address
-	reg [ADDR_WIDTH-1:0] addr_reg;
+always @(posedge clk or negedge clear)
+if(~clear)
+RAM_ADDR <= 0;
+else
+RAM_ADDR <= ADDR;
 
-	always @ (posedge clk)
-	begin
-		// Write
-		if (we)
-			ram[addr] <= data;
 
-		addr_reg <= addr;
-	end
+//integer i;
+initial begin
+//for(i=0; i<(2**(addrWidth)-1); i=i+1)
+//	MEM[i] = 0;
+{MEM[3],MEM[2],MEM[1],MEM[0]}=32'h00a00093;
+{MEM[7],MEM[6],MEM[5],MEM[4]}=32'h01400113;
+{MEM[11],MEM[10],MEM[9],MEM[8]}=32'h00102023;
+{MEM[15],MEM[14],MEM[13],MEM[12]}=32'h00202223;
+{MEM[19],MEM[18],MEM[17],MEM[16]}=32'h00002183;
+{MEM[23],MEM[22],MEM[21],MEM[20]}=32'h00402203;
+{MEM[27],MEM[26],MEM[25],MEM[24]}=32'h004182b3;
+//{MEM[31],MEM[30],MEM[29],MEM[28]}=32'h004182b3;
 
-	// Continuous assignment implies read returns NEW data.
-	// This is the natural behavior of the TriMatrix memory
-	// blocks in Single Port mode.  
-	assign q = ram[addr_reg];
+end
 
+always @(posedge clk or negedge clear) begin
+if(~clear)
+DOUT <= 0;
+else begin
+DOUT <= {MEM[ADDR+3],MEM[ADDR+2],MEM[ADDR+1],MEM[ADDR]};
+if(wren)
+{MEM[ADDR+3],MEM[ADDR+2],MEM[ADDR+1],MEM[ADDR]} <= DIN;
+end
+end
 endmodule
+
+
+//Data Memory
+module DataRAM #(parameter width = 8,parameter addrWidth = 8)(
+output reg  [(width*4)-1:0] DOUT,
+input [addrWidth-1:0] ADDR,
+input [(width*4)-1:0] DIN,
+input wren, clear, clk
+);
+reg [width-1:0] MEM [2**(addrWidth)-1:0];
+
+reg [addrWidth-1:0] RAM_ADDR;
+
+always @(posedge clk or negedge clear)
+if(~clear)
+RAM_ADDR <= 0;
+else
+RAM_ADDR <= ADDR;
+
+//integer i;
+initial begin
+//for(i=0; i<(2**(addrWidth)-1); i=i+1)
+//	MEM[i] = 0;
+
+end
+
+always @(posedge clk or negedge clear) begin
+if(~clear)
+DOUT <= 0;
+else begin
+DOUT <= {MEM[ADDR+3],MEM[ADDR+2],MEM[ADDR+1],MEM[ADDR]};
+if(wren)
+{MEM[ADDR+3],MEM[ADDR+2],MEM[ADDR+1],MEM[ADDR]} <= DIN;
+end
+end
+endmodule
+
+
+
+
+//tb
+module tb;
+reg reset,clk;
+riscv riscv0(.KEY({reset,clk}));
+initial begin
+//$dumpfile("test.vcd");
+//$dumpvars(0, tb);
+
+#0 reset = 1; clk = 0;
+#1 reset = 0; #1 reset = 1;
+
+#2 clk = ~clk; #1 clk = ~clk;
+#1 clk = ~clk; #1 clk = ~clk;
+#1 clk = ~clk; #1 clk = ~clk;
+#1 clk = ~clk; #1 clk = ~clk;
+#1 clk = ~clk; #1 clk = ~clk;
+#1 clk = ~clk; #1 clk = ~clk;
+#1 clk = ~clk; #1 clk = ~clk;
+#1 clk = ~clk; #1 clk = ~clk;
+#1 clk = ~clk; #1 clk = ~clk;
+#1 clk = ~clk; #1 clk = ~clk;
+#1 clk = ~clk; #1 clk = ~clk;
+#1 clk = ~clk; #1 clk = ~clk;
+#1 clk = ~clk; #1 clk = ~clk;
+end
+endmodule
+
+
+
