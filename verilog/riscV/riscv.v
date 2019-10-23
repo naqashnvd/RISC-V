@@ -1,4 +1,4 @@
-module riscv (input [1:0]KEY);
+module riscv (input [1:0]KEY,output [9:0]LEDR);
 
 wire [31:0]dataA,dataB,imemAddr,I,aluResult,dmemOut;
 reg [31:0]aluB,dataD,pcIn;
@@ -9,6 +9,8 @@ wire [31:0]immGenOut;
 wire branchFromAlu;
 wire clock = KEY[0];
 wire clear = KEY[1];
+
+assign LEDR = aluResult[9:0];
 
 
 pc pc1(
@@ -120,7 +122,7 @@ endmodule
 
 //Instruction Memory
 module IRAM #(parameter width = 8,parameter addrWidth = 8)(
-output reg  [(width*4)-1:0] DOUT,
+output [(width*4)-1:0] DOUT,
 input [addrWidth-1:0] ADDR,
 input [(width*4)-1:0] DIN,
 input wren, clear, clk
@@ -145,17 +147,22 @@ for(i=0; i<(2**(addrWidth)-1); i=i+1)
 {MEM[27],MEM[26],MEM[25],MEM[24]}=32'h004182b3;
 {MEM[31],MEM[30],MEM[29],MEM[28]}=32'h004182b3;
 
+//{MEM[3],MEM[2],MEM[1],MEM[0]}=32'h00100093;
+//{MEM[7],MEM[6],MEM[5],MEM[4]}=32'h00200113;
+//{MEM[11],MEM[10],MEM[9],MEM[8]}=32'h00209463;
+//{MEM[15],MEM[14],MEM[13],MEM[12]}=32'h00100193;
+//{MEM[19],MEM[18],MEM[17],MEM[16]}=32'h00100213;
+
+
+
 end
 
-always @(posedge clk or negedge clear) begin
-if(~clear)
-DOUT <= 0;
-else begin
-DOUT <= {MEM[ADDR+3],MEM[ADDR+2],MEM[ADDR+1],MEM[ADDR]};
+always @(posedge clk) begin
 if(wren)
 {MEM[ADDR+3],MEM[ADDR+2],MEM[ADDR+1],MEM[ADDR]} <= DIN;
 end
-end
+assign DOUT = {MEM[ADDR+3],MEM[ADDR+2],MEM[ADDR+1],MEM[ADDR]};
+
 endmodule
 
 
@@ -172,14 +179,12 @@ integer i;
 initial begin
 for(i=0; i<(2**(addrWidth)-1); i=i+1)
 	MEM[i] = 0;
-{MEM[3],MEM[2],MEM[1],MEM[0]}=32'h1;
-{MEM[7],MEM[6],MEM[5],MEM[4]}=32'h2;
-
+//{MEM[3],MEM[2],MEM[1],MEM[0]}=32'h1;
+//{MEM[7],MEM[6],MEM[5],MEM[4]}=32'h2;
 
 end
 
 always @(posedge clk ) begin
-//DOUT <= {MEM[ADDR+3],MEM[ADDR+2],MEM[ADDR+1],MEM[ADDR]};
 if(wren) {MEM[ADDR+3],MEM[ADDR+2],MEM[ADDR+1],MEM[ADDR]} <= DIN;
 end
 
