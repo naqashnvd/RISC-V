@@ -13,7 +13,7 @@ wire clear = KEY[1];
 assign LEDR = aluResult[9:0];
 
 
-pc pc1(
+register pc(
 	.data(pcIn),
 	.enable(1),
 	.clock(~clock),
@@ -24,7 +24,7 @@ pc pc1(
 
 always@(*)begin
 	if(branchFromAlu&signals[7]) pcIn = imemAddr+immGenOut;
-	else pcIn = imemAddr;
+	else pcIn = imemAddr+4;
 end
 
 //single_port_ram imem(
@@ -147,11 +147,19 @@ for(i=0; i<(2**(addrWidth)-1); i=i+1)
 {MEM[27],MEM[26],MEM[25],MEM[24]}=32'h004182b3;
 {MEM[31],MEM[30],MEM[29],MEM[28]}=32'h004182b3;
 
-//{MEM[3],MEM[2],MEM[1],MEM[0]}=32'h00100093;
-//{MEM[7],MEM[6],MEM[5],MEM[4]}=32'h00200113;
-//{MEM[11],MEM[10],MEM[9],MEM[8]}=32'h00209463;
-//{MEM[15],MEM[14],MEM[13],MEM[12]}=32'h00100193;
-//{MEM[19],MEM[18],MEM[17],MEM[16]}=32'h00100213;
+
+
+// addi x1,x0,1
+// addi x2,x0,2
+// bne x1,x2,true
+// addi x3,x0,1
+// true:
+// addi x4,x0,1
+// {MEM[3],MEM[2],MEM[1],MEM[0]}=32'h00100093; 
+// {MEM[7],MEM[6],MEM[5],MEM[4]}=32'h00200113; 
+// {MEM[11],MEM[10],MEM[9],MEM[8]}=32'h00209463; 
+// {MEM[15],MEM[14],MEM[13],MEM[12]}=32'h00100193;
+// {MEM[19],MEM[18],MEM[17],MEM[16]}=32'h00100213;
 
 
 

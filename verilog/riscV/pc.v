@@ -8,7 +8,7 @@ module pc #(parameter width = 32)(
 	always@(posedge clock or negedge clear)begin
 			if(~clear) out <=0;
 			else begin 
-				if(enable) out <=out + 4;
+				if(enable) out <=data + 4;
 				else out <= out;
 			end
 	end
