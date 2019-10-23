@@ -10,12 +10,13 @@ wire branchFromAlu;
 wire clock = KEY[0];
 wire clear = KEY[1];
 
-assign LEDR = aluResult[9:0];
+
+assign LEDR[9:0]=signals[9:0];
 
 
 register pc(
 	.data(pcIn),
-	.enable(1),
+	.enable(1'b1),
 	.clock(~clock),
 	.clear(clear),
 	.out(imemAddr)
@@ -27,19 +28,13 @@ always@(*)begin
 	else pcIn = imemAddr+4;
 end
 
-//single_port_ram imem(
-//	.data(),
-//	.addr(imemAddr),
-//	.we(0), 
-//	.clk(clock),
-//	.q(I)
-//);
+
 
 IRAM imem(
 .DOUT(I),
-.ADDR(imemAddr),
-.DIN(),
-.wren(0),
+.ADDR(imemAddr[7:0]),
+.DIN(32'b0),
+.wren(1'b0),
 .clear(clear),
 .clk(clock)
 );
@@ -78,7 +73,6 @@ controlUnit CU(
 	.signals(signals) //0-1 imm sel , 2 AluSrc , 3 Mem to Reg , 4 RegWrite , 5 MemRead , 6 MemWrite , 7 Branch ,8-10 AluOP
 );
 
-
 always@(*)begin
 	if(signals[2]) aluB =  immGenOut;
 	else aluB = dataB;
@@ -92,19 +86,11 @@ alu alu(
  .aluResult(aluResult),
  .branchFromAlu(branchFromAlu)
 );
-
-
-//single_port_ram dmem(
-//	.data(),
-//	.addr(aluResult),
-//	.we(signals[6]), 
-//	.clk(clock),
-//	.q(dmemOut)
-//);
+// data Ram
 
 DataRAM dmem(
 .DOUT(dmemOut),
-.ADDR(aluResult),
+.ADDR(aluResult[7:0]),
 .DIN(dataB),
 .wren(signals[6]),
 .clear(clear),
@@ -134,7 +120,7 @@ reg [width-1:0] MEM [2**(addrWidth)-1:0];
 integer i;
 initial begin
 for(i=0; i<(2**(addrWidth)-1); i=i+1)
-	MEM[i] = 0;
+	MEM[i] = 8'b0;
 //{MEM[3],MEM[2],MEM[1],MEM[0]}=32'h00002083;
 //{MEM[7],MEM[6],MEM[5],MEM[4]}=32'h00402103;
 
@@ -155,11 +141,11 @@ for(i=0; i<(2**(addrWidth)-1); i=i+1)
 // addi x3,x0,1
 // true:
 // addi x4,x0,1
-// {MEM[3],MEM[2],MEM[1],MEM[0]}=32'h00100093; 
-// {MEM[7],MEM[6],MEM[5],MEM[4]}=32'h00200113; 
-// {MEM[11],MEM[10],MEM[9],MEM[8]}=32'h00209463; 
-// {MEM[15],MEM[14],MEM[13],MEM[12]}=32'h00100193;
-// {MEM[19],MEM[18],MEM[17],MEM[16]}=32'h00100213;
+ {MEM[3],MEM[2],MEM[1],MEM[0]}=32'h00100093; 
+ {MEM[7],MEM[6],MEM[5],MEM[4]}=32'h00200113; 
+ {MEM[11],MEM[10],MEM[9],MEM[8]}=32'h00209463; 
+ {MEM[15],MEM[14],MEM[13],MEM[12]}=32'h00100193;
+ {MEM[19],MEM[18],MEM[17],MEM[16]}=32'h00100213;
 
 
 
@@ -198,7 +184,7 @@ reg [width-1:0] MEM [2**(addrWidth)-1:0];
 integer i;
 initial begin
 for(i=0; i<(2**(addrWidth)-1); i=i+1)
-	MEM[i] = 0;
+	MEM[i] = 8'b0;
 //{MEM[3],MEM[2],MEM[1],MEM[0]}=32'h1;
 //{MEM[7],MEM[6],MEM[5],MEM[4]}=32'h2;
 
