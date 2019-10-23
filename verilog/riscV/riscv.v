@@ -138,14 +138,14 @@ for(i=0; i<(2**(addrWidth)-1); i=i+1)
 //{MEM[3],MEM[2],MEM[1],MEM[0]}=32'h00002083;
 //{MEM[7],MEM[6],MEM[5],MEM[4]}=32'h00402103;
 
-{MEM[3],MEM[2],MEM[1],MEM[0]}=32'h00a00093;
-{MEM[7],MEM[6],MEM[5],MEM[4]}=32'h01400113;
-{MEM[11],MEM[10],MEM[9],MEM[8]}=32'h00102023;
-{MEM[15],MEM[14],MEM[13],MEM[12]}=32'h00202223;
-{MEM[19],MEM[18],MEM[17],MEM[16]}=32'h00002183;
-{MEM[23],MEM[22],MEM[21],MEM[20]}=32'h00402203;
-{MEM[27],MEM[26],MEM[25],MEM[24]}=32'h004182b3;
-{MEM[31],MEM[30],MEM[29],MEM[28]}=32'h004182b3;
+// {MEM[3],MEM[2],MEM[1],MEM[0]}=32'h00a00093;
+// {MEM[7],MEM[6],MEM[5],MEM[4]}=32'h01400113;
+// {MEM[11],MEM[10],MEM[9],MEM[8]}=32'h00102023;
+// {MEM[15],MEM[14],MEM[13],MEM[12]}=32'h00202223;
+// {MEM[19],MEM[18],MEM[17],MEM[16]}=32'h00002183;
+// {MEM[23],MEM[22],MEM[21],MEM[20]}=32'h00402203;
+// {MEM[27],MEM[26],MEM[25],MEM[24]}=32'h004182b3;
+// //{MEM[31],MEM[30],MEM[29],MEM[28]}=32'h004182b3;
 
 
 
@@ -161,6 +161,18 @@ for(i=0; i<(2**(addrWidth)-1); i=i+1)
 // {MEM[15],MEM[14],MEM[13],MEM[12]}=32'h00100193;
 // {MEM[19],MEM[18],MEM[17],MEM[16]}=32'h00100213;
 
+
+
+//Test Codes
+// {MEM[3],MEM[2],MEM[1],MEM[0]}=32'h00800093;
+// {MEM[7],MEM[6],MEM[5],MEM[4]}=32'h03100293;
+// {MEM[11],MEM[10],MEM[9],MEM[8]}=32'h00500333;
+// {MEM[15],MEM[14],MEM[13],MEM[12]}=32'h00120213;
+// {MEM[19],MEM[18],MEM[17],MEM[16]}=32'hfe415ce3;
+// {MEM[23],MEM[22],MEM[21],MEM[20]}=32'h00000213;
+// {MEM[27],MEM[26],MEM[25],MEM[24]}=32'h00128293;
+// {MEM[31],MEM[30],MEM[29],MEM[28]}=32'h00110113;
+// {MEM[35],MEM[34],MEM[33],MEM[32]}=32'hfe20d4e3;
 
 
 end
@@ -227,6 +239,16 @@ $dumpvars(0, tb);
 #1 clk = ~clk; #1 clk = ~clk;
 #1 clk = ~clk; #1 clk = ~clk;
 #1 clk = ~clk; #1 clk = ~clk;
+#1 clk = ~clk; #1 clk = ~clk;
+#1 clk = ~clk; #1 clk = ~clk;
+#1 clk = ~clk; #1 clk = ~clk;
+#1 clk = ~clk; #1 clk = ~clk;
+#1 clk = ~clk; #1 clk = ~clk;
+#1 clk = ~clk; #1 clk = ~clk;
+#1 clk = ~clk; #1 clk = ~clk;
+#1 clk = ~clk; #1 clk = ~clk;
+#1 clk = ~clk; #1 clk = ~clk;
+
 end
 endmodule
 
