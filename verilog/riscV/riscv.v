@@ -1,8 +1,8 @@
 module riscv (input [1:0]KEY,output [9:0]LEDR);
 
-wire [31:0]dataA,dataB,imemAddr,I,aluResult,dmemOut;
+wire [31:0]dataA,dataB,imemAddr,I,aluResult,dmemOut,MEM_aluResult;
 reg [31:0]dataD,pcIn;
-wire [4:0]Rs1,Rs2,Rd;
+wire [4:0]Rs1,Rs2,Rd,MEM_Rd;
 wire [6:0]opcode;
 wire [10:0]signals; //CU signals 0-1 imm sel , 2 AluSrc , 3 Mem to Reg , 4 RegWrite , 5 MemRead , 6 MemWrite , 7 Branch ,8-10 AluOP
 wire [31:0]immGenOut;
@@ -10,6 +10,9 @@ wire branchFromAlu;
 wire [3:0]ID_func3_7 = {ID_I[30],ID_I[14:12]};
 wire clock = KEY[0];
 wire clear = KEY[1];
+wire notStall;
+wire [1:0]forwardA,forwardB;
+
 
 
 assign LEDR[9:0]=dataA[9:0];
@@ -131,9 +134,8 @@ alu alu(
 
 //EX_MEM
 wire [10:0]MEM_signals;
-wire [31:0]MEM_branchAddr,MEM_aluResult,MEM_dataB;
+wire [31:0]MEM_branchAddr,MEM_dataB;
 wire MEM_branchFromAlu;
-wire [4:0]MEM_Rd;
 
 wire [31:0]EX_branchAddr ;
 assign EX_branchAddr = (EX_imemAddr+(EX_immGenOut >>> 2));
@@ -179,7 +181,7 @@ end
 
 
 //hazard Dectection Unit
-wire notStall;
+
 HDU HDU(
 	.EX_MemRead(EX_signals[5]),
 	.ID_Rs1(Rs1),
@@ -189,7 +191,6 @@ HDU HDU(
 );
 
 //Forwarding Unit
-wire [1:0]forwardA,forwardB;
 forwardingUnit fu(
 	.MEM_RegWrite(MEM_signals[4]),
 	.WB_RegWrite(WB_signals[4]),
