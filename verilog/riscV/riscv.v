@@ -1,12 +1,13 @@
 module riscv (input [1:0]KEY,output [9:0]LEDR);
 
 wire [31:0]dataA,dataB,imemAddr,I,aluResult,dmemOut;
-reg [31:0]aluB,dataD,pcIn;
+reg [31:0]dataD,pcIn;
 wire [4:0]Rs1,Rs2,Rd;
 wire [6:0]opcode;
-wire [10:0]signals; //CU signals
+wire [10:0]signals; //CU signals 0-1 imm sel , 2 AluSrc , 3 Mem to Reg , 4 RegWrite , 5 MemRead , 6 MemWrite , 7 Branch ,8-10 AluOP
 wire [31:0]immGenOut;
 wire branchFromAlu;
+wire [3:0]ID_func3_7 = {ID_I[30],ID_I[14:12]};
 wire clock = KEY[0];
 wire clear = KEY[1];
 
@@ -14,39 +15,45 @@ wire clear = KEY[1];
 assign LEDR[9:0]=dataA[9:0];
 
 
+wire branchTaken = MEM_branchFromAlu & MEM_signals[7];
+always@(*)begin
+	if(branchTaken) pcIn = MEM_branchAddr;
+	else pcIn = imemAddr+1;
+end
+
 register pc(
 	.data(pcIn),
-	.enable(1'b1),
+	.enable(notStall),
 	.clock(clock),
 	.clear(clear),
 	.out(imemAddr)
 );
 
-
-always@(*)begin
-	if(branchFromAlu&signals[7]) pcIn = (imemAddr+(immGenOut >>> 2));
-	else pcIn = imemAddr+1;
-end
-
-
-
 IRAM imem(
-.DOUT(I),
-.ADDR(imemAddr[7:0]),
-.DIN(32'b0),
-.wren(1'b0),
-.clear(clear),
-.clk(clock)
+	.DOUT(I),
+	.ADDR(imemAddr[7:0]),
+	.DIN(32'b0),
+	.wren(1'b0),
+	.clear(clear),
+	.clk(clock)
+);
+
+//IF_ID 
+wire [31:0]ID_imemAddr,ID_I;
+
+register#(.width(64)) IF_ID(
+	.data({imemAddr,I}),
+	.enable(notStall),
+	.clock(clock),
+	.clear(clear),
+	.out({ID_imemAddr,ID_I})
 );
 
 
-
-
-
-assign opcode = I[6:0];
-assign Rd = I[11:7];
-assign Rs1 = I[19:15];
-assign Rs2 = I[24:20];
+assign opcode = ID_I[6:0];
+assign Rd = ID_I[11:7];
+assign Rs1 = ID_I[19:15];
+assign Rs2 = ID_I[24:20];
 
 regFile rf(
 	.clock(~clock),
@@ -54,14 +61,14 @@ regFile rf(
 	.regWriteEnable(signals[4]),
 	.addrA(Rs1),
 	.addrB(Rs2),
-	.addrD(Rd),
+	.addrD(MEM_Rd),
 	.dataD(dataD),
 	.dataA(dataA),
 	.dataB(dataB)
 );
 
 immGen immGen(
-	.I(I),
+	.I(ID_I),
 	.immSel(signals[1:0]),
 	.imm(immGenOut) 
 );
@@ -73,36 +80,126 @@ controlUnit CU(
 	.signals(signals) //0-1 imm sel , 2 AluSrc , 3 Mem to Reg , 4 RegWrite , 5 MemRead , 6 MemWrite , 7 Branch ,8-10 AluOP
 );
 
+
+
+
+//ID_EX
+wire [10:0]EX_signals;
+wire [31:0]EX_imemAddr,EX_dataA,EX_dataB,EX_immGenOut;
+wire [3:0]EX_func3_7;
+wire [4:0]EX_Rs1,EX_Rs2,EX_Rd;
+
+reg [10:0]stallSignals;
 always@(*)begin
-	if(signals[2]) aluB =  immGenOut;
-	else aluB = dataB;
+	if(notStall) stallSignals=signals;
+	else stallSignals=10'b0;
 end
 
+register#(.width(158)) ID_EX(
+	.data({stallSignals,ID_imemAddr,dataA,dataB,immGenOut,ID_func3_7,Rs1,Rs2,Rd}),
+	.enable(branchTaken),
+	.clock(clock),
+	.clear(clear),
+	.out({EX_signals,EX_imemAddr,EX_dataA,EX_dataB,EX_immGenOut,EX_func3_7,EX_Rs1,EX_Rs2,EX_Rd})
+);
+
+wire [31:0]aluA,aluB,forwardB_dataB;
+aluSource aluSource( 
+	.EX_dataA(EX_dataA),
+	.dataD(dataD),
+	.MEM_aluResult(MEM_aluResult),
+	.EX_dataB(EX_dataB),
+	.EX_immGenOut(EX_immGenOut),
+	.forwardA(forwardA),
+	.forwardB(forwardB),
+	.EX_signals(EX_signals),
+	.aluA(aluA),
+	.aluB(aluB),
+	.forwardB_dataB(forwardB_dataB)
+);
+
+
 alu alu(
- .dataA(dataA),
+ .dataA(aluA),
  .dataB(aluB),
- .func({I[30],I[14:12]}),
- .aluOp(signals[10:8]),
+ .func(EX_func3_7),
+ .aluOp(EX_signals[10:8]),
  .aluResult(aluResult),
  .branchFromAlu(branchFromAlu)
 );
+
+
+//EX_MEM
+wire [10:0]MEM_signals;
+wire [31:0]MEM_branchAddr,MEM_aluResult,MEM_dataB;
+wire MEM_branchFromAlu;
+wire [4:0]MEM_Rd;
+
+wire [31:0]EX_branchAddr ;
+assign EX_branchAddr = (EX_imemAddr+(EX_immGenOut >>> 2));
+register#(.width(113)) EX_MEM(
+	.data({EX_signals,EX_branchAddr,branchFromAlu,aluResult,forwardB_dataB,EX_Rd}),
+	.enable(1'b1),
+	.clock(clock),
+	.clear(clear),
+	.out({MEM_signals,MEM_branchAddr,MEM_branchFromAlu,MEM_aluResult,MEM_dataB,MEM_Rd})
+);
+
 // data Ram
 
 DataRAM dmem(
 .DOUT(dmemOut),
-.ADDR(aluResult[7:0]),
-.DIN(dataB),
-.wren(signals[6]),
+.ADDR(MEM_aluResult[7:0]),
+.DIN(MEM_dataB),
+.wren(MEM_signals[6]),
 .clear(clear),
 .clk(clock)
 );
 
+//MEM_WB
+wire [10:0] WB_signals;
+wire [31:0]WB_aluResult;
+wire [4:0]WB_Rd;
+register#(.width(48)) MEM_WB(
+	.data({MEM_signals,MEM_aluResult,MEM_Rd}),
+	.enable(1'b1),
+	.clock(clock),
+	.clear(clear),
+	.out({WB_signals,WB_aluResult,WB_Rd})
+);
+
 
 always@(*)begin
-	if(signals[3]) dataD = dmemOut;
-	else dataD = aluResult;
+	if(WB_signals[3]) dataD = dmemOut;
+	else dataD = WB_aluResult;
+	
 end
 
+
+
+
+//hazard Dectection Unit
+wire notStall;
+HDU HDU(
+	.EX_MemRead(EX_signals[5]),
+	.ID_Rs1(Rs1),
+	.ID_Rs2(Rs2),
+	.EX_Rd(EX_Rd),
+	.notStall(notStall)
+);
+
+//Forwarding Unit
+wire [1:0]forwardA,forwardB;
+forwardingUnit fu(
+	.MEM_RegWrite(MEM_signals[4]),
+	.WB_RegWrite(WB_signals[4]),
+	.MEM_Rd(MEM_Rd),
+	.EX_Rs1(EX_Rs1),
+	.EX_Rs2(EX_Rs2),
+	.WB_Rd(WB_Rd),
+	.ForwardA(forwardA),
+	.ForwardB(forwardB)
+);
 
 endmodule
 
