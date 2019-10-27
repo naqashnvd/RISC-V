@@ -7,18 +7,39 @@ wire [6:0]opcode;
 wire [10:0]signals; //CU signals 0-1 imm sel , 2 AluSrc , 3 Mem to Reg , 4 RegWrite , 5 MemRead , 6 MemWrite , 7 Branch ,8-10 AluOP
 wire [31:0]immGenOut;
 wire branchFromAlu;
-wire [3:0]ID_func3_7 = {ID_I[30],ID_I[14:12]};
+
 wire clock = KEY[0];
 wire clear = KEY[1];
 wire notStall;
 wire [1:0]forwardA,forwardB;
 
+wire [31:0]ID_imemAddr,ID_I;
 
+wire [10:0]EX_signals;
+wire [31:0]EX_imemAddr,EX_dataA,EX_dataB,EX_immGenOut;
+wire [3:0]EX_func3_7;
+wire [4:0]EX_Rs1,EX_Rs2,EX_Rd;
 
-assign LEDR[9:0]=dataA[9:0];
+wire [10:0]MEM_signals;
+wire [31:0]MEM_branchAddr,MEM_dataB;
+wire MEM_branchFromAlu;
+
+wire [31:0]EX_branchAddr ;
+
+wire [10:0] WB_signals;
+wire [31:0]WB_aluResult;
+wire [4:0]WB_Rd;
+
+wire [3:0]ID_func3_7 ;
+
+assign ID_func3_7 = {ID_I[30],ID_I[14:12]};
+
+assign LEDR[9:0]=dataD[9:0];
+
 
 
 wire branchTaken = MEM_branchFromAlu & MEM_signals[7];
+
 always@(*)begin
 	if(branchTaken) pcIn = MEM_branchAddr;
 	else pcIn = imemAddr+1;
@@ -27,7 +48,7 @@ end
 register pc(
 	.data(pcIn),
 	.enable(notStall),
-	.clock(clock),
+	.clock(~clock),
 	.clear(clear),
 	.out(imemAddr)
 );
@@ -42,7 +63,7 @@ IRAM imem(
 );
 
 //IF_ID 
-wire [31:0]ID_imemAddr,ID_I;
+
 
 register#(.width(64)) IF_ID(
 	.data({imemAddr,I}),
@@ -87,10 +108,6 @@ controlUnit CU(
 
 
 //ID_EX
-wire [10:0]EX_signals;
-wire [31:0]EX_imemAddr,EX_dataA,EX_dataB,EX_immGenOut;
-wire [3:0]EX_func3_7;
-wire [4:0]EX_Rs1,EX_Rs2,EX_Rd;
 
 reg [10:0]stallSignals;
 always@(*)begin
@@ -100,9 +117,9 @@ end
 
 register#(.width(158)) ID_EX(
 	.data({stallSignals,ID_imemAddr,dataA,dataB,immGenOut,ID_func3_7,Rs1,Rs2,Rd}),
-	.enable(branchTaken),
+	.enable(1'b1),
 	.clock(clock),
-	.clear(clear),
+	.clear(~branchTaken),
 	.out({EX_signals,EX_imemAddr,EX_dataA,EX_dataB,EX_immGenOut,EX_func3_7,EX_Rs1,EX_Rs2,EX_Rd})
 );
 
@@ -133,11 +150,7 @@ alu alu(
 
 
 //EX_MEM
-wire [10:0]MEM_signals;
-wire [31:0]MEM_branchAddr,MEM_dataB;
-wire MEM_branchFromAlu;
 
-wire [31:0]EX_branchAddr ;
 assign EX_branchAddr = (EX_imemAddr+(EX_immGenOut >>> 2));
 register#(.width(113)) EX_MEM(
 	.data({EX_signals,EX_branchAddr,branchFromAlu,aluResult,forwardB_dataB,EX_Rd}),
@@ -159,9 +172,7 @@ DataRAM dmem(
 );
 
 //MEM_WB
-wire [10:0] WB_signals;
-wire [31:0]WB_aluResult;
-wire [4:0]WB_Rd;
+
 register#(.width(48)) MEM_WB(
 	.data({MEM_signals,MEM_aluResult,MEM_Rd}),
 	.enable(1'b1),
@@ -321,25 +332,8 @@ $dumpvars(0, tb);
 #2 clk = ~clk; #1 clk = ~clk;
 #1 clk = ~clk; #1 clk = ~clk;
 #1 clk = ~clk; #1 clk = ~clk;
-#1 clk = ~clk; #1 clk = ~clk;
-#1 clk = ~clk; #1 clk = ~clk;
-#1 clk = ~clk; #1 clk = ~clk;
-#1 clk = ~clk; #1 clk = ~clk;
-#1 clk = ~clk; #1 clk = ~clk;
-#1 clk = ~clk; #1 clk = ~clk;
-#1 clk = ~clk; #1 clk = ~clk;
-#1 clk = ~clk; #1 clk = ~clk;
-#1 clk = ~clk; #1 clk = ~clk;
-#1 clk = ~clk; #1 clk = ~clk;
-#1 clk = ~clk; #1 clk = ~clk;
-#1 clk = ~clk; #1 clk = ~clk;
-#1 clk = ~clk; #1 clk = ~clk;
-#1 clk = ~clk; #1 clk = ~clk;
-#1 clk = ~clk; #1 clk = ~clk;
-#1 clk = ~clk; #1 clk = ~clk;
-#1 clk = ~clk; #1 clk = ~clk;
-#1 clk = ~clk; #1 clk = ~clk;
-#1 clk = ~clk; #1 clk = ~clk;
+
+
 
 end
 endmodule
