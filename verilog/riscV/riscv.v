@@ -8,7 +8,7 @@
 
 module riscv (input [1:0]KEY,output [9:0]LEDR);
 
-wire [31:0]dataA,dataB,imemAddr,I,aluResult,dmemOut,MEM_aluResult;
+wire [31:0]dataA,dataB,imemAddr,aluResult,dmemOut,MEM_aluResult;
 reg [31:0]dataD,pcIn;
 wire [4:0]Rs1,Rs2,Rd,MEM_Rd;
 wire [6:0]opcode;
@@ -62,7 +62,7 @@ register pc(
 );
 
 IRAM imem(
-	.DOUT(I),
+	.DOUT(ID_I),
 	.ADDR(imemAddr[7:0]),
 	.DIN(32'b0),
 	.wren(1'b0),
@@ -73,12 +73,12 @@ IRAM imem(
 //IF_ID 
 
 
-register#(.width(64)) IF_ID(
-	.data({imemAddr,I}),
+register#(.width(32)) IF_ID(
+	.data({imemAddr}),
 	.enable(notStall),
 	.clock(clock),
 	.clear(clear),
-	.out({ID_imemAddr,ID_I})
+	.out({ID_imemAddr})
 );
 
 
@@ -338,6 +338,10 @@ $dumpvars(0, tb);
 #1 reset = 0; #1 reset = 1;
 
 #2 clk = ~clk; #1 clk = ~clk;
+#1 clk = ~clk; #1 clk = ~clk;
+#1 clk = ~clk; #1 clk = ~clk;
+#1 clk = ~clk; #1 clk = ~clk;
+#1 clk = ~clk; #1 clk = ~clk;
 #1 clk = ~clk; #1 clk = ~clk;
 #1 clk = ~clk; #1 clk = ~clk;
 #1 clk = ~clk; #1 clk = ~clk;
