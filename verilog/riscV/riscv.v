@@ -1,3 +1,11 @@
+`include "alu.v"
+`include "aluSource.v"
+`include "controlUnit.v"
+`include "forwadingUnit.v"
+`include "hdu.v"
+`include "immGen.v"
+`include "regFile.v"
+
 module riscv (input [1:0]KEY,output [9:0]LEDR);
 
 wire [31:0]dataA,dataB,imemAddr,I,aluResult,dmemOut,MEM_aluResult;
@@ -82,10 +90,10 @@ assign Rs2 = ID_I[24:20];
 regFile rf(
 	.clock(~clock),
 	.clear(clear),
-	.regWriteEnable(signals[4]),
+	.regWriteEnable(WB_signals[4]),
 	.addrA(Rs1),
 	.addrB(Rs2),
-	.addrD(MEM_Rd),
+	.addrD(WB_Rd),
 	.dataD(dataD),
 	.dataA(dataA),
 	.dataB(dataB)
@@ -332,6 +340,14 @@ $dumpvars(0, tb);
 #2 clk = ~clk; #1 clk = ~clk;
 #1 clk = ~clk; #1 clk = ~clk;
 #1 clk = ~clk; #1 clk = ~clk;
+#1 clk = ~clk; #1 clk = ~clk;
+#1 clk = ~clk; #1 clk = ~clk;
+#1 clk = ~clk; #1 clk = ~clk;
+#1 clk = ~clk; #1 clk = ~clk;
+#1 clk = ~clk; #1 clk = ~clk;
+#1 clk = ~clk; #1 clk = ~clk;
+#1 clk = ~clk; #1 clk = ~clk;
+
 
 
 
