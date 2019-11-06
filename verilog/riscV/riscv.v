@@ -56,7 +56,7 @@ end
 register pc(
 	.data(pcIn),
 	.enable(notStall),
-	.clock(~clock),
+	.clock(clock),
 	.clear(clear),
 	.out(imemAddr)
 );
@@ -88,7 +88,7 @@ assign Rs1 = ID_I[19:15];
 assign Rs2 = ID_I[24:20];
 
 regFile rf(
-	.clock(~clock),
+	.clock(clock),
 	.clear(clear),
 	.regWriteEnable(WB_signals[4]),
 	.addrA(Rs1),
@@ -127,7 +127,7 @@ register#(.width(158)) ID_EX(
 	.data({stallSignals,ID_imemAddr,dataA,dataB,immGenOut,ID_func3_7,Rs1,Rs2,Rd}),
 	.enable(1'b1),
 	.clock(clock),
-	.clear(~branchTaken),
+	.clear(~branchTaken&clear),
 	.out({EX_signals,EX_imemAddr,EX_dataA,EX_dataB,EX_immGenOut,EX_func3_7,EX_Rs1,EX_Rs2,EX_Rd})
 );
 
@@ -259,24 +259,43 @@ for(i=0; i<(2**(8)-1); i=i+1)
 // addi x3,x0,1
 // true:
 //// addi x4,x0,1
-//MEM[0]=32'h00100093; 
-//MEM[1]=32'h00200113; 
-//MEM[2]=32'h00209463; 
-//MEM[3]=32'h00100193;
-//MEM[4]=32'h00100213;
+MEM[0]=32'h00100093; 
+MEM[1]=32'h00200113; 
+MEM[2]=32'h00209463; 
+MEM[3]=32'h00100193;
+MEM[4]=32'h00100213;
+
+//addi x1,x0,1
+//addi x2,x0,2
+//addi x3,x0,3
+//addi x4,x0,4
+//addi x5,x0,5
+//addi x6,x0,6
+//addi x7,x0,7
+
+// MEM[0]=32'h00100093;
+// MEM[1]=32'h00200113;
+// MEM[2]=32'h00300193;
+// MEM[3]=32'h00400213;
+// MEM[4]=32'h00500293;
+// MEM[5]=32'h00600313;
+// MEM[6]=32'h00700393;
+
+
+
 
 
 
 //Test Codes
- MEM[0]=32'h00800093;
- MEM[1]=32'h03100293;
- MEM[2]=32'h00500333;
- MEM[3]=32'h00120213;
- MEM[4]=32'hfe415ce3;
- MEM[5]=32'h00000213;
- MEM[6]=32'h00128293;
- MEM[7]=32'h00110113;
- MEM[8]=32'hfe20d4e3;
+// MEM[0]=32'h00800093;
+// MEM[1]=32'h03100293;
+// MEM[2]=32'h00500333;
+// MEM[3]=32'h00120213;
+// MEM[4]=32'hfe415ce3;
+// MEM[5]=32'h00000213;
+// MEM[6]=32'h00128293;
+// MEM[7]=32'h00110113;
+// MEM[8]=32'hfe20d4e3;
 
 
 end
