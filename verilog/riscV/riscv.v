@@ -61,12 +61,13 @@ register pc(
 	.out(imemAddr)
 );
 
+assign flush = clear&~branchTaken;
 IRAM imem(
 	.DOUT(ID_I),
 	.ADDR(imemAddr[7:0]),
 	.DIN(32'b0),
 	.wren(1'b0),
-	.clear(clear),
+	.clear(flush),
 	.clk(clock)
 );
 
@@ -77,7 +78,7 @@ register#(.width(32)) IF_ID(
 	.data({imemAddr}),
 	.enable(notStall),
 	.clock(clock),
-	.clear(clear),
+	.clear(flush),
 	.out({ID_imemAddr})
 );
 
@@ -127,7 +128,7 @@ register#(.width(158)) ID_EX(
 	.data({stallSignals,ID_imemAddr,dataA,dataB,immGenOut,ID_func3_7,Rs1,Rs2,Rd}),
 	.enable(1'b1),
 	.clock(clock),
-	.clear(~branchTaken&clear),
+	.clear(flush),
 	.out({EX_signals,EX_imemAddr,EX_dataA,EX_dataB,EX_immGenOut,EX_func3_7,EX_Rs1,EX_Rs2,EX_Rd})
 );
 
@@ -159,7 +160,7 @@ alu alu(
 
 //EX_MEM
 
-assign EX_branchAddr = (EX_imemAddr+(EX_immGenOut >>> 2));
+assign EX_branchAddr = ( $signed(EX_imemAddr)+($signed(EX_immGenOut) >>> 2));
 register#(.width(113)) EX_MEM(
 	.data({EX_signals,EX_branchAddr,branchFromAlu,aluResult,forwardB_dataB,EX_Rd}),
 	.enable(1'b1),
@@ -259,11 +260,11 @@ for(i=0; i<(2**(8)-1); i=i+1)
 // addi x3,x0,1
 // true:
 //// addi x4,x0,1
-MEM[0]=32'h00100093; 
-MEM[1]=32'h00200113; 
-MEM[2]=32'h00209463; 
-MEM[3]=32'h00100193;
-MEM[4]=32'h00100213;
+//MEM[0]=32'h00100093; 
+//MEM[1]=32'h00200113; 
+//MEM[2]=32'h00209463; 
+//MEM[3]=32'h00100193;
+//MEM[4]=32'h00100213;
 
 //addi x1,x0,1
 //addi x2,x0,2
@@ -287,15 +288,30 @@ MEM[4]=32'h00100213;
 
 
 //Test Codes
-// MEM[0]=32'h00800093;
-// MEM[1]=32'h03100293;
-// MEM[2]=32'h00500333;
-// MEM[3]=32'h00120213;
-// MEM[4]=32'hfe415ce3;
-// MEM[5]=32'h00000213;
-// MEM[6]=32'h00128293;
-// MEM[7]=32'h00110113;
-// MEM[8]=32'hfe20d4e3;
+ MEM[ 0 ]=32'h00000113
+;
+MEM[ 1 ]=32'h00000193
+;
+MEM[ 2 ]=32'h00000213
+;
+MEM[ 3 ]=32'h00800093
+;
+MEM[ 4 ]=32'h03100293
+;
+MEM[ 5 ]=32'hfe502fa3
+;
+MEM[ 6 ]=32'h00120213
+;
+MEM[ 7 ]=32'hfe415ce3
+;
+MEM[ 8 ]=32'h00000213
+;
+MEM[ 9 ]=32'h00128293
+;
+MEM[ 10 ]=32'h00110113
+;
+MEM[ 11 ]=32'hfe20d4e3
+;
 
 
 end
@@ -387,6 +403,122 @@ $dumpvars(0, tb);
 
 
 #1 clk = ~clk; #1 clk = ~clk;
+#1 clk = ~clk; #1 clk = ~clk;
+#1 clk = ~clk; #1 clk = ~clk;
+#1 clk = ~clk; #1 clk = ~clk;
+#1 clk = ~clk; #1 clk = ~clk;
+#1 clk = ~clk; #1 clk = ~clk;
+#1 clk = ~clk; #1 clk = ~clk;
+#1 clk = ~clk; #1 clk = ~clk;
+#1 clk = ~clk; #1 clk = ~clk;
+#1 clk = ~clk; #1 clk = ~clk;
+#1 clk = ~clk; #1 clk = ~clk;
+#1 clk = ~clk; #1 clk = ~clk;
+#1 clk = ~clk; #1 clk = ~clk;
+#1 clk = ~clk; #1 clk = ~clk;
+#1 clk = ~clk; #1 clk = ~clk;
+#1 clk = ~clk; #1 clk = ~clk;
+#1 clk = ~clk; #1 clk = ~clk;
+#1 clk = ~clk; #1 clk = ~clk;
+#1 clk = ~clk; #1 clk = ~clk;
+#1 clk = ~clk; #1 clk = ~clk;
+#1 clk = ~clk; #1 clk = ~clk;
+#1 clk = ~clk; #1 clk = ~clk;
+#1 clk = ~clk; #1 clk = ~clk;
+#1 clk = ~clk; #1 clk = ~clk;
+
+#1 clk = ~clk; #1 clk = ~clk;
+#1 clk = ~clk; #1 clk = ~clk;
+#1 clk = ~clk; #1 clk = ~clk;
+#1 clk = ~clk; #1 clk = ~clk;
+#1 clk = ~clk; #1 clk = ~clk;
+#1 clk = ~clk; #1 clk = ~clk;
+#1 clk = ~clk; #1 clk = ~clk;
+#1 clk = ~clk; #1 clk = ~clk;
+#1 clk = ~clk; #1 clk = ~clk;
+#1 clk = ~clk; #1 clk = ~clk;
+#1 clk = ~clk; #1 clk = ~clk;
+#1 clk = ~clk; #1 clk = ~clk;
+#1 clk = ~clk; #1 clk = ~clk;
+
+
+#1 clk = ~clk; #1 clk = ~clk;
+#1 clk = ~clk; #1 clk = ~clk;
+#1 clk = ~clk; #1 clk = ~clk;
+#1 clk = ~clk; #1 clk = ~clk;
+#1 clk = ~clk; #1 clk = ~clk;
+#1 clk = ~clk; #1 clk = ~clk;
+#1 clk = ~clk; #1 clk = ~clk;
+#1 clk = ~clk; #1 clk = ~clk;
+#1 clk = ~clk; #1 clk = ~clk;
+#1 clk = ~clk; #1 clk = ~clk;
+#1 clk = ~clk; #1 clk = ~clk;
+#1 clk = ~clk; #1 clk = ~clk;
+
+
+#1 clk = ~clk; #1 clk = ~clk;
+#1 clk = ~clk; #1 clk = ~clk;
+#1 clk = ~clk; #1 clk = ~clk;
+#1 clk = ~clk; #1 clk = ~clk;
+#1 clk = ~clk; #1 clk = ~clk;
+#1 clk = ~clk; #1 clk = ~clk;
+#1 clk = ~clk; #1 clk = ~clk;
+
+#1 clk = ~clk; #1 clk = ~clk;
+#1 clk = ~clk; #1 clk = ~clk;
+#1 clk = ~clk; #1 clk = ~clk;
+#1 clk = ~clk; #1 clk = ~clk;
+#1 clk = ~clk; #1 clk = ~clk;
+#1 clk = ~clk; #1 clk = ~clk;
+#1 clk = ~clk; #1 clk = ~clk;
+#1 clk = ~clk; #1 clk = ~clk;
+#1 clk = ~clk; #1 clk = ~clk;
+#1 clk = ~clk; #1 clk = ~clk;
+#1 clk = ~clk; #1 clk = ~clk;
+#1 clk = ~clk; #1 clk = ~clk;
+#1 clk = ~clk; #1 clk = ~clk;
+
+
+#1 clk = ~clk; #1 clk = ~clk;
+#1 clk = ~clk; #1 clk = ~clk;
+#1 clk = ~clk; #1 clk = ~clk;
+#1 clk = ~clk; #1 clk = ~clk;
+#1 clk = ~clk; #1 clk = ~clk;
+#1 clk = ~clk; #1 clk = ~clk;
+#1 clk = ~clk; #1 clk = ~clk;
+#1 clk = ~clk; #1 clk = ~clk;
+#1 clk = ~clk; #1 clk = ~clk;
+#1 clk = ~clk; #1 clk = ~clk;
+#1 clk = ~clk; #1 clk = ~clk;
+#1 clk = ~clk; #1 clk = ~clk;
+#1 clk = ~clk; #1 clk = ~clk;
+#1 clk = ~clk; #1 clk = ~clk;
+#1 clk = ~clk; #1 clk = ~clk;
+#1 clk = ~clk; #1 clk = ~clk;
+#1 clk = ~clk; #1 clk = ~clk;
+#1 clk = ~clk; #1 clk = ~clk;
+#1 clk = ~clk; #1 clk = ~clk;
+#1 clk = ~clk; #1 clk = ~clk;
+#1 clk = ~clk; #1 clk = ~clk;
+#1 clk = ~clk; #1 clk = ~clk;
+#1 clk = ~clk; #1 clk = ~clk;
+#1 clk = ~clk; #1 clk = ~clk;
+
+#1 clk = ~clk; #1 clk = ~clk;
+#1 clk = ~clk; #1 clk = ~clk;
+#1 clk = ~clk; #1 clk = ~clk;
+#1 clk = ~clk; #1 clk = ~clk;
+#1 clk = ~clk; #1 clk = ~clk;
+#1 clk = ~clk; #1 clk = ~clk;
+#1 clk = ~clk; #1 clk = ~clk;
+#1 clk = ~clk; #1 clk = ~clk;
+#1 clk = ~clk; #1 clk = ~clk;
+#1 clk = ~clk; #1 clk = ~clk;
+#1 clk = ~clk; #1 clk = ~clk;
+#1 clk = ~clk; #1 clk = ~clk;
+#1 clk = ~clk; #1 clk = ~clk;
+
+
 #1 clk = ~clk; #1 clk = ~clk;
 #1 clk = ~clk; #1 clk = ~clk;
 #1 clk = ~clk; #1 clk = ~clk;
