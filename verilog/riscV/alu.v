@@ -6,6 +6,9 @@ module alu#(parameter width = 32)(
  output reg [width-1:0]aluResult,
  output reg branchFromAlu
 );
+
+	wire signed [width-1:0]signDataA = dataA;
+	wire signed [width-1:0]signDataB = dataB;
 	wire [width-1:0]add;
 	wire [width-1:0]sub;
    wire [width-1:0]andd;
@@ -14,6 +17,7 @@ module alu#(parameter width = 32)(
 	
 	wire [2:0]func3 = func[2:0];
 	wire func7 = func[3];
+
 	
 	assign add = dataA + dataB;
 	assign sub = dataA - dataB;
@@ -29,12 +33,21 @@ module alu#(parameter width = 32)(
 		case(func3)
 		3'h0: begin
 				case(func7)
-					1'b0:aluResult = add;
+					1'b0:aluResult = add; 
 					1'b1:aluResult = sub;
 				endcase
 				end
-		3'h4:	aluResult = orr;
-		3'h6:	aluResult = xorr;
+		3'h1:	aluResult = dataA << dataB; //shift left Logic
+		3'h2:	aluResult = signDataA < signDataB; //set less than signed
+		3'h3:	aluResult = dataA < dataB;
+		3'h4:	aluResult = xorr;
+		3'h5:	begin
+				case(func7)
+					1'b0:aluResult = dataA >> dataB ; //Shift Right Logic
+					1'b1:aluResult = signDataA >>> dataB ;//Shift Arthmetic Right 
+				endcase
+				end 
+		3'h6:	aluResult = orr;
 		3'h7:	aluResult = andd;
 		default: aluResult = 32'b0;
 		endcase

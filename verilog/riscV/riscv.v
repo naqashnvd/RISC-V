@@ -1,10 +1,10 @@
-`include "alu.v"
-`include "aluSource.v"
-`include "controlUnit.v"
-`include "forwadingUnit.v"
-`include "hdu.v"
-`include "immGen.v"
-`include "regFile.v"
+//`include "alu.v"
+//`include "aluSource.v"
+//`include "controlUnit.v"
+//`include "forwadingUnit.v"
+//`include "hdu.v"
+//`include "immGen.v"
+//`include "regFile.v"
 
 module riscv (input [1:0]KEY,output [9:0]LEDR);
 
@@ -259,24 +259,24 @@ for(i=0; i<(2**(8)-1); i=i+1)
 // addi x3,x0,1
 // true:
 //// addi x4,x0,1
-MEM[0]=32'h00100093; 
-MEM[1]=32'h00200113; 
-MEM[2]=32'h00209463; 
-MEM[3]=32'h00100193;
-MEM[4]=32'h00100213;
+//MEM[0]=32'h00100093; 
+//MEM[1]=32'h00200113; 
+//MEM[2]=32'h00209463; 
+//MEM[3]=32'h00100193;
+//MEM[4]=32'h00100213;
 
 
 
 //Test Codes
-// MEM[0]=32'h00800093;
-// MEM[1]=32'h03100293;
-// MEM[2]=32'h00500333;
-// MEM[3]=32'h00120213;
-// MEM[4]=32'hfe415ce3;
-// MEM[5]=32'h00000213;
-// MEM[6]=32'h00128293;
-// MEM[7]=32'h00110113;
-// MEM[8]=32'hfe20d4e3;
+ MEM[0]=32'h00800093;
+ MEM[1]=32'h03100293;
+ MEM[2]=32'h00500333;
+ MEM[3]=32'h00120213;
+ MEM[4]=32'hfe415ce3;
+ MEM[5]=32'h00000213;
+ MEM[6]=32'h00128293;
+ MEM[7]=32'h00110113;
+ MEM[8]=32'hfe20d4e3;
 
 
 end
@@ -338,6 +338,35 @@ $dumpvars(0, tb);
 #1 reset = 0; #1 reset = 1;
 
 #2 clk = ~clk; #1 clk = ~clk;
+#1 clk = ~clk; #1 clk = ~clk;
+#1 clk = ~clk; #1 clk = ~clk;
+#1 clk = ~clk; #1 clk = ~clk;
+#1 clk = ~clk; #1 clk = ~clk;
+#1 clk = ~clk; #1 clk = ~clk;
+#1 clk = ~clk; #1 clk = ~clk;
+#1 clk = ~clk; #1 clk = ~clk;
+#1 clk = ~clk; #1 clk = ~clk;
+#1 clk = ~clk; #1 clk = ~clk;
+#1 clk = ~clk; #1 clk = ~clk;
+#1 clk = ~clk; #1 clk = ~clk;
+#1 clk = ~clk; #1 clk = ~clk;
+#1 clk = ~clk; #1 clk = ~clk;
+
+#1 clk = ~clk; #1 clk = ~clk;
+#1 clk = ~clk; #1 clk = ~clk;
+#1 clk = ~clk; #1 clk = ~clk;
+#1 clk = ~clk; #1 clk = ~clk;
+#1 clk = ~clk; #1 clk = ~clk;
+#1 clk = ~clk; #1 clk = ~clk;
+#1 clk = ~clk; #1 clk = ~clk;
+#1 clk = ~clk; #1 clk = ~clk;
+#1 clk = ~clk; #1 clk = ~clk;
+#1 clk = ~clk; #1 clk = ~clk;
+#1 clk = ~clk; #1 clk = ~clk;
+#1 clk = ~clk; #1 clk = ~clk;
+#1 clk = ~clk; #1 clk = ~clk;
+
+
 #1 clk = ~clk; #1 clk = ~clk;
 #1 clk = ~clk; #1 clk = ~clk;
 #1 clk = ~clk; #1 clk = ~clk;
