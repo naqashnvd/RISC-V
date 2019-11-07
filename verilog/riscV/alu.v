@@ -20,7 +20,7 @@ module alu#(parameter width = 32)(
 
 	
 	assign add = dataA + dataB;
-	assign sub = dataA - dataB;
+	assign sub = signDataA - signDataB;
 	assign andd = dataA & dataB;
 	assign orr = dataA | dataB;
 	assign xorr = dataA ^ dataB;

@@ -1,10 +1,10 @@
-//`include "alu.v"
-//`include "aluSource.v"
-//`include "controlUnit.v"
-//`include "forwadingUnit.v"
-//`include "hdu.v"
-//`include "immGen.v"
-//`include "regFile.v"
+`include "alu.v"
+`include "aluSource.v"
+`include "controlUnit.v"
+`include "forwadingUnit.v"
+`include "hdu.v"
+`include "immGen.v"
+`include "regFile.v"
 
 module riscv (input [1:0]KEY,output [9:0]LEDR);
 
@@ -89,7 +89,7 @@ assign Rs1 = ID_I[19:15];
 assign Rs2 = ID_I[24:20];
 
 regFile rf(
-	.clock(clock),
+	.clock(~clock),
 	.clear(clear),
 	.regWriteEnable(WB_signals[4]),
 	.addrA(Rs1),
@@ -288,29 +288,29 @@ for(i=0; i<(2**(8)-1); i=i+1)
 
 
 //Test Codes
- MEM[ 0 ]=32'h00000113
+MEM[ 0 ]=32'h00300093
 ;
-MEM[ 1 ]=32'h00000193
+MEM[ 1 ]=32'h00400113
 ;
-MEM[ 2 ]=32'h00000213
+MEM[ 2 ]=32'h002081b3
 ;
-MEM[ 3 ]=32'h00800093
+MEM[ 3 ]=32'h40208233
 ;
-MEM[ 4 ]=32'h03100293
+MEM[ 4 ]=32'h002092b3
 ;
-MEM[ 5 ]=32'hfe502fa3
+MEM[ 5 ]=32'h0020ab33
 ;
-MEM[ 6 ]=32'h00120213
+MEM[ 6 ]=32'h0020b3b3
 ;
-MEM[ 7 ]=32'hfe415ce3
+MEM[ 7 ]=32'h0020c433
 ;
-MEM[ 8 ]=32'h00000213
+MEM[ 8 ]=32'h0020d4b3
 ;
-MEM[ 9 ]=32'h00128293
+MEM[ 9 ]=32'h4020d533
 ;
-MEM[ 10 ]=32'h00110113
+MEM[ 10 ]=32'h0020e5b3
 ;
-MEM[ 11 ]=32'hfe20d4e3
+MEM[ 11 ]=32'h0020f633
 ;
 
 
