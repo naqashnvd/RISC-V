@@ -5,6 +5,8 @@
 `include "hdu.v"
 `include "immGen.v"
 `include "regFile.v"
+`include "IMEM.v"
+`include "DataMem.v"
 
 module riscv (input [1:0]KEY,output [9:0]LEDR);
 
@@ -89,7 +91,7 @@ assign Rs1 = ID_I[19:15];
 assign Rs2 = ID_I[24:20];
 
 regFile rf(
-	.clock(~clock),
+	.clock(clock),
 	.clear(clear),
 	.regWriteEnable(WB_signals[4]),
 	.addrA(Rs1),
@@ -226,137 +228,7 @@ endmodule
 
 
 
-//Instruction Memory
-module IRAM #(parameter width = 32,parameter addrWidth = 8)(
-output reg [(width)-1:0] DOUT,
-input [8-1:0] ADDR,
-input [(width)-1:0] DIN,
-input wren, clear, clk
-);
-reg [width-1:0] MEM [2**(8)-1:0];
-integer i;
-initial begin
 
-for(i=0; i<(2**(8)-1); i=i+1)
-	MEM[i] = 32'b0;
-
-//MEM[0]=32'h00002083;
-//MEM[1]=32'h00402103;
-//
-// MEM[0]=32'h00a00093;
-// MEM[1]=32'h01400113;
-// MEM[2]=32'h00102023;
-// MEM[3]=32'h00202223;
-// MEM[4]=32'h00002183;
-// MEM[5]=32'h00402203;
-// MEM[7]=32'h004182b3;
-
-
-
-
-// addi x1,x0,1
-// addi x2,x0,2
-// bne x1,x2,true
-// addi x3,x0,1
-// true:
-//// addi x4,x0,1
-//MEM[0]=32'h00100093; 
-//MEM[1]=32'h00200113; 
-//MEM[2]=32'h00209463; 
-//MEM[3]=32'h00100193;
-//MEM[4]=32'h00100213;
-
-//addi x1,x0,1
-//addi x2,x0,2
-//addi x3,x0,3
-//addi x4,x0,4
-//addi x5,x0,5
-//addi x6,x0,6
-//addi x7,x0,7
-
-// MEM[0]=32'h00100093;
-// MEM[1]=32'h00200113;
-// MEM[2]=32'h00300193;
-// MEM[3]=32'h00400213;
-// MEM[4]=32'h00500293;
-// MEM[5]=32'h00600313;
-// MEM[6]=32'h00700393;
-
-
-
-
-
-
-//Test Codes
-MEM[ 0 ]=32'h00300093
-;
-MEM[ 1 ]=32'h00400113
-;
-MEM[ 2 ]=32'h002081b3
-;
-MEM[ 3 ]=32'h40208233
-;
-MEM[ 4 ]=32'h002092b3
-;
-MEM[ 5 ]=32'h0020ab33
-;
-MEM[ 6 ]=32'h0020b3b3
-;
-MEM[ 7 ]=32'h0020c433
-;
-MEM[ 8 ]=32'h0020d4b3
-;
-MEM[ 9 ]=32'h4020d533
-;
-MEM[ 10 ]=32'h0020e5b3
-;
-MEM[ 11 ]=32'h0020f633
-;
-
-
-end
-
-always @(posedge clk or negedge clear) begin
-if(~clear) DOUT <=32'b0;
-else begin 
-	DOUT <= MEM[ADDR];
-	if(wren) MEM[ADDR] <= DIN;
-end
-end
-//assign DOUT = MEM[ADDR];
-
-endmodule
-
-
-//Data Memory
-module DataRAM #(parameter width = 32,parameter addrWidth = 8)(
-output reg [(width)-1:0] DOUT,
-input [addrWidth-1:0] ADDR,
-input [(width)-1:0] DIN,
-input wren, clear, clk
-);
-reg [width-1:0] MEM [2**(addrWidth)-1:0];
-
-integer i;
-initial begin
-for(i=0; i<(2**(addrWidth)-1); i=i+1)
-	MEM[i] = 32'b0;
-//MEM[0]=32'h1;
-//MEM[1]=32'h2;
-
-end
-
-always @(posedge clk or negedge clear) begin
-if(~clear) DOUT <=32'b0;
-else begin 
-	DOUT <= MEM[ADDR];
-	if(wren) MEM[ADDR] <= DIN;
-end
-end
-
-//assign DOUT = MEM[ADDR];
-
-endmodule
 
 
 
@@ -426,113 +298,6 @@ $dumpvars(0, tb);
 #1 clk = ~clk; #1 clk = ~clk;
 #1 clk = ~clk; #1 clk = ~clk;
 #1 clk = ~clk; #1 clk = ~clk;
-
-#1 clk = ~clk; #1 clk = ~clk;
-#1 clk = ~clk; #1 clk = ~clk;
-#1 clk = ~clk; #1 clk = ~clk;
-#1 clk = ~clk; #1 clk = ~clk;
-#1 clk = ~clk; #1 clk = ~clk;
-#1 clk = ~clk; #1 clk = ~clk;
-#1 clk = ~clk; #1 clk = ~clk;
-#1 clk = ~clk; #1 clk = ~clk;
-#1 clk = ~clk; #1 clk = ~clk;
-#1 clk = ~clk; #1 clk = ~clk;
-#1 clk = ~clk; #1 clk = ~clk;
-#1 clk = ~clk; #1 clk = ~clk;
-#1 clk = ~clk; #1 clk = ~clk;
-
-
-#1 clk = ~clk; #1 clk = ~clk;
-#1 clk = ~clk; #1 clk = ~clk;
-#1 clk = ~clk; #1 clk = ~clk;
-#1 clk = ~clk; #1 clk = ~clk;
-#1 clk = ~clk; #1 clk = ~clk;
-#1 clk = ~clk; #1 clk = ~clk;
-#1 clk = ~clk; #1 clk = ~clk;
-#1 clk = ~clk; #1 clk = ~clk;
-#1 clk = ~clk; #1 clk = ~clk;
-#1 clk = ~clk; #1 clk = ~clk;
-#1 clk = ~clk; #1 clk = ~clk;
-#1 clk = ~clk; #1 clk = ~clk;
-
-
-#1 clk = ~clk; #1 clk = ~clk;
-#1 clk = ~clk; #1 clk = ~clk;
-#1 clk = ~clk; #1 clk = ~clk;
-#1 clk = ~clk; #1 clk = ~clk;
-#1 clk = ~clk; #1 clk = ~clk;
-#1 clk = ~clk; #1 clk = ~clk;
-#1 clk = ~clk; #1 clk = ~clk;
-
-#1 clk = ~clk; #1 clk = ~clk;
-#1 clk = ~clk; #1 clk = ~clk;
-#1 clk = ~clk; #1 clk = ~clk;
-#1 clk = ~clk; #1 clk = ~clk;
-#1 clk = ~clk; #1 clk = ~clk;
-#1 clk = ~clk; #1 clk = ~clk;
-#1 clk = ~clk; #1 clk = ~clk;
-#1 clk = ~clk; #1 clk = ~clk;
-#1 clk = ~clk; #1 clk = ~clk;
-#1 clk = ~clk; #1 clk = ~clk;
-#1 clk = ~clk; #1 clk = ~clk;
-#1 clk = ~clk; #1 clk = ~clk;
-#1 clk = ~clk; #1 clk = ~clk;
-
-
-#1 clk = ~clk; #1 clk = ~clk;
-#1 clk = ~clk; #1 clk = ~clk;
-#1 clk = ~clk; #1 clk = ~clk;
-#1 clk = ~clk; #1 clk = ~clk;
-#1 clk = ~clk; #1 clk = ~clk;
-#1 clk = ~clk; #1 clk = ~clk;
-#1 clk = ~clk; #1 clk = ~clk;
-#1 clk = ~clk; #1 clk = ~clk;
-#1 clk = ~clk; #1 clk = ~clk;
-#1 clk = ~clk; #1 clk = ~clk;
-#1 clk = ~clk; #1 clk = ~clk;
-#1 clk = ~clk; #1 clk = ~clk;
-#1 clk = ~clk; #1 clk = ~clk;
-#1 clk = ~clk; #1 clk = ~clk;
-#1 clk = ~clk; #1 clk = ~clk;
-#1 clk = ~clk; #1 clk = ~clk;
-#1 clk = ~clk; #1 clk = ~clk;
-#1 clk = ~clk; #1 clk = ~clk;
-#1 clk = ~clk; #1 clk = ~clk;
-#1 clk = ~clk; #1 clk = ~clk;
-#1 clk = ~clk; #1 clk = ~clk;
-#1 clk = ~clk; #1 clk = ~clk;
-#1 clk = ~clk; #1 clk = ~clk;
-#1 clk = ~clk; #1 clk = ~clk;
-
-#1 clk = ~clk; #1 clk = ~clk;
-#1 clk = ~clk; #1 clk = ~clk;
-#1 clk = ~clk; #1 clk = ~clk;
-#1 clk = ~clk; #1 clk = ~clk;
-#1 clk = ~clk; #1 clk = ~clk;
-#1 clk = ~clk; #1 clk = ~clk;
-#1 clk = ~clk; #1 clk = ~clk;
-#1 clk = ~clk; #1 clk = ~clk;
-#1 clk = ~clk; #1 clk = ~clk;
-#1 clk = ~clk; #1 clk = ~clk;
-#1 clk = ~clk; #1 clk = ~clk;
-#1 clk = ~clk; #1 clk = ~clk;
-#1 clk = ~clk; #1 clk = ~clk;
-
-
-#1 clk = ~clk; #1 clk = ~clk;
-#1 clk = ~clk; #1 clk = ~clk;
-#1 clk = ~clk; #1 clk = ~clk;
-#1 clk = ~clk; #1 clk = ~clk;
-#1 clk = ~clk; #1 clk = ~clk;
-#1 clk = ~clk; #1 clk = ~clk;
-#1 clk = ~clk; #1 clk = ~clk;
-#1 clk = ~clk; #1 clk = ~clk;
-#1 clk = ~clk; #1 clk = ~clk;
-#1 clk = ~clk; #1 clk = ~clk;
-#1 clk = ~clk; #1 clk = ~clk;
-#1 clk = ~clk; #1 clk = ~clk;
-
-
 
 
 end
