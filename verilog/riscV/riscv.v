@@ -5,8 +5,7 @@
 `include "hdu.v"
 `include "immGen.v"
 `include "regFile.v"
-`include "IMEM.v"
-`include "DataMem.v"
+`include "RAM.v"
 module riscv (input [1:0]KEY,output [9:0]LEDR);
 
 wire [31:0]dataA,dataB,imemAddr,aluResult,dmemOut,MEM_aluResult;
@@ -63,7 +62,8 @@ register pc(
 );
 
 assign flush = clear&~branchTaken;
-IRAM imem(
+
+RAM imem(
 	.DOUT(I),
 	.ADDR(imemAddr[7:0]),
 	.DIN(32'b0),
@@ -171,7 +171,7 @@ register#(.width(113)) EX_MEM(
 
 // data Ram
 
-DataRAM dmem(
+RAM dmem(
 .DOUT(dmemOut),
 .ADDR(MEM_aluResult[7:0]),
 .DIN(MEM_dataB),
@@ -234,10 +234,18 @@ endmodule
 module tb;
 reg reset,clk;
 riscv riscv0(.KEY({reset,clk}));
+integer i;
 initial begin
 $dumpfile("test.vcd");
 $dumpvars(0, tb);
 
+$readmemh("imem.hex",riscv0.imem.MEM);
+$readmemh("dmem.hex",riscv0.dmem.MEM);
+
+for(i = 0; i < 10; i = i + 1)begin
+	$dumpvars(1, riscv0.imem.MEM[i]);
+	$dumpvars(1, riscv0.dmem.MEM[i]);
+	end
 #0 reset = 1; clk = 0;
 #1 reset = 0; #1 reset = 1;
 
