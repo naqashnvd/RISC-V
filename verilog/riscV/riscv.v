@@ -7,7 +7,6 @@
 `include "regFile.v"
 `include "IMEM.v"
 `include "DataMem.v"
-
 module riscv (input [1:0]KEY,output [9:0]LEDR);
 
 wire [31:0]dataA,dataB,imemAddr,aluResult,dmemOut,MEM_aluResult;
@@ -23,7 +22,7 @@ wire clear = KEY[1];
 wire notStall;
 wire [1:0]forwardA,forwardB;
 
-wire [31:0]ID_imemAddr,ID_I;
+wire [31:0]ID_imemAddr,ID_I,I,WB_dmemOut;
 
 wire [10:0]EX_signals;
 wire [31:0]EX_imemAddr,EX_dataA,EX_dataB,EX_immGenOut;
@@ -65,23 +64,22 @@ register pc(
 
 assign flush = clear&~branchTaken;
 IRAM imem(
-	.DOUT(ID_I),
+	.DOUT(I),
 	.ADDR(imemAddr[7:0]),
 	.DIN(32'b0),
 	.wren(1'b0),
-	.clear(flush),
-	.clk(clock)
+	.clock(clock)
 );
 
 //IF_ID 
 
 
-register#(.width(32)) IF_ID(
-	.data({imemAddr}),
+register#(.width(64)) IF_ID(
+	.data({imemAddr,I}),
 	.enable(notStall),
 	.clock(clock),
 	.clear(flush),
-	.out({ID_imemAddr})
+	.out({ID_imemAddr,ID_I})
 );
 
 
@@ -91,7 +89,7 @@ assign Rs1 = ID_I[19:15];
 assign Rs2 = ID_I[24:20];
 
 regFile rf(
-	.clock(clock),
+	.clock(~clock),
 	.clear(clear),
 	.regWriteEnable(WB_signals[4]),
 	.addrA(Rs1),
@@ -178,23 +176,22 @@ DataRAM dmem(
 .ADDR(MEM_aluResult[7:0]),
 .DIN(MEM_dataB),
 .wren(MEM_signals[6]),
-.clear(clear),
-.clk(clock)
+.clock(clock)
 );
 
 //MEM_WB
 
-register#(.width(48)) MEM_WB(
-	.data({MEM_signals,MEM_aluResult,MEM_Rd}),
+register#(.width(80)) MEM_WB(
+	.data({MEM_signals,MEM_aluResult,MEM_Rd,dmemOut}),
 	.enable(1'b1),
 	.clock(clock),
 	.clear(clear),
-	.out({WB_signals,WB_aluResult,WB_Rd})
+	.out({WB_signals,WB_aluResult,WB_Rd,WB_dmemOut})
 );
 
 
 always@(*)begin
-	if(WB_signals[3]) dataD = dmemOut;
+	if(WB_signals[3]) dataD = WB_dmemOut;
 	else dataD = WB_aluResult;
 	
 end
