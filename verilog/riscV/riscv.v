@@ -207,8 +207,13 @@ endmodule
 module tb;
 	reg reset,clk;
 	riscv riscv0(.KEY({reset,clk}));
+	
+	reg [31:0]count = 0;	
+	always@(posedge clk)begin
+		count <= count + 1;
+	end
 
-	integer i;
+	integer i,j;
 	initial begin
 		$dumpfile("test.vcd");
 		$dumpvars(0, tb);
@@ -221,64 +226,15 @@ module tb;
 			$dumpvars(1, riscv0.dmem.MEM[i]);
 			end
 
-		$monitor("%c",riscv0.dmem.MEM[255]);
-		
+		//$monitor("%c , %d",riscv0.dmem.MEM[255],count);
+		$monitor("%c",riscv0.dmem.MEM[255]);		
+
 		#0 reset = 1; clk = 0;
-		#1 reset = 0; #1 reset = 1;
-
-		#2 clk = ~clk; #1 clk = ~clk;
-		#1 clk = ~clk; #1 clk = ~clk;
-		#1 clk = ~clk; #1 clk = ~clk;
-		#1 clk = ~clk; #1 clk = ~clk;
-		#1 clk = ~clk; #1 clk = ~clk;
-		#1 clk = ~clk; #1 clk = ~clk;
-		#1 clk = ~clk; #1 clk = ~clk;
-		#1 clk = ~clk; #1 clk = ~clk;
-		#1 clk = ~clk; #1 clk = ~clk;
-		#1 clk = ~clk; #1 clk = ~clk;
-		#1 clk = ~clk; #1 clk = ~clk;
-		#1 clk = ~clk; #1 clk = ~clk;
-		#1 clk = ~clk; #1 clk = ~clk;
-		#1 clk = ~clk; #1 clk = ~clk;
-		#1 clk = ~clk; #1 clk = ~clk;
-		#1 clk = ~clk; #1 clk = ~clk;
-		#1 clk = ~clk; #1 clk = ~clk;
-		#1 clk = ~clk; #1 clk = ~clk;
-		#1 clk = ~clk; #1 clk = ~clk;
-		#1 clk = ~clk; #1 clk = ~clk;
-		#1 clk = ~clk; #1 clk = ~clk;
-		#1 clk = ~clk; #1 clk = ~clk;
-		#1 clk = ~clk; #1 clk = ~clk;
-		#1 clk = ~clk; #1 clk = ~clk;
-		#1 clk = ~clk; #1 clk = ~clk;
-		#1 clk = ~clk; #1 clk = ~clk;
-		#1 clk = ~clk; #1 clk = ~clk;
-		#1 clk = ~clk; #1 clk = ~clk;
-		#1 clk = ~clk; #1 clk = ~clk;
-		#1 clk = ~clk; #1 clk = ~clk;
-		#1 clk = ~clk; #1 clk = ~clk;
-		#1 clk = ~clk; #1 clk = ~clk;
-		#1 clk = ~clk; #1 clk = ~clk;
-		#1 clk = ~clk; #1 clk = ~clk;
-		#1 clk = ~clk; #1 clk = ~clk;
-		#1 clk = ~clk; #1 clk = ~clk;
-		#1 clk = ~clk; #1 clk = ~clk;
-		#1 clk = ~clk; #1 clk = ~clk;
-		#1 clk = ~clk; #1 clk = ~clk;
-		#1 clk = ~clk; #1 clk = ~clk;
-		#1 clk = ~clk; #1 clk = ~clk;
-		#1 clk = ~clk; #1 clk = ~clk;
-		#1 clk = ~clk; #1 clk = ~clk;
-		#1 clk = ~clk; #1 clk = ~clk;
-		#1 clk = ~clk; #1 clk = ~clk;
-		#1 clk = ~clk; #1 clk = ~clk;
-		#1 clk = ~clk; #1 clk = ~clk;
-		#1 clk = ~clk; #1 clk = ~clk;
-		#1 clk = ~clk; #1 clk = ~clk;
-		#1 clk = ~clk; #1 clk = ~clk;
-		#1 clk = ~clk; #1 clk = ~clk;
-
-
+		#1 reset = 0; #1 reset = 1 ;#1
+		
+		for(j = 0;j < 50;j = j + 1) begin
+			#1 clk = ~clk; #1 clk = ~clk;
+		end
 	end
 endmodule
 
