@@ -207,13 +207,8 @@ endmodule
 module tb;
 	reg reset,clk;
 	riscv riscv0(.KEY({reset,clk}));
+
 	integer i;
-
-	always@(*)begin
-		if(riscv0.MEM_aluResult[7:0] == 8'hff) 
-			$display("%c",riscv0.MEM_dataB);	
-	end
-
 	initial begin
 		$dumpfile("test.vcd");
 		$dumpvars(0, tb);
@@ -226,6 +221,8 @@ module tb;
 			$dumpvars(1, riscv0.dmem.MEM[i]);
 			end
 
+		$monitor("%c",riscv0.dmem.MEM[255]);
+		
 		#0 reset = 1; clk = 0;
 		#1 reset = 0; #1 reset = 1;
 
