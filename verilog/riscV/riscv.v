@@ -1,3 +1,6 @@
+
+`default_nettype none
+
 `include "alu.v"
 `include "aluSource.v"
 `include "controlUnit.v"
@@ -6,6 +9,9 @@
 `include "immGen.v"
 `include "regFile.v"
 `include "RAM.v"
+
+
+
 module riscv (input [1:0]KEY,output [9:0]LEDR);
 
 	wire [31:0]dataA,dataB,imemAddr,aluResult,dmemOut,MEM_aluResult;
@@ -222,8 +228,9 @@ module tb;
 		$readmemh("dmem.hex",riscv0.dmem.MEM);
 
 		for(i = 0; i < 10; i = i + 1)begin
-			$dumpvars(1, riscv0.imem.MEM[i]);
-			$dumpvars(1, riscv0.dmem.MEM[i]);
+			$dumpvars(0, riscv0.imem.MEM[i]);
+			$dumpvars(0, riscv0.dmem.MEM[i]);
+			$dumpvars(0, riscv0.rf.registers[i]);
 			end
 
 		//$monitor("%c , %d",riscv0.dmem.MEM[255],count);
@@ -232,7 +239,7 @@ module tb;
 		#0 reset = 1; clk = 0;
 		#1 reset = 0; #1 reset = 1 ;#1
 		
-		for(j = 0;j < 50;j = j + 1) begin
+		for(j = 0;j < 100;j = j + 1) begin
 			#1 clk = ~clk; #1 clk = ~clk;
 		end
 	end
