@@ -1,6 +1,6 @@
 module aluSource( input[31:0]EX_dataA,dataD,MEM_aluResult,EX_dataB,EX_immGenOut,
 input [1:0]forwardA,forwardB,
-input [10:0]EX_signals,
+input aluSourceSel,
 output reg [31:0]aluA,aluB,forwardB_dataB
 );
 
@@ -19,7 +19,7 @@ always@(*)begin
 		default: forwardB_dataB = 32'b0;
 	endcase
 	
-	case (EX_signals[2])
+	case (aluSourceSel)
 		1'b0: aluB = forwardB_dataB;
 		1'b1: aluB = EX_immGenOut;
 		default: aluB = 32'b0;

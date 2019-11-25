@@ -37,14 +37,14 @@ module alu#(parameter width = 32)(
 					1'b1:aluResult = sub;
 				endcase
 				end
-		3'h1:	aluResult = dataA << dataB; //shift left Logic
+		3'h1:	aluResult = dataA << dataB[4:0]; //shift left Logic
 		3'h2:	aluResult = signDataA < signDataB; //set less than signed
 		3'h3:	aluResult = dataA < dataB;
 		3'h4:	aluResult = xorr;
 		3'h5:	begin
 				case(func7)
-					1'b0:aluResult = dataA >> dataB ; //Shift Right Logic
-					1'b1:aluResult = signDataA >>> dataB ;//Shift Arthmetic Right 
+					1'b0:aluResult = dataA >> dataB[4:0] ; //Shift Right Logic
+					1'b1:aluResult = signDataA >>> dataB[4:0] ;//Shift Arthmetic Right 
 				endcase
 				end 
 		3'h6:	aluResult = orr;
@@ -56,10 +56,12 @@ module alu#(parameter width = 32)(
 	endcase
 	
 	case(func3)
-		3'h0: branchFromAlu = (dataA == dataB);
-		3'h1: branchFromAlu = ~(dataA == dataB);
-		3'h4:	branchFromAlu = (dataA < dataB);
-		3'h5:	branchFromAlu = (dataA >= dataB);
+		3'h0:	branchFromAlu = (dataA == dataB);
+		3'h1:	branchFromAlu = (dataA != dataB);
+		3'h4:	branchFromAlu = (signDataA < signDataB);
+		3'h5:	branchFromAlu = (signDataA >= signDataB);
+		3'h6:	branchFromAlu = (dataA < dataB);	
+		3'h7:	branchFromAlu = (dataA >= dataB);
 		default:	branchFromAlu = 0;
 	endcase
 end
