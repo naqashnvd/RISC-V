@@ -20,10 +20,10 @@ always@(*)begin
 	else if(opcode == `LOAD)	signals = 14'b00000000111100;
 	else if(opcode == `STORE)	signals = 14'b00000001000101;
 	else if(opcode == `SBType)	signals = 14'b00010010000010;
-	else if(opcode == `LUI)		signals = 14'b00001000010111;
-	else if(opcode == `AUIPC)	signals = 14'b01001000010111;
-	else if(opcode == `JAL)		signals = 14'b01110010001000;
-	else if(opcode == `JALR)	signals = 14'b11010010001000;
+	else if(opcode == `LUI)		signals = 14'b00000000010111;
+	else if(opcode == `AUIPC)	signals = 14'b01000000010111;
+	else if(opcode == `JAL)		signals = 14'b01110010011000;
+	else if(opcode == `JALR)	signals = 14'b11010010011000;
 	else signals = 14'h0;
 end
 

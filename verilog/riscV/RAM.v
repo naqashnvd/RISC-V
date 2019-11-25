@@ -5,7 +5,7 @@ input [addrWidth-1:0] ADDR,
 input [(width)-1:0] DIN,
 input wren, clock
 );
-reg [width-1:0] MEM [2**(addrWidth)-1:0];
+reg [width-1:0] MEM [0:2**(addrWidth)-1];
 
 integer i;
 initial begin
