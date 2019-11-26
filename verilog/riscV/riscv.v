@@ -61,9 +61,9 @@ module riscv (input [1:0]KEY,output [9:0]LEDR);
 
 	assign flush = clear&~branchTaken;
 
-	RAM imem(
+	RAM#(32,24) imem(
 		.DOUT(I),
-		.ADDR(imemAddr[7:0]),
+		.ADDR(imemAddr),
 		.DIN(32'b0),
 		.wren(1'b0),
 		.clock(clock)
@@ -243,8 +243,8 @@ module tb;
 		$readmemh("imem.hex",riscv0.imem.MEM);
 		$readmemh("dmem.hex",riscv0.dmem.MEM);
 
-		for(i = 0; i < 10; i = i + 1)begin
-			$dumpvars(0, riscv0.imem.MEM[i]);
+		for(i = 0; i < 32; i = i + 1)begin
+			//$dumpvars(0, riscv0.imem.MEM[i]);
 			$dumpvars(0, riscv0.dmem.MEM[i]);
 			$dumpvars(0, riscv0.rf.registers[i]);
 			end

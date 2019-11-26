@@ -15,7 +15,7 @@ output reg [13:0]signals
 );
 
 always@(*)begin
-	if(opcode == `RType)			signals = 14'b00001000010000;
+	if(opcode == `RType)		signals = 14'b00001000010000;
 	else if(opcode == `IType)	signals = 14'b00001000010100;
 	else if(opcode == `LOAD)	signals = 14'b00000000111100;
 	else if(opcode == `STORE)	signals = 14'b00000001000101;

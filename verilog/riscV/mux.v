@@ -50,7 +50,7 @@ always@(*)begin
 		case(pcIn_sel)
 			2'b00:	out	=	next_imemAddr;
 			2'b01:	out	=	MEM_branchAddr;
-			2'b11:	out	=	MEM_aluResult;
+			2'b11:	out	=	MEM_aluResult<<1;
 			default:	out	=	32'b0;
 		endcase
 	end
