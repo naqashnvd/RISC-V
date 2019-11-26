@@ -50,7 +50,7 @@ always@(*)begin
 		case(pcIn_sel)
 			2'b00:	out	=	next_imemAddr;
 			2'b01:	out	=	MEM_branchAddr;
-			2'b11:	out	=	MEM_aluResult<<1;
+			2'b11:	out	=	($signed({MEM_aluResult[31:1],1'b0})>>>2); // for word align memory
 			default:	out	=	32'b0;
 		endcase
 	end

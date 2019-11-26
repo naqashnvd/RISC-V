@@ -19,8 +19,8 @@ module riscv (input [1:0]KEY,output [9:0]LEDR);
 	wire [31:0]dataD,dmemOut,pcIn;
 	wire [4:0]Rs1,Rs2,Rd,MEM_Rd;
 	wire [6:0]opcode;
-	wire [13:0]signals,EX_signals,MEM_signals,WB_signals; 
-	//CU signals 0-1 immsel[1:0] , 2 AluSrc , 3 Mem to Reg , 4 RegWrite , 5 MemRead , 6 MemWrite , 7 Branch ,8-10 AluOP,11 immsel[2] ,12 offset to Reg , 13 I_jalr
+	wire [14:0]signals,EX_signals,MEM_signals,WB_signals; 
+	//CU signals 0-1 immsel[1:0] , 2 AluSrc , 3 Mem to Reg , 4 RegWrite , 5 MemRead , 6 MemWrite , 7 Branch ,8-10 AluOP,11 immsel[2] ,12 offset to Reg , 13 I_jalr , 14 unconditionaljump
 	wire [31:0]immGenOut;
 	wire branchFromAlu;
 	wire clock = KEY[0];
@@ -41,7 +41,7 @@ module riscv (input [1:0]KEY,output [9:0]LEDR);
 
 	assign ID_func3_7 = {ID_I[30],ID_I[14:12]};
 	assign LEDR[9:0]=dataD[9:0];
-	assign branchTaken = MEM_branchFromAlu & MEM_signals[7];
+	assign branchTaken = (MEM_branchFromAlu && MEM_signals[7]) || MEM_signals[14];
 	assign next_imemAddr = imemAddr+1;
 	
 	
@@ -61,7 +61,7 @@ module riscv (input [1:0]KEY,output [9:0]LEDR);
 
 	assign flush = clear&~branchTaken;
 
-	RAM#(32,24) imem(
+	RAM#(32,16) imem(
 		.DOUT(I),
 		.ADDR(imemAddr),
 		.DIN(32'b0),
@@ -108,13 +108,13 @@ module riscv (input [1:0]KEY,output [9:0]LEDR);
 	);
 
 	//ID_EX
-	reg [13:0]stallSignals;
+	reg [14:0]stallSignals;
 	always@(*)begin
 		if(notStall) stallSignals=signals;
-		else stallSignals=14'b0;
+		else stallSignals=15'b0;
 	end
 
-	register#(.width(193)) ID_EX(
+	register#(.width(194)) ID_EX(
 		.data({stallSignals,ID_imemAddr,dataA,dataB,immGenOut,ID_func3_7,Rs1,Rs2,Rd,ID_next_imemAddr}),
 		.enable(1'b1),
 		.clock(clock),
@@ -150,8 +150,8 @@ module riscv (input [1:0]KEY,output [9:0]LEDR);
 
 	//EX_MEM
 	
-	assign EX_branchAddr = ( $signed(EX_imemAddr)+($signed(EX_immGenOut) >>> 2));
-	register#(.width(152)) EX_MEM(
+	assign EX_branchAddr = ( $signed(EX_imemAddr)+($signed(EX_immGenOut) >>> 2)); // for word align memory
+	register#(.width(153)) EX_MEM(
 		.data({EX_signals,EX_branchAddr,branchFromAlu,aluResult,forwardB_dataB,EX_Rd,EX_func3_7,EX_next_imemAddr}),
 		.enable(1'b1),
 		.clock(clock),
@@ -181,7 +181,7 @@ module riscv (input [1:0]KEY,output [9:0]LEDR);
 
 	//MEM_WB
 	wire [31:0]WB_branchAddr;
-	register#(.width(147)) MEM_WB(
+	register#(.width(148)) MEM_WB(
 		.data({MEM_signals,MEM_aluResult,MEM_Rd,dmemOut,MEM_branchAddr,MEM_next_imemAddr}),
 		.enable(1'b1),
 		.clock(clock),
