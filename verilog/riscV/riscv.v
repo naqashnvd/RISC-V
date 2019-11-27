@@ -8,7 +8,8 @@
 `include "hdu.v"
 `include "immGen.v"
 `include "regFile.v"
-`include "RAM.v"
+`include "DRAM.v"
+`include "IRAM.v"
 `include "mux.v"
 
 
@@ -61,9 +62,9 @@ module riscv (input [1:0]KEY,output [9:0]LEDR);
 
 	assign flush = clear&~branchTaken;
 
-	RAM#(32,16) imem(
+	IRAM#(32,8) imem(
 		.DOUT(I),
-		.ADDR(imemAddr),
+		.ADDR(imemAddr[7:0]),
 		.DIN(32'b0),
 		.wren(1'b0),
 		.clock(clock)
@@ -85,15 +86,15 @@ module riscv (input [1:0]KEY,output [9:0]LEDR);
 	assign Rs2 = ID_I[24:20];
 
 	regFile rf(
-		.clock(~clock),
+		.clock(clock),
 		.clear(clear),
 		.regWriteEnable(WB_signals[4]),
 		.addrA(Rs1),
 		.addrB(Rs2),
 		.addrD(WB_Rd),
 		.dataD(dataD),
-		.dataA(dataA),
-		.dataB(dataB)
+		.dataA(EX_dataA),
+		.dataB(EX_dataB)
 	);
 
 	immGen immGen(
@@ -114,12 +115,12 @@ module riscv (input [1:0]KEY,output [9:0]LEDR);
 		else stallSignals=15'b0;
 	end
 
-	register#(.width(194)) ID_EX(
-		.data({stallSignals,ID_imemAddr,dataA,dataB,immGenOut,ID_func3_7,Rs1,Rs2,Rd,ID_next_imemAddr}),
+	register#(.width(130)) ID_EX(
+		.data({stallSignals,ID_imemAddr,immGenOut,ID_func3_7,Rs1,Rs2,Rd,ID_next_imemAddr}),
 		.enable(1'b1),
 		.clock(clock),
 		.clear(flush),
-		.out({EX_signals,EX_imemAddr,EX_dataA,EX_dataB,EX_immGenOut,EX_func3_7,EX_Rs1,EX_Rs2,EX_Rd,EX_next_imemAddr})
+		.out({EX_signals,EX_imemAddr,EX_immGenOut,EX_func3_7,EX_Rs1,EX_Rs2,EX_Rd,EX_next_imemAddr})
 	);
 
 	wire [31:0]aluA,aluB,forwardB_dataB;
@@ -161,7 +162,7 @@ module riscv (input [1:0]KEY,output [9:0]LEDR);
 
 	// data Ram
 	wire [31:0]temp_dmemOut;
-	RAM dmem(
+	DRAM dmem(
 		.DOUT(temp_dmemOut),
 		.ADDR(MEM_aluResult[7:0]),
 		.DIN(MEM_dataB),
@@ -216,6 +217,7 @@ module riscv (input [1:0]KEY,output [9:0]LEDR);
 		.ForwardB(forwardB)
 	);
 
+	
 endmodule
 
 

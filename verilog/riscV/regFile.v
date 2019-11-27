@@ -14,20 +14,19 @@ module regFile #(parameter width = 32,parameter addrWidth = 5) (
 	//wire [width-1:0]Rout[width-1:0];
 	reg [width-1:0]registers[0:width-1];
 
-	always@(posedge clock)begin
+	always@(negedge clock)begin
 		if(regWriteEnable && (addrD != 5'b0)) 
 			registers[addrD] <= dataD;
 	end
 	
-	always@(*)begin
-		dataA = registers[addrA];
-		dataB = registers[addrB]; 
+	always@(posedge clock)begin
+		dataA <= registers[addrA];
+		dataB <= registers[addrB]; 
 	end
 	
-	integer i;
+	
 	initial begin
-		for(i = 0;i<width;i=i+1)
-			registers[i]=32'b0;
+			registers[0]=32'b0;
 	end
 
 	
