@@ -24,9 +24,10 @@ module regFile #(parameter width = 32,parameter addrWidth = 5) (
 		dataB <= registers[addrB]; 
 	end
 	
-	
+	integer i;
 	initial begin
-			registers[0]=32'b0;
+		for(i=0;i<32;i=i+1)
+			registers[i]=32'b0;
 	end
 
 	

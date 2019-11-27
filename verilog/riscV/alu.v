@@ -19,8 +19,8 @@ module alu#(parameter width = 32)(
 	
 	assign add = dataA + $signed(dataB);
 	assign sub = $signed (dataA) - $signed(dataB);
-	assign andd = dataA && dataB;
-	assign orr = dataA || dataB;
+	assign andd = dataA & dataB;
+	assign orr = dataA | dataB;
 	assign xorr = dataA ^ dataB;
 	
 	always@(*)begin
@@ -46,7 +46,7 @@ module alu#(parameter width = 32)(
 					else
 									case(func7)
 										1'b0:aluResult = dataA >> dataB[4:0] ; //Shift Right Logic
-										1'b1:aluResult = $signed(dataA) >>> $signed(dataB[4:0]) ;//Shift Arthmetic Right 
+										1'b1:aluResult = $signed(dataA) >>> dataB[4:0] ;//Shift Arthmetic Right 
 									endcase
 				end 
 		3'h6:	aluResult = orr;

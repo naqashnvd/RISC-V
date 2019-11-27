@@ -15,11 +15,13 @@ end
 
 
 always @(posedge clock) begin
-	case(func3)
-	2'b000:	MEM[ADDR]<=DIN[7:0];
-	2'b001: MEM[ADDR]<=DIN[15:0];	
-	2'b010:	MEM[ADDR]<=DIN[31:0];
-	endcase
+	if(wren)begin
+		case(func3)
+		2'b000:	MEM[ADDR]<=DIN[7:0];
+		2'b001: MEM[ADDR]<=DIN[15:0];	
+		2'b010:	MEM[ADDR]<=DIN[31:0];
+		endcase
+	end
 end
 assign DOUT = MEM[ADDR];
 endmodule
