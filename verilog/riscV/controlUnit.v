@@ -16,10 +16,10 @@ output reg [14:0]signals
 
 always@(*)begin
 	if(opcode == `RType)		signals = 15'b000001000010000;
-	else if(opcode == `IType)	signals = 15'b000001000010100;
+	else if(opcode == `IType)	signals = 15'b000011000010100;
 	else if(opcode == `LOAD)	signals = 15'b000000000111100;
 	else if(opcode == `STORE)	signals = 15'b000000001000101;
-	else if(opcode == `SBType)	signals = 15'b000010010000010;
+	else if(opcode == `SBType)	signals = 15'b000000110000010;
 	else if(opcode == `LUI)		signals = 15'b000000000010111;
 	else if(opcode == `AUIPC)	signals = 15'b001000000010111;
 	else if(opcode == `JAL)		signals = 15'b101100000011100;

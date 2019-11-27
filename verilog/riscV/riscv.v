@@ -167,7 +167,8 @@ module riscv (input [1:0]KEY,output [9:0]LEDR);
 		.ADDR(MEM_aluResult[7:0]),
 		.DIN(MEM_dataB),
 		.wren(MEM_signals[6]),
-		.clock(clock)
+		.clock(clock),
+		.func3(MEM_func3_7[2:0])
 	);
 	
 	
