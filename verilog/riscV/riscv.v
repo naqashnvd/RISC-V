@@ -12,9 +12,19 @@
 `include "IRAM.v"
 `include "mux.v"
 
+module riscv(input [1:0]KEY,output [6:0]HEX0,output [6:0]HEX1,output [6:0]HEX2,output [6:0]HEX3);
+	wire[31:0]dataOut;
+	
+	riscv_core rv32i(KEY[0],KEY[1],dataOut);
+	
+	sevSegDec s0(dataOut[3:0],HEX0);
+	sevSegDec s1(dataOut[7:4],HEX1);
+	sevSegDec s2(dataOut[11:8],HEX2);
+	sevSegDec s3(dataOut[15:12],HEX3);
 
+endmodule
 
-module riscv (input [1:0]KEY,output [9:0]LEDR);
+module riscv_core (input clock,clear,output [31:0]dataOut);
 
 	wire [31:0]dataA,dataB,imemAddr,aluResult,MEM_aluResult;
 	wire [31:0]dataD,dmemOut,pcIn;
@@ -24,8 +34,6 @@ module riscv (input [1:0]KEY,output [9:0]LEDR);
 	//CU signals 0-1 immsel[1:0] , 2 AluSrc , 3 Mem to Reg , 4 RegWrite , 5 MemRead , 6 MemWrite , 7 Branch ,8-10 AluOP,11 immsel[2] ,12 offset to Reg , 13 I_jalr , 14 unconditionaljump
 	wire [31:0]immGenOut;
 	wire branchFromAlu;
-	wire clock = KEY[0];
-	wire clear = KEY[1];
 	wire notStall,branchTaken,flush;
 	wire [1:0]forwardA,forwardB;
 	wire [31:0]ID_imemAddr,ID_I,I,WB_dmemOut;
@@ -41,9 +49,11 @@ module riscv (input [1:0]KEY,output [9:0]LEDR);
 	wire [31:0]next_imemAddr,ID_next_imemAddr,EX_next_imemAddr,MEM_next_imemAddr,WB_next_imemAddr;
 
 	assign ID_func3_7 = {ID_I[30],ID_I[14:12]};
-	assign LEDR[9:0]=dataD[9:0];
 	assign branchTaken = (MEM_branchFromAlu && MEM_signals[7]) || MEM_signals[14];
 	assign next_imemAddr = imemAddr+1;
+	
+	
+	assign dataOut = dataD;
 	
 	
 	pcIn_MUX	pcIn_MUX(
@@ -221,9 +231,29 @@ module riscv (input [1:0]KEY,output [9:0]LEDR);
 	
 endmodule
 
-
-
-
+module sevSegDec(input [3:0]bcd,output reg [6:0] seg);
+always@(bcd) begin
+	case (bcd) //case statement
+            4'h0 : seg = 7'b1000000;
+            4'h1 : seg = 7'b1111001;
+            4'h2 : seg = 7'b0100100;
+            4'h3 : seg = 7'b0110000;
+            4'h4 : seg = 7'b0011001;
+            4'h5 : seg = 7'b0010010;
+            4'h6 : seg = 7'b0000010;
+            4'h7 : seg = 7'b1111000;
+            4'h8 : seg = 7'b0000000;
+				4'h9 : seg = 7'b0010000;
+            4'hA : seg = 7'b0001000;
+				4'hB : seg = 7'b0000011;
+				4'hC : seg = 7'b0000110;
+				4'hD : seg = 7'b0100001;
+				4'hE : seg = 7'b0000110;
+				4'hF : seg = 7'b0111000;
+				default : seg = 7'b1111111; 
+	endcase
+end
+endmodule
 
 
 
