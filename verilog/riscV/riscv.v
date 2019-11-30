@@ -11,6 +11,7 @@
 `include "DRAM.v"
 `include "IRAM.v"
 `include "mux.v"
+`include "FPU.v"
 
 module top(input [1:0]KEY,output [6:0]HEX0,output [6:0]HEX1,output [6:0]HEX2,output [6:0]HEX3);
 	wire[31:0]dataOut;
@@ -30,7 +31,7 @@ module riscv_core (input clock,clear,output [31:0]dataOut);
 	wire [31:0]dataD,dmemOut,pcIn;
 	wire [4:0]Rs1,Rs2,Rd,MEM_Rd;
 	wire [6:0]opcode;
-	wire [18:0]signals,EX_signals,MEM_signals,WB_signals; 
+	wire [19:0]signals,EX_signals,MEM_signals,WB_signals; 
 	
 		/////////////////////////////////////////CU signals/////////////////////////////////////////////////////////////////////////////////
 		//0-1 immsel[1:0] ,
@@ -48,7 +49,8 @@ module riscv_core (input clock,clear,output [31:0]dataOut);
 		//15 float reg Write ,
 		//16 regFile dataA Sel ,
 		//17 regFile dataB Sel ,
-		//18 aluResult sel  
+		//18 aluResult sel  ,
+		//19 fpuOp 
 		/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 		
 	wire [31:0]immGenOut;
@@ -159,13 +161,13 @@ module riscv_core (input clock,clear,output [31:0]dataOut);
 	assign EX_dataB = (EX_signals[17])? EX_f_dataB : EX_x_dataB;
 	
 	////////////////////////////////////////////////////////////ID_EX/////////////////////////////////////////////////////////////////////
-	reg [18:0]stallSignals;
+	reg [19:0]stallSignals;
 	always@(*)begin
 		if(notStall) stallSignals=signals;
-		else stallSignals=19'b0;
+		else stallSignals=20'b0;
 	end
 
-	register#(.width(134)) ID_EX(
+	register#(.width(135)) ID_EX(
 		.data({stallSignals,ID_imemAddr,immGenOut,ID_func3_7,Rs1,Rs2,Rd,ID_next_imemAddr}),
 		.enable(1'b1),
 		.clock(clock),
@@ -202,7 +204,7 @@ module riscv_core (input clock,clear,output [31:0]dataOut);
 	//////////////////////////////////////////////////////////////EX_MEM///////////////////////////////////////////////////////////////////////////////////
 	
 	assign EX_branchAddr = ( $signed(EX_imemAddr)+($signed(EX_immGenOut) >>> 2)); // for word align instruction memory
-	register#(.width(157)) EX_MEM(
+	register#(.width(158)) EX_MEM(
 		.data({EX_signals,EX_branchAddr,branchFromAlu,aluResult,forwardB_dataB,EX_Rd,EX_func3_7,EX_next_imemAddr}),
 		.enable(1'b1),
 		.clock(clock),
@@ -233,7 +235,7 @@ module riscv_core (input clock,clear,output [31:0]dataOut);
 
 	////////////////////////////////////////////////////////////MEM_WB//////////////////////////////////////////////////////////////////////////////////////////
 	wire [31:0]WB_branchAddr;
-	register#(.width(152)) MEM_WB(
+	register#(.width(153)) MEM_WB(
 		.data({MEM_signals,MEM_aluResult,MEM_Rd,dmemOut,MEM_branchAddr,MEM_next_imemAddr}),
 		.enable(1'b1),
 		.clock(clock),
