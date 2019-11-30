@@ -65,11 +65,13 @@ module riscv_core (input clock,clear,output [31:0]dataOut);
 	wire [31:0]WB_aluResult;
 	wire [4:0]WB_Rd;
 	wire [3:0]ID_func3_7 ;
+	wire [4:0]ID_funct5;
 	wire [31:0]next_imemAddr,ID_next_imemAddr,EX_next_imemAddr,MEM_next_imemAddr,WB_next_imemAddr;
 
 	assign ID_func3_7 = {ID_I[30],ID_I[14:12]};
 	assign branchTaken = (MEM_branchFromAlu && MEM_signals[7]) || MEM_signals[14];
 	assign next_imemAddr = imemAddr+1;
+	assign ID_funct5=ID_I[31:27];
 	
 	
 	assign dataOut = dataD;
@@ -135,6 +137,7 @@ module riscv_core (input clock,clear,output [31:0]dataOut);
 
 	controlUnit CU(
 		.opcode(opcode),
+		.funct5(ID_funct5), //for F extension
 		.signals(signals) 
 	);
 	
@@ -255,8 +258,8 @@ module riscv_core (input clock,clear,output [31:0]dataOut);
 
 	/////////////////////////////////////////////////////////////Forwarding Unit/////////////////////////////////////////////////////////////////////////
 	forwardingUnit fu(
-		.MEM_RegWrite(MEM_signals[4]),
-		.WB_RegWrite(WB_signals[4]),
+		.MEM_RegWrite(MEM_signals[4] | MEM_signals[15]), //temporary fix for float forwarding
+		.WB_RegWrite(WB_signals[4] | WB_signals[15]), // temporary fix for float forwarding
 		.MEM_Rd(MEM_Rd),
 		.EX_Rs1(EX_Rs1),
 		.EX_Rs2(EX_Rs2),
@@ -310,6 +313,7 @@ module tb;
 			$dumpvars(0, riscv0.imem.MEM[i]);
 			$dumpvars(0, riscv0.dmem.MEM[i]);
 			$dumpvars(0, riscv0.rf.registers[i]);
+			$dumpvars(0, riscv0.float_rf.registers[i]);
 			end
 
 		$monitor("%c",riscv0.dmem.MEM[255]);		

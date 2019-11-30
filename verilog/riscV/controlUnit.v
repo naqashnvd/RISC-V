@@ -1,15 +1,20 @@
-`define LUI 7'b0110111
-`define AUIPC 7'b0010111
-`define JAL 7'b1101111
-`define JALR 7'b1100111
-`define SBType 7'b1100011
-`define LOAD 7'b0000011
-`define STORE 7'b0100011
-`define IType 7'b0010011
-`define RType 7'b0110011
+`define LUI		7'b0110111
+`define AUIPC	7'b0010111
+`define JAL		7'b1101111
+`define JALR	7'b1100111
+`define SBType	7'b1100011
+`define LOAD	7'b0000011
+`define STORE	7'b0100011
+`define IType	7'b0010011
+`define RType	7'b0110011
+
+`define F_RType	7'b1010011
+`define F_LOAD		7'b0000111
+`define F_STORE	7'b0100111
 
 module controlUnit(
 input [6:0]opcode,
+input [4:0]funct5,
 output reg [18:0]signals 
 );
 
@@ -42,6 +47,18 @@ always@(*)begin
 	else if(opcode == `AUIPC)	signals = 19'b0000001000000010111;
 	else if(opcode == `JAL)		signals = 19'b0000101100000011100;
 	else if(opcode == `JALR)	signals = 19'b0000111000000011100;
+	
+	else if(opcode == `F_RType) begin
+			case(funct5)
+				5'b11110:	signals = 19'b0001000000000000000;
+				5'b11100:	signals = 19'b0010000000000010000;
+				
+				default signals = 19'h0;
+			endcase
+		end
+	else if(opcode == `F_LOAD) signals =	19'b0001000000000101100;
+	else if(opcode == `F_STORE) signals =	19'b0100000000001000101;
+	
 	else signals = 19'h0;
 end
 
