@@ -1,2 +1,2 @@
 # RISC-V
-I have implemented Risc V using logisim
+I have implemented Risc-V using verilog
