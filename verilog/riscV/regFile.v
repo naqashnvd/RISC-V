@@ -1,6 +1,5 @@
 module regFile #(parameter width = 32,parameter addrWidth = 5) (
 	input clock,
-	input clear,
 	input	regWriteEnable,
 	input	[addrWidth-1:0]addrA,
 	input	[addrWidth-1:0]addrB,

@@ -12,7 +12,7 @@
 `include "IRAM.v"
 `include "mux.v"
 
-module riscv(input [1:0]KEY,output [6:0]HEX0,output [6:0]HEX1,output [6:0]HEX2,output [6:0]HEX3);
+module top(input [1:0]KEY,output [6:0]HEX0,output [6:0]HEX1,output [6:0]HEX2,output [6:0]HEX3);
 	wire[31:0]dataOut;
 	
 	riscv_core rv32i(KEY[0],KEY[1],dataOut);
@@ -30,8 +30,27 @@ module riscv_core (input clock,clear,output [31:0]dataOut);
 	wire [31:0]dataD,dmemOut,pcIn;
 	wire [4:0]Rs1,Rs2,Rd,MEM_Rd;
 	wire [6:0]opcode;
-	wire [14:0]signals,EX_signals,MEM_signals,WB_signals; 
-	//CU signals 0-1 immsel[1:0] , 2 AluSrc , 3 Mem to Reg , 4 RegWrite , 5 MemRead , 6 MemWrite , 7 Branch ,8-10 AluOP,11 immsel[2] ,12 offset to Reg , 13 I_jalr , 14 unconditionaljump
+	wire [18:0]signals,EX_signals,MEM_signals,WB_signals; 
+	
+		/////////////////////////////////////////CU signals/////////////////////////////////////////////////////////////////////////////////
+		//0-1 immsel[1:0] ,
+		//2 AluSrc ,
+		//3 Mem to Reg ,
+		//4 RegWrite ,
+		//5 MemRead ,
+		//6 MemWrite ,
+		//7 Branch ,
+		//8-10 AluOP,
+		//11 immsel[2] ,
+		//12 offset to Reg ,
+		//13 I_jalr , 
+		//14 unconditionaljump ,
+		//15 float reg Write ,
+		//16 regFile dataA Sel ,
+		//17 regFile dataB Sel ,
+		//18 aluResult sel  
+		/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+		
 	wire [31:0]immGenOut;
 	wire branchFromAlu;
 	wire notStall,branchTaken,flush;
@@ -80,7 +99,7 @@ module riscv_core (input clock,clear,output [31:0]dataOut);
 		.clock(clock)
 	);
 
-	//IF_ID 
+	////////////////////////////////////////////////////////////////IF_ID /////////////////////////////////////////////////////////////////////////
 	register#(.width(96)) IF_ID(
 		.data({imemAddr,I,next_imemAddr}),
 		.enable(notStall),
@@ -94,17 +113,18 @@ module riscv_core (input clock,clear,output [31:0]dataOut);
 	assign Rd = ID_I[11:7];
 	assign Rs1 = ID_I[19:15];
 	assign Rs2 = ID_I[24:20];
+	
+	wire [31:0]EX_x_dataA,EX_x_dataB;
 
 	regFile rf(
 		.clock(clock),
-		.clear(clear),
 		.regWriteEnable(WB_signals[4]),
 		.addrA(Rs1),
 		.addrB(Rs2),
 		.addrD(WB_Rd),
 		.dataD(dataD),
-		.dataA(EX_dataA),
-		.dataB(EX_dataB)
+		.dataA(EX_x_dataA),
+		.dataB(EX_x_dataB)
 	);
 
 	immGen immGen(
@@ -117,15 +137,32 @@ module riscv_core (input clock,clear,output [31:0]dataOut);
 		.opcode(opcode),
 		.signals(signals) 
 	);
+	
+	/////////////////////////////////////////////////////Floating Point Register///////////////////////////////////////////////////////////
+	
+	wire [31:0]EX_f_dataA,EX_f_dataB;
+	regFile float_rf(
+		.clock(clock),
+		.regWriteEnable(WB_signals[15]), //Float reg Write
+		.addrA(Rs1),
+		.addrB(Rs2),
+		.addrD(WB_Rd),
+		.dataD(dataD),
+		.dataA(EX_f_dataA),
+		.dataB(EX_f_dataB)
+	);
 
-	//ID_EX
-	reg [14:0]stallSignals;
+	assign EX_dataA = (EX_signals[16])? EX_f_dataA : EX_x_dataA;
+	assign EX_dataB = (EX_signals[17])? EX_f_dataB : EX_x_dataB;
+	
+	////////////////////////////////////////////////////////////ID_EX/////////////////////////////////////////////////////////////////////
+	reg [18:0]stallSignals;
 	always@(*)begin
 		if(notStall) stallSignals=signals;
-		else stallSignals=15'b0;
+		else stallSignals=19'b0;
 	end
 
-	register#(.width(130)) ID_EX(
+	register#(.width(134)) ID_EX(
 		.data({stallSignals,ID_imemAddr,immGenOut,ID_func3_7,Rs1,Rs2,Rd,ID_next_imemAddr}),
 		.enable(1'b1),
 		.clock(clock),
@@ -159,10 +196,10 @@ module riscv_core (input clock,clear,output [31:0]dataOut);
 	);
 
 
-	//EX_MEM
+	//////////////////////////////////////////////////////////////EX_MEM///////////////////////////////////////////////////////////////////////////////////
 	
-	assign EX_branchAddr = ( $signed(EX_imemAddr)+($signed(EX_immGenOut) >>> 2)); // for word align memory
-	register#(.width(153)) EX_MEM(
+	assign EX_branchAddr = ( $signed(EX_imemAddr)+($signed(EX_immGenOut) >>> 2)); // for word align instruction memory
+	register#(.width(157)) EX_MEM(
 		.data({EX_signals,EX_branchAddr,branchFromAlu,aluResult,forwardB_dataB,EX_Rd,EX_func3_7,EX_next_imemAddr}),
 		.enable(1'b1),
 		.clock(clock),
@@ -170,7 +207,7 @@ module riscv_core (input clock,clear,output [31:0]dataOut);
 		.out({MEM_signals,MEM_branchAddr,MEM_branchFromAlu,MEM_aluResult,MEM_dataB,MEM_Rd,MEM_func3_7,MEM_next_imemAddr})
 	);
 
-	// data Ram
+	//////////////////////////////////////////////////////////// data Ram//////////////////////////////////////////////////////////////////////////////////
 	wire [31:0]temp_dmemOut;
 	DRAM dmem(
 		.DOUT(temp_dmemOut),
@@ -191,9 +228,9 @@ module riscv_core (input clock,clear,output [31:0]dataOut);
 
 
 
-	//MEM_WB
+	////////////////////////////////////////////////////////////MEM_WB//////////////////////////////////////////////////////////////////////////////////////////
 	wire [31:0]WB_branchAddr;
-	register#(.width(148)) MEM_WB(
+	register#(.width(152)) MEM_WB(
 		.data({MEM_signals,MEM_aluResult,MEM_Rd,dmemOut,MEM_branchAddr,MEM_next_imemAddr}),
 		.enable(1'b1),
 		.clock(clock),
@@ -207,7 +244,7 @@ module riscv_core (input clock,clear,output [31:0]dataOut);
 	.out(dataD)
 	);
 
-	//hazard Dectection Unit
+	//////////////////////////////////////////////////////////hazard Dectection Unit//////////////////////////////////////////////////////////////////////
 	HDU HDU(
 		.EX_MemRead(EX_signals[5]),
 		.ID_Rs1(Rs1),
@@ -216,7 +253,7 @@ module riscv_core (input clock,clear,output [31:0]dataOut);
 		.notStall(notStall)
 	);
 
-	//Forwarding Unit
+	/////////////////////////////////////////////////////////////Forwarding Unit/////////////////////////////////////////////////////////////////////////
 	forwardingUnit fu(
 		.MEM_RegWrite(MEM_signals[4]),
 		.WB_RegWrite(WB_signals[4]),
@@ -231,9 +268,10 @@ module riscv_core (input clock,clear,output [31:0]dataOut);
 	
 endmodule
 
+////////////////////////////////////////////////////////////Seven Seg Decoder for DE1/////////////////////////////////////////////////////////////
 module sevSegDec(input [3:0]bcd,output reg [6:0] seg);
 always@(bcd) begin
-	case (bcd) //case statement
+	case (bcd) 
             4'h0 : seg = 7'b1000000;
             4'h1 : seg = 7'b1111001;
             4'h2 : seg = 7'b0100100;
@@ -256,25 +294,17 @@ end
 endmodule
 
 
-
-
-//tb
+////////////////////////////////////////////////////////////////tb/////////////////////////////////////////////////////////////////////////////////
 module tb;
 	reg reset,clk;
-	riscv riscv0(.KEY({reset,clk}));
+	wire [31:0]dataOut;
+	riscv_core riscv0(clk,reset,dataOut);
 	
-	reg [31:0]count = 0;	
-	always@(posedge clk)begin
-		count <= count + 1;
-	end
-
 	integer i,j;
 	initial begin
 		$dumpfile("test.vcd");
 		$dumpvars(0, tb);
 
-		//$readmemh("imem.hex",riscv0.imem.MEM);
-		//$readmemh("dmem.hex",riscv0.dmem.MEM);
 
 		for(i = 0; i < 32; i = i + 1)begin
 			$dumpvars(0, riscv0.imem.MEM[i]);
@@ -282,7 +312,6 @@ module tb;
 			$dumpvars(0, riscv0.rf.registers[i]);
 			end
 
-		//$monitor("%c , %d",riscv0.dmem.MEM[255],count);
 		$monitor("%c",riscv0.dmem.MEM[255]);		
 
 		#0 reset = 1; clk = 0;
