@@ -2,3 +2,5 @@
 *.bak
 *.out
 *.vcd
+riscv_core/greybox_tmp/UNUSED.hex
+riscv_core/greybox_tmp/cbx_args.txt

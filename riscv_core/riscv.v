@@ -1,5 +1,5 @@
 
-`default_nettype none
+//`default_nettype none
 
 `include "alu.v"
 `include "aluSource.v"
@@ -12,6 +12,7 @@
 `include "IRAM.v"
 `include "mux.v"
 `include "FPU.v"
+
 
 module top(input [1:0]KEY,output [6:0]HEX0,output [6:0]HEX1,output [6:0]HEX2,output [6:0]HEX3);
 	wire[31:0]dataOut;
@@ -190,16 +191,35 @@ module riscv_core (input clock,clear,output [31:0]dataOut);
 		.forwardB_dataB(forwardB_dataB)
 	);
 
-
+	///////////////////////////////////////////////////////////// Alu ////////////////////////////////////////////////////////////////////////////////
+	wire [31:0]temp_aluResult;
 	alu alu(
 		.dataA(aluA),
 		.dataB(aluB),
 		.func(EX_func3_7),
 		.aluOp(EX_signals[10:8]),
-		.aluResult(aluResult),
+		.aluResult(temp_aluResult),
+		//.aluResult(aluResult),
 		.branchFromAlu(branchFromAlu)
 	);
-
+	
+	///////////////////////////////////////////////////////// FPU //////////////////////////////////////////////////////////////////////////////////////
+	wire [31:0]temp_fpuResult;
+	wire fpu_inprogress;
+	 FPU fpu(
+		 .clock(clock),
+		 .clear(clear),
+		 .fpu_sel(EX_signals[18]), // aluResult Sel -> 1 for fpuResult
+		 .dataA(aluA),
+		 .dataB(aluB),
+		 .func3(EX_func3_7[2:0]),
+		 .fpuOp({EX_signals[19],EX_signals[10:8]}), //{fpuOp,aluOp}
+		 .EX_Rs1_0(EX_Rs1[0]),
+		 .fpuResult(temp_fpuResult),
+		 .fpu_inprogress(fpu_inprogress)
+	 );
+	 
+	 assign aluResult = (EX_signals[18])? temp_fpuResult : temp_aluResult;
 
 	//////////////////////////////////////////////////////////////EX_MEM///////////////////////////////////////////////////////////////////////////////////
 	
