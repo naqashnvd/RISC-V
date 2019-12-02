@@ -23,14 +23,14 @@ output reg [19:0]signals
 //2 AluSrc ,
 //3 Mem to Reg ,
 //4 RegWrite ,
-//5 MemRead ,
+//5 dataA sel , for U-type instructions LUI and AUIPC
 //6 MemWrite ,
 //7 Branch ,
 //8-10 AluOP,
 //11 immsel[2] ,
 //12 offset to Reg ,
 //13 I_jalr , 
-//14 unconditionaljump ,
+//14 unconditionaljump , JAL and JALR instructions
 //15 float reg Write ,
 //16 regFile dataA Sel ,
 //17 regFile dataB Sel ,
@@ -41,7 +41,7 @@ output reg [19:0]signals
 always@(*)begin
 	if(opcode == `RType)		signals = 20'b00000000001000010000;
 	else if(opcode == `IType)	signals = 20'b00000000011000010100;
-	else if(opcode == `LOAD)	signals = 20'b00000000000000111100;
+	else if(opcode == `LOAD)	signals = 20'b00000000000000011100;
 	else if(opcode == `STORE)	signals = 20'b00000000000001000101;
 	else if(opcode == `SBType)	signals = 20'b00000000000110000010;
 	else if(opcode == `LUI)		signals = 20'b00000000000000010111;
@@ -71,7 +71,7 @@ always@(*)begin
 			endcase
 		end
 //////////////////////////////////////////////// Use ALU ////////////////////////////////////////////////////////////////////////////
-	else if(opcode == `F_LOAD)	signals = 20'b00001000000000101100;
+	else if(opcode == `F_LOAD)	signals = 20'b00001000000000001100;
 	else if(opcode == `F_STORE) signals = 20'b00100000000001000101;
 	
 	else signals = 20'h0;

@@ -39,7 +39,7 @@ module riscv_core (input clock,clear,output [31:0]dataOut);
 		//2 AluSrc ,
 		//3 Mem to Reg ,
 		//4 RegWrite ,
-		//5 MemRead ,
+		//5 dataA sel , for U-type instructions LUI and AUIPC
 		//6 MemWrite ,
 		//7 Branch ,
 		//8-10 AluOP,
@@ -119,7 +119,7 @@ module riscv_core (input clock,clear,output [31:0]dataOut);
 	assign Rs1 = ID_I[19:15];
 	assign Rs2 = ID_I[24:20];
 	
-	wire [31:0]EX_x_dataA,EX_x_dataB;
+	wire [31:0]temp_EX_x_dataA,EX_x_dataA,EX_x_dataB;
 
 	regFile rf(
 		.clock(clock),
@@ -128,9 +128,11 @@ module riscv_core (input clock,clear,output [31:0]dataOut);
 		.addrB(Rs2),
 		.addrD(WB_Rd),
 		.dataD(dataD),
-		.dataA(EX_x_dataA),
+		.dataA(temp_EX_x_dataA),
 		.dataB(EX_x_dataB)
 	);
+
+	assign EX_x_dataA = (EX_signals[5])? 32'b0 : temp_EX_x_dataA; //Mux to sel for 32'b0 for U-type instructions
 
 	immGen immGen(
 		.I(ID_I),
