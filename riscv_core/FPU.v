@@ -162,33 +162,5 @@ module FPU#(parameter width = 32)(
 		endcase
 	end
 	
-	////////////////////////////////////////////////// FPU Controller ///////////////////////////////////////////////////////////////////////////////////////////////
-	
-	reg [4:0]count;
-	wire temp_clock_reset;
-	wire clock_reset;
-	always@(*)begin
-		if(fpu_sel) begin
-			if(count < cycles)	begin
-				fpu_inprogress	=	1'b1;
-				temp_clock_reset=	1'b1;
-			end	
-			else begin 
-				fpu_inprogress	=	1'b0;
-				temp_clock_reset=	1'b0;
-			end	
-		end
-		else 
-			fpu_inprogress	=	1'b0;
-			temp_clock_reset=	1'b0;
-	end
-	
-	wire clock_reset = clear & temp_clock_reset ;
-
-	always@(posedge clock or negedge clock_reset)begin
-		if(~clock_reset) count <= 5'b0;
-		else begin
-			count <= count+5'b1;
-		end
-	end
 endmodule
+

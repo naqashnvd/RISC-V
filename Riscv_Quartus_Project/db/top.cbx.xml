@@ -81,6 +81,6 @@
 		<CBX_INST_ENTRY INSTANCE_NAME="|top|riscv_core:rv32i|FPU:fpu|fpu_add_sub:fpu_add_sub_inst|fpu_add_sub_altfp_add_sub_hrm:fpu_add_sub_altfp_add_sub_hrm_component|lpm_add_sub:add_sub7" CBX_FILE_NAME="add_sub_2lj.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|top|riscv_core:rv32i|FPU:fpu|fpu_convert_float_integer:fpu_convert_float_integer_inst|fpu_convert_float_integer_altfp_convert_a4p:fpu_convert_float_integer_altfp_convert_a4p_component|lpm_add_sub:add_sub9" CBX_FILE_NAME="add_sub_mse.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|top|riscv_core:rv32i|FPU:fpu|fpu_sqrt:fpu_sqrt_inst|fpu_sqrt_altfp_sqrt_ece:fpu_sqrt_altfp_sqrt_ece_component|fpu_sqrt_alt_sqrt_block_kfb:alt_sqrt_block2|lpm_add_sub:add_sub24" CBX_FILE_NAME="add_sub_uid.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|top|riscv_core:rv32i|IRAM:imem|altsyncram:MEM_rtl_0" CBX_FILE_NAME="altsyncram_fv61.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|top|riscv_core:rv32i|IRAM:imem|altsyncram:MEM_rtl_0" CBX_FILE_NAME="altsyncram_0661.tdf"/>
 	</PROJECT>
 </LOG_ROOT>
