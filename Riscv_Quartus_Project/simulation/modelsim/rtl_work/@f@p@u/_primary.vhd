@@ -13,8 +13,7 @@ entity FPU is
         func3           : in     vl_logic_vector(2 downto 0);
         fpuOp           : in     vl_logic_vector(3 downto 0);
         EX_Rs1_0        : in     vl_logic;
-        fpuResult       : out    vl_logic_vector;
-        fpu_inprogress  : out    vl_logic
+        fpuResult       : out    vl_logic_vector
     );
     attribute mti_svvh_generic_type : integer;
     attribute mti_svvh_generic_type of width : constant is 1;

@@ -1,5 +1,5 @@
 Analysis & Synthesis report for top
-Fri Dec 06 19:29:35 2019
+Sat Dec 07 13:55:57 2019
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -26,11 +26,11 @@ Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edit
  18. Source assignments for riscv_core:rv32i|FPU:fpu|fpu_mult:fpu_mult_inst|fpu_mult_altfp_mult_idq:fpu_mult_altfp_mult_idq_component|lpm_mult:man_product2_mult|mult_jfs:auto_generated
  19. Source assignments for riscv_core:rv32i|FPU:fpu|fpu_div:fpu_div_inst|fpu_div_altfp_div_tkl:fpu_div_altfp_div_tkl_component|fpu_div_altfp_div_pst_t2j:altfp_div_pst1|altsyncram:altsyncram3|altsyncram_fvo:auto_generated
  20. Source assignments for riscv_core:rv32i|DRAM:dmem|altsyncram:MEM_rtl_0|altsyncram_82g1:auto_generated
- 21. Source assignments for riscv_core:rv32i|regFile:rf|altsyncram:registers_rtl_0|altsyncram_93h1:auto_generated
- 22. Source assignments for riscv_core:rv32i|regFile:rf|altsyncram:registers_rtl_1|altsyncram_93h1:auto_generated
- 23. Source assignments for riscv_core:rv32i|regFile:float_rf|altsyncram:registers_rtl_0|altsyncram_93h1:auto_generated
- 24. Source assignments for riscv_core:rv32i|regFile:float_rf|altsyncram:registers_rtl_1|altsyncram_93h1:auto_generated
- 25. Source assignments for riscv_core:rv32i|IRAM:imem|altsyncram:MEM_rtl_0|altsyncram_0661:auto_generated
+ 21. Source assignments for riscv_core:rv32i|IRAM:imem|altsyncram:MEM_rtl_0|altsyncram_fv61:auto_generated
+ 22. Source assignments for riscv_core:rv32i|regFile:rf|altsyncram:registers_rtl_0|altsyncram_93h1:auto_generated
+ 23. Source assignments for riscv_core:rv32i|regFile:rf|altsyncram:registers_rtl_1|altsyncram_93h1:auto_generated
+ 24. Source assignments for riscv_core:rv32i|regFile:float_rf|altsyncram:registers_rtl_0|altsyncram_93h1:auto_generated
+ 25. Source assignments for riscv_core:rv32i|regFile:float_rf|altsyncram:registers_rtl_1|altsyncram_93h1:auto_generated
  26. Source assignments for riscv_core:rv32i|FPU:fpu|fpu_sqrt:fpu_sqrt_inst|fpu_sqrt_altfp_sqrt_ece:fpu_sqrt_altfp_sqrt_ece_component|altshift_taps:nan_man_ff0_rtl_0|shift_taps_53m:auto_generated|altsyncram_6c81:altsyncram2
  27. Source assignments for riscv_core:rv32i|FPU:fpu|fpu_div:fpu_div_inst|fpu_div_altfp_div_tkl:fpu_div_altfp_div_tkl_component|fpu_div_altfp_div_pst_t2j:altfp_div_pst1|altshift_taps:exp_result_dffe_0_rtl_0|shift_taps_n1m:auto_generated|altsyncram_4981:altsyncram2
  28. Source assignments for riscv_core:rv32i|FPU:fpu|fpu_convert_float_integer:fpu_convert_float_integer_inst|fpu_convert_float_integer_altfp_convert_a4p:fpu_convert_float_integer_altfp_convert_a4p_component|altshift_taps:exp_and_reg2_rtl_0|shift_taps_v1m:auto_generated|altsyncram_rg31:altsyncram4
@@ -119,11 +119,11 @@ Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edit
 111. Parameter Settings for User Entity Instance: riscv_core:rv32i|DRAM:dmem
 112. Parameter Settings for User Entity Instance: riscv_core:rv32i|register:MEM_WB
 113. Parameter Settings for Inferred Entity Instance: riscv_core:rv32i|DRAM:dmem|altsyncram:MEM_rtl_0
-114. Parameter Settings for Inferred Entity Instance: riscv_core:rv32i|regFile:rf|altsyncram:registers_rtl_0
-115. Parameter Settings for Inferred Entity Instance: riscv_core:rv32i|regFile:rf|altsyncram:registers_rtl_1
-116. Parameter Settings for Inferred Entity Instance: riscv_core:rv32i|regFile:float_rf|altsyncram:registers_rtl_0
-117. Parameter Settings for Inferred Entity Instance: riscv_core:rv32i|regFile:float_rf|altsyncram:registers_rtl_1
-118. Parameter Settings for Inferred Entity Instance: riscv_core:rv32i|IRAM:imem|altsyncram:MEM_rtl_0
+114. Parameter Settings for Inferred Entity Instance: riscv_core:rv32i|IRAM:imem|altsyncram:MEM_rtl_0
+115. Parameter Settings for Inferred Entity Instance: riscv_core:rv32i|regFile:rf|altsyncram:registers_rtl_0
+116. Parameter Settings for Inferred Entity Instance: riscv_core:rv32i|regFile:rf|altsyncram:registers_rtl_1
+117. Parameter Settings for Inferred Entity Instance: riscv_core:rv32i|regFile:float_rf|altsyncram:registers_rtl_0
+118. Parameter Settings for Inferred Entity Instance: riscv_core:rv32i|regFile:float_rf|altsyncram:registers_rtl_1
 119. Parameter Settings for Inferred Entity Instance: riscv_core:rv32i|FPU:fpu|fpu_sqrt:fpu_sqrt_inst|fpu_sqrt_altfp_sqrt_ece:fpu_sqrt_altfp_sqrt_ece_component|altshift_taps:nan_man_ff0_rtl_0
 120. Parameter Settings for Inferred Entity Instance: riscv_core:rv32i|FPU:fpu|fpu_div:fpu_div_inst|fpu_div_altfp_div_tkl:fpu_div_altfp_div_tkl_component|fpu_div_altfp_div_pst_t2j:altfp_div_pst1|altshift_taps:exp_result_dffe_0_rtl_0
 121. Parameter Settings for Inferred Entity Instance: riscv_core:rv32i|FPU:fpu|fpu_convert_float_integer:fpu_convert_float_integer_inst|fpu_convert_float_integer_altfp_convert_a4p:fpu_convert_float_integer_altfp_convert_a4p_component|altshift_taps:exp_and_reg2_rtl_0
@@ -137,12 +137,10 @@ Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edit
 129. Port Connectivity Checks: "riscv_core:rv32i|FPU:fpu|fpu_div:fpu_div_inst"
 130. Port Connectivity Checks: "riscv_core:rv32i|FPU:fpu|fpu_mult:fpu_mult_inst"
 131. Port Connectivity Checks: "riscv_core:rv32i|FPU:fpu|fpu_add_sub:fpu_add_sub_inst"
-132. Port Connectivity Checks: "riscv_core:rv32i|FPU:fpu"
-133. Port Connectivity Checks: "riscv_core:rv32i|register:ID_EX"
-134. Port Connectivity Checks: "riscv_core:rv32i|IRAM:imem"
-135. Port Connectivity Checks: "riscv_core:rv32i"
-136. Elapsed Time Per Partition
-137. Analysis & Synthesis Messages
+132. Port Connectivity Checks: "riscv_core:rv32i|IRAM:imem"
+133. Port Connectivity Checks: "riscv_core:rv32i"
+134. Elapsed Time Per Partition
+135. Analysis & Synthesis Messages
 
 
 
@@ -168,15 +166,15 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Fri Dec 06 19:29:34 2019           ;
+; Analysis & Synthesis Status        ; Successful - Sat Dec 07 13:55:57 2019           ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; top                                             ;
 ; Top-level Entity Name              ; top                                             ;
 ; Family                             ; Cyclone II                                      ;
-; Total logic elements               ; 4,869                                           ;
-;     Total combinational functions  ; 4,080                                           ;
-;     Dedicated logic registers      ; 2,195                                           ;
-; Total registers                    ; 2195                                            ;
+; Total logic elements               ; 4,920                                           ;
+;     Total combinational functions  ; 4,131                                           ;
+;     Dedicated logic registers      ; 2,200                                           ;
+; Total registers                    ; 2200                                            ;
 ; Total pins                         ; 30                                              ;
 ; Total virtual pins                 ; 0                                               ;
 ; Total memory bits                  ; 25,339                                          ;
@@ -305,6 +303,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ; ../riscv_core/IRAM.v                                   ; yes             ; Auto-Found Verilog HDL File                           ; C:/Users/naqas/Desktop/Github/RISC-V/riscv_core/IRAM.v                                          ;         ;
 ; ../riscv_core/mux.v                                    ; yes             ; Auto-Found Verilog HDL File                           ; C:/Users/naqas/Desktop/Github/RISC-V/riscv_core/mux.v                                           ;         ;
 ; ../riscv_core/FPU.v                                    ; yes             ; Auto-Found Verilog HDL File                           ; C:/Users/naqas/Desktop/Github/RISC-V/riscv_core/FPU.v                                           ;         ;
+; ../riscv_core/FPU_Controller.v                         ; yes             ; Auto-Found Verilog HDL File                           ; C:/Users/naqas/Desktop/Github/RISC-V/riscv_core/FPU_Controller.v                                ;         ;
 ; /users/naqas/desktop/github/risc-v/riscv_core/imem.hex ; yes             ; Auto-Found Hexadecimal (Intel-Format) File            ; /users/naqas/desktop/github/risc-v/riscv_core/imem.hex                                          ;         ;
 ; /users/naqas/desktop/github/risc-v/riscv_core/dmem.hex ; yes             ; Auto-Found Hexadecimal (Intel-Format) File            ; /users/naqas/desktop/github/risc-v/riscv_core/dmem.hex                                          ;         ;
 ; lpm_add_sub.tdf                                        ; yes             ; Megafunction                                          ; c:/altera/13.0sp1/quartus/libraries/megafunctions/lpm_add_sub.tdf                               ;         ;
@@ -386,11 +385,11 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ; db/cmpr_dhg.tdf                                        ; yes             ; Auto-Generated Megafunction                           ; C:/Users/naqas/Desktop/Github/RISC-V/Riscv_Quartus_Project/db/cmpr_dhg.tdf                      ;         ;
 ; db/cmpr_ehg.tdf                                        ; yes             ; Auto-Generated Megafunction                           ; C:/Users/naqas/Desktop/Github/RISC-V/Riscv_Quartus_Project/db/cmpr_ehg.tdf                      ;         ;
 ; db/altsyncram_82g1.tdf                                 ; yes             ; Auto-Generated Megafunction                           ; C:/Users/naqas/Desktop/Github/RISC-V/Riscv_Quartus_Project/db/altsyncram_82g1.tdf               ;         ;
-; db/top.ram0_DRAM_255a05.hdl.mif                        ; yes             ; Auto-Generated Auto-Found Memory Initialization File  ; C:/Users/naqas/Desktop/Github/RISC-V/Riscv_Quartus_Project/db/top.ram0_DRAM_255a05.hdl.mif      ;         ;
+; db/top.ram0_dram_255a05.hdl.mif                        ; yes             ; Auto-Generated Auto-Found Memory Initialization File  ; C:/Users/naqas/Desktop/Github/RISC-V/Riscv_Quartus_Project/db/top.ram0_dram_255a05.hdl.mif      ;         ;
+; db/altsyncram_fv61.tdf                                 ; yes             ; Auto-Generated Megafunction                           ; C:/Users/naqas/Desktop/Github/RISC-V/Riscv_Quartus_Project/db/altsyncram_fv61.tdf               ;         ;
+; db/top.ram0_iram_c4ed73f3.hdl.mif                      ; yes             ; Auto-Generated Auto-Found Memory Initialization File  ; C:/Users/naqas/Desktop/Github/RISC-V/Riscv_Quartus_Project/db/top.ram0_iram_c4ed73f3.hdl.mif    ;         ;
 ; db/altsyncram_93h1.tdf                                 ; yes             ; Auto-Generated Megafunction                           ; C:/Users/naqas/Desktop/Github/RISC-V/Riscv_Quartus_Project/db/altsyncram_93h1.tdf               ;         ;
-; db/top.ram0_regFile_4c8ea16e.hdl.mif                   ; yes             ; Auto-Generated Auto-Found Memory Initialization File  ; C:/Users/naqas/Desktop/Github/RISC-V/Riscv_Quartus_Project/db/top.ram0_regFile_4c8ea16e.hdl.mif ;         ;
-; db/altsyncram_0661.tdf                                 ; yes             ; Auto-Generated Megafunction                           ; C:/Users/naqas/Desktop/Github/RISC-V/Riscv_Quartus_Project/db/altsyncram_0661.tdf               ;         ;
-; db/top.ram0_IRAM_c4ed73f3.hdl.mif                      ; yes             ; Auto-Generated Auto-Found Memory Initialization File  ; C:/Users/naqas/Desktop/Github/RISC-V/Riscv_Quartus_Project/db/top.ram0_IRAM_c4ed73f3.hdl.mif    ;         ;
+; db/top.ram0_regfile_4c8ea16e.hdl.mif                   ; yes             ; Auto-Generated Auto-Found Memory Initialization File  ; C:/Users/naqas/Desktop/Github/RISC-V/Riscv_Quartus_Project/db/top.ram0_regfile_4c8ea16e.hdl.mif ;         ;
 ; altshift_taps.tdf                                      ; yes             ; Megafunction                                          ; c:/altera/13.0sp1/quartus/libraries/megafunctions/altshift_taps.tdf                             ;         ;
 ; lpm_counter.inc                                        ; yes             ; Megafunction                                          ; c:/altera/13.0sp1/quartus/libraries/megafunctions/lpm_counter.inc                               ;         ;
 ; lpm_compare.inc                                        ; yes             ; Megafunction                                          ; c:/altera/13.0sp1/quartus/libraries/megafunctions/lpm_compare.inc                               ;         ;
@@ -415,29 +414,29 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +---------------------------------------------+--------+
 ; Resource                                    ; Usage  ;
 +---------------------------------------------+--------+
-; Estimated Total logic elements              ; 4,869  ;
+; Estimated Total logic elements              ; 4,920  ;
 ;                                             ;        ;
-; Total combinational functions               ; 4080   ;
+; Total combinational functions               ; 4131   ;
 ; Logic element usage by number of LUT inputs ;        ;
-;     -- 4 input functions                    ; 1524   ;
-;     -- 3 input functions                    ; 1625   ;
-;     -- <=2 input functions                  ; 931    ;
+;     -- 4 input functions                    ; 1569   ;
+;     -- 3 input functions                    ; 1628   ;
+;     -- <=2 input functions                  ; 934    ;
 ;                                             ;        ;
 ; Logic elements by mode                      ;        ;
-;     -- normal mode                          ; 3044   ;
-;     -- arithmetic mode                      ; 1036   ;
+;     -- normal mode                          ; 3091   ;
+;     -- arithmetic mode                      ; 1040   ;
 ;                                             ;        ;
-; Total registers                             ; 2195   ;
-;     -- Dedicated logic registers            ; 2195   ;
+; Total registers                             ; 2200   ;
+;     -- Dedicated logic registers            ; 2200   ;
 ;     -- I/O registers                        ; 0      ;
 ;                                             ;        ;
 ; I/O pins                                    ; 30     ;
 ; Total memory bits                           ; 25339  ;
 ; Embedded Multiplier 9-bit elements          ; 23     ;
 ; Maximum fan-out node                        ; KEY[0] ;
-; Maximum fan-out                             ; 2469   ;
-; Total fan-out                               ; 21506  ;
-; Average fan-out                             ; 3.26   ;
+; Maximum fan-out                             ; 2474   ;
+; Total fan-out                               ; 22117  ;
+; Average fan-out                             ; 3.33   ;
 +---------------------------------------------+--------+
 
 
@@ -446,18 +445,18 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +-----------------------------------------------------------------------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------+
 ; Compilation Hierarchy Node                                                                                      ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                                                                                                                                                                                                                                                                                                             ; Library Name ;
 +-----------------------------------------------------------------------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------+
-; |top                                                                                                            ; 4080 (1)          ; 2195 (0)     ; 25339       ; 23           ; 1       ; 11        ; 30   ; 0            ; |top                                                                                                                                                                                                                                                                                                                                                                                                                            ; work         ;
-;    |riscv_core:rv32i|                                                                                           ; 4051 (462)        ; 2195 (0)     ; 25339       ; 23           ; 1       ; 11        ; 0    ; 0            ; |top|riscv_core:rv32i                                                                                                                                                                                                                                                                                                                                                                                                           ; work         ;
+; |top                                                                                                            ; 4131 (1)          ; 2200 (0)     ; 25339       ; 23           ; 1       ; 11        ; 30   ; 0            ; |top                                                                                                                                                                                                                                                                                                                                                                                                                            ; work         ;
+;    |riscv_core:rv32i|                                                                                           ; 4102 (466)        ; 2200 (0)     ; 25339       ; 23           ; 1       ; 11        ; 0    ; 0            ; |top|riscv_core:rv32i                                                                                                                                                                                                                                                                                                                                                                                                           ; work         ;
 ;       |DRAM:dmem|                                                                                               ; 90 (90)           ; 75 (75)      ; 8192        ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|riscv_core:rv32i|DRAM:dmem                                                                                                                                                                                                                                                                                                                                                                                                 ; work         ;
 ;          |altsyncram:MEM_rtl_0|                                                                                 ; 0 (0)             ; 0 (0)        ; 8192        ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|riscv_core:rv32i|DRAM:dmem|altsyncram:MEM_rtl_0                                                                                                                                                                                                                                                                                                                                                                            ; work         ;
 ;             |altsyncram_82g1:auto_generated|                                                                    ; 0 (0)             ; 0 (0)        ; 8192        ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|riscv_core:rv32i|DRAM:dmem|altsyncram:MEM_rtl_0|altsyncram_82g1:auto_generated                                                                                                                                                                                                                                                                                                                                             ; work         ;
-;       |FPU:fpu|                                                                                                 ; 2519 (10)         ; 1610 (0)     ; 4859        ; 23           ; 1       ; 11        ; 0    ; 0            ; |top|riscv_core:rv32i|FPU:fpu                                                                                                                                                                                                                                                                                                                                                                                                   ; work         ;
-;          |fpu_add_sub:fpu_add_sub_inst|                                                                         ; 697 (0)           ; 305 (0)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|riscv_core:rv32i|FPU:fpu|fpu_add_sub:fpu_add_sub_inst                                                                                                                                                                                                                                                                                                                                                                      ; work         ;
-;             |fpu_add_sub_altfp_add_sub_hrm:fpu_add_sub_altfp_add_sub_hrm_component|                             ; 697 (253)         ; 305 (217)    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|riscv_core:rv32i|FPU:fpu|fpu_add_sub:fpu_add_sub_inst|fpu_add_sub_altfp_add_sub_hrm:fpu_add_sub_altfp_add_sub_hrm_component                                                                                                                                                                                                                                                                                                ; work         ;
+;       |FPU:fpu|                                                                                                 ; 2530 (9)          ; 1610 (0)     ; 4859        ; 23           ; 1       ; 11        ; 0    ; 0            ; |top|riscv_core:rv32i|FPU:fpu                                                                                                                                                                                                                                                                                                                                                                                                   ; work         ;
+;          |fpu_add_sub:fpu_add_sub_inst|                                                                         ; 711 (0)           ; 305 (0)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|riscv_core:rv32i|FPU:fpu|fpu_add_sub:fpu_add_sub_inst                                                                                                                                                                                                                                                                                                                                                                      ; work         ;
+;             |fpu_add_sub_altfp_add_sub_hrm:fpu_add_sub_altfp_add_sub_hrm_component|                             ; 711 (266)         ; 305 (217)    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|riscv_core:rv32i|FPU:fpu|fpu_add_sub:fpu_add_sub_inst|fpu_add_sub_altfp_add_sub_hrm:fpu_add_sub_altfp_add_sub_hrm_component                                                                                                                                                                                                                                                                                                ; work         ;
 ;                |fpu_add_sub_altbarrel_shift_6hb:rbarrel_shift|                                                  ; 105 (105)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|riscv_core:rv32i|FPU:fpu|fpu_add_sub:fpu_add_sub_inst|fpu_add_sub_altfp_add_sub_hrm:fpu_add_sub_altfp_add_sub_hrm_component|fpu_add_sub_altbarrel_shift_6hb:rbarrel_shift                                                                                                                                                                                                                                                  ; work         ;
 ;                |fpu_add_sub_altbarrel_shift_h0e:lbarrel_shift|                                                  ; 111 (111)         ; 24 (24)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|riscv_core:rv32i|FPU:fpu|fpu_add_sub:fpu_add_sub_inst|fpu_add_sub_altfp_add_sub_hrm:fpu_add_sub_altfp_add_sub_hrm_component|fpu_add_sub_altbarrel_shift_h0e:lbarrel_shift                                                                                                                                                                                                                                                  ; work         ;
-;                |fpu_add_sub_altpriority_encoder_e48:trailing_zeros_cnt|                                         ; 25 (14)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|riscv_core:rv32i|FPU:fpu|fpu_add_sub:fpu_add_sub_inst|fpu_add_sub_altfp_add_sub_hrm:fpu_add_sub_altfp_add_sub_hrm_component|fpu_add_sub_altpriority_encoder_e48:trailing_zeros_cnt                                                                                                                                                                                                                                         ; work         ;
-;                   |fpu_add_sub_altpriority_encoder_fj8:altpriority_encoder24|                                   ; 11 (6)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|riscv_core:rv32i|FPU:fpu|fpu_add_sub:fpu_add_sub_inst|fpu_add_sub_altfp_add_sub_hrm:fpu_add_sub_altfp_add_sub_hrm_component|fpu_add_sub_altpriority_encoder_e48:trailing_zeros_cnt|fpu_add_sub_altpriority_encoder_fj8:altpriority_encoder24                                                                                                                                                                               ; work         ;
+;                |fpu_add_sub_altpriority_encoder_e48:trailing_zeros_cnt|                                         ; 26 (14)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|riscv_core:rv32i|FPU:fpu|fpu_add_sub:fpu_add_sub_inst|fpu_add_sub_altfp_add_sub_hrm:fpu_add_sub_altfp_add_sub_hrm_component|fpu_add_sub_altpriority_encoder_e48:trailing_zeros_cnt                                                                                                                                                                                                                                         ; work         ;
+;                   |fpu_add_sub_altpriority_encoder_fj8:altpriority_encoder24|                                   ; 12 (7)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|riscv_core:rv32i|FPU:fpu|fpu_add_sub:fpu_add_sub_inst|fpu_add_sub_altfp_add_sub_hrm:fpu_add_sub_altfp_add_sub_hrm_component|fpu_add_sub_altpriority_encoder_e48:trailing_zeros_cnt|fpu_add_sub_altpriority_encoder_fj8:altpriority_encoder24                                                                                                                                                                               ; work         ;
 ;                      |fpu_add_sub_altpriority_encoder_vh8:altpriority_encoder26|                                ; 3 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|riscv_core:rv32i|FPU:fpu|fpu_add_sub:fpu_add_sub_inst|fpu_add_sub_altfp_add_sub_hrm:fpu_add_sub_altfp_add_sub_hrm_component|fpu_add_sub_altpriority_encoder_e48:trailing_zeros_cnt|fpu_add_sub_altpriority_encoder_fj8:altpriority_encoder24|fpu_add_sub_altpriority_encoder_vh8:altpriority_encoder26                                                                                                                     ; work         ;
 ;                         |fpu_add_sub_altpriority_encoder_qh8:altpriority_encoder28|                             ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|riscv_core:rv32i|FPU:fpu|fpu_add_sub:fpu_add_sub_inst|fpu_add_sub_altfp_add_sub_hrm:fpu_add_sub_altfp_add_sub_hrm_component|fpu_add_sub_altpriority_encoder_e48:trailing_zeros_cnt|fpu_add_sub_altpriority_encoder_fj8:altpriority_encoder24|fpu_add_sub_altpriority_encoder_vh8:altpriority_encoder26|fpu_add_sub_altpriority_encoder_qh8:altpriority_encoder28                                                           ; work         ;
 ;                      |fpu_add_sub_altpriority_encoder_vh8:altpriority_encoder27|                                ; 2 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|riscv_core:rv32i|FPU:fpu|fpu_add_sub:fpu_add_sub_inst|fpu_add_sub_altfp_add_sub_hrm:fpu_add_sub_altfp_add_sub_hrm_component|fpu_add_sub_altpriority_encoder_e48:trailing_zeros_cnt|fpu_add_sub_altpriority_encoder_fj8:altpriority_encoder24|fpu_add_sub_altpriority_encoder_vh8:altpriority_encoder27                                                                                                                     ; work         ;
@@ -485,10 +484,10 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ;                   |add_sub_nqe:auto_generated|                                                                  ; 8 (8)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|riscv_core:rv32i|FPU:fpu|fpu_add_sub:fpu_add_sub_inst|fpu_add_sub_altfp_add_sub_hrm:fpu_add_sub_altfp_add_sub_hrm_component|lpm_add_sub:add_sub9|add_sub_nqe:auto_generated                                                                                                                                                                                                                                                ; work         ;
 ;                |lpm_compare:trailing_zeros_limit_comparator|                                                    ; 2 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|riscv_core:rv32i|FPU:fpu|fpu_add_sub:fpu_add_sub_inst|fpu_add_sub_altfp_add_sub_hrm:fpu_add_sub_altfp_add_sub_hrm_component|lpm_compare:trailing_zeros_limit_comparator                                                                                                                                                                                                                                                    ; work         ;
 ;                   |cmpr_aag:auto_generated|                                                                     ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|riscv_core:rv32i|FPU:fpu|fpu_add_sub:fpu_add_sub_inst|fpu_add_sub_altfp_add_sub_hrm:fpu_add_sub_altfp_add_sub_hrm_component|lpm_compare:trailing_zeros_limit_comparator|cmpr_aag:auto_generated                                                                                                                                                                                                                            ; work         ;
-;          |fpu_compare:fpu_compare_inst|                                                                         ; 59 (0)            ; 3 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|riscv_core:rv32i|FPU:fpu|fpu_compare:fpu_compare_inst                                                                                                                                                                                                                                                                                                                                                                      ; work         ;
-;             |fpu_compare_altfp_compare_irb:fpu_compare_altfp_compare_irb_component|                             ; 59 (17)           ; 3 (3)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|riscv_core:rv32i|FPU:fpu|fpu_compare:fpu_compare_inst|fpu_compare_altfp_compare_irb:fpu_compare_altfp_compare_irb_component                                                                                                                                                                                                                                                                                                ; work         ;
-;                |lpm_compare:cmpr1|                                                                              ; 12 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|riscv_core:rv32i|FPU:fpu|fpu_compare:fpu_compare_inst|fpu_compare_altfp_compare_irb:fpu_compare_altfp_compare_irb_component|lpm_compare:cmpr1                                                                                                                                                                                                                                                                              ; work         ;
-;                   |cmpr_nrg:auto_generated|                                                                     ; 12 (12)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|riscv_core:rv32i|FPU:fpu|fpu_compare:fpu_compare_inst|fpu_compare_altfp_compare_irb:fpu_compare_altfp_compare_irb_component|lpm_compare:cmpr1|cmpr_nrg:auto_generated                                                                                                                                                                                                                                                      ; work         ;
+;          |fpu_compare:fpu_compare_inst|                                                                         ; 57 (0)            ; 3 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|riscv_core:rv32i|FPU:fpu|fpu_compare:fpu_compare_inst                                                                                                                                                                                                                                                                                                                                                                      ; work         ;
+;             |fpu_compare_altfp_compare_irb:fpu_compare_altfp_compare_irb_component|                             ; 57 (16)           ; 3 (3)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|riscv_core:rv32i|FPU:fpu|fpu_compare:fpu_compare_inst|fpu_compare_altfp_compare_irb:fpu_compare_altfp_compare_irb_component                                                                                                                                                                                                                                                                                                ; work         ;
+;                |lpm_compare:cmpr1|                                                                              ; 11 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|riscv_core:rv32i|FPU:fpu|fpu_compare:fpu_compare_inst|fpu_compare_altfp_compare_irb:fpu_compare_altfp_compare_irb_component|lpm_compare:cmpr1                                                                                                                                                                                                                                                                              ; work         ;
+;                   |cmpr_nrg:auto_generated|                                                                     ; 11 (11)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|riscv_core:rv32i|FPU:fpu|fpu_compare:fpu_compare_inst|fpu_compare_altfp_compare_irb:fpu_compare_altfp_compare_irb_component|lpm_compare:cmpr1|cmpr_nrg:auto_generated                                                                                                                                                                                                                                                      ; work         ;
 ;                |lpm_compare:cmpr2|                                                                              ; 11 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|riscv_core:rv32i|FPU:fpu|fpu_compare:fpu_compare_inst|fpu_compare_altfp_compare_irb:fpu_compare_altfp_compare_irb_component|lpm_compare:cmpr2                                                                                                                                                                                                                                                                              ; work         ;
 ;                   |cmpr_nrg:auto_generated|                                                                     ; 11 (11)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|riscv_core:rv32i|FPU:fpu|fpu_compare:fpu_compare_inst|fpu_compare_altfp_compare_irb:fpu_compare_altfp_compare_irb_component|lpm_compare:cmpr2|cmpr_nrg:auto_generated                                                                                                                                                                                                                                                      ; work         ;
 ;                |lpm_compare:cmpr3|                                                                              ; 12 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|riscv_core:rv32i|FPU:fpu|fpu_compare:fpu_compare_inst|fpu_compare_altfp_compare_irb:fpu_compare_altfp_compare_irb_component|lpm_compare:cmpr3                                                                                                                                                                                                                                                                              ; work         ;
@@ -603,15 +602,16 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ;                      |add_sub_8hd:auto_generated|                                                               ; 5 (5)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|riscv_core:rv32i|FPU:fpu|fpu_sqrt:fpu_sqrt_inst|fpu_sqrt_altfp_sqrt_ece:fpu_sqrt_altfp_sqrt_ece_component|fpu_sqrt_alt_sqrt_block_kfb:alt_sqrt_block2|lpm_add_sub:add_sub6|add_sub_8hd:auto_generated                                                                                                                                                                                                                      ; work         ;
 ;                   |lpm_add_sub:add_sub8|                                                                        ; 7 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|riscv_core:rv32i|FPU:fpu|fpu_sqrt:fpu_sqrt_inst|fpu_sqrt_altfp_sqrt_ece:fpu_sqrt_altfp_sqrt_ece_component|fpu_sqrt_alt_sqrt_block_kfb:alt_sqrt_block2|lpm_add_sub:add_sub8                                                                                                                                                                                                                                                 ; work         ;
 ;                      |add_sub_ahd:auto_generated|                                                               ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|riscv_core:rv32i|FPU:fpu|fpu_sqrt:fpu_sqrt_inst|fpu_sqrt_altfp_sqrt_ece:fpu_sqrt_altfp_sqrt_ece_component|fpu_sqrt_alt_sqrt_block_kfb:alt_sqrt_block2|lpm_add_sub:add_sub8|add_sub_ahd:auto_generated                                                                                                                                                                                                                      ; work         ;
-;       |IRAM:imem|                                                                                               ; 29 (29)           ; 1 (1)        ; 8192        ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|riscv_core:rv32i|IRAM:imem                                                                                                                                                                                                                                                                                                                                                                                                 ; work         ;
+;       |IRAM:imem|                                                                                               ; 27 (27)           ; 1 (1)        ; 8192        ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|riscv_core:rv32i|IRAM:imem                                                                                                                                                                                                                                                                                                                                                                                                 ; work         ;
 ;          |altsyncram:MEM_rtl_0|                                                                                 ; 0 (0)             ; 0 (0)        ; 8192        ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|riscv_core:rv32i|IRAM:imem|altsyncram:MEM_rtl_0                                                                                                                                                                                                                                                                                                                                                                            ; work         ;
-;             |altsyncram_0661:auto_generated|                                                                    ; 0 (0)             ; 0 (0)        ; 8192        ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|riscv_core:rv32i|IRAM:imem|altsyncram:MEM_rtl_0|altsyncram_0661:auto_generated                                                                                                                                                                                                                                                                                                                                             ; work         ;
+;             |altsyncram_fv61:auto_generated|                                                                    ; 0 (0)             ; 0 (0)        ; 8192        ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|riscv_core:rv32i|IRAM:imem|altsyncram:MEM_rtl_0|altsyncram_fv61:auto_generated                                                                                                                                                                                                                                                                                                                                             ; work         ;
 ;       |WB_MUX:WB_MUX|                                                                                           ; 64 (64)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|riscv_core:rv32i|WB_MUX:WB_MUX                                                                                                                                                                                                                                                                                                                                                                                             ; work         ;
 ;       |alu:alu|                                                                                                 ; 442 (442)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|riscv_core:rv32i|alu:alu                                                                                                                                                                                                                                                                                                                                                                                                   ; work         ;
-;       |aluSource:aluSource|                                                                                     ; 168 (168)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|riscv_core:rv32i|aluSource:aluSource                                                                                                                                                                                                                                                                                                                                                                                       ; work         ;
-;       |controlUnit:CU|                                                                                          ; 63 (63)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|riscv_core:rv32i|controlUnit:CU                                                                                                                                                                                                                                                                                                                                                                                            ; work         ;
+;       |aluSource:aluSource|                                                                                     ; 192 (192)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|riscv_core:rv32i|aluSource:aluSource                                                                                                                                                                                                                                                                                                                                                                                       ; work         ;
+;       |controlUnit:CU|                                                                                          ; 64 (64)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|riscv_core:rv32i|controlUnit:CU                                                                                                                                                                                                                                                                                                                                                                                            ; work         ;
 ;       |forwardingUnit:fu|                                                                                       ; 20 (20)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|riscv_core:rv32i|forwardingUnit:fu                                                                                                                                                                                                                                                                                                                                                                                         ; work         ;
-;       |immGen:immGen|                                                                                           ; 31 (31)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|riscv_core:rv32i|immGen:immGen                                                                                                                                                                                                                                                                                                                                                                                             ; work         ;
+;       |fpuController:fpuController|                                                                             ; 15 (15)           ; 5 (5)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|riscv_core:rv32i|fpuController:fpuController                                                                                                                                                                                                                                                                                                                                                                               ; work         ;
+;       |immGen:immGen|                                                                                           ; 30 (30)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|riscv_core:rv32i|immGen:immGen                                                                                                                                                                                                                                                                                                                                                                                             ; work         ;
 ;       |memOut_MUX:memOut_MUX|                                                                                   ; 19 (19)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|riscv_core:rv32i|memOut_MUX:memOut_MUX                                                                                                                                                                                                                                                                                                                                                                                     ; work         ;
 ;       |pcIn_MUX:pcIn_MUX|                                                                                       ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|riscv_core:rv32i|pcIn_MUX:pcIn_MUX                                                                                                                                                                                                                                                                                                                                                                                         ; work         ;
 ;       |regFile:float_rf|                                                                                        ; 1 (1)             ; 0 (0)        ; 2048        ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|riscv_core:rv32i|regFile:float_rf                                                                                                                                                                                                                                                                                                                                                                                          ; work         ;
@@ -624,7 +624,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ;             |altsyncram_93h1:auto_generated|                                                                    ; 0 (0)             ; 0 (0)        ; 1024        ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|riscv_core:rv32i|regFile:rf|altsyncram:registers_rtl_0|altsyncram_93h1:auto_generated                                                                                                                                                                                                                                                                                                                                      ; work         ;
 ;          |altsyncram:registers_rtl_1|                                                                           ; 0 (0)             ; 0 (0)        ; 1024        ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|riscv_core:rv32i|regFile:rf|altsyncram:registers_rtl_1                                                                                                                                                                                                                                                                                                                                                                     ; work         ;
 ;             |altsyncram_93h1:auto_generated|                                                                    ; 0 (0)             ; 0 (0)        ; 1024        ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|riscv_core:rv32i|regFile:rf|altsyncram:registers_rtl_1|altsyncram_93h1:auto_generated                                                                                                                                                                                                                                                                                                                                      ; work         ;
-;       |register:EX_MEM|                                                                                         ; 67 (67)           ; 145 (145)    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|riscv_core:rv32i|register:EX_MEM                                                                                                                                                                                                                                                                                                                                                                                           ; work         ;
+;       |register:EX_MEM|                                                                                         ; 66 (66)           ; 145 (145)    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|riscv_core:rv32i|register:EX_MEM                                                                                                                                                                                                                                                                                                                                                                                           ; work         ;
 ;       |register:ID_EX|                                                                                          ; 17 (17)           ; 131 (131)    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|riscv_core:rv32i|register:ID_EX                                                                                                                                                                                                                                                                                                                                                                                            ; work         ;
 ;       |register:IF_ID|                                                                                          ; 0 (0)             ; 64 (64)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|riscv_core:rv32i|register:IF_ID                                                                                                                                                                                                                                                                                                                                                                                            ; work         ;
 ;       |register:MEM_WB|                                                                                         ; 24 (24)           ; 137 (137)    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|riscv_core:rv32i|register:MEM_WB                                                                                                                                                                                                                                                                                                                                                                                           ; work         ;
@@ -647,7 +647,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; riscv_core:rv32i|FPU:fpu|fpu_div:fpu_div_inst|fpu_div_altfp_div_tkl:fpu_div_altfp_div_tkl_component|fpu_div_altfp_div_pst_t2j:altfp_div_pst1|altshift_taps:exp_result_dffe_0_rtl_0|shift_taps_n1m:auto_generated|altsyncram_4981:altsyncram2|ALTSYNCRAM                                   ; AUTO ; Simple Dual Port ; 2            ; 12           ; 2            ; 12           ; 24   ; None                                 ;
 ; riscv_core:rv32i|FPU:fpu|fpu_div:fpu_div_inst|fpu_div_altfp_div_tkl:fpu_div_altfp_div_tkl_component|fpu_div_altfp_div_pst_t2j:altfp_div_pst1|altsyncram:altsyncram3|altsyncram_fvo:auto_generated|ALTSYNCRAM                                                                              ; AUTO ; ROM              ; 512          ; 9            ; --           ; --           ; 4608 ; fpu_div.hex                          ;
 ; riscv_core:rv32i|FPU:fpu|fpu_sqrt:fpu_sqrt_inst|fpu_sqrt_altfp_sqrt_ece:fpu_sqrt_altfp_sqrt_ece_component|altshift_taps:nan_man_ff0_rtl_0|shift_taps_53m:auto_generated|altsyncram_6c81:altsyncram2|ALTSYNCRAM                                                                            ; AUTO ; Simple Dual Port ; 11           ; 10           ; 11           ; 10           ; 110  ; None                                 ;
-; riscv_core:rv32i|IRAM:imem|altsyncram:MEM_rtl_0|altsyncram_0661:auto_generated|ALTSYNCRAM                                                                                                                                                                                                 ; AUTO ; ROM              ; 256          ; 32           ; --           ; --           ; 8192 ; db/top.ram0_IRAM_c4ed73f3.hdl.mif    ;
+; riscv_core:rv32i|IRAM:imem|altsyncram:MEM_rtl_0|altsyncram_fv61:auto_generated|ALTSYNCRAM                                                                                                                                                                                                 ; AUTO ; ROM              ; 256          ; 32           ; --           ; --           ; 8192 ; db/top.ram0_IRAM_c4ed73f3.hdl.mif    ;
 ; riscv_core:rv32i|regFile:float_rf|altsyncram:registers_rtl_0|altsyncram_93h1:auto_generated|ALTSYNCRAM                                                                                                                                                                                    ; AUTO ; Simple Dual Port ; 32           ; 32           ; 32           ; 32           ; 1024 ; db/top.ram0_regFile_4c8ea16e.hdl.mif ;
 ; riscv_core:rv32i|regFile:float_rf|altsyncram:registers_rtl_1|altsyncram_93h1:auto_generated|ALTSYNCRAM                                                                                                                                                                                    ; AUTO ; Simple Dual Port ; 32           ; 32           ; 32           ; 32           ; 1024 ; db/top.ram0_regFile_4c8ea16e.hdl.mif ;
 ; riscv_core:rv32i|regFile:rf|altsyncram:registers_rtl_0|altsyncram_93h1:auto_generated|ALTSYNCRAM                                                                                                                                                                                          ; AUTO ; Simple Dual Port ; 32           ; 32           ; 32           ; 32           ; 1024 ; db/top.ram0_regFile_4c8ea16e.hdl.mif ;
@@ -920,12 +920,12 @@ Note: number of Embedded Multiplier Blocks used is only available after a succes
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 2195  ;
-; Number of registers using Synchronous Clear  ; 79    ;
+; Total registers                              ; 2200  ;
+; Number of registers using Synchronous Clear  ; 84    ;
 ; Number of registers using Synchronous Load   ; 225   ;
-; Number of registers using Asynchronous Clear ; 511   ;
+; Number of registers using Asynchronous Clear ; 516   ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 32    ;
+; Number of registers using Clock Enable       ; 397   ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -1038,11 +1038,11 @@ Note: number of Embedded Multiplier Blocks used is only available after a succes
 +-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+------------+
 ; Register Name                                                                                                                                                                                               ; Megafunction                                                                                                                                                                                           ; Type       ;
 +-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+------------+
+; riscv_core:rv32i|register:IF_ID|out[32..63]                                                                                                                                                                 ; riscv_core:rv32i|IRAM:imem|MEM_rtl_0                                                                                                                                                                   ; RAM        ;
 ; riscv_core:rv32i|regFile:rf|dataA[0..31]                                                                                                                                                                    ; riscv_core:rv32i|regFile:rf|registers_rtl_0                                                                                                                                                            ; RAM        ;
 ; riscv_core:rv32i|regFile:rf|dataB[0..31]                                                                                                                                                                    ; riscv_core:rv32i|regFile:rf|registers_rtl_1                                                                                                                                                            ; RAM        ;
 ; riscv_core:rv32i|regFile:float_rf|dataA[0..31]                                                                                                                                                              ; riscv_core:rv32i|regFile:float_rf|registers_rtl_0                                                                                                                                                      ; RAM        ;
 ; riscv_core:rv32i|regFile:float_rf|dataB[0..31]                                                                                                                                                              ; riscv_core:rv32i|regFile:float_rf|registers_rtl_1                                                                                                                                                      ; RAM        ;
-; riscv_core:rv32i|register:IF_ID|out[32..63]                                                                                                                                                                 ; riscv_core:rv32i|IRAM:imem|MEM_rtl_0                                                                                                                                                                   ; RAM        ;
 ; riscv_core:rv32i|FPU:fpu|fpu_sqrt:fpu_sqrt_inst|fpu_sqrt_altfp_sqrt_ece:fpu_sqrt_altfp_sqrt_ece_component|nan_man_ff12[0]                                                                                   ; riscv_core:rv32i|FPU:fpu|fpu_sqrt:fpu_sqrt_inst|fpu_sqrt_altfp_sqrt_ece:fpu_sqrt_altfp_sqrt_ece_component|nan_man_ff0_rtl_0                                                                            ; SHIFT_TAPS ;
 ; riscv_core:rv32i|FPU:fpu|fpu_sqrt:fpu_sqrt_inst|fpu_sqrt_altfp_sqrt_ece:fpu_sqrt_altfp_sqrt_ece_component|nan_man_ff11[0]                                                                                   ; riscv_core:rv32i|FPU:fpu|fpu_sqrt:fpu_sqrt_inst|fpu_sqrt_altfp_sqrt_ece:fpu_sqrt_altfp_sqrt_ece_component|nan_man_ff0_rtl_0                                                                            ; SHIFT_TAPS ;
 ; riscv_core:rv32i|FPU:fpu|fpu_sqrt:fpu_sqrt_inst|fpu_sqrt_altfp_sqrt_ece:fpu_sqrt_altfp_sqrt_ece_component|nan_man_ff10[0]                                                                                   ; riscv_core:rv32i|FPU:fpu|fpu_sqrt:fpu_sqrt_inst|fpu_sqrt_altfp_sqrt_ece:fpu_sqrt_altfp_sqrt_ece_component|nan_man_ff0_rtl_0                                                                            ; SHIFT_TAPS ;
@@ -1164,36 +1164,36 @@ Note: number of Embedded Multiplier Blocks used is only available after a succes
 +--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                                                                                                                                                                                                               ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; 3:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; Yes        ; |top|riscv_core:rv32i|register:pc|out[31]                                                                                                                                                                                                                                ;
-; 4:1                ; 29 bits   ; 58 LEs        ; 58 LEs               ; 0 LEs                  ; Yes        ; |top|riscv_core:rv32i|register:pc|out[12]                                                                                                                                                                                                                                ;
-; 3:1                ; 10 bits   ; 20 LEs        ; 10 LEs               ; 10 LEs                 ; Yes        ; |top|riscv_core:rv32i|FPU:fpu|fpu_convert:fpu_convert_inst|fpu_convert_altfp_convert_3tm:fpu_convert_altfp_convert_3tm_component|result_reg[14]                                                                                                                          ;
-; 3:1                ; 15 bits   ; 30 LEs        ; 30 LEs               ; 0 LEs                  ; Yes        ; |top|riscv_core:rv32i|FPU:fpu|fpu_convert:fpu_convert_inst|fpu_convert_altfp_convert_3tm:fpu_convert_altfp_convert_3tm_component|fpu_convert_altbarrel_shift_brf:altbarrel_shift5|sbit_piper2d[21]                                                                       ;
-; 3:1                ; 7 bits    ; 14 LEs        ; 14 LEs               ; 0 LEs                  ; Yes        ; |top|riscv_core:rv32i|FPU:fpu|fpu_convert_float_integer:fpu_convert_float_integer_inst|fpu_convert_float_integer_altfp_convert_a4p:fpu_convert_float_integer_altfp_convert_a4p_component|fpu_convert_float_integer_altbarrel_shift_grf:altbarrel_shift6|sbit_piper2d[38] ;
-; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; Yes        ; |top|riscv_core:rv32i|FPU:fpu|fpu_add_sub:fpu_add_sub_inst|fpu_add_sub_altfp_add_sub_hrm:fpu_add_sub_altfp_add_sub_hrm_component|fpu_add_sub_altbarrel_shift_h0e:lbarrel_shift|sbit_piper1d[17]                                                                          ;
-; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; Yes        ; |top|riscv_core:rv32i|FPU:fpu|fpu_convert:fpu_convert_inst|fpu_convert_altfp_convert_3tm:fpu_convert_altfp_convert_3tm_component|fpu_convert_altbarrel_shift_brf:altbarrel_shift5|sbit_piper1d[27]                                                                       ;
-; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |top|riscv_core:rv32i|register:ID_EX|out[52]                                                                                                                                                                                                                             ;
-; 4:1                ; 10 bits   ; 20 LEs        ; 20 LEs               ; 0 LEs                  ; Yes        ; |top|riscv_core:rv32i|register:ID_EX|out[76]                                                                                                                                                                                                                             ;
-; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |top|riscv_core:rv32i|FPU:fpu|fpu_add_sub:fpu_add_sub_inst|fpu_add_sub_altfp_add_sub_hrm:fpu_add_sub_altfp_add_sub_hrm_component|fpu_add_sub_altbarrel_shift_h0e:lbarrel_shift|sbit_piper1d[21]                                                                          ;
-; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; Yes        ; |top|riscv_core:rv32i|FPU:fpu|fpu_convert:fpu_convert_inst|fpu_convert_altfp_convert_3tm:fpu_convert_altfp_convert_3tm_component|fpu_convert_altbarrel_shift_brf:altbarrel_shift5|sbit_piper1d[30]                                                                       ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; Yes        ; |top|riscv_core:rv32i|register:pc|out[29]                                                                                                                                                                                                                                ;
+; 4:1                ; 29 bits   ; 58 LEs        ; 58 LEs               ; 0 LEs                  ; Yes        ; |top|riscv_core:rv32i|register:pc|out[9]                                                                                                                                                                                                                                 ;
+; 3:1                ; 10 bits   ; 20 LEs        ; 10 LEs               ; 10 LEs                 ; Yes        ; |top|riscv_core:rv32i|FPU:fpu|fpu_convert:fpu_convert_inst|fpu_convert_altfp_convert_3tm:fpu_convert_altfp_convert_3tm_component|result_reg[20]                                                                                                                          ;
+; 3:1                ; 15 bits   ; 30 LEs        ; 30 LEs               ; 0 LEs                  ; Yes        ; |top|riscv_core:rv32i|FPU:fpu|fpu_convert:fpu_convert_inst|fpu_convert_altfp_convert_3tm:fpu_convert_altfp_convert_3tm_component|fpu_convert_altbarrel_shift_brf:altbarrel_shift5|sbit_piper2d[22]                                                                       ;
+; 3:1                ; 7 bits    ; 14 LEs        ; 14 LEs               ; 0 LEs                  ; Yes        ; |top|riscv_core:rv32i|FPU:fpu|fpu_convert_float_integer:fpu_convert_float_integer_inst|fpu_convert_float_integer_altfp_convert_a4p:fpu_convert_float_integer_altfp_convert_a4p_component|fpu_convert_float_integer_altbarrel_shift_grf:altbarrel_shift6|sbit_piper2d[35] ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; Yes        ; |top|riscv_core:rv32i|FPU:fpu|fpu_add_sub:fpu_add_sub_inst|fpu_add_sub_altfp_add_sub_hrm:fpu_add_sub_altfp_add_sub_hrm_component|fpu_add_sub_altbarrel_shift_h0e:lbarrel_shift|sbit_piper1d[16]                                                                          ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; Yes        ; |top|riscv_core:rv32i|FPU:fpu|fpu_convert:fpu_convert_inst|fpu_convert_altfp_convert_3tm:fpu_convert_altfp_convert_3tm_component|fpu_convert_altbarrel_shift_brf:altbarrel_shift5|sbit_piper1d[28]                                                                       ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |top|riscv_core:rv32i|register:ID_EX|out[53]                                                                                                                                                                                                                             ;
+; 4:1                ; 10 bits   ; 20 LEs        ; 20 LEs               ; 0 LEs                  ; Yes        ; |top|riscv_core:rv32i|register:ID_EX|out[78]                                                                                                                                                                                                                             ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |top|riscv_core:rv32i|FPU:fpu|fpu_add_sub:fpu_add_sub_inst|fpu_add_sub_altfp_add_sub_hrm:fpu_add_sub_altfp_add_sub_hrm_component|fpu_add_sub_altbarrel_shift_h0e:lbarrel_shift|sbit_piper1d[18]                                                                          ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; Yes        ; |top|riscv_core:rv32i|FPU:fpu|fpu_convert:fpu_convert_inst|fpu_convert_altfp_convert_3tm:fpu_convert_altfp_convert_3tm_component|fpu_convert_altbarrel_shift_brf:altbarrel_shift5|sbit_piper1d[29]                                                                       ;
 ; 5:1                ; 2 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; Yes        ; |top|riscv_core:rv32i|FPU:fpu|fpu_add_sub:fpu_add_sub_inst|fpu_add_sub_altfp_add_sub_hrm:fpu_add_sub_altfp_add_sub_hrm_component|fpu_add_sub_altbarrel_shift_h0e:lbarrel_shift|sbit_piper1d[23]                                                                          ;
-; 6:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |top|riscv_core:rv32i|register:ID_EX|out[69]                                                                                                                                                                                                                             ;
-; 6:1                ; 2 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |top|riscv_core:rv32i|FPU:fpu|fpu_add_sub:fpu_add_sub_inst|fpu_add_sub_altfp_add_sub_hrm:fpu_add_sub_altfp_add_sub_hrm_component|fpu_add_sub_altbarrel_shift_h0e:lbarrel_shift|sbit_piper1d[24]                                                                          ;
-; 34:1               ; 4 bits    ; 88 LEs        ; 52 LEs               ; 36 LEs                 ; Yes        ; |top|riscv_core:rv32i|register:ID_EX|out[123]                                                                                                                                                                                                                            ;
+; 6:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |top|riscv_core:rv32i|register:ID_EX|out[63]                                                                                                                                                                                                                             ;
+; 6:1                ; 2 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |top|riscv_core:rv32i|FPU:fpu|fpu_add_sub:fpu_add_sub_inst|fpu_add_sub_altfp_add_sub_hrm:fpu_add_sub_altfp_add_sub_hrm_component|fpu_add_sub_altbarrel_shift_h0e:lbarrel_shift|sbit_piper1d[25]                                                                          ;
+; 34:1               ; 4 bits    ; 88 LEs        ; 52 LEs               ; 36 LEs                 ; Yes        ; |top|riscv_core:rv32i|register:ID_EX|out[119]                                                                                                                                                                                                                            ;
 ; 8:1                ; 2 bits    ; 10 LEs        ; 10 LEs               ; 0 LEs                  ; Yes        ; |top|riscv_core:rv32i|register:ID_EX|out[127]                                                                                                                                                                                                                            ;
-; 39:1               ; 8 bits    ; 208 LEs       ; 96 LEs               ; 112 LEs                ; Yes        ; |top|riscv_core:rv32i|register:EX_MEM|out[88]                                                                                                                                                                                                                            ;
-; 40:1               ; 7 bits    ; 182 LEs       ; 91 LEs               ; 91 LEs                 ; Yes        ; |top|riscv_core:rv32i|register:EX_MEM|out[95]                                                                                                                                                                                                                            ;
-; 41:1               ; 4 bits    ; 108 LEs       ; 56 LEs               ; 52 LEs                 ; Yes        ; |top|riscv_core:rv32i|register:EX_MEM|out[97]                                                                                                                                                                                                                            ;
+; 39:1               ; 8 bits    ; 208 LEs       ; 96 LEs               ; 112 LEs                ; Yes        ; |top|riscv_core:rv32i|register:EX_MEM|out[85]                                                                                                                                                                                                                            ;
+; 40:1               ; 7 bits    ; 182 LEs       ; 91 LEs               ; 91 LEs                 ; Yes        ; |top|riscv_core:rv32i|register:EX_MEM|out[93]                                                                                                                                                                                                                            ;
+; 41:1               ; 4 bits    ; 108 LEs       ; 56 LEs               ; 52 LEs                 ; Yes        ; |top|riscv_core:rv32i|register:EX_MEM|out[100]                                                                                                                                                                                                                           ;
 ; 42:1               ; 2 bits    ; 56 LEs        ; 32 LEs               ; 24 LEs                 ; Yes        ; |top|riscv_core:rv32i|register:EX_MEM|out[102]                                                                                                                                                                                                                           ;
 ; 4:1                ; 32 bits   ; 64 LEs        ; 64 LEs               ; 0 LEs                  ; No         ; |top|riscv_core:rv32i|WB_MUX:WB_MUX|Mux1                                                                                                                                                                                                                                 ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; No         ; |top|riscv_core:rv32i|DRAM:dmem|Mux7                                                                                                                                                                                                                                     ;
-; 3:1                ; 15 bits   ; 30 LEs        ; 30 LEs               ; 0 LEs                  ; No         ; |top|riscv_core:rv32i|FPU:fpu|fpu_convert_float_integer:fpu_convert_float_integer_inst|fpu_convert_float_integer_altfp_convert_a4p:fpu_convert_float_integer_altfp_convert_a4p_component|integer_tmp_output[17]                                                          ;
-; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |top|riscv_core:rv32i|FPU:fpu|fpu_add_sub:fpu_add_sub_inst|fpu_add_sub_altfp_add_sub_hrm:fpu_add_sub_altfp_add_sub_hrm_component|fpu_add_sub_altbarrel_shift_6hb:rbarrel_shift|result[9]                                                                                 ;
-; 5:1                ; 32 bits   ; 96 LEs        ; 64 LEs               ; 32 LEs                 ; No         ; |top|riscv_core:rv32i|aluSource:aluSource|Mux35                                                                                                                                                                                                                          ;
-; 5:1                ; 32 bits   ; 96 LEs        ; 64 LEs               ; 32 LEs                 ; No         ; |top|riscv_core:rv32i|aluSource:aluSource|Mux23                                                                                                                                                                                                                          ;
-; 4:1                ; 5 bits    ; 10 LEs        ; 10 LEs               ; 0 LEs                  ; No         ; |top|riscv_core:rv32i|FPU:fpu|fpu_add_sub:fpu_add_sub_inst|fpu_add_sub_altfp_add_sub_hrm:fpu_add_sub_altfp_add_sub_hrm_component|fpu_add_sub_altbarrel_shift_6hb:rbarrel_shift|result[6]                                                                                 ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; No         ; |top|riscv_core:rv32i|DRAM:dmem|Mux1                                                                                                                                                                                                                                     ;
+; 3:1                ; 15 bits   ; 30 LEs        ; 30 LEs               ; 0 LEs                  ; No         ; |top|riscv_core:rv32i|FPU:fpu|fpu_convert_float_integer:fpu_convert_float_integer_inst|fpu_convert_float_integer_altfp_convert_a4p:fpu_convert_float_integer_altfp_convert_a4p_component|integer_tmp_output[19]                                                          ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |top|riscv_core:rv32i|FPU:fpu|fpu_add_sub:fpu_add_sub_inst|fpu_add_sub_altfp_add_sub_hrm:fpu_add_sub_altfp_add_sub_hrm_component|fpu_add_sub_altbarrel_shift_6hb:rbarrel_shift|result[8]                                                                                 ;
+; 5:1                ; 32 bits   ; 96 LEs        ; 64 LEs               ; 32 LEs                 ; No         ; |top|riscv_core:rv32i|aluSource:aluSource|Mux54                                                                                                                                                                                                                          ;
+; 5:1                ; 32 bits   ; 96 LEs        ; 64 LEs               ; 32 LEs                 ; No         ; |top|riscv_core:rv32i|aluSource:aluSource|Mux27                                                                                                                                                                                                                          ;
+; 4:1                ; 5 bits    ; 10 LEs        ; 10 LEs               ; 0 LEs                  ; No         ; |top|riscv_core:rv32i|FPU:fpu|fpu_add_sub:fpu_add_sub_inst|fpu_add_sub_altfp_add_sub_hrm:fpu_add_sub_altfp_add_sub_hrm_component|fpu_add_sub_altbarrel_shift_6hb:rbarrel_shift|result[0]                                                                                 ;
 ; 5:1                ; 3 bits    ; 9 LEs         ; 9 LEs                ; 0 LEs                  ; No         ; |top|riscv_core:rv32i|FPU:fpu|fpu_add_sub:fpu_add_sub_inst|fpu_add_sub_altfp_add_sub_hrm:fpu_add_sub_altfp_add_sub_hrm_component|fpu_add_sub_altbarrel_shift_6hb:rbarrel_shift|result[1]                                                                                 ;
-; 40:1               ; 4 bits    ; 104 LEs       ; 52 LEs               ; 52 LEs                 ; No         ; |top|riscv_core:rv32i|aluResult[4]                                                                                                                                                                                                                                       ;
-; 41:1               ; 2 bits    ; 54 LEs        ; 28 LEs               ; 26 LEs                 ; No         ; |top|riscv_core:rv32i|aluResult[2]                                                                                                                                                                                                                                       ;
+; 40:1               ; 4 bits    ; 104 LEs       ; 52 LEs               ; 52 LEs                 ; No         ; |top|riscv_core:rv32i|aluResult[6]                                                                                                                                                                                                                                       ;
+; 41:1               ; 2 bits    ; 54 LEs        ; 28 LEs               ; 26 LEs                 ; No         ; |top|riscv_core:rv32i|aluResult[3]                                                                                                                                                                                                                                       ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 
@@ -1296,6 +1296,15 @@ Note: number of Embedded Multiplier Blocks used is only available after a succes
 +---------------------------------+--------------------+------+-----------------------------------------+
 
 
++-------------------------------------------------------------------------------------------------------+
+; Source assignments for riscv_core:rv32i|IRAM:imem|altsyncram:MEM_rtl_0|altsyncram_fv61:auto_generated ;
++---------------------------------+--------------------+------+-----------------------------------------+
+; Assignment                      ; Value              ; From ; To                                      ;
++---------------------------------+--------------------+------+-----------------------------------------+
+; OPTIMIZE_POWER_DURING_SYNTHESIS ; NORMAL_COMPILATION ; -    ; -                                       ;
++---------------------------------+--------------------+------+-----------------------------------------+
+
+
 +--------------------------------------------------------------------------------------------------------------+
 ; Source assignments for riscv_core:rv32i|regFile:rf|altsyncram:registers_rtl_0|altsyncram_93h1:auto_generated ;
 +---------------------------------+--------------------+------+------------------------------------------------+
@@ -1330,15 +1339,6 @@ Note: number of Embedded Multiplier Blocks used is only available after a succes
 +---------------------------------+--------------------+------+------------------------------------------------------+
 ; OPTIMIZE_POWER_DURING_SYNTHESIS ; NORMAL_COMPILATION ; -    ; -                                                    ;
 +---------------------------------+--------------------+------+------------------------------------------------------+
-
-
-+-------------------------------------------------------------------------------------------------------+
-; Source assignments for riscv_core:rv32i|IRAM:imem|altsyncram:MEM_rtl_0|altsyncram_0661:auto_generated ;
-+---------------------------------+--------------------+------+-----------------------------------------+
-; Assignment                      ; Value              ; From ; To                                      ;
-+---------------------------------+--------------------+------+-----------------------------------------+
-; OPTIMIZE_POWER_DURING_SYNTHESIS ; NORMAL_COMPILATION ; -    ; -                                       ;
-+---------------------------------+--------------------+------+-----------------------------------------+
 
 
 +----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -3600,6 +3600,67 @@ Note: In order to hide this table in the UI and the text report file, please set
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
++--------------------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: riscv_core:rv32i|IRAM:imem|altsyncram:MEM_rtl_0 ;
++------------------------------------+-----------------------------------+-------------------------+
+; Parameter Name                     ; Value                             ; Type                    ;
++------------------------------------+-----------------------------------+-------------------------+
+; BYTE_SIZE_BLOCK                    ; 8                                 ; Untyped                 ;
+; AUTO_CARRY_CHAINS                  ; ON                                ; AUTO_CARRY              ;
+; IGNORE_CARRY_BUFFERS               ; OFF                               ; IGNORE_CARRY            ;
+; AUTO_CASCADE_CHAINS                ; ON                                ; AUTO_CASCADE            ;
+; IGNORE_CASCADE_BUFFERS             ; OFF                               ; IGNORE_CASCADE          ;
+; WIDTH_BYTEENA                      ; 1                                 ; Untyped                 ;
+; OPERATION_MODE                     ; ROM                               ; Untyped                 ;
+; WIDTH_A                            ; 32                                ; Untyped                 ;
+; WIDTHAD_A                          ; 8                                 ; Untyped                 ;
+; NUMWORDS_A                         ; 256                               ; Untyped                 ;
+; OUTDATA_REG_A                      ; UNREGISTERED                      ; Untyped                 ;
+; ADDRESS_ACLR_A                     ; NONE                              ; Untyped                 ;
+; OUTDATA_ACLR_A                     ; NONE                              ; Untyped                 ;
+; WRCONTROL_ACLR_A                   ; NONE                              ; Untyped                 ;
+; INDATA_ACLR_A                      ; NONE                              ; Untyped                 ;
+; BYTEENA_ACLR_A                     ; NONE                              ; Untyped                 ;
+; WIDTH_B                            ; 1                                 ; Untyped                 ;
+; WIDTHAD_B                          ; 1                                 ; Untyped                 ;
+; NUMWORDS_B                         ; 1                                 ; Untyped                 ;
+; INDATA_REG_B                       ; CLOCK1                            ; Untyped                 ;
+; WRCONTROL_WRADDRESS_REG_B          ; CLOCK1                            ; Untyped                 ;
+; RDCONTROL_REG_B                    ; CLOCK1                            ; Untyped                 ;
+; ADDRESS_REG_B                      ; CLOCK1                            ; Untyped                 ;
+; OUTDATA_REG_B                      ; UNREGISTERED                      ; Untyped                 ;
+; BYTEENA_REG_B                      ; CLOCK1                            ; Untyped                 ;
+; INDATA_ACLR_B                      ; NONE                              ; Untyped                 ;
+; WRCONTROL_ACLR_B                   ; NONE                              ; Untyped                 ;
+; ADDRESS_ACLR_B                     ; NONE                              ; Untyped                 ;
+; OUTDATA_ACLR_B                     ; NONE                              ; Untyped                 ;
+; RDCONTROL_ACLR_B                   ; NONE                              ; Untyped                 ;
+; BYTEENA_ACLR_B                     ; NONE                              ; Untyped                 ;
+; WIDTH_BYTEENA_A                    ; 1                                 ; Untyped                 ;
+; WIDTH_BYTEENA_B                    ; 1                                 ; Untyped                 ;
+; RAM_BLOCK_TYPE                     ; AUTO                              ; Untyped                 ;
+; BYTE_SIZE                          ; 8                                 ; Untyped                 ;
+; READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE                         ; Untyped                 ;
+; READ_DURING_WRITE_MODE_PORT_A      ; NEW_DATA_NO_NBE_READ              ; Untyped                 ;
+; READ_DURING_WRITE_MODE_PORT_B      ; NEW_DATA_NO_NBE_READ              ; Untyped                 ;
+; INIT_FILE                          ; db/top.ram0_IRAM_c4ed73f3.hdl.mif ; Untyped                 ;
+; INIT_FILE_LAYOUT                   ; PORT_A                            ; Untyped                 ;
+; MAXIMUM_DEPTH                      ; 0                                 ; Untyped                 ;
+; CLOCK_ENABLE_INPUT_A               ; NORMAL                            ; Untyped                 ;
+; CLOCK_ENABLE_INPUT_B               ; NORMAL                            ; Untyped                 ;
+; CLOCK_ENABLE_OUTPUT_A              ; NORMAL                            ; Untyped                 ;
+; CLOCK_ENABLE_OUTPUT_B              ; NORMAL                            ; Untyped                 ;
+; CLOCK_ENABLE_CORE_A                ; USE_INPUT_CLKEN                   ; Untyped                 ;
+; CLOCK_ENABLE_CORE_B                ; USE_INPUT_CLKEN                   ; Untyped                 ;
+; ENABLE_ECC                         ; FALSE                             ; Untyped                 ;
+; ECC_PIPELINE_STAGE_ENABLED         ; FALSE                             ; Untyped                 ;
+; WIDTH_ECCSTATUS                    ; 3                                 ; Untyped                 ;
+; DEVICE_FAMILY                      ; Cyclone II                        ; Untyped                 ;
+; CBXI_PARAMETER                     ; altsyncram_fv61                   ; Untyped                 ;
++------------------------------------+-----------------------------------+-------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
 +---------------------------------------------------------------------------------------------------------+
 ; Parameter Settings for Inferred Entity Instance: riscv_core:rv32i|regFile:rf|altsyncram:registers_rtl_0 ;
 +------------------------------------+--------------------------------------+-----------------------------+
@@ -3844,67 +3905,6 @@ Note: In order to hide this table in the UI and the text report file, please set
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+--------------------------------------------------------------------------------------------------+
-; Parameter Settings for Inferred Entity Instance: riscv_core:rv32i|IRAM:imem|altsyncram:MEM_rtl_0 ;
-+------------------------------------+-----------------------------------+-------------------------+
-; Parameter Name                     ; Value                             ; Type                    ;
-+------------------------------------+-----------------------------------+-------------------------+
-; BYTE_SIZE_BLOCK                    ; 8                                 ; Untyped                 ;
-; AUTO_CARRY_CHAINS                  ; ON                                ; AUTO_CARRY              ;
-; IGNORE_CARRY_BUFFERS               ; OFF                               ; IGNORE_CARRY            ;
-; AUTO_CASCADE_CHAINS                ; ON                                ; AUTO_CASCADE            ;
-; IGNORE_CASCADE_BUFFERS             ; OFF                               ; IGNORE_CASCADE          ;
-; WIDTH_BYTEENA                      ; 1                                 ; Untyped                 ;
-; OPERATION_MODE                     ; ROM                               ; Untyped                 ;
-; WIDTH_A                            ; 32                                ; Untyped                 ;
-; WIDTHAD_A                          ; 8                                 ; Untyped                 ;
-; NUMWORDS_A                         ; 256                               ; Untyped                 ;
-; OUTDATA_REG_A                      ; UNREGISTERED                      ; Untyped                 ;
-; ADDRESS_ACLR_A                     ; NONE                              ; Untyped                 ;
-; OUTDATA_ACLR_A                     ; NONE                              ; Untyped                 ;
-; WRCONTROL_ACLR_A                   ; NONE                              ; Untyped                 ;
-; INDATA_ACLR_A                      ; NONE                              ; Untyped                 ;
-; BYTEENA_ACLR_A                     ; NONE                              ; Untyped                 ;
-; WIDTH_B                            ; 1                                 ; Untyped                 ;
-; WIDTHAD_B                          ; 1                                 ; Untyped                 ;
-; NUMWORDS_B                         ; 1                                 ; Untyped                 ;
-; INDATA_REG_B                       ; CLOCK1                            ; Untyped                 ;
-; WRCONTROL_WRADDRESS_REG_B          ; CLOCK1                            ; Untyped                 ;
-; RDCONTROL_REG_B                    ; CLOCK1                            ; Untyped                 ;
-; ADDRESS_REG_B                      ; CLOCK1                            ; Untyped                 ;
-; OUTDATA_REG_B                      ; UNREGISTERED                      ; Untyped                 ;
-; BYTEENA_REG_B                      ; CLOCK1                            ; Untyped                 ;
-; INDATA_ACLR_B                      ; NONE                              ; Untyped                 ;
-; WRCONTROL_ACLR_B                   ; NONE                              ; Untyped                 ;
-; ADDRESS_ACLR_B                     ; NONE                              ; Untyped                 ;
-; OUTDATA_ACLR_B                     ; NONE                              ; Untyped                 ;
-; RDCONTROL_ACLR_B                   ; NONE                              ; Untyped                 ;
-; BYTEENA_ACLR_B                     ; NONE                              ; Untyped                 ;
-; WIDTH_BYTEENA_A                    ; 1                                 ; Untyped                 ;
-; WIDTH_BYTEENA_B                    ; 1                                 ; Untyped                 ;
-; RAM_BLOCK_TYPE                     ; AUTO                              ; Untyped                 ;
-; BYTE_SIZE                          ; 8                                 ; Untyped                 ;
-; READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE                         ; Untyped                 ;
-; READ_DURING_WRITE_MODE_PORT_A      ; NEW_DATA_NO_NBE_READ              ; Untyped                 ;
-; READ_DURING_WRITE_MODE_PORT_B      ; NEW_DATA_NO_NBE_READ              ; Untyped                 ;
-; INIT_FILE                          ; db/top.ram0_IRAM_c4ed73f3.hdl.mif ; Untyped                 ;
-; INIT_FILE_LAYOUT                   ; PORT_A                            ; Untyped                 ;
-; MAXIMUM_DEPTH                      ; 0                                 ; Untyped                 ;
-; CLOCK_ENABLE_INPUT_A               ; NORMAL                            ; Untyped                 ;
-; CLOCK_ENABLE_INPUT_B               ; NORMAL                            ; Untyped                 ;
-; CLOCK_ENABLE_OUTPUT_A              ; NORMAL                            ; Untyped                 ;
-; CLOCK_ENABLE_OUTPUT_B              ; NORMAL                            ; Untyped                 ;
-; CLOCK_ENABLE_CORE_A                ; USE_INPUT_CLKEN                   ; Untyped                 ;
-; CLOCK_ENABLE_CORE_B                ; USE_INPUT_CLKEN                   ; Untyped                 ;
-; ENABLE_ECC                         ; FALSE                             ; Untyped                 ;
-; ECC_PIPELINE_STAGE_ENABLED         ; FALSE                             ; Untyped                 ;
-; WIDTH_ECCSTATUS                    ; 3                                 ; Untyped                 ;
-; DEVICE_FAMILY                      ; Cyclone II                        ; Untyped                 ;
-; CBXI_PARAMETER                     ; altsyncram_0661                   ; Untyped                 ;
-+------------------------------------+-----------------------------------+-------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
 +--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 ; Parameter Settings for Inferred Entity Instance: riscv_core:rv32i|FPU:fpu|fpu_sqrt:fpu_sqrt_inst|fpu_sqrt_altfp_sqrt_ece:fpu_sqrt_altfp_sqrt_ece_component|altshift_taps:nan_man_ff0_rtl_0 ;
 +----------------+----------------+----------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -4053,6 +4053,17 @@ Note: In order to hide this table in the UI and the text report file, please set
 ;     -- OUTDATA_REG_B                      ; UNREGISTERED                                                                                                                                                        ;
 ;     -- RAM_BLOCK_TYPE                     ; AUTO                                                                                                                                                                ;
 ;     -- READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE                                                                                                                                                           ;
+; Entity Instance                           ; riscv_core:rv32i|IRAM:imem|altsyncram:MEM_rtl_0                                                                                                                     ;
+;     -- OPERATION_MODE                     ; ROM                                                                                                                                                                 ;
+;     -- WIDTH_A                            ; 32                                                                                                                                                                  ;
+;     -- NUMWORDS_A                         ; 256                                                                                                                                                                 ;
+;     -- OUTDATA_REG_A                      ; UNREGISTERED                                                                                                                                                        ;
+;     -- WIDTH_B                            ; 1                                                                                                                                                                   ;
+;     -- NUMWORDS_B                         ; 1                                                                                                                                                                   ;
+;     -- ADDRESS_REG_B                      ; CLOCK1                                                                                                                                                              ;
+;     -- OUTDATA_REG_B                      ; UNREGISTERED                                                                                                                                                        ;
+;     -- RAM_BLOCK_TYPE                     ; AUTO                                                                                                                                                                ;
+;     -- READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE                                                                                                                                                           ;
 ; Entity Instance                           ; riscv_core:rv32i|regFile:rf|altsyncram:registers_rtl_0                                                                                                              ;
 ;     -- OPERATION_MODE                     ; DUAL_PORT                                                                                                                                                           ;
 ;     -- WIDTH_A                            ; 32                                                                                                                                                                  ;
@@ -4097,17 +4108,6 @@ Note: In order to hide this table in the UI and the text report file, please set
 ;     -- OUTDATA_REG_B                      ; UNREGISTERED                                                                                                                                                        ;
 ;     -- RAM_BLOCK_TYPE                     ; AUTO                                                                                                                                                                ;
 ;     -- READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE                                                                                                                                                           ;
-; Entity Instance                           ; riscv_core:rv32i|IRAM:imem|altsyncram:MEM_rtl_0                                                                                                                     ;
-;     -- OPERATION_MODE                     ; ROM                                                                                                                                                                 ;
-;     -- WIDTH_A                            ; 32                                                                                                                                                                  ;
-;     -- NUMWORDS_A                         ; 256                                                                                                                                                                 ;
-;     -- OUTDATA_REG_A                      ; UNREGISTERED                                                                                                                                                        ;
-;     -- WIDTH_B                            ; 1                                                                                                                                                                   ;
-;     -- NUMWORDS_B                         ; 1                                                                                                                                                                   ;
-;     -- ADDRESS_REG_B                      ; CLOCK1                                                                                                                                                              ;
-;     -- OUTDATA_REG_B                      ; UNREGISTERED                                                                                                                                                        ;
-;     -- RAM_BLOCK_TYPE                     ; AUTO                                                                                                                                                                ;
-;     -- READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE                                                                                                                                                           ;
 +-------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 
@@ -4137,7 +4137,6 @@ Note: In order to hide this table in the UI and the text report file, please set
 +---------------+--------+----------+-------------------------------------------------------------------------------------+
 ; Port          ; Type   ; Severity ; Details                                                                             ;
 +---------------+--------+----------+-------------------------------------------------------------------------------------+
-; enable        ; Input  ; Info     ; Stuck at VCC                                                                        ;
 ; out[152..149] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
 ; out[147..146] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
 ; out[144..138] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
@@ -4214,24 +4213,6 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------+--------+----------+-------------------------------------------------------------------------------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "riscv_core:rv32i|FPU:fpu"                                                                     ;
-+----------------+--------+----------+-------------------------------------------------------------------------------------+
-; Port           ; Type   ; Severity ; Details                                                                             ;
-+----------------+--------+----------+-------------------------------------------------------------------------------------+
-; fpu_inprogress ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+----------------+--------+----------+-------------------------------------------------------------------------------------+
-
-
-+-------------------------------------------------------------+
-; Port Connectivity Checks: "riscv_core:rv32i|register:ID_EX" ;
-+--------+-------+----------+---------------------------------+
-; Port   ; Type  ; Severity ; Details                         ;
-+--------+-------+----------+---------------------------------+
-; enable ; Input ; Info     ; Stuck at VCC                    ;
-+--------+-------+----------+---------------------------------+
-
-
 +--------------------------------------------------------+
 ; Port Connectivity Checks: "riscv_core:rv32i|IRAM:imem" ;
 +------+-------+----------+------------------------------+
@@ -4256,7 +4237,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:14     ;
+; Top            ; 00:00:13     ;
 +----------------+--------------+
 
 
@@ -4266,10 +4247,10 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Fri Dec 06 19:29:06 2019
+    Info: Processing started: Sat Dec 07 13:55:33 2019
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off top -c top
 Warning (20028): Parallel compilation is not licensed and has been disabled
-Info (12021): Found 18 design units, including 18 entities, in source file /users/naqas/desktop/github/risc-v/riscv_core/riscv.v
+Info (12021): Found 19 design units, including 19 entities, in source file /users/naqas/desktop/github/risc-v/riscv_core/riscv.v
     Info (12023): Found entity 1: alu
     Info (12023): Found entity 2: aluSource
     Info (12023): Found entity 3: controlUnit
@@ -4284,10 +4265,11 @@ Info (12021): Found 18 design units, including 18 entities, in source file /user
     Info (12023): Found entity 12: memOut_MUX
     Info (12023): Found entity 13: pcIn_MUX
     Info (12023): Found entity 14: FPU
-    Info (12023): Found entity 15: top
-    Info (12023): Found entity 16: riscv_core
-    Info (12023): Found entity 17: sevSegDec
-    Info (12023): Found entity 18: tb
+    Info (12023): Found entity 15: fpuController
+    Info (12023): Found entity 16: top
+    Info (12023): Found entity 17: riscv_core
+    Info (12023): Found entity 18: sevSegDec
+    Info (12023): Found entity 19: tb
 Info (12021): Found 22 design units, including 22 entities, in source file fpu_add_sub.v
     Info (12023): Found entity 1: fpu_add_sub_altbarrel_shift_h0e
     Info (12023): Found entity 2: fpu_add_sub_altbarrel_shift_6hb
@@ -4355,16 +4337,15 @@ Info (12128): Elaborating entity "controlUnit" for hierarchy "riscv_core:rv32i|c
 Info (12128): Elaborating entity "register" for hierarchy "riscv_core:rv32i|register:ID_EX"
 Info (12128): Elaborating entity "aluSource" for hierarchy "riscv_core:rv32i|aluSource:aluSource"
 Info (12128): Elaborating entity "alu" for hierarchy "riscv_core:rv32i|alu:alu"
+Info (12128): Elaborating entity "fpuController" for hierarchy "riscv_core:rv32i|fpuController:fpuController"
 Info (12128): Elaborating entity "FPU" for hierarchy "riscv_core:rv32i|FPU:fpu"
-Warning (10858): Verilog HDL warning at FPU.v(15): object FCVT_W_SU used but never assigned
-Warning (10858): Verilog HDL warning at FPU.v(15): object FCVT_S_WU used but never assigned
-Warning (10036): Verilog HDL or VHDL warning at FPU.v(102): object "cycles" assigned a value but never read
-Warning (10030): Net "FLE_S[31..1]" at FPU.v(15) has no driver or initial value, using a default initial value '0'
-Warning (10030): Net "FLT_S[31..1]" at FPU.v(15) has no driver or initial value, using a default initial value '0'
-Warning (10030): Net "FEQ_S[31..1]" at FPU.v(15) has no driver or initial value, using a default initial value '0'
-Warning (10030): Net "FCVT_W_SU" at FPU.v(15) has no driver or initial value, using a default initial value '0'
-Warning (10030): Net "FCVT_S_WU" at FPU.v(15) has no driver or initial value, using a default initial value '0'
-Warning (10034): Output port "fpu_inprogress" at FPU.v(12) has no driver
+Warning (10858): Verilog HDL warning at FPU.v(14): object FCVT_W_SU used but never assigned
+Warning (10858): Verilog HDL warning at FPU.v(14): object FCVT_S_WU used but never assigned
+Warning (10030): Net "FLE_S[31..1]" at FPU.v(14) has no driver or initial value, using a default initial value '0'
+Warning (10030): Net "FLT_S[31..1]" at FPU.v(14) has no driver or initial value, using a default initial value '0'
+Warning (10030): Net "FEQ_S[31..1]" at FPU.v(14) has no driver or initial value, using a default initial value '0'
+Warning (10030): Net "FCVT_W_SU" at FPU.v(14) has no driver or initial value, using a default initial value '0'
+Warning (10030): Net "FCVT_S_WU" at FPU.v(14) has no driver or initial value, using a default initial value '0'
 Info (12128): Elaborating entity "fpu_add_sub" for hierarchy "riscv_core:rv32i|FPU:fpu|fpu_add_sub:fpu_add_sub_inst"
 Info (12128): Elaborating entity "fpu_add_sub_altfp_add_sub_hrm" for hierarchy "riscv_core:rv32i|FPU:fpu|fpu_add_sub:fpu_add_sub_inst|fpu_add_sub_altfp_add_sub_hrm:fpu_add_sub_altfp_add_sub_hrm_component"
 Info (12128): Elaborating entity "fpu_add_sub_altbarrel_shift_h0e" for hierarchy "riscv_core:rv32i|FPU:fpu|fpu_add_sub:fpu_add_sub_inst|fpu_add_sub_altfp_add_sub_hrm:fpu_add_sub_altfp_add_sub_hrm_component|fpu_add_sub_altbarrel_shift_h0e:lbarrel_shift"
@@ -5030,6 +5011,17 @@ Info (19000): Inferred 9 megafunctions from design logic
         Info (286033): Parameter INDATA_ACLR_A set to NONE
         Info (286033): Parameter WRCONTROL_ACLR_A set to NONE
         Info (286033): Parameter INIT_FILE set to db/top.ram0_DRAM_255a05.hdl.mif
+    Info (276029): Inferred altsyncram megafunction from the following design logic: "riscv_core:rv32i|IRAM:imem|MEM_rtl_0" 
+        Info (286033): Parameter OPERATION_MODE set to ROM
+        Info (286033): Parameter WIDTH_A set to 32
+        Info (286033): Parameter WIDTHAD_A set to 8
+        Info (286033): Parameter NUMWORDS_A set to 256
+        Info (286033): Parameter OUTDATA_REG_A set to UNREGISTERED
+        Info (286033): Parameter ADDRESS_ACLR_A set to NONE
+        Info (286033): Parameter OUTDATA_ACLR_A set to NONE
+        Info (286033): Parameter INDATA_ACLR_A set to NONE
+        Info (286033): Parameter WRCONTROL_ACLR_A set to NONE
+        Info (286033): Parameter INIT_FILE set to db/top.ram0_IRAM_c4ed73f3.hdl.mif
     Info (276029): Inferred altsyncram megafunction from the following design logic: "riscv_core:rv32i|regFile:rf|registers_rtl_0" 
         Info (286033): Parameter OPERATION_MODE set to DUAL_PORT
         Info (286033): Parameter WIDTH_A set to 32
@@ -5094,17 +5086,6 @@ Info (19000): Inferred 9 megafunctions from design logic
         Info (286033): Parameter INDATA_ACLR_A set to NONE
         Info (286033): Parameter WRCONTROL_ACLR_A set to NONE
         Info (286033): Parameter INIT_FILE set to db/top.ram0_regFile_4c8ea16e.hdl.mif
-    Info (276029): Inferred altsyncram megafunction from the following design logic: "riscv_core:rv32i|IRAM:imem|MEM_rtl_0" 
-        Info (286033): Parameter OPERATION_MODE set to ROM
-        Info (286033): Parameter WIDTH_A set to 32
-        Info (286033): Parameter WIDTHAD_A set to 8
-        Info (286033): Parameter NUMWORDS_A set to 256
-        Info (286033): Parameter OUTDATA_REG_A set to UNREGISTERED
-        Info (286033): Parameter ADDRESS_ACLR_A set to NONE
-        Info (286033): Parameter OUTDATA_ACLR_A set to NONE
-        Info (286033): Parameter INDATA_ACLR_A set to NONE
-        Info (286033): Parameter WRCONTROL_ACLR_A set to NONE
-        Info (286033): Parameter INIT_FILE set to db/top.ram0_IRAM_c4ed73f3.hdl.mif
     Info (276034): Inferred altshift_taps megafunction from the following design logic: "riscv_core:rv32i|FPU:fpu|fpu_sqrt:fpu_sqrt_inst|fpu_sqrt_altfp_sqrt_ece:fpu_sqrt_altfp_sqrt_ece_component|nan_man_ff0_rtl_0"
         Info (286033): Parameter NUMBER_OF_TAPS set to 1
         Info (286033): Parameter TAP_DISTANCE set to 13
@@ -5136,8 +5117,20 @@ Info (12133): Instantiated megafunction "riscv_core:rv32i|DRAM:dmem|altsyncram:M
     Info (12134): Parameter "INIT_FILE" = "db/top.ram0_DRAM_255a05.hdl.mif"
 Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_82g1.tdf
     Info (12023): Found entity 1: altsyncram_82g1
-Warning (127007): Memory Initialization File or Hexadecimal (Intel-Format) File "C:/Users/naqas/Desktop/Github/RISC-V/Riscv_Quartus_Project/db/top.ram0_DRAM_255a05.hdl.mif" contains "don't care" values -- overwriting them with 0s
-Warning (127007): Memory Initialization File or Hexadecimal (Intel-Format) File "C:/Users/naqas/Desktop/Github/RISC-V/Riscv_Quartus_Project/db/top.ram0_DRAM_255a05.hdl.mif" contains "don't care" values -- overwriting them with 0s
+Info (12130): Elaborated megafunction instantiation "riscv_core:rv32i|IRAM:imem|altsyncram:MEM_rtl_0"
+Info (12133): Instantiated megafunction "riscv_core:rv32i|IRAM:imem|altsyncram:MEM_rtl_0" with the following parameter:
+    Info (12134): Parameter "OPERATION_MODE" = "ROM"
+    Info (12134): Parameter "WIDTH_A" = "32"
+    Info (12134): Parameter "WIDTHAD_A" = "8"
+    Info (12134): Parameter "NUMWORDS_A" = "256"
+    Info (12134): Parameter "OUTDATA_REG_A" = "UNREGISTERED"
+    Info (12134): Parameter "ADDRESS_ACLR_A" = "NONE"
+    Info (12134): Parameter "OUTDATA_ACLR_A" = "NONE"
+    Info (12134): Parameter "INDATA_ACLR_A" = "NONE"
+    Info (12134): Parameter "WRCONTROL_ACLR_A" = "NONE"
+    Info (12134): Parameter "INIT_FILE" = "db/top.ram0_IRAM_c4ed73f3.hdl.mif"
+Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_fv61.tdf
+    Info (12023): Found entity 1: altsyncram_fv61
 Info (12130): Elaborated megafunction instantiation "riscv_core:rv32i|regFile:rf|altsyncram:registers_rtl_0"
 Info (12133): Instantiated megafunction "riscv_core:rv32i|regFile:rf|altsyncram:registers_rtl_0" with the following parameter:
     Info (12134): Parameter "OPERATION_MODE" = "DUAL_PORT"
@@ -5157,22 +5150,6 @@ Info (12133): Instantiated megafunction "riscv_core:rv32i|regFile:rf|altsyncram:
     Info (12134): Parameter "INIT_FILE" = "db/top.ram0_regFile_4c8ea16e.hdl.mif"
 Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_93h1.tdf
     Info (12023): Found entity 1: altsyncram_93h1
-Info (12130): Elaborated megafunction instantiation "riscv_core:rv32i|IRAM:imem|altsyncram:MEM_rtl_0"
-Info (12133): Instantiated megafunction "riscv_core:rv32i|IRAM:imem|altsyncram:MEM_rtl_0" with the following parameter:
-    Info (12134): Parameter "OPERATION_MODE" = "ROM"
-    Info (12134): Parameter "WIDTH_A" = "32"
-    Info (12134): Parameter "WIDTHAD_A" = "8"
-    Info (12134): Parameter "NUMWORDS_A" = "256"
-    Info (12134): Parameter "OUTDATA_REG_A" = "UNREGISTERED"
-    Info (12134): Parameter "ADDRESS_ACLR_A" = "NONE"
-    Info (12134): Parameter "OUTDATA_ACLR_A" = "NONE"
-    Info (12134): Parameter "INDATA_ACLR_A" = "NONE"
-    Info (12134): Parameter "WRCONTROL_ACLR_A" = "NONE"
-    Info (12134): Parameter "INIT_FILE" = "db/top.ram0_IRAM_c4ed73f3.hdl.mif"
-Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_0661.tdf
-    Info (12023): Found entity 1: altsyncram_0661
-Warning (127007): Memory Initialization File or Hexadecimal (Intel-Format) File "C:/Users/naqas/Desktop/Github/RISC-V/Riscv_Quartus_Project/db/top.ram0_IRAM_c4ed73f3.hdl.mif" contains "don't care" values -- overwriting them with 0s
-Warning (127007): Memory Initialization File or Hexadecimal (Intel-Format) File "C:/Users/naqas/Desktop/Github/RISC-V/Riscv_Quartus_Project/db/top.ram0_IRAM_c4ed73f3.hdl.mif" contains "don't care" values -- overwriting them with 0s
 Info (12130): Elaborated megafunction instantiation "riscv_core:rv32i|FPU:fpu|fpu_sqrt:fpu_sqrt_inst|fpu_sqrt_altfp_sqrt_ece:fpu_sqrt_altfp_sqrt_ece_component|altshift_taps:nan_man_ff0_rtl_0"
 Info (12133): Instantiated megafunction "riscv_core:rv32i|FPU:fpu|fpu_sqrt:fpu_sqrt_inst|fpu_sqrt_altfp_sqrt_ece:fpu_sqrt_altfp_sqrt_ece_component|altshift_taps:nan_man_ff0_rtl_0" with the following parameter:
     Info (12134): Parameter "NUMBER_OF_TAPS" = "1"
@@ -5215,16 +5192,16 @@ Info (12021): Found 1 design units, including 1 entities, in source file db/cmpr
 Info (17049): 33 registers lost all their fanouts during netlist optimizations.
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 5486 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 5535 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 2 input pins
     Info (21059): Implemented 28 output pins
-    Info (21061): Implemented 5171 logic cells
+    Info (21061): Implemented 5220 logic cells
     Info (21064): Implemented 262 RAM segments
     Info (21062): Implemented 23 DSP elements
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 23 warnings
-    Info: Peak virtual memory: 4673 megabytes
-    Info: Processing ended: Fri Dec 06 19:29:35 2019
-    Info: Elapsed time: 00:00:29
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 17 warnings
+    Info: Peak virtual memory: 4670 megabytes
+    Info: Processing ended: Sat Dec 07 13:55:57 2019
+    Info: Elapsed time: 00:00:24
     Info: Total CPU time (on all processors): 00:00:24
 
 

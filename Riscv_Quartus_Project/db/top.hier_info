@@ -32,8 +32,8 @@ HEX3[6] <= sevSegDec:s3.port1
 
 
 |top|riscv_core:rv32i
-clock => clock.IN10
-clear => clear.IN4
+clock => clock.IN11
+clear => clear.IN5
 dataOut[0] <= dataD[0].DB_MAX_OUTPUT_PORT_TYPE
 dataOut[1] <= dataD[1].DB_MAX_OUTPUT_PORT_TYPE
 dataOut[2] <= dataD[2].DB_MAX_OUTPUT_PORT_TYPE
@@ -4109,6 +4109,28 @@ aluResult[31] <= Mux32.DB_MAX_OUTPUT_PORT_TYPE
 branchFromAlu <= Mux64.DB_MAX_OUTPUT_PORT_TYPE
 
 
+|top|riscv_core:rv32i|fpuController:fpuController
+clock => count[0].CLK
+clock => count[1].CLK
+clock => count[2].CLK
+clock => count[3].CLK
+clock => count[4].CLK
+clear => count[0].ACLR
+clear => count[1].ACLR
+clear => count[2].ACLR
+clear => count[3].ACLR
+clear => count[4].ACLR
+fpuOp[0] => Decoder0.IN3
+fpuOp[1] => Decoder0.IN2
+fpuOp[1] => Decoder1.IN2
+fpuOp[2] => Decoder0.IN1
+fpuOp[2] => Decoder1.IN1
+fpuOp[3] => Decoder0.IN0
+fpuOp[3] => Decoder1.IN0
+fpu_sel => always1.IN1
+fpu_inprogress <= fpu_inprogress.DB_MAX_OUTPUT_PORT_TYPE
+
+
 |top|riscv_core:rv32i|FPU:fpu
 clock => clock.IN7
 clear => ~NO_FANOUT~
@@ -4469,7 +4491,6 @@ fpuResult[28] <= Mux36.DB_MAX_OUTPUT_PORT_TYPE
 fpuResult[29] <= Mux35.DB_MAX_OUTPUT_PORT_TYPE
 fpuResult[30] <= Mux34.DB_MAX_OUTPUT_PORT_TYPE
 fpuResult[31] <= Mux33.DB_MAX_OUTPUT_PORT_TYPE
-fpu_inprogress <= <GND>
 
 
 |top|riscv_core:rv32i|FPU:fpu|fpu_add_sub:fpu_add_sub_inst

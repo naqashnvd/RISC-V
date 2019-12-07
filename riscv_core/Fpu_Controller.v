@@ -50,7 +50,7 @@ module fpuController(input clock,
 
 	always@(*)begin
 		if(fpu_sel & (cycles!=0)) begin
-			if(count < cycles)	begin
+			if(count < cycles-5'd1)	begin
 				fpu_inprogress	=	1'b1;
 			end	
 			else begin 
