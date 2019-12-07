@@ -7,8 +7,7 @@ module FPU#(parameter width = 32)(
  input [2:0]func3,
  input [3:0]fpuOp,
  input EX_Rs1_0,
- output reg [width-1:0]fpuResult,
- output reg fpu_inprogress
+ output reg [width-1:0]fpuResult
  );
 
  wire [width-1:0]FADD_SUB_S,FMUL_S,FDIV_S,FSIGNJ_S,FSIGNJN_S,FSIGNJX_S,FMIN_S,FMAX_S;
@@ -99,27 +98,22 @@ module FPU#(parameter width = 32)(
 	
  /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
  
-	reg [4:0]cycles; 
+	
 	always@(*)begin
 		case(fpuOp)
 			4'b0000:	begin
 							fpuResult = FADD_SUB_S;
-							cycles = 5'd7;
 						end
 			4'b0001:	begin
 							fpuResult = FADD_SUB_S;
-							cycles = 5'd7;
 						end
 			4'b0010:	begin	
 							fpuResult = FMUL_S;
-							cycles = 5'd5;
 						end
 			4'b0011:	begin	
 							fpuResult = FDIV_S;
-							cycles = 5'd6;
 						end
 			4'b0100:	begin
-							cycles = 5'd0;
 							case(func3[1:0])
 								2'b00:	fpuResult = FSIGNJ_S;	
 								2'b01:	fpuResult = FSIGNJN_S;	
@@ -128,16 +122,13 @@ module FPU#(parameter width = 32)(
 							endcase
 						end
 			4'b0101: begin
-							cycles = 5'd1;
 							if(~func3[0]) fpuResult = FMIN_S;		
 							else fpuResult = FMAX_S;
 						end		
 			4'b0110:	begin
 							fpuResult = FSQRT_S;
-							cycles = 5'd16;
 						end
 			4'b0111:	begin
-							cycles = 5'd1;	
 							case(func3[1:0])
 								2'b00:	fpuResult = FLE_S;		
 								2'b01:	fpuResult = FLT_S;			
@@ -146,18 +137,15 @@ module FPU#(parameter width = 32)(
 							endcase
 						end
 			4'b1000:	begin	
-							cycles = 5'd6;
 							if(~EX_Rs1_0) fpuResult = FCVT_W_S;		
 							else fpuResult = FCVT_W_SU;
 						end
 			4'b1001:	begin 
-							cycles = 5'd6;
 							if(~EX_Rs1_0) fpuResult = FCVT_S_W;		
 							else fpuResult = FCVT_S_WU;	
 						end
 			default:	begin
 							fpuResult = 32'b0;
-							cycles = 5'b0;
 						end
 		endcase
 	end

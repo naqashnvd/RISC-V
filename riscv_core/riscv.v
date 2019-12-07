@@ -12,6 +12,7 @@
 `include "IRAM.v"
 `include "mux.v"
 `include "FPU.v"
+`include "FPU_Controller.v"
 
 
 module top(input [1:0]KEY,output [6:0]HEX0,output [6:0]HEX1,output [6:0]HEX2,output [6:0]HEX3);
@@ -70,7 +71,8 @@ module riscv_core (input clock,clear,output [31:0]dataOut);
 	wire [3:0]ID_func3_7 ;
 	wire [4:0]ID_funct5;
 	wire [31:0]next_imemAddr,ID_next_imemAddr,EX_next_imemAddr,MEM_next_imemAddr,WB_next_imemAddr;
-
+	wire fpu_inprogress;
+	
 	assign ID_func3_7 = {ID_I[30],ID_I[14:12]};
 	assign branchTaken = (MEM_branchFromAlu && MEM_signals[7]) || MEM_signals[14];
 	assign next_imemAddr = imemAddr+1;
@@ -88,7 +90,7 @@ module riscv_core (input clock,clear,output [31:0]dataOut);
 
 	register pc(
 		.data(pcIn),
-		.enable(notStall),
+		.enable(notStall & ~fpu_inprogress),
 		.clock(clock),
 		.clear(clear),
 		.out(imemAddr)
@@ -107,7 +109,7 @@ module riscv_core (input clock,clear,output [31:0]dataOut);
 	////////////////////////////////////////////////////////////////IF_ID /////////////////////////////////////////////////////////////////////////
 	register#(.width(96)) IF_ID(
 		.data({imemAddr,I,next_imemAddr}),
-		.enable(notStall),
+		.enable(notStall & ~fpu_inprogress),
 		.clock(clock),
 		.clear(flush),
 		.out({ID_imemAddr,ID_I,ID_next_imemAddr})
@@ -172,7 +174,7 @@ module riscv_core (input clock,clear,output [31:0]dataOut);
 
 	register#(.width(135)) ID_EX(
 		.data({stallSignals,ID_imemAddr,immGenOut,ID_func3_7,Rs1,Rs2,Rd,ID_next_imemAddr}),
-		.enable(1'b1),
+		.enable(~fpu_inprogress),
 		.clock(clock),
 		.clear(flush),
 		.out({EX_signals,EX_imemAddr,EX_immGenOut,EX_func3_7,EX_Rs1,EX_Rs2,EX_Rd,EX_next_imemAddr})
@@ -207,7 +209,16 @@ module riscv_core (input clock,clear,output [31:0]dataOut);
 	
 	///////////////////////////////////////////////////////// FPU //////////////////////////////////////////////////////////////////////////////////////
 	wire [31:0]temp_fpuResult;
-	wire fpu_inprogress;
+	
+	
+	fpuController fpuController( 
+		.clock(clock),
+		.clear(clear),
+		.fpuOp({EX_signals[19],EX_signals[10:8]}), //{fpuOp,aluOp}
+		.fpu_sel(EX_signals[18]), // aluResult Sel -> 1 for fpuResult
+		.fpu_inprogress(fpu_inprogress)
+	);
+	
 	 FPU fpu(
 		 .clock(clock),
 		 .clear(clear),
@@ -217,8 +228,7 @@ module riscv_core (input clock,clear,output [31:0]dataOut);
 		 .func3(EX_func3_7[2:0]),
 		 .fpuOp({EX_signals[19],EX_signals[10:8]}), //{fpuOp,aluOp}
 		 .EX_Rs1_0(EX_Rs1[0]),
-		 .fpuResult(temp_fpuResult),
-		 .fpu_inprogress(fpu_inprogress)
+		 .fpuResult(temp_fpuResult)
 	 );
 	 
 	 assign aluResult = (EX_signals[18])? temp_fpuResult : temp_aluResult;
@@ -259,7 +269,7 @@ module riscv_core (input clock,clear,output [31:0]dataOut);
 	wire [31:0]WB_branchAddr;
 	register#(.width(153)) MEM_WB(
 		.data({MEM_signals,MEM_aluResult,MEM_Rd,dmemOut,MEM_branchAddr,MEM_next_imemAddr}),
-		.enable(1'b1),
+		.enable(~fpu_inprogress),
 		.clock(clock),
 		.clear(clear),
 		.out({WB_signals,WB_aluResult,WB_Rd,WB_dmemOut,WB_branchAddr,WB_next_imemAddr})
