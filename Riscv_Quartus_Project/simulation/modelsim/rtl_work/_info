@@ -9,7 +9,7 @@ valu
 I;U9bn`HdenA974c=;_OI91
 VhbYQOc`iA7SOAbD@@AeOJ1
 Z1 dC:\Users\naqas\Desktop\Github\RISC-V\Riscv_Quartus_Project\simulation\modelsim
-Z2 w1575708613
+Z2 w1576185829
 FC:/Users/naqas/Desktop/Github/RISC-V/Riscv_Quartus_Project/../riscv_core/alu.v
 Z3 8C:/Users/naqas/Desktop/Github/RISC-V/Riscv_Quartus_Project/../riscv_core/riscv.v
 Z4 FC:/Users/naqas/Desktop/Github/RISC-V/Riscv_Quartus_Project/../riscv_core/riscv.v
@@ -18,7 +18,7 @@ Z5 OV;L;10.1d;51
 r1
 !s85 0
 31
-Z6 !s108 1575710291.978000
+Z6 !s108 1576186666.883000
 Z7 !s107 C:/Users/naqas/Desktop/Github/RISC-V/Riscv_Quartus_Project/../riscv_core/FPU_Controller.v|C:/Users/naqas/Desktop/Github/RISC-V/Riscv_Quartus_Project/../riscv_core/FPU.v|C:/Users/naqas/Desktop/Github/RISC-V/Riscv_Quartus_Project/../riscv_core/mux.v|C:/Users/naqas/Desktop/Github/RISC-V/Riscv_Quartus_Project/../riscv_core/IRAM.v|C:/Users/naqas/Desktop/Github/RISC-V/Riscv_Quartus_Project/../riscv_core/DRAM.v|C:/Users/naqas/Desktop/Github/RISC-V/Riscv_Quartus_Project/../riscv_core/regFile.v|C:/Users/naqas/Desktop/Github/RISC-V/Riscv_Quartus_Project/../riscv_core/immGen.v|C:/Users/naqas/Desktop/Github/RISC-V/Riscv_Quartus_Project/../riscv_core/hdu.v|C:/Users/naqas/Desktop/Github/RISC-V/Riscv_Quartus_Project/../riscv_core/forwadingUnit.v|C:/Users/naqas/Desktop/Github/RISC-V/Riscv_Quartus_Project/../riscv_core/controlUnit.v|C:/Users/naqas/Desktop/Github/RISC-V/Riscv_Quartus_Project/../riscv_core/aluSource.v|C:/Users/naqas/Desktop/Github/RISC-V/Riscv_Quartus_Project/../riscv_core/alu.v|C:/Users/naqas/Desktop/Github/RISC-V/Riscv_Quartus_Project/../riscv_core/riscv.v|
 Z8 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/naqas/Desktop/Github/RISC-V/Riscv_Quartus_Project/../riscv_core|C:/Users/naqas/Desktop/Github/RISC-V/Riscv_Quartus_Project/../riscv_core/riscv.v|
 !s101 -O0
@@ -48,11 +48,11 @@ R10
 nalu@source
 vcontrolUnit
 !i10b 1
-!s100 <0eL:P0<3TZAVe]]H6HU33
-II`2QA0RaFzk64_O^gaJ6U2
+!s100 <`K>mgEmVPL1i6[<EQ4RL2
+I5inRN`BfKbJmGWoLC@?b>3
 VceRJXKb4UNl5jN?]4T]F31
 R1
-R2
+w1576186622
 FC:/Users/naqas/Desktop/Github/RISC-V/Riscv_Quartus_Project/../riscv_core/controlUnit.v
 R3
 R4
@@ -145,7 +145,7 @@ L0 2624
 R5
 r1
 31
-Z14 !s108 1575710289.000000
+Z14 !s108 1576186663.916000
 Z15 !s107 C:/Users/naqas/Desktop/Github/RISC-V/Riscv_Quartus_Project/fpu_add_sub.v|
 Z16 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/naqas/Desktop/Github/RISC-V/Riscv_Quartus_Project|C:/Users/naqas/Desktop/Github/RISC-V/Riscv_Quartus_Project/fpu_add_sub.v|
 R9
@@ -585,7 +585,7 @@ L0 351
 R5
 r1
 31
-Z21 !s108 1575710290.274000
+Z21 !s108 1576186665.234000
 Z22 !s107 C:/Users/naqas/Desktop/Github/RISC-V/Riscv_Quartus_Project/fpu_compare.v|
 Z23 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/naqas/Desktop/Github/RISC-V/Riscv_Quartus_Project|C:/Users/naqas/Desktop/Github/RISC-V/Riscv_Quartus_Project/fpu_compare.v|
 R9
@@ -625,7 +625,7 @@ L0 828
 R5
 r1
 31
-Z27 !s108 1575710290.709000
+Z27 !s108 1576186665.649000
 Z28 !s107 C:/Users/naqas/Desktop/Github/RISC-V/Riscv_Quartus_Project/fpu_convert.v|
 Z29 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/naqas/Desktop/Github/RISC-V/Riscv_Quartus_Project|C:/Users/naqas/Desktop/Github/RISC-V/Riscv_Quartus_Project/fpu_convert.v|
 R9
@@ -781,7 +781,7 @@ R1
 R24
 R25
 R26
-L0 333
+Z30 L0 333
 R5
 r1
 31
@@ -858,16 +858,16 @@ vfpu_convert_float_integer
 Il2>QCFYjgKX]GG4XnYV5R3
 VZK4I:;aoz6]@33gX1>YQ[2
 R1
-Z30 w1575193275
-Z31 8C:/Users/naqas/Desktop/Github/RISC-V/Riscv_Quartus_Project/fpu_convert_float_integer.v
-Z32 FC:/Users/naqas/Desktop/Github/RISC-V/Riscv_Quartus_Project/fpu_convert_float_integer.v
+Z31 w1575193275
+Z32 8C:/Users/naqas/Desktop/Github/RISC-V/Riscv_Quartus_Project/fpu_convert_float_integer.v
+Z33 FC:/Users/naqas/Desktop/Github/RISC-V/Riscv_Quartus_Project/fpu_convert_float_integer.v
 L0 939
 R5
 r1
 31
-Z33 !s108 1575710291.138000
-Z34 !s107 C:/Users/naqas/Desktop/Github/RISC-V/Riscv_Quartus_Project/fpu_convert_float_integer.v|
-Z35 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/naqas/Desktop/Github/RISC-V/Riscv_Quartus_Project|C:/Users/naqas/Desktop/Github/RISC-V/Riscv_Quartus_Project/fpu_convert_float_integer.v|
+Z34 !s108 1576186666.054000
+Z35 !s107 C:/Users/naqas/Desktop/Github/RISC-V/Riscv_Quartus_Project/fpu_convert_float_integer.v|
+Z36 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/naqas/Desktop/Github/RISC-V/Riscv_Quartus_Project|C:/Users/naqas/Desktop/Github/RISC-V/Riscv_Quartus_Project/fpu_convert_float_integer.v|
 R9
 R17
 !i10b 1
@@ -878,16 +878,16 @@ vfpu_convert_float_integer_altbarrel_shift_grf
 IN`eV4Q8>AJEh_2R]AcP?N3
 VGfDn0k3W9JbNCkMNk>eej0
 R1
-R30
 R31
 R32
+R33
 L0 50
 R5
 r1
 31
-R33
 R34
 R35
+R36
 R9
 R17
 !i10b 1
@@ -898,16 +898,16 @@ vfpu_convert_float_integer_altfp_convert_a4p
 I@D=^z[YkH<iiYS:geUhRk3
 VIC6XGGK;WV>C;oJWNN<iU2
 R1
-R30
 R31
 R32
+R33
 L0 143
 R5
 r1
 31
-R33
 R34
 R35
+R36
 R9
 R17
 !i10b 1
@@ -918,16 +918,16 @@ vfpu_div
 I>>z5KliL0nXZ1CM_f__H?1
 V;G6U7m>OAzFfC<n@o`jPc2
 R1
-Z36 w1575192143
-Z37 8C:/Users/naqas/Desktop/Github/RISC-V/Riscv_Quartus_Project/fpu_div.v
-Z38 FC:/Users/naqas/Desktop/Github/RISC-V/Riscv_Quartus_Project/fpu_div.v
+Z37 w1575192143
+Z38 8C:/Users/naqas/Desktop/Github/RISC-V/Riscv_Quartus_Project/fpu_div.v
+Z39 FC:/Users/naqas/Desktop/Github/RISC-V/Riscv_Quartus_Project/fpu_div.v
 L0 1090
 R5
 r1
 31
-Z39 !s108 1575710289.984000
-Z40 !s107 C:/Users/naqas/Desktop/Github/RISC-V/Riscv_Quartus_Project/fpu_div.v|
-Z41 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/naqas/Desktop/Github/RISC-V/Riscv_Quartus_Project|C:/Users/naqas/Desktop/Github/RISC-V/Riscv_Quartus_Project/fpu_div.v|
+Z40 !s108 1576186665.003000
+Z41 !s107 C:/Users/naqas/Desktop/Github/RISC-V/Riscv_Quartus_Project/fpu_div.v|
+Z42 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/naqas/Desktop/Github/RISC-V/Riscv_Quartus_Project|C:/Users/naqas/Desktop/Github/RISC-V/Riscv_Quartus_Project/fpu_div.v|
 R9
 R17
 !i10b 1
@@ -938,16 +938,16 @@ vfpu_div_altfp_div_pst_t2j
 I:YY3TzPAG[@aL<KU=;5_^2
 VABVOB4nToQ65K]JVO^bcT0
 R1
-R36
 R37
 R38
+R39
 L0 50
 R5
 r1
 31
-R39
 R40
 R41
+R42
 R9
 R17
 !i10b 1
@@ -958,16 +958,16 @@ vfpu_div_altfp_div_tkl
 I`JakcXj[0:7e^lDoSnEb]2
 V^cIR<Z>ABG__7XRliGl?]3
 R1
-R36
 R37
 R38
+R39
 L0 1031
 R5
 r1
 31
-R39
 R40
 R41
+R42
 R9
 R17
 !i10b 1
@@ -978,16 +978,16 @@ vfpu_mult
 Ii3;`]1n;jm3Pc>RP:c1;K0
 VdV9e^Z75C[4:M`I3zWa931
 R1
-Z42 w1575191917
-Z43 8C:/Users/naqas/Desktop/Github/RISC-V/Riscv_Quartus_Project/fpu_mult.v
-Z44 FC:/Users/naqas/Desktop/Github/RISC-V/Riscv_Quartus_Project/fpu_mult.v
+Z43 w1575191917
+Z44 8C:/Users/naqas/Desktop/Github/RISC-V/Riscv_Quartus_Project/fpu_mult.v
+Z45 FC:/Users/naqas/Desktop/Github/RISC-V/Riscv_Quartus_Project/fpu_mult.v
 L0 553
 R5
 r1
 31
-Z45 !s108 1575710289.734000
-Z46 !s107 C:/Users/naqas/Desktop/Github/RISC-V/Riscv_Quartus_Project/fpu_mult.v|
-Z47 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/naqas/Desktop/Github/RISC-V/Riscv_Quartus_Project|C:/Users/naqas/Desktop/Github/RISC-V/Riscv_Quartus_Project/fpu_mult.v|
+Z46 !s108 1576186664.692000
+Z47 !s107 C:/Users/naqas/Desktop/Github/RISC-V/Riscv_Quartus_Project/fpu_mult.v|
+Z48 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/naqas/Desktop/Github/RISC-V/Riscv_Quartus_Project|C:/Users/naqas/Desktop/Github/RISC-V/Riscv_Quartus_Project/fpu_mult.v|
 R9
 R17
 !i10b 1
@@ -998,16 +998,16 @@ vfpu_mult_altfp_mult_idq
 IAcj99_o3XXmhTEClg1bO[0
 Vb4l34o7zQE=Q:iMUVeOE;2
 R1
-R42
 R43
 R44
+R45
 L0 46
 R5
 r1
 31
-R45
 R46
 R47
+R48
 R9
 R17
 !i10b 1
@@ -1018,16 +1018,16 @@ vfpu_sqrt
 ICfZN?QcWCL=X1cTS3Z]QR0
 V<2;VKZL=02J[MWXMZgM6X2
 R1
-Z48 w1575192579
-Z49 8C:/Users/naqas/Desktop/Github/RISC-V/Riscv_Quartus_Project/fpu_sqrt.v
-Z50 FC:/Users/naqas/Desktop/Github/RISC-V/Riscv_Quartus_Project/fpu_sqrt.v
+Z49 w1575192579
+Z50 8C:/Users/naqas/Desktop/Github/RISC-V/Riscv_Quartus_Project/fpu_sqrt.v
+Z51 FC:/Users/naqas/Desktop/Github/RISC-V/Riscv_Quartus_Project/fpu_sqrt.v
 L0 1837
 R5
 r1
 31
-Z51 !s108 1575710290.472000
-Z52 !s107 C:/Users/naqas/Desktop/Github/RISC-V/Riscv_Quartus_Project/fpu_sqrt.v|
-Z53 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/naqas/Desktop/Github/RISC-V/Riscv_Quartus_Project|C:/Users/naqas/Desktop/Github/RISC-V/Riscv_Quartus_Project/fpu_sqrt.v|
+Z52 !s108 1576186665.408000
+Z53 !s107 C:/Users/naqas/Desktop/Github/RISC-V/Riscv_Quartus_Project/fpu_sqrt.v|
+Z54 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/naqas/Desktop/Github/RISC-V/Riscv_Quartus_Project|C:/Users/naqas/Desktop/Github/RISC-V/Riscv_Quartus_Project/fpu_sqrt.v|
 R9
 R17
 !i10b 1
@@ -1038,16 +1038,16 @@ vfpu_sqrt_alt_sqrt_block_kfb
 I@REk9ZGU@gLUbjSkdnViz0
 VDlH_BOEf6`S9zNonV2H7j3
 R1
-R48
 R49
 R50
+R51
 L0 50
 R5
 r1
 31
-R51
 R52
 R53
+R54
 R9
 R17
 !i10b 1
@@ -1058,16 +1058,16 @@ vfpu_sqrt_altfp_sqrt_ece
 IV1ebB7I_I^lzmeA<67Ped1
 VZUMRPi30a^<fN54na8Mbg0
 R1
-R48
 R49
 R50
+R51
 L0 1081
 R5
 r1
 31
-R51
 R52
 R53
+R54
 R9
 R17
 !i10b 1
@@ -1076,11 +1076,11 @@ R17
 !s101 -O0
 vfpuController
 !i10b 1
-!s100 NV:KjTS;_Vck=8=cd5=ED0
-I3eeIM5O<`n9^z<aK>F_bV3
+!s100 6[>[AU4hRQH8QmUXR_CDK1
+IB^EdGTAWPR?1SQ[DLaE@U1
 VhJWLzdmmJzZ];oX0FmN`03
 R1
-w1575710282
+w1576186320
 FC:/Users/naqas/Desktop/Github/RISC-V/Riscv_Quartus_Project/../riscv_core/FPU_Controller.v
 R3
 R4
@@ -1169,7 +1169,7 @@ Ib[_ZHilhNb<i23:GhY?BN2
 Vaf0mbmgh4NPgZz1RPePHL0
 R1
 R2
-Z54 FC:/Users/naqas/Desktop/Github/RISC-V/Riscv_Quartus_Project/../riscv_core/mux.v
+Z55 FC:/Users/naqas/Desktop/Github/RISC-V/Riscv_Quartus_Project/../riscv_core/mux.v
 R3
 R4
 L0 22
@@ -1191,7 +1191,7 @@ I8Y>G_I56[BgF92:zXd3IT3
 V9EGf8Bz=JmBH1lXTdDTO[1
 R1
 R2
-R54
+R55
 R3
 R4
 L0 40
@@ -1213,7 +1213,7 @@ IlokG7HVlQ=nJb><0ABn0a2
 V0zXzSI`mK^=MDbZ]K;7?:0
 R1
 R2
-Z55 FC:/Users/naqas/Desktop/Github/RISC-V/Riscv_Quartus_Project/../riscv_core/regFile.v
+Z56 FC:/Users/naqas/Desktop/Github/RISC-V/Riscv_Quartus_Project/../riscv_core/regFile.v
 R3
 R4
 L0 1
@@ -1235,7 +1235,7 @@ In3N=Z0?no:FiC;En0>Nc<2
 VEk;o04]hz1z@35>Z>T0T`3
 R1
 R2
-R55
+R56
 R3
 R4
 L0 53
@@ -1251,8 +1251,8 @@ R9
 R10
 vriscv_core
 !i10b 1
-!s100 a>Be9EICN2h:4gFz:Na:m2
-I<;IH]h=a]7LLb^Am=cZ@Y1
+!s100 zZKmjW:8RP>68aWg;J3`b3
+IX=jD;Bzo`J;dcEn^JkoM^0
 V4`D]Ei@laFWcnJ5Y0Xn6g1
 R1
 R2
@@ -1271,14 +1271,14 @@ R9
 R10
 vsevSegDec
 !i10b 1
-!s100 EkKoYoM9FGhbeK5a19PUW2
-I@JNHMA<_Ba@=bb<JW[d?23
+!s100 kZ^lZZR^o8aL4WM71CKgm0
+I9VN@V[k>=dJ@@W8oSjm]h1
 VRNz:_ccl7VcbgWlETYXGB3
 R1
 R2
 R3
 R4
-L0 309
+L0 307
 R5
 r1
 !s85 0
@@ -1292,14 +1292,14 @@ R10
 nsev@seg@dec
 vtb
 !i10b 1
-!s100 g;7Q:S;4HJE]7FNkiIHDY3
-IU2bP8elkV?520MoiodhlL3
+!s100 O@i3EmHn[elC[MK<ZRE:80
+I1I_XekNG>M0Q:S8m]V3cg3
 VV@Xn<HnSRM[I5c1?BH]3a3
 R1
 R2
 R3
 R4
-L0 335
+R30
 R5
 r1
 !s85 0
@@ -1337,7 +1337,7 @@ IkPNWRe[68O?aR6h[a0da:3
 VQI3P^NG19]dN31N>6SicY0
 R1
 R2
-R54
+R55
 R3
 R4
 L0 1

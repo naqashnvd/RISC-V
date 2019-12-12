@@ -40,7 +40,7 @@ module riscv_core (input clock,clear,output [31:0]dataOut);
 		//2 AluSrc ,
 		//3 Mem to Reg ,
 		//4 RegWrite ,
-		//5 dataA sel , for U-type instructions LUI and AUIPC
+		//5 MemRead ,
 		//6 MemWrite ,
 		//7 Branch ,
 		//8-10 AluOP,
@@ -121,7 +121,7 @@ module riscv_core (input clock,clear,output [31:0]dataOut);
 	assign Rs1 = ID_I[19:15];
 	assign Rs2 = ID_I[24:20];
 	
-	wire [31:0]temp_EX_x_dataA,EX_x_dataA,EX_x_dataB;
+	wire [31:0]EX_x_dataA,EX_x_dataB;
 
 	regFile rf(
 		.clock(clock),
@@ -130,11 +130,9 @@ module riscv_core (input clock,clear,output [31:0]dataOut);
 		.addrB(Rs2),
 		.addrD(WB_Rd),
 		.dataD(dataD),
-		.dataA(temp_EX_x_dataA),
+		.dataA(EX_x_dataA),
 		.dataB(EX_x_dataB)
 	);
-
-	assign EX_x_dataA = (EX_signals[5])? 32'b0 : temp_EX_x_dataA; //Mux to sel for 32'b0 for U-type instructions
 
 	immGen immGen(
 		.I(ID_I),
@@ -343,14 +341,14 @@ module tb;
 		$dumpvars(0, tb);
 
 
-		for(i = 0; i < 32; i = i + 1)begin
-			$dumpvars(0, riscv0.imem.MEM[i]);
-			$dumpvars(0, riscv0.dmem.MEM[i]);
-			$dumpvars(0, riscv0.rf.registers[i]);
-			$dumpvars(0, riscv0.float_rf.registers[i]);
-			end
+//		for(i = 0; i < 32; i = i + 1)begin
+//			$dumpvars(0, riscv0.imem.MEM[i]);
+//			$dumpvars(0, riscv0.dmem.MEM[i]);
+//			$dumpvars(0, riscv0.rf.registers[i]);
+//			$dumpvars(0, riscv0.float_rf.registers[i]);
+//			end
 
-		$monitor("%c",riscv0.dmem.MEM[255]);		
+//		$monitor("%c",riscv0.dmem.MEM[255]);		
 
 		#0 reset = 1; clk = 0;
 		#1 reset = 0; #1 reset = 1 ;#1

@@ -23,7 +23,7 @@ output reg [19:0]signals
 //2 AluSrc ,
 //3 Mem to Reg ,
 //4 RegWrite ,
-//5 dataA sel , for U-type instructions LUI and AUIPC
+//5 MemRead ,
 //6 MemWrite ,
 //7 Branch ,
 //8-10 AluOP,
@@ -41,7 +41,7 @@ output reg [19:0]signals
 always@(*)begin
 	if(opcode == `RType)		signals = 20'b00000000001000010000;
 	else if(opcode == `IType)	signals = 20'b00000000011000010100;
-	else if(opcode == `LOAD)	signals = 20'b00000000000000011100;
+	else if(opcode == `LOAD)	signals = 20'b00000000000000111100;
 	else if(opcode == `STORE)	signals = 20'b00000000000001000101;
 	else if(opcode == `SBType)	signals = 20'b00000000000110000010;
 	else if(opcode == `LUI)		signals = 20'b00000000000000010111;
@@ -56,8 +56,8 @@ always@(*)begin
 				5'b11110:		signals = 20'b00001000000000000000;	//fmv.s.x	
 				5'b11100:		signals = 20'b00010000000000010000;	//fmv.x.s	
 /////////////////////////////////////////////// Use FPU //////////////////////////////////////////////////////////////////////////
-				5'b00000:		signals = 20'b01111000000000000000; //FADD.S						{fpuOp,aluOp} = 0
-				5'b00001:		signals = 20'b01111000000100000000; //FSUB.S						{fpuOp,aluOp} = 1
+				5'b00000:		signals = 20'b01111000000100000000; //FADD.S						{fpuOp,aluOp} = 1
+				5'b00001:		signals = 20'b01111000000000000000; //FSUB.S						{fpuOp,aluOp} = 0
 				5'b00010:		signals = 20'b01111000001000000000; //FMUL.S						{fpuOp,aluOp} = 2
 				5'b00011:		signals = 20'b01111000001100000000;	//FDIV.S						{fpuOp,aluOp} = 3
 				5'b00100:		signals = 20'b01111000010000000000; //F_Sign_Inject					{fpuOp,aluOp} = 4
@@ -71,7 +71,7 @@ always@(*)begin
 			endcase
 		end
 //////////////////////////////////////////////// Use ALU ////////////////////////////////////////////////////////////////////////////
-	else if(opcode == `F_LOAD)	signals = 20'b00001000000000001100;
+	else if(opcode == `F_LOAD)	signals = 20'b00001000000000101100;
 	else if(opcode == `F_STORE) signals = 20'b00100000000001000101;
 	
 	else signals = 20'h0;
