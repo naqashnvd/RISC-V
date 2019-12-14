@@ -33,7 +33,7 @@
 //applicable agreement for further details.
 
 
-//altfp_convert CBX_AUTO_BLACKBOX="ALL" DEVICE_FAMILY="Cyclone II" OPERATION="INT2FLOAT" ROUNDING="TO_NEAREST" WIDTH_DATA=32 WIDTH_EXP_INPUT=8 WIDTH_EXP_OUTPUT=8 WIDTH_INT=32 WIDTH_MAN_INPUT=23 WIDTH_MAN_OUTPUT=23 WIDTH_RESULT=32 clock dataa result
+//altfp_convert CBX_AUTO_BLACKBOX="ALL" DEVICE_FAMILY="Cyclone II" OPERATION="INT2FLOAT" ROUNDING="TO_NEAREST" WIDTH_DATA=32 WIDTH_EXP_INPUT=8 WIDTH_EXP_OUTPUT=8 WIDTH_INT=32 WIDTH_MAN_INPUT=23 WIDTH_MAN_OUTPUT=23 WIDTH_RESULT=32 aclr clk_en clock dataa result
 //VERSION_BEGIN 13.0 cbx_altbarrel_shift 2013:06:12:18:03:43:SJ cbx_altfp_convert 2013:06:12:18:03:43:SJ cbx_altpriority_encoder 2013:06:12:18:03:43:SJ cbx_altsyncram 2013:06:12:18:03:43:SJ cbx_cycloneii 2013:06:12:18:03:43:SJ cbx_lpm_abs 2013:06:12:18:03:43:SJ cbx_lpm_add_sub 2013:06:12:18:03:43:SJ cbx_lpm_compare 2013:06:12:18:03:43:SJ cbx_lpm_decode 2013:06:12:18:03:43:SJ cbx_lpm_divide 2013:06:12:18:03:43:SJ cbx_lpm_mux 2013:06:12:18:03:43:SJ cbx_mgl 2013:06:12:18:05:10:SJ cbx_stratix 2013:06:12:18:03:43:SJ cbx_stratixii 2013:06:12:18:03:43:SJ cbx_stratixiii 2013:06:12:18:03:43:SJ cbx_stratixv 2013:06:12:18:03:43:SJ cbx_util_mgl 2013:06:12:18:03:43:SJ  VERSION_END
 // synthesis VERILOG_INPUT_VERSION VERILOG_2001
 // altera message_off 10463
@@ -414,14 +414,26 @@ endmodule //fpu_convert_altpriority_encoder_qb6
 //synopsys translate_off
 `timescale 1 ps / 1 ps
 //synopsys translate_on
-module  fpu_convert_altfp_convert_3tm
+module  fpu_convert_altfp_convert_hvn
 	( 
+	aclr,
+	clk_en,
 	clock,
 	dataa,
 	result) ;
+	input   aclr;
+	input   clk_en;
 	input   clock;
 	input   [31:0]  dataa;
 	output   [31:0]  result;
+`ifndef ALTERA_RESERVED_QIS
+// synopsys translate_off
+`endif
+	tri0   aclr;
+	tri1   clk_en;
+`ifndef ALTERA_RESERVED_QIS
+// synopsys translate_on
+`endif
 
 	wire  [31:0]   wire_altbarrel_shift5_result;
 	wire  [4:0]   wire_altpriority_encoder2_q;
@@ -451,13 +463,11 @@ module  fpu_convert_altfp_convert_3tm
 	wire  [11:0]   wire_add_sub7_result;
 	wire  [7:0]   wire_add_sub8_result;
 	wire  wire_cmpr4_alb;
-	wire aclr;
 	wire  [11:0]  add_1_adder1_w;
 	wire  [11:0]  add_1_adder2_w;
 	wire  [23:0]  add_1_adder_w;
 	wire  add_1_w;
 	wire  [7:0]  bias_value_w;
-	wire clk_en;
 	wire  [7:0]  const_bias_value_add_width_int_w;
 	wire  [7:0]  exceptions_value;
 	wire  [7:0]  exponent_bus;
@@ -779,13 +789,11 @@ module  fpu_convert_altfp_convert_3tm
 		cmpr4.lpm_width = 8,
 		cmpr4.lpm_type = "lpm_compare";
 	assign
-		aclr = 1'b0,
 		add_1_adder1_w = add_1_adder1_reg,
 		add_1_adder2_w = (({12{(~ add_1_adder1_cout_reg)}} & mantissa_pre_round_reg[23:12]) | ({12{add_1_adder1_cout_reg}} & add_1_adder2_reg)),
 		add_1_adder_w = {add_1_adder2_w, add_1_adder1_w},
 		add_1_w = ((((~ guard_bit_w) & round_bit_w) & sticky_bit_w) | (guard_bit_w & round_bit_w)),
 		bias_value_w = 8'b01111111,
-		clk_en = 1'b1,
 		const_bias_value_add_width_int_w = 8'b10011101,
 		exceptions_value = (({8{(~ max_neg_value_selector)}} & exponent_zero_w) | ({8{max_neg_value_selector}} & max_neg_value_w)),
 		exponent_bus = exponent_rounded,
@@ -818,7 +826,7 @@ module  fpu_convert_altfp_convert_3tm
 		sticky_bit_or_w = {(sticky_bit_or_w[4] | sticky_bit_bus[5]), (sticky_bit_or_w[3] | sticky_bit_bus[4]), (sticky_bit_or_w[2] | sticky_bit_bus[3]), (sticky_bit_or_w[1] | sticky_bit_bus[2]), (sticky_bit_or_w[0] | sticky_bit_bus[1]), sticky_bit_bus[0]},
 		sticky_bit_w = sticky_bit_or_w[5],
 		zero_padding_w = {3{1'b0}};
-endmodule //fpu_convert_altfp_convert_3tm
+endmodule //fpu_convert_altfp_convert_hvn
 //VALID FILE
 
 
@@ -826,10 +834,14 @@ endmodule //fpu_convert_altfp_convert_3tm
 `timescale 1 ps / 1 ps
 // synopsys translate_on
 module fpu_convert (
+	aclr,
+	clk_en,
 	clock,
 	dataa,
 	result);
 
+	input	  aclr;
+	input	  clk_en;
 	input	  clock;
 	input	[31:0]  dataa;
 	output	[31:0]  result;
@@ -837,7 +849,9 @@ module fpu_convert (
 	wire [31:0] sub_wire0;
 	wire [31:0] result = sub_wire0[31:0];
 
-	fpu_convert_altfp_convert_3tm	fpu_convert_altfp_convert_3tm_component (
+	fpu_convert_altfp_convert_hvn	fpu_convert_altfp_convert_hvn_component (
+				.aclr (aclr),
+				.clk_en (clk_en),
 				.clock (clock),
 				.dataa (dataa),
 				.result (sub_wire0));
@@ -861,6 +875,10 @@ endmodule
 // Retrieval info: CONSTANT: WIDTH_MAN_INPUT NUMERIC "23"
 // Retrieval info: CONSTANT: WIDTH_MAN_OUTPUT NUMERIC "23"
 // Retrieval info: CONSTANT: WIDTH_RESULT NUMERIC "32"
+// Retrieval info: USED_PORT: aclr 0 0 0 0 INPUT NODEFVAL "aclr"
+// Retrieval info: CONNECT: @aclr 0 0 0 0 aclr 0 0 0 0
+// Retrieval info: USED_PORT: clk_en 0 0 0 0 INPUT NODEFVAL "clk_en"
+// Retrieval info: CONNECT: @clk_en 0 0 0 0 clk_en 0 0 0 0
 // Retrieval info: USED_PORT: clock 0 0 0 0 INPUT NODEFVAL "clock"
 // Retrieval info: CONNECT: @clock 0 0 0 0 clock 0 0 0 0
 // Retrieval info: USED_PORT: dataa 0 0 32 0 INPUT NODEFVAL "dataa[31..0]"

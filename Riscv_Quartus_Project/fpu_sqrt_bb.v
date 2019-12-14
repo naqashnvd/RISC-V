@@ -32,6 +32,8 @@
 //applicable agreement for further details.
 
 module fpu_sqrt (
+	aclr,
+	clk_en,
 	clock,
 	data,
 	nan,
@@ -39,6 +41,8 @@ module fpu_sqrt (
 	result,
 	zero)/* synthesis synthesis_clearbox = 1 */;
 
+	input	  aclr;
+	input	  clk_en;
 	input	  clock;
 	input	[31:0]  data;
 	output	  nan;
@@ -60,12 +64,16 @@ endmodule
 // Retrieval info: CONSTANT: ROUNDING STRING "TO_NEAREST"
 // Retrieval info: CONSTANT: WIDTH_EXP NUMERIC "8"
 // Retrieval info: CONSTANT: WIDTH_MAN NUMERIC "23"
+// Retrieval info: USED_PORT: aclr 0 0 0 0 INPUT NODEFVAL "aclr"
+// Retrieval info: USED_PORT: clk_en 0 0 0 0 INPUT NODEFVAL "clk_en"
 // Retrieval info: USED_PORT: clock 0 0 0 0 INPUT NODEFVAL "clock"
 // Retrieval info: USED_PORT: data 0 0 32 0 INPUT NODEFVAL "data[31..0]"
 // Retrieval info: USED_PORT: nan 0 0 0 0 OUTPUT NODEFVAL "nan"
 // Retrieval info: USED_PORT: overflow 0 0 0 0 OUTPUT NODEFVAL "overflow"
 // Retrieval info: USED_PORT: result 0 0 32 0 OUTPUT NODEFVAL "result[31..0]"
 // Retrieval info: USED_PORT: zero 0 0 0 0 OUTPUT NODEFVAL "zero"
+// Retrieval info: CONNECT: @aclr 0 0 0 0 aclr 0 0 0 0
+// Retrieval info: CONNECT: @clk_en 0 0 0 0 clk_en 0 0 0 0
 // Retrieval info: CONNECT: @clock 0 0 0 0 clock 0 0 0 0
 // Retrieval info: CONNECT: @data 0 0 32 0 data 0 0 32 0
 // Retrieval info: CONNECT: nan 0 0 0 0 @nan 0 0 0 0

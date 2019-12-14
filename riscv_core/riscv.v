@@ -225,7 +225,7 @@ module riscv_core (input clock,clear,output [31:0]dataOut);
 		 .dataB(aluB),
 		 .func3(EX_func3_7[2:0]),
 		 .fpuOp({EX_signals[19],EX_signals[10:8]}), //{fpuOp,aluOp}
-		 .EX_Rs1_0(EX_Rs1[0]),
+		 .EX_Rs2_0(EX_Rs2[0]),
 		 .fpuResult(temp_fpuResult)
 	 );
 	 

@@ -33,7 +33,7 @@
 //applicable agreement for further details.
 
 
-//altfp_compare CBX_AUTO_BLACKBOX="ALL" DEVICE_FAMILY="Cyclone II" PIPELINE=1 WIDTH_EXP=8 WIDTH_MAN=23 aeb alb aleb clock dataa datab
+//altfp_compare CBX_AUTO_BLACKBOX="ALL" DEVICE_FAMILY="Cyclone II" PIPELINE=1 WIDTH_EXP=8 WIDTH_MAN=23 aclr aeb alb aleb clk_en clock dataa datab
 //VERSION_BEGIN 13.0 cbx_altfp_compare 2013:06:12:18:03:43:SJ cbx_cycloneii 2013:06:12:18:03:43:SJ cbx_lpm_add_sub 2013:06:12:18:03:43:SJ cbx_lpm_compare 2013:06:12:18:03:43:SJ cbx_mgl 2013:06:12:18:05:10:SJ cbx_stratix 2013:06:12:18:03:43:SJ cbx_stratixii 2013:06:12:18:03:43:SJ  VERSION_END
 // synthesis VERILOG_INPUT_VERSION VERILOG_2001
 // altera message_off 10463
@@ -43,20 +43,32 @@
 //synopsys translate_off
 `timescale 1 ps / 1 ps
 //synopsys translate_on
-module  fpu_compare_altfp_compare_irb
+module  fpu_compare_altfp_compare_0uc
 	( 
+	aclr,
 	aeb,
 	alb,
 	aleb,
+	clk_en,
 	clock,
 	dataa,
 	datab) ;
+	input   aclr;
 	output   aeb;
 	output   alb;
 	output   aleb;
+	input   clk_en;
 	input   clock;
 	input   [31:0]  dataa;
 	input   [31:0]  datab;
+`ifndef ALTERA_RESERVED_QIS
+// synopsys translate_off
+`endif
+	tri0   aclr;
+	tri1   clk_en;
+`ifndef ALTERA_RESERVED_QIS
+// synopsys translate_on
+`endif
 
 	reg	out_aeb_w_dffe3;
 	reg	out_alb_w_dffe3;
@@ -69,7 +81,6 @@ module  fpu_compare_altfp_compare_irb
 	wire  wire_cmpr3_agb;
 	wire  wire_cmpr4_aeb;
 	wire  wire_cmpr4_agb;
-	wire aclr;
 	wire  aligned_dataa_sign_adjusted_dffe2_wi;
 	wire  aligned_dataa_sign_adjusted_dffe2_wo;
 	wire  aligned_dataa_sign_adjusted_w;
@@ -87,7 +98,6 @@ module  fpu_compare_altfp_compare_irb
 	wire  both_inputs_zero;
 	wire  both_inputs_zero_dffe2_wi;
 	wire  both_inputs_zero_dffe2_wo;
-	wire clk_en;
 	wire  exp_a_all_one_dffe1_wi;
 	wire  exp_a_all_one_dffe1_wo;
 	wire  [7:0]  exp_a_all_one_w;
@@ -265,7 +275,6 @@ module  fpu_compare_altfp_compare_irb
 		cmpr4.lpm_width = 7,
 		cmpr4.lpm_type = "lpm_compare";
 	assign
-		aclr = 1'b0,
 		aeb = out_aeb_dffe3_wo,
 		alb = out_alb_dffe3_wo,
 		aleb = out_aleb_dffe3_wo,
@@ -286,7 +295,6 @@ module  fpu_compare_altfp_compare_irb
 		both_inputs_zero = (input_dataa_zero_w & input_datab_zero_w),
 		both_inputs_zero_dffe2_wi = both_inputs_zero,
 		both_inputs_zero_dffe2_wo = both_inputs_zero_dffe2_wi,
-		clk_en = 1'b1,
 		exp_a_all_one_dffe1_wi = exp_a_all_one_w[7],
 		exp_a_all_one_dffe1_wo = exp_a_all_one_dffe1_wi,
 		exp_a_all_one_w = {(dataa[30] & exp_a_all_one_w[6]), (dataa[29] & exp_a_all_one_w[5]), (dataa[28] & exp_a_all_one_w[4]), (dataa[27] & exp_a_all_one_w[3]), (dataa[26] & exp_a_all_one_w[2]), (dataa[25] & exp_a_all_one_w[1]), (dataa[24] & exp_a_all_one_w[0]), dataa[23]},
@@ -341,7 +349,7 @@ module  fpu_compare_altfp_compare_irb
 		out_aleb_dffe3_wo = out_aleb_w_dffe3,
 		out_aleb_w = ((out_alb_w | out_aeb_w) & (~ out_unordered_w)),
 		out_unordered_w = (input_dataa_nan_dffe2_wo | input_datab_nan_dffe2_wo);
-endmodule //fpu_compare_altfp_compare_irb
+endmodule //fpu_compare_altfp_compare_0uc
 //VALID FILE
 
 
@@ -349,6 +357,8 @@ endmodule //fpu_compare_altfp_compare_irb
 `timescale 1 ps / 1 ps
 // synopsys translate_on
 module fpu_compare (
+	aclr,
+	clk_en,
 	clock,
 	dataa,
 	datab,
@@ -356,6 +366,8 @@ module fpu_compare (
 	alb,
 	aleb);
 
+	input	  aclr;
+	input	  clk_en;
 	input	  clock;
 	input	[31:0]  dataa;
 	input	[31:0]  datab;
@@ -370,7 +382,9 @@ module fpu_compare (
 	wire  aleb = sub_wire1;
 	wire  alb = sub_wire2;
 
-	fpu_compare_altfp_compare_irb	fpu_compare_altfp_compare_irb_component (
+	fpu_compare_altfp_compare_0uc	fpu_compare_altfp_compare_0uc_component (
+				.aclr (aclr),
+				.clk_en (clk_en),
 				.clock (clock),
 				.datab (datab),
 				.dataa (dataa),
@@ -391,12 +405,16 @@ endmodule
 // Retrieval info: CONSTANT: PIPELINE NUMERIC "1"
 // Retrieval info: CONSTANT: WIDTH_EXP NUMERIC "8"
 // Retrieval info: CONSTANT: WIDTH_MAN NUMERIC "23"
+// Retrieval info: USED_PORT: aclr 0 0 0 0 INPUT NODEFVAL "aclr"
 // Retrieval info: USED_PORT: aeb 0 0 0 0 OUTPUT NODEFVAL "aeb"
 // Retrieval info: USED_PORT: alb 0 0 0 0 OUTPUT NODEFVAL "alb"
 // Retrieval info: USED_PORT: aleb 0 0 0 0 OUTPUT NODEFVAL "aleb"
+// Retrieval info: USED_PORT: clk_en 0 0 0 0 INPUT NODEFVAL "clk_en"
 // Retrieval info: USED_PORT: clock 0 0 0 0 INPUT NODEFVAL "clock"
 // Retrieval info: USED_PORT: dataa 0 0 32 0 INPUT NODEFVAL "dataa[31..0]"
 // Retrieval info: USED_PORT: datab 0 0 32 0 INPUT NODEFVAL "datab[31..0]"
+// Retrieval info: CONNECT: @aclr 0 0 0 0 aclr 0 0 0 0
+// Retrieval info: CONNECT: @clk_en 0 0 0 0 clk_en 0 0 0 0
 // Retrieval info: CONNECT: @clock 0 0 0 0 clock 0 0 0 0
 // Retrieval info: CONNECT: @dataa 0 0 32 0 dataa 0 0 32 0
 // Retrieval info: CONNECT: @datab 0 0 32 0 datab 0 0 32 0

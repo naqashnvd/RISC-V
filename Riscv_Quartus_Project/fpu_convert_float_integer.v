@@ -33,7 +33,7 @@
 //applicable agreement for further details.
 
 
-//altfp_convert CBX_AUTO_BLACKBOX="ALL" DEVICE_FAMILY="Cyclone II" OPERATION="FLOAT2INT" ROUNDING="TO_NEAREST" WIDTH_DATA=32 WIDTH_EXP_INPUT=8 WIDTH_EXP_OUTPUT=8 WIDTH_INT=32 WIDTH_MAN_INPUT=23 WIDTH_MAN_OUTPUT=23 WIDTH_RESULT=32 clock dataa nan overflow result underflow
+//altfp_convert CBX_AUTO_BLACKBOX="ALL" DEVICE_FAMILY="Cyclone II" OPERATION="FLOAT2INT" ROUNDING="TO_NEAREST" WIDTH_DATA=32 WIDTH_EXP_INPUT=8 WIDTH_EXP_OUTPUT=8 WIDTH_INT=32 WIDTH_MAN_INPUT=23 WIDTH_MAN_OUTPUT=23 WIDTH_RESULT=32 aclr clk_en clock dataa nan overflow result underflow
 //VERSION_BEGIN 13.0 cbx_altbarrel_shift 2013:06:12:18:03:43:SJ cbx_altfp_convert 2013:06:12:18:03:43:SJ cbx_altpriority_encoder 2013:06:12:18:03:43:SJ cbx_altsyncram 2013:06:12:18:03:43:SJ cbx_cycloneii 2013:06:12:18:03:43:SJ cbx_lpm_abs 2013:06:12:18:03:43:SJ cbx_lpm_add_sub 2013:06:12:18:03:43:SJ cbx_lpm_compare 2013:06:12:18:03:43:SJ cbx_lpm_decode 2013:06:12:18:03:43:SJ cbx_lpm_divide 2013:06:12:18:03:43:SJ cbx_lpm_mux 2013:06:12:18:03:43:SJ cbx_mgl 2013:06:12:18:05:10:SJ cbx_stratix 2013:06:12:18:03:43:SJ cbx_stratixii 2013:06:12:18:03:43:SJ cbx_stratixiii 2013:06:12:18:03:43:SJ cbx_stratixv 2013:06:12:18:03:43:SJ cbx_util_mgl 2013:06:12:18:03:43:SJ  VERSION_END
 // synthesis VERILOG_INPUT_VERSION VERILOG_2001
 // altera message_off 10463
@@ -140,20 +140,32 @@ endmodule //fpu_convert_float_integer_altbarrel_shift_grf
 //synopsys translate_off
 `timescale 1 ps / 1 ps
 //synopsys translate_on
-module  fpu_convert_float_integer_altfp_convert_a4p
+module  fpu_convert_float_integer_altfp_convert_o6q
 	( 
+	aclr,
+	clk_en,
 	clock,
 	dataa,
 	nan,
 	overflow,
 	result,
 	underflow) ;
+	input   aclr;
+	input   clk_en;
 	input   clock;
 	input   [31:0]  dataa;
 	output   nan;
 	output   overflow;
 	output   [31:0]  result;
 	output   underflow;
+`ifndef ALTERA_RESERVED_QIS
+// synopsys translate_off
+`endif
+	tri0   aclr;
+	tri1   clk_en;
+`ifndef ALTERA_RESERVED_QIS
+// synopsys translate_on
+`endif
 
 	wire  [53:0]   wire_altbarrel_shift6_result;
 	reg	[5:0]	added_power2_reg;
@@ -215,7 +227,6 @@ module  fpu_convert_float_integer_altfp_convert_a4p
 	wire  wire_cmpr2_aeb;
 	wire  wire_cmpr3_alb;
 	wire  wire_max_shift_compare_agb;
-	wire aclr;
 	wire  add_1_cout_w;
 	wire  add_1_w;
 	wire  [31:0]  all_zeroes_w;
@@ -227,7 +238,6 @@ module  fpu_convert_float_integer_altfp_convert_a4p
 	wire  below_lower_limit2_w;
 	wire  [7:0]  bias_value_less_1_w;
 	wire  [7:0]  bias_value_w;
-	wire clk_en;
 	wire  [7:0]  const_bias_value_add_width_res_w;
 	wire  denormal_input_w;
 	wire  equal_upper_limit_w;
@@ -852,7 +862,6 @@ module  fpu_convert_float_integer_altfp_convert_a4p
 		max_shift_compare.lpm_width = 6,
 		max_shift_compare.lpm_type = "lpm_compare";
 	assign
-		aclr = 1'b0,
 		add_1_cout_w = ((wire_add_sub7_cout & add_1_w) & (~ sign_input_reg3)),
 		add_1_w = ((((~ guard_bit_w) & round_bit_w) & sticky_bit_w) | (guard_bit_w & round_bit_w)),
 		all_zeroes_w = {1'b0, {31{1'b0}}},
@@ -864,7 +873,6 @@ module  fpu_convert_float_integer_altfp_convert_a4p
 		below_lower_limit2_w = wire_cmpr3_alb,
 		bias_value_less_1_w = 8'b01111110,
 		bias_value_w = 8'b01111111,
-		clk_en = 1'b1,
 		const_bias_value_add_width_res_w = 8'b10011110,
 		denormal_input_w = ((~ exp_or_reg4) & man_or_reg4),
 		equal_upper_limit_w = wire_cmpr1_aeb,
@@ -929,7 +937,7 @@ module  fpu_convert_float_integer_altfp_convert_a4p
 		unsigned_integer = integer_rounded_reg,
 		upper_limit_w = (((~ sign_input_reg3) & (exceed_upper_limit_reg3 | equal_upper_limit_reg3)) | (sign_input_reg3 & (exceed_upper_limit_reg3 | (equal_upper_limit_reg3 & (int_or_reg3 | add_1_w))))),
 		zero_input_w = ((~ exp_or_reg4) & (~ man_or_reg4));
-endmodule //fpu_convert_float_integer_altfp_convert_a4p
+endmodule //fpu_convert_float_integer_altfp_convert_o6q
 //VALID FILE
 
 
@@ -937,6 +945,8 @@ endmodule //fpu_convert_float_integer_altfp_convert_a4p
 `timescale 1 ps / 1 ps
 // synopsys translate_on
 module fpu_convert_float_integer (
+	aclr,
+	clk_en,
 	clock,
 	dataa,
 	nan,
@@ -944,6 +954,8 @@ module fpu_convert_float_integer (
 	result,
 	underflow);
 
+	input	  aclr;
+	input	  clk_en;
 	input	  clock;
 	input	[31:0]  dataa;
 	output	  nan;
@@ -960,7 +972,9 @@ module fpu_convert_float_integer (
 	wire  nan = sub_wire2;
 	wire [31:0] result = sub_wire3[31:0];
 
-	fpu_convert_float_integer_altfp_convert_a4p	fpu_convert_float_integer_altfp_convert_a4p_component (
+	fpu_convert_float_integer_altfp_convert_o6q	fpu_convert_float_integer_altfp_convert_o6q_component (
+				.aclr (aclr),
+				.clk_en (clk_en),
 				.clock (clock),
 				.dataa (dataa),
 				.overflow (sub_wire0),
@@ -987,6 +1001,10 @@ endmodule
 // Retrieval info: CONSTANT: WIDTH_MAN_INPUT NUMERIC "23"
 // Retrieval info: CONSTANT: WIDTH_MAN_OUTPUT NUMERIC "23"
 // Retrieval info: CONSTANT: WIDTH_RESULT NUMERIC "32"
+// Retrieval info: USED_PORT: aclr 0 0 0 0 INPUT NODEFVAL "aclr"
+// Retrieval info: CONNECT: @aclr 0 0 0 0 aclr 0 0 0 0
+// Retrieval info: USED_PORT: clk_en 0 0 0 0 INPUT NODEFVAL "clk_en"
+// Retrieval info: CONNECT: @clk_en 0 0 0 0 clk_en 0 0 0 0
 // Retrieval info: USED_PORT: clock 0 0 0 0 INPUT NODEFVAL "clock"
 // Retrieval info: CONNECT: @clock 0 0 0 0 clock 0 0 0 0
 // Retrieval info: USED_PORT: dataa 0 0 32 0 INPUT NODEFVAL "dataa[31..0]"

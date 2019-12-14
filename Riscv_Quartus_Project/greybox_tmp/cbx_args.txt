@@ -1,0 +1,14 @@
+INTENDED_DEVICE_FAMILY="Cyclone II"
+PIPELINE=16
+ROUNDING=TO_NEAREST
+WIDTH_EXP=8
+WIDTH_MAN=23
+DEVICE_FAMILY="Cyclone II"
+aclr
+clk_en
+clock
+data
+nan
+overflow
+result
+zero

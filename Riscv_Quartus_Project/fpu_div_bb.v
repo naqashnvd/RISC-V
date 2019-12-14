@@ -32,6 +32,8 @@
 //applicable agreement for further details.
 
 module fpu_div (
+	aclr,
+	clk_en,
 	clock,
 	dataa,
 	datab,
@@ -42,6 +44,8 @@ module fpu_div (
 	underflow,
 	zero)/* synthesis synthesis_clearbox = 1 */;
 
+	input	  aclr;
+	input	  clk_en;
 	input	  clock;
 	input	[31:0]  dataa;
 	input	[31:0]  datab;
@@ -67,6 +71,8 @@ endmodule
 // Retrieval info: CONSTANT: REDUCED_FUNCTIONALITY STRING "NO"
 // Retrieval info: CONSTANT: WIDTH_EXP NUMERIC "8"
 // Retrieval info: CONSTANT: WIDTH_MAN NUMERIC "23"
+// Retrieval info: USED_PORT: aclr 0 0 0 0 INPUT NODEFVAL "aclr"
+// Retrieval info: USED_PORT: clk_en 0 0 0 0 INPUT NODEFVAL "clk_en"
 // Retrieval info: USED_PORT: clock 0 0 0 0 INPUT NODEFVAL "clock"
 // Retrieval info: USED_PORT: dataa 0 0 32 0 INPUT NODEFVAL "dataa[31..0]"
 // Retrieval info: USED_PORT: datab 0 0 32 0 INPUT NODEFVAL "datab[31..0]"
@@ -76,6 +82,8 @@ endmodule
 // Retrieval info: USED_PORT: result 0 0 32 0 OUTPUT NODEFVAL "result[31..0]"
 // Retrieval info: USED_PORT: underflow 0 0 0 0 OUTPUT NODEFVAL "underflow"
 // Retrieval info: USED_PORT: zero 0 0 0 0 OUTPUT NODEFVAL "zero"
+// Retrieval info: CONNECT: @aclr 0 0 0 0 aclr 0 0 0 0
+// Retrieval info: CONNECT: @clk_en 0 0 0 0 clk_en 0 0 0 0
 // Retrieval info: CONNECT: @clock 0 0 0 0 clock 0 0 0 0
 // Retrieval info: CONNECT: @dataa 0 0 32 0 dataa 0 0 32 0
 // Retrieval info: CONNECT: @datab 0 0 32 0 datab 0 0 32 0

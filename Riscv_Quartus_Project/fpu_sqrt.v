@@ -33,7 +33,7 @@
 //applicable agreement for further details.
 
 
-//altfp_sqrt CBX_AUTO_BLACKBOX="ALL" DEVICE_FAMILY="Cyclone II" PIPELINE=16 ROUNDING="TO_NEAREST" WIDTH_EXP=8 WIDTH_MAN=23 clock data nan overflow result zero
+//altfp_sqrt CBX_AUTO_BLACKBOX="ALL" DEVICE_FAMILY="Cyclone II" PIPELINE=16 ROUNDING="TO_NEAREST" WIDTH_EXP=8 WIDTH_MAN=23 aclr clk_en clock data nan overflow result zero
 //VERSION_BEGIN 13.0 cbx_altfp_sqrt 2013:06:12:18:03:43:SJ cbx_cycloneii 2013:06:12:18:03:43:SJ cbx_lpm_add_sub 2013:06:12:18:03:43:SJ cbx_mgl 2013:06:12:18:05:10:SJ cbx_stratix 2013:06:12:18:03:43:SJ cbx_stratixii 2013:06:12:18:03:43:SJ  VERSION_END
 // synthesis VERILOG_INPUT_VERSION VERILOG_2001
 // altera message_off 10463
@@ -1078,20 +1078,32 @@ endmodule //fpu_sqrt_alt_sqrt_block_kfb
 //synopsys translate_off
 `timescale 1 ps / 1 ps
 //synopsys translate_on
-module  fpu_sqrt_altfp_sqrt_ece
+module  fpu_sqrt_altfp_sqrt_sef
 	( 
+	aclr,
+	clk_en,
 	clock,
 	data,
 	nan,
 	overflow,
 	result,
 	zero) ;
+	input   aclr;
+	input   clk_en;
 	input   clock;
 	input   [31:0]  data;
 	output   nan;
 	output   overflow;
 	output   [31:0]  result;
 	output   zero;
+`ifndef ALTERA_RESERVED_QIS
+// synopsys translate_off
+`endif
+	tri0   aclr;
+	tri1   clk_en;
+`ifndef ALTERA_RESERVED_QIS
+// synopsys translate_on
+`endif
 
 	wire  [24:0]   wire_alt_sqrt_block2_root_result;
 	reg	exp_all_one_ff;
@@ -1176,9 +1188,7 @@ module  fpu_sqrt_altfp_sqrt_ece
 	reg	zero_ff;
 	wire  [8:0]   wire_add_sub1_result;
 	wire  [22:0]   wire_add_sub3_result;
-	wire aclr;
 	wire  [7:0]  bias;
-	wire clk_en;
 	wire  [7:0]  exp_all_one_w;
 	wire  [7:0]  exp_div_w;
 	wire  [7:0]  exp_ff2_w;
@@ -1809,9 +1819,7 @@ module  fpu_sqrt_altfp_sqrt_ece
 		add_sub3.lpm_width = 23,
 		add_sub3.lpm_type = "lpm_add_sub";
 	assign
-		aclr = 1'b0,
 		bias = {1'b0, {7{1'b1}}},
-		clk_en = 1'b1,
 		exp_all_one_w = {(exp_in_ff[7] & exp_all_one_w[6]), (exp_in_ff[6] & exp_all_one_w[5]), (exp_in_ff[5] & exp_all_one_w[4]), (exp_in_ff[4] & exp_all_one_w[3]), (exp_in_ff[3] & exp_all_one_w[2]), (exp_in_ff[2] & exp_all_one_w[1]), (exp_in_ff[1] & exp_all_one_w[0]), exp_in_ff[0]},
 		exp_div_w = {wire_add_sub1_result[8:1]},
 		exp_ff2_w = exp_ff212c,
@@ -1827,7 +1835,7 @@ module  fpu_sqrt_altfp_sqrt_ece
 		result = {sign_node_ff15[0:0], exp_result_ff, man_result_ff},
 		roundbit_w = wire_alt_sqrt_block2_root_result[0],
 		zero = zero_ff;
-endmodule //fpu_sqrt_altfp_sqrt_ece
+endmodule //fpu_sqrt_altfp_sqrt_sef
 //VALID FILE
 
 
@@ -1835,6 +1843,8 @@ endmodule //fpu_sqrt_altfp_sqrt_ece
 `timescale 1 ps / 1 ps
 // synopsys translate_on
 module fpu_sqrt (
+	aclr,
+	clk_en,
 	clock,
 	data,
 	nan,
@@ -1842,6 +1852,8 @@ module fpu_sqrt (
 	result,
 	zero);
 
+	input	  aclr;
+	input	  clk_en;
 	input	  clock;
 	input	[31:0]  data;
 	output	  nan;
@@ -1858,7 +1870,9 @@ module fpu_sqrt (
 	wire  nan = sub_wire2;
 	wire [31:0] result = sub_wire3[31:0];
 
-	fpu_sqrt_altfp_sqrt_ece	fpu_sqrt_altfp_sqrt_ece_component (
+	fpu_sqrt_altfp_sqrt_sef	fpu_sqrt_altfp_sqrt_sef_component (
+				.aclr (aclr),
+				.clk_en (clk_en),
 				.clock (clock),
 				.data (data),
 				.overflow (sub_wire0),
@@ -1880,12 +1894,16 @@ endmodule
 // Retrieval info: CONSTANT: ROUNDING STRING "TO_NEAREST"
 // Retrieval info: CONSTANT: WIDTH_EXP NUMERIC "8"
 // Retrieval info: CONSTANT: WIDTH_MAN NUMERIC "23"
+// Retrieval info: USED_PORT: aclr 0 0 0 0 INPUT NODEFVAL "aclr"
+// Retrieval info: USED_PORT: clk_en 0 0 0 0 INPUT NODEFVAL "clk_en"
 // Retrieval info: USED_PORT: clock 0 0 0 0 INPUT NODEFVAL "clock"
 // Retrieval info: USED_PORT: data 0 0 32 0 INPUT NODEFVAL "data[31..0]"
 // Retrieval info: USED_PORT: nan 0 0 0 0 OUTPUT NODEFVAL "nan"
 // Retrieval info: USED_PORT: overflow 0 0 0 0 OUTPUT NODEFVAL "overflow"
 // Retrieval info: USED_PORT: result 0 0 32 0 OUTPUT NODEFVAL "result[31..0]"
 // Retrieval info: USED_PORT: zero 0 0 0 0 OUTPUT NODEFVAL "zero"
+// Retrieval info: CONNECT: @aclr 0 0 0 0 aclr 0 0 0 0
+// Retrieval info: CONNECT: @clk_en 0 0 0 0 clk_en 0 0 0 0
 // Retrieval info: CONNECT: @clock 0 0 0 0 clock 0 0 0 0
 // Retrieval info: CONNECT: @data 0 0 32 0 data 0 0 32 0
 // Retrieval info: CONNECT: nan 0 0 0 0 @nan 0 0 0 0

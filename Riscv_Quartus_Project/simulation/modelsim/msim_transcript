@@ -32,14 +32,14 @@
 # -- Compiling module fpu_add_sub_altpriority_encoder_v28
 # -- Compiling module fpu_add_sub_altpriority_encoder_f48
 # -- Compiling module fpu_add_sub_altpriority_encoder_e48
-# -- Compiling module fpu_add_sub_altfp_add_sub_hrm
+# -- Compiling module fpu_add_sub_altfp_add_sub_vtn
 # -- Compiling module fpu_add_sub
 # 
 # Top level modules:
 # 	fpu_add_sub
 # vlog -vlog01compat -work work +incdir+C:/Users/naqas/Desktop/Github/RISC-V/Riscv_Quartus_Project {C:/Users/naqas/Desktop/Github/RISC-V/Riscv_Quartus_Project/fpu_mult.v}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
-# -- Compiling module fpu_mult_altfp_mult_idq
+# -- Compiling module fpu_mult_altfp_mult_0gr
 # -- Compiling module fpu_mult
 # 
 # Top level modules:
@@ -47,14 +47,14 @@
 # vlog -vlog01compat -work work +incdir+C:/Users/naqas/Desktop/Github/RISC-V/Riscv_Quartus_Project {C:/Users/naqas/Desktop/Github/RISC-V/Riscv_Quartus_Project/fpu_div.v}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 # -- Compiling module fpu_div_altfp_div_pst_t2j
-# -- Compiling module fpu_div_altfp_div_tkl
+# -- Compiling module fpu_div_altfp_div_bnm
 # -- Compiling module fpu_div
 # 
 # Top level modules:
 # 	fpu_div
 # vlog -vlog01compat -work work +incdir+C:/Users/naqas/Desktop/Github/RISC-V/Riscv_Quartus_Project {C:/Users/naqas/Desktop/Github/RISC-V/Riscv_Quartus_Project/fpu_compare.v}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
-# -- Compiling module fpu_compare_altfp_compare_irb
+# -- Compiling module fpu_compare_altfp_compare_0uc
 # -- Compiling module fpu_compare
 # 
 # Top level modules:
@@ -62,7 +62,7 @@
 # vlog -vlog01compat -work work +incdir+C:/Users/naqas/Desktop/Github/RISC-V/Riscv_Quartus_Project {C:/Users/naqas/Desktop/Github/RISC-V/Riscv_Quartus_Project/fpu_sqrt.v}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 # -- Compiling module fpu_sqrt_alt_sqrt_block_kfb
-# -- Compiling module fpu_sqrt_altfp_sqrt_ece
+# -- Compiling module fpu_sqrt_altfp_sqrt_sef
 # -- Compiling module fpu_sqrt
 # 
 # Top level modules:
@@ -79,7 +79,7 @@
 # -- Compiling module fpu_convert_altpriority_encoder_bv7
 # -- Compiling module fpu_convert_altpriority_encoder_r08
 # -- Compiling module fpu_convert_altpriority_encoder_qb6
-# -- Compiling module fpu_convert_altfp_convert_3tm
+# -- Compiling module fpu_convert_altfp_convert_hvn
 # -- Compiling module fpu_convert
 # 
 # Top level modules:
@@ -87,7 +87,7 @@
 # vlog -vlog01compat -work work +incdir+C:/Users/naqas/Desktop/Github/RISC-V/Riscv_Quartus_Project {C:/Users/naqas/Desktop/Github/RISC-V/Riscv_Quartus_Project/fpu_convert_float_integer.v}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 # -- Compiling module fpu_convert_float_integer_altbarrel_shift_grf
-# -- Compiling module fpu_convert_float_integer_altfp_convert_a4p
+# -- Compiling module fpu_convert_float_integer_altfp_convert_o6q
 # -- Compiling module fpu_convert_float_integer
 # 
 # Top level modules:
@@ -171,7 +171,7 @@
 # Loading work.fpuController
 # Loading work.FPU
 # Loading work.fpu_add_sub
-# Loading work.fpu_add_sub_altfp_add_sub_hrm
+# Loading work.fpu_add_sub_altfp_add_sub_vtn
 # Loading work.fpu_add_sub_altbarrel_shift_h0e
 # Loading work.fpu_add_sub_altbarrel_shift_6hb
 # Loading work.fpu_add_sub_altpriority_encoder_qb6
@@ -195,22 +195,22 @@
 # Loading lpm_ver.lpm_add_sub
 # Loading lpm_ver.lpm_compare
 # Loading work.fpu_mult
-# Loading work.fpu_mult_altfp_mult_idq
+# Loading work.fpu_mult_altfp_mult_0gr
 # Loading lpm_ver.lpm_mult
 # Loading lpm_ver.LPM_HINT_EVALUATION
 # Loading work.fpu_div
-# Loading work.fpu_div_altfp_div_tkl
+# Loading work.fpu_div_altfp_div_bnm
 # Loading work.fpu_div_altfp_div_pst_t2j
 # Loading altera_mf_ver.altsyncram
 # Loading altera_mf_ver.ALTERA_DEVICE_FAMILIES
 # Loading altera_mf_ver.ALTERA_MF_MEMORY_INITIALIZATION
 # Loading work.fpu_compare
-# Loading work.fpu_compare_altfp_compare_irb
+# Loading work.fpu_compare_altfp_compare_0uc
 # Loading work.fpu_sqrt
-# Loading work.fpu_sqrt_altfp_sqrt_ece
+# Loading work.fpu_sqrt_altfp_sqrt_sef
 # Loading work.fpu_sqrt_alt_sqrt_block_kfb
 # Loading work.fpu_convert
-# Loading work.fpu_convert_altfp_convert_3tm
+# Loading work.fpu_convert_altfp_convert_hvn
 # Loading work.fpu_convert_altbarrel_shift_brf
 # Loading work.fpu_convert_altpriority_encoder_qb6
 # Loading work.fpu_convert_altpriority_encoder_rf8
@@ -222,7 +222,7 @@
 # Loading work.fpu_convert_altpriority_encoder_6v7
 # Loading work.fpu_convert_altpriority_encoder_3v7
 # Loading work.fpu_convert_float_integer
-# Loading work.fpu_convert_float_integer_altfp_convert_a4p
+# Loading work.fpu_convert_float_integer_altfp_convert_o6q
 # Loading work.fpu_convert_float_integer_altbarrel_shift_grf
 # Loading work.DRAM
 # Loading work.memOut_MUX
@@ -231,7 +231,7 @@
 # Loading work.forwardingUnit
 # ** Warning: (vsim-3016) C:/Users/naqas/Desktop/Github/RISC-V/Riscv_Quartus_Project/fpu_div.v(254): Port type is incompatible with connection (port 'clock0').
 # 
-#         Region: /tb/riscv0/fpu/fpu_div_inst/fpu_div_altfp_div_tkl_component/altfp_div_pst1/altsyncram3
+#         Region: /tb/riscv0/fpu/fpu_div_inst/fpu_div_altfp_div_bnm_component/altfp_div_pst1/altsyncram3
 # ** Warning: Design size of 64 instances exceeds ModelSim ALTERA recommended capacity.
 # This may because you are loading cell libraries which are not recommended with
 # the ModelSim Altera version. Expect performance to be adversely affected.
@@ -242,3 +242,8 @@
 # view signals
 # .main_pane.objects.interior.cs.body.tree
 # run -all
+# 00000000
+# 40533334
+# c00cccce
+# c01ae149
+# c0000000

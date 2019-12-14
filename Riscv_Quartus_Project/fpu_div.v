@@ -33,7 +33,7 @@
 //applicable agreement for further details.
 
 
-//altfp_div CBX_AUTO_BLACKBOX="ALL" DENORMAL_SUPPORT="NO" DEVICE_FAMILY="Cyclone II" OPTIMIZE="SPEED" PIPELINE=6 REDUCED_FUNCTIONALITY="NO" WIDTH_EXP=8 WIDTH_MAN=23 clock dataa datab division_by_zero nan overflow result underflow zero
+//altfp_div CBX_AUTO_BLACKBOX="ALL" DENORMAL_SUPPORT="NO" DEVICE_FAMILY="Cyclone II" OPTIMIZE="SPEED" PIPELINE=6 REDUCED_FUNCTIONALITY="NO" WIDTH_EXP=8 WIDTH_MAN=23 aclr clk_en clock dataa datab division_by_zero nan overflow result underflow zero
 //VERSION_BEGIN 13.0 cbx_altbarrel_shift 2013:06:12:18:03:43:SJ cbx_altfp_div 2013:06:12:18:03:43:SJ cbx_altsyncram 2013:06:12:18:03:43:SJ cbx_cycloneii 2013:06:12:18:03:43:SJ cbx_lpm_abs 2013:06:12:18:03:43:SJ cbx_lpm_add_sub 2013:06:12:18:03:43:SJ cbx_lpm_compare 2013:06:12:18:03:43:SJ cbx_lpm_decode 2013:06:12:18:03:43:SJ cbx_lpm_divide 2013:06:12:18:03:43:SJ cbx_lpm_mult 2013:06:12:18:03:43:SJ cbx_lpm_mux 2013:06:12:18:03:43:SJ cbx_mgl 2013:06:12:18:05:10:SJ cbx_padd 2013:06:12:18:03:43:SJ cbx_stratix 2013:06:12:18:03:43:SJ cbx_stratixii 2013:06:12:18:03:43:SJ cbx_stratixiii 2013:06:12:18:03:43:SJ cbx_stratixv 2013:06:12:18:03:43:SJ cbx_util_mgl 2013:06:12:18:03:43:SJ  VERSION_END
 // synthesis VERILOG_INPUT_VERSION VERILOG_2001
 // altera message_off 10463
@@ -1028,8 +1028,10 @@ endmodule //fpu_div_altfp_div_pst_t2j
 //synopsys translate_off
 `timescale 1 ps / 1 ps
 //synopsys translate_on
-module  fpu_div_altfp_div_tkl
+module  fpu_div_altfp_div_bnm
 	( 
+	aclr,
+	clk_en,
 	clock,
 	dataa,
 	datab,
@@ -1039,6 +1041,8 @@ module  fpu_div_altfp_div_tkl
 	result,
 	underflow,
 	zero) ;
+	input   aclr;
+	input   clk_en;
 	input   clock;
 	input   [31:0]  dataa;
 	input   [31:0]  datab;
@@ -1048,6 +1052,14 @@ module  fpu_div_altfp_div_tkl
 	output   [31:0]  result;
 	output   underflow;
 	output   zero;
+`ifndef ALTERA_RESERVED_QIS
+// synopsys translate_off
+`endif
+	tri0   aclr;
+	tri1   clk_en;
+`ifndef ALTERA_RESERVED_QIS
+// synopsys translate_on
+`endif
 
 	wire  wire_altfp_div_pst1_division_by_zero;
 	wire  wire_altfp_div_pst1_nan;
@@ -1055,8 +1067,6 @@ module  fpu_div_altfp_div_tkl
 	wire  [31:0]   wire_altfp_div_pst1_result;
 	wire  wire_altfp_div_pst1_underflow;
 	wire  wire_altfp_div_pst1_zero;
-	wire aclr;
-	wire clk_en;
 
 	fpu_div_altfp_div_pst_t2j   altfp_div_pst1
 	( 
@@ -1072,15 +1082,13 @@ module  fpu_div_altfp_div_tkl
 	.underflow(wire_altfp_div_pst1_underflow),
 	.zero(wire_altfp_div_pst1_zero));
 	assign
-		aclr = 1'b0,
-		clk_en = 1'b1,
 		division_by_zero = wire_altfp_div_pst1_division_by_zero,
 		nan = wire_altfp_div_pst1_nan,
 		overflow = wire_altfp_div_pst1_overflow,
 		result = wire_altfp_div_pst1_result,
 		underflow = wire_altfp_div_pst1_underflow,
 		zero = wire_altfp_div_pst1_zero;
-endmodule //fpu_div_altfp_div_tkl
+endmodule //fpu_div_altfp_div_bnm
 //VALID FILE
 
 
@@ -1088,6 +1096,8 @@ endmodule //fpu_div_altfp_div_tkl
 `timescale 1 ps / 1 ps
 // synopsys translate_on
 module fpu_div (
+	aclr,
+	clk_en,
 	clock,
 	dataa,
 	datab,
@@ -1098,6 +1108,8 @@ module fpu_div (
 	underflow,
 	zero);
 
+	input	  aclr;
+	input	  clk_en;
 	input	  clock;
 	input	[31:0]  dataa;
 	input	[31:0]  datab;
@@ -1121,10 +1133,12 @@ module fpu_div (
 	wire  division_by_zero = sub_wire4;
 	wire  underflow = sub_wire5;
 
-	fpu_div_altfp_div_tkl	fpu_div_altfp_div_tkl_component (
+	fpu_div_altfp_div_bnm	fpu_div_altfp_div_bnm_component (
+				.clk_en (clk_en),
 				.clock (clock),
 				.datab (datab),
 				.dataa (dataa),
+				.aclr (aclr),
 				.overflow (sub_wire0),
 				.zero (sub_wire1),
 				.nan (sub_wire2),
@@ -1147,6 +1161,8 @@ endmodule
 // Retrieval info: CONSTANT: REDUCED_FUNCTIONALITY STRING "NO"
 // Retrieval info: CONSTANT: WIDTH_EXP NUMERIC "8"
 // Retrieval info: CONSTANT: WIDTH_MAN NUMERIC "23"
+// Retrieval info: USED_PORT: aclr 0 0 0 0 INPUT NODEFVAL "aclr"
+// Retrieval info: USED_PORT: clk_en 0 0 0 0 INPUT NODEFVAL "clk_en"
 // Retrieval info: USED_PORT: clock 0 0 0 0 INPUT NODEFVAL "clock"
 // Retrieval info: USED_PORT: dataa 0 0 32 0 INPUT NODEFVAL "dataa[31..0]"
 // Retrieval info: USED_PORT: datab 0 0 32 0 INPUT NODEFVAL "datab[31..0]"
@@ -1156,6 +1172,8 @@ endmodule
 // Retrieval info: USED_PORT: result 0 0 32 0 OUTPUT NODEFVAL "result[31..0]"
 // Retrieval info: USED_PORT: underflow 0 0 0 0 OUTPUT NODEFVAL "underflow"
 // Retrieval info: USED_PORT: zero 0 0 0 0 OUTPUT NODEFVAL "zero"
+// Retrieval info: CONNECT: @aclr 0 0 0 0 aclr 0 0 0 0
+// Retrieval info: CONNECT: @clk_en 0 0 0 0 clk_en 0 0 0 0
 // Retrieval info: CONNECT: @clock 0 0 0 0 clock 0 0 0 0
 // Retrieval info: CONNECT: @dataa 0 0 32 0 dataa 0 0 32 0
 // Retrieval info: CONNECT: @datab 0 0 32 0 datab 0 0 32 0

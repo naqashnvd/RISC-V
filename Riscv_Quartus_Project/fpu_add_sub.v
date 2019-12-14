@@ -33,7 +33,7 @@
 //applicable agreement for further details.
 
 
-//altfp_add_sub CBX_AUTO_BLACKBOX="ALL" DENORMAL_SUPPORT="NO" DEVICE_FAMILY="Cyclone II" DIRECTION="VARIABLE" OPTIMIZE="AREA" PIPELINE=7 REDUCED_FUNCTIONALITY="NO" WIDTH_EXP=8 WIDTH_MAN=23 add_sub clock dataa datab nan overflow result underflow zero
+//altfp_add_sub CBX_AUTO_BLACKBOX="ALL" DENORMAL_SUPPORT="NO" DEVICE_FAMILY="Cyclone II" DIRECTION="VARIABLE" OPTIMIZE="AREA" PIPELINE=7 REDUCED_FUNCTIONALITY="NO" WIDTH_EXP=8 WIDTH_MAN=23 aclr add_sub clk_en clock dataa datab nan overflow result underflow zero
 //VERSION_BEGIN 13.0 cbx_altbarrel_shift 2013:06:12:18:03:43:SJ cbx_altfp_add_sub 2013:06:12:18:03:43:SJ cbx_altpriority_encoder 2013:06:12:18:03:43:SJ cbx_cycloneii 2013:06:12:18:03:43:SJ cbx_lpm_add_sub 2013:06:12:18:03:43:SJ cbx_lpm_compare 2013:06:12:18:03:43:SJ cbx_mgl 2013:06:12:18:05:10:SJ cbx_stratix 2013:06:12:18:03:43:SJ cbx_stratixii 2013:06:12:18:03:43:SJ  VERSION_END
 // synthesis VERILOG_INPUT_VERSION VERILOG_2001
 // altera message_off 10463
@@ -706,9 +706,11 @@ endmodule //fpu_add_sub_altpriority_encoder_e48
 //synopsys translate_off
 `timescale 1 ps / 1 ps
 //synopsys translate_on
-module  fpu_add_sub_altfp_add_sub_hrm
+module  fpu_add_sub_altfp_add_sub_vtn
 	( 
+	aclr,
 	add_sub,
+	clk_en,
 	clock,
 	dataa,
 	datab,
@@ -717,7 +719,9 @@ module  fpu_add_sub_altfp_add_sub_hrm
 	result,
 	underflow,
 	zero) ;
+	input   aclr;
 	input   add_sub;
+	input   clk_en;
 	input   clock;
 	input   [31:0]  dataa;
 	input   [31:0]  datab;
@@ -729,7 +733,9 @@ module  fpu_add_sub_altfp_add_sub_hrm
 `ifndef ALTERA_RESERVED_QIS
 // synopsys translate_off
 `endif
+	tri0   aclr;
 	tri1   add_sub;
+	tri1   clk_en;
 `ifndef ALTERA_RESERVED_QIS
 // synopsys translate_on
 `endif
@@ -817,7 +823,6 @@ module  fpu_add_sub_altfp_add_sub_hrm
 	wire  [25:0]   wire_add_sub8_result;
 	wire  [8:0]   wire_add_sub9_result;
 	wire  wire_trailing_zeros_limit_comparator_agb;
-	wire aclr;
 	wire  add_sub_dffe11_wi;
 	wire  add_sub_dffe11_wo;
 	wire  add_sub_dffe12_wi;
@@ -894,7 +899,6 @@ module  fpu_add_sub_altfp_add_sub_hrm
 	wire  both_inputs_are_infinite_dffe1_wo;
 	wire  both_inputs_are_infinite_dffe25_wi;
 	wire  both_inputs_are_infinite_dffe25_wo;
-	wire clk_en;
 	wire  [7:0]  data_exp_dffe1_wi;
 	wire  [7:0]  data_exp_dffe1_wo;
 	wire  [31:0]  dataa_dffe11_wi;
@@ -2085,7 +2089,6 @@ module  fpu_add_sub_altfp_add_sub_hrm
 		trailing_zeros_limit_comparator.lpm_width = 6,
 		trailing_zeros_limit_comparator.lpm_type = "lpm_compare";
 	assign
-		aclr = 1'b0,
 		add_sub_dffe11_wi = add_sub,
 		add_sub_dffe11_wo = add_sub_dffe11_wi,
 		add_sub_dffe12_wi = add_sub_dffe11_wo,
@@ -2162,7 +2165,6 @@ module  fpu_add_sub_altfp_add_sub_hrm
 		both_inputs_are_infinite_dffe1_wo = both_inputs_are_infinite_dffe1,
 		both_inputs_are_infinite_dffe25_wi = both_inputs_are_infinite_dffe1_wo,
 		both_inputs_are_infinite_dffe25_wo = both_inputs_are_infinite_dffe25_wi,
-		clk_en = 1'b1,
 		data_exp_dffe1_wi = (({8{(~ exp_amb_mux_dffe15_wo)}} & aligned_dataa_exp_dffe15_wo[7:0]) | ({8{exp_amb_mux_dffe15_wo}} & aligned_datab_exp_dffe15_wo[7:0])),
 		data_exp_dffe1_wo = data_exp_dffe1,
 		dataa_dffe11_wi = dataa,
@@ -2614,7 +2616,7 @@ module  fpu_add_sub_altfp_add_sub_hrm
 		zero_man_sign_dffe27_wo = zero_man_sign_dffe27_wi,
 		zero_man_sign_dffe2_wi = (dataa_sign_dffe25_wo & add_sub_dffe25_wo),
 		zero_man_sign_dffe2_wo = zero_man_sign_dffe2;
-endmodule //fpu_add_sub_altfp_add_sub_hrm
+endmodule //fpu_add_sub_altfp_add_sub_vtn
 //VALID FILE
 
 
@@ -2622,7 +2624,9 @@ endmodule //fpu_add_sub_altfp_add_sub_hrm
 `timescale 1 ps / 1 ps
 // synopsys translate_on
 module fpu_add_sub (
+	aclr,
 	add_sub,
+	clk_en,
 	clock,
 	dataa,
 	datab,
@@ -2632,7 +2636,9 @@ module fpu_add_sub (
 	underflow,
 	zero);
 
+	input	  aclr;
 	input	  add_sub;
+	input	  clk_en;
 	input	  clock;
 	input	[31:0]  dataa;
 	input	[31:0]  datab;
@@ -2653,10 +2659,12 @@ module fpu_add_sub (
 	wire [31:0] result = sub_wire3[31:0];
 	wire  underflow = sub_wire4;
 
-	fpu_add_sub_altfp_add_sub_hrm	fpu_add_sub_altfp_add_sub_hrm_component (
+	fpu_add_sub_altfp_add_sub_vtn	fpu_add_sub_altfp_add_sub_vtn_component (
+				.clk_en (clk_en),
 				.clock (clock),
 				.datab (datab),
 				.dataa (dataa),
+				.aclr (aclr),
 				.add_sub (add_sub),
 				.overflow (sub_wire0),
 				.zero (sub_wire1),
@@ -2682,7 +2690,9 @@ endmodule
 // Retrieval info: CONSTANT: REDUCED_FUNCTIONALITY STRING "NO"
 // Retrieval info: CONSTANT: WIDTH_EXP NUMERIC "8"
 // Retrieval info: CONSTANT: WIDTH_MAN NUMERIC "23"
+// Retrieval info: USED_PORT: aclr 0 0 0 0 INPUT NODEFVAL "aclr"
 // Retrieval info: USED_PORT: add_sub 0 0 0 0 INPUT NODEFVAL "add_sub"
+// Retrieval info: USED_PORT: clk_en 0 0 0 0 INPUT NODEFVAL "clk_en"
 // Retrieval info: USED_PORT: clock 0 0 0 0 INPUT NODEFVAL "clock"
 // Retrieval info: USED_PORT: dataa 0 0 32 0 INPUT NODEFVAL "dataa[31..0]"
 // Retrieval info: USED_PORT: datab 0 0 32 0 INPUT NODEFVAL "datab[31..0]"
@@ -2691,7 +2701,9 @@ endmodule
 // Retrieval info: USED_PORT: result 0 0 32 0 OUTPUT NODEFVAL "result[31..0]"
 // Retrieval info: USED_PORT: underflow 0 0 0 0 OUTPUT NODEFVAL "underflow"
 // Retrieval info: USED_PORT: zero 0 0 0 0 OUTPUT NODEFVAL "zero"
+// Retrieval info: CONNECT: @aclr 0 0 0 0 aclr 0 0 0 0
 // Retrieval info: CONNECT: @add_sub 0 0 0 0 add_sub 0 0 0 0
+// Retrieval info: CONNECT: @clk_en 0 0 0 0 clk_en 0 0 0 0
 // Retrieval info: CONNECT: @clock 0 0 0 0 clock 0 0 0 0
 // Retrieval info: CONNECT: @dataa 0 0 32 0 dataa 0 0 32 0
 // Retrieval info: CONNECT: @datab 0 0 32 0 datab 0 0 32 0

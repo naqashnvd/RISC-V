@@ -32,6 +32,8 @@
 //applicable agreement for further details.
 
 module fpu_convert_float_integer (
+	aclr,
+	clk_en,
 	clock,
 	dataa,
 	nan,
@@ -39,6 +41,8 @@ module fpu_convert_float_integer (
 	result,
 	underflow)/* synthesis synthesis_clearbox = 1 */;
 
+	input	  aclr;
+	input	  clk_en;
 	input	  clock;
 	input	[31:0]  dataa;
 	output	  nan;
@@ -65,6 +69,10 @@ endmodule
 // Retrieval info: CONSTANT: WIDTH_MAN_INPUT NUMERIC "23"
 // Retrieval info: CONSTANT: WIDTH_MAN_OUTPUT NUMERIC "23"
 // Retrieval info: CONSTANT: WIDTH_RESULT NUMERIC "32"
+// Retrieval info: USED_PORT: aclr 0 0 0 0 INPUT NODEFVAL "aclr"
+// Retrieval info: CONNECT: @aclr 0 0 0 0 aclr 0 0 0 0
+// Retrieval info: USED_PORT: clk_en 0 0 0 0 INPUT NODEFVAL "clk_en"
+// Retrieval info: CONNECT: @clk_en 0 0 0 0 clk_en 0 0 0 0
 // Retrieval info: USED_PORT: clock 0 0 0 0 INPUT NODEFVAL "clock"
 // Retrieval info: CONNECT: @clock 0 0 0 0 clock 0 0 0 0
 // Retrieval info: USED_PORT: dataa 0 0 32 0 INPUT NODEFVAL "dataa[31..0]"

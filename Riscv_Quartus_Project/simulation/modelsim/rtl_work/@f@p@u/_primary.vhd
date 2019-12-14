@@ -12,7 +12,7 @@ entity FPU is
         dataB           : in     vl_logic_vector;
         func3           : in     vl_logic_vector(2 downto 0);
         fpuOp           : in     vl_logic_vector(3 downto 0);
-        EX_Rs1_0        : in     vl_logic;
+        EX_Rs2_0        : in     vl_logic;
         fpuResult       : out    vl_logic_vector
     );
     attribute mti_svvh_generic_type : integer;
