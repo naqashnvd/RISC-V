@@ -28,3 +28,11 @@ addi x3,x0,1
 addi x3,x0,2
 addi x3,x0,3
 nop
+##################################################
+
+flw f1,0(x0)
+flw f2,1(x0)
+fadd.s f3,f1,f2
+fsub.s f3,f1,f2
+fmul.s f3,f1,f2
+fdiv.s f3,f1,f2

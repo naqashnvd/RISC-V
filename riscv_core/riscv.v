@@ -236,7 +236,7 @@ module riscv_core (input clock,clear,output [31:0]dataOut);
 	assign EX_branchAddr = ( $signed(EX_imemAddr)+($signed(EX_immGenOut) >>> 2)); // for word align instruction memory
 	register#(.width(158)) EX_MEM(
 		.data({EX_signals,EX_branchAddr,branchFromAlu,aluResult,forwardB_dataB,EX_Rd,EX_func3_7,EX_next_imemAddr}),
-		.enable(1'b1),
+		.enable(~fpu_inprogress),
 		.clock(clock),
 		.clear(clear),
 		.out({MEM_signals,MEM_branchAddr,MEM_branchFromAlu,MEM_aluResult,MEM_dataB,MEM_Rd,MEM_func3_7,MEM_next_imemAddr})
@@ -348,12 +348,13 @@ module tb;
 //			$dumpvars(0, riscv0.float_rf.registers[i]);
 //			end
 
-//		$monitor("%c",riscv0.dmem.MEM[255]);		
+//		$monitor("%c",riscv0.dmem.MEM[255]);	
+		$monitor("%h",riscv0.float_rf.registers[3]);
 
 		#0 reset = 1; clk = 0;
 		#1 reset = 0; #1 reset = 1 ;#1
 		
-		for(j = 0;j < 100;j = j + 1) begin
+		for(j = 0;j < 200;j = j + 1) begin
 			#1 clk = ~clk; #1 clk = ~clk;
 		end
 	end

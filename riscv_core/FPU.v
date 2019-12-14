@@ -18,6 +18,10 @@ module FPU#(parameter width = 32)(
  wire nan_sqrt,overflow_sqrt,zero_sqrt;
  wire nan_convert,overflow_convert,underflow_convert;
  
+ assign FLE_S[31:1] = 31'b0;
+ assign FLT_S[31:1] = 31'b0;
+ assign FEQ_S[31:1] = 31'b0;
+ 
  ///////////////////////////////////////////////////////////// Altera IP's///////////////////////////////////////////////////////////////////////////////
  fpu_add_sub	fpu_add_sub_inst ( // 7 Clock Cycles
 	.add_sub ( fpuOp[0] ),
@@ -28,7 +32,8 @@ module FPU#(parameter width = 32)(
 	.overflow ( overflow_add ),
 	.result ( FADD_SUB_S ),
 	.underflow ( underflow_add ),
-	.zero ( zero_add )
+	.zero ( zero_add ),
+	.clk_en ( fpu_sel )
 	);
 	
 	fpu_mult	fpu_mult_inst (  // 5 Clock Cycles
@@ -39,13 +44,15 @@ module FPU#(parameter width = 32)(
 	.overflow ( overflow_mult ),
 	.result ( FMUL_S ),
 	.underflow ( underflow_mult ),
-	.zero ( zero_mult )
+	.zero ( zero_mult ),
+	.clk_en ( fpu_sel )
 	);
 
 	fpu_div	fpu_div_inst (	// 6 Clock Cycles
 	.clock ( clock ),
 	.dataa ( dataA ),
 	.datab ( dataB ),
+	.clk_en ( fpu_sel ),
 	.division_by_zero ( division_by_zero ),
 	.nan ( nan_div ),
 	.overflow ( overflow_div ),
@@ -58,6 +65,7 @@ module FPU#(parameter width = 32)(
 	.clock ( clock ),
 	.dataa ( dataA ),
 	.datab ( dataB ),
+	.clk_en ( fpu_sel ),
 	.aeb ( FEQ_S[0] ),
 	.alb ( FLT_S[0] ),
 	.aleb ( FLE_S[0] )
@@ -66,6 +74,7 @@ module FPU#(parameter width = 32)(
 	fpu_sqrt	fpu_sqrt_inst ( // 16 Clock Cycles
 	.clock ( clock ),
 	.data ( dataA ),
+	.clk_en ( fpu_sel ),
 	.nan ( nan_sqrt ),
 	.overflow ( overflow_sqrt ),
 	.result ( FSQRT_S ),
@@ -75,12 +84,14 @@ module FPU#(parameter width = 32)(
 	fpu_convert	fpu_convert_inst ( //Integer to Floating Point 6 clock cycles
 	.clock ( clock ),
 	.dataa ( dataA ),
+	.clk_en ( fpu_sel ),
 	.result ( FCVT_W_S )
 	);
 	
 	fpu_convert_float_integer	fpu_convert_float_integer_inst ( //Floating point to Integer 6 clock cycles
 	.clock ( clock ),
 	.dataa ( dataA ),
+	.clk_en ( fpu_sel ),
 	.nan ( nan_convert ),
 	.overflow ( overflow_convert ),
 	.result ( FCVT_S_W ),
