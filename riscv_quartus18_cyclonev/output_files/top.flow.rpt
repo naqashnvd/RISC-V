@@ -1,5 +1,5 @@
 Flow report for top
-Sat Dec 14 20:14:49 2019
+Sun Dec 15 17:26:42 2019
 Quartus Prime Version 18.0.0 Build 614 04/24/2018 SJ Lite Edition
 
 
@@ -40,18 +40,18 @@ refer to the applicable agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Flow Summary                                                                  ;
 +---------------------------------+---------------------------------------------+
-; Flow Status                     ; Successful - Sat Dec 14 20:14:49 2019       ;
+; Flow Status                     ; Successful - Sun Dec 15 17:26:42 2019       ;
 ; Quartus Prime Version           ; 18.0.0 Build 614 04/24/2018 SJ Lite Edition ;
 ; Revision Name                   ; top                                         ;
-; Top-level Entity Name           ; top                                         ;
+; Top-level Entity Name           ; riscv_core                                  ;
 ; Family                          ; Cyclone V                                   ;
 ; Device                          ; 5CSEBA6U23I7DK                              ;
 ; Timing Models                   ; Final                                       ;
 ; Logic utilization (in ALMs)     ; N/A                                         ;
-; Total registers                 ; 2599                                        ;
-; Total pins                      ; 30                                          ;
+; Total registers                 ; 2602                                        ;
+; Total pins                      ; 71                                          ;
 ; Total virtual pins              ; 0                                           ;
-; Total block memory bits         ; 25,218                                      ;
+; Total block memory bits         ; 33,410                                      ;
 ; Total DSP Blocks                ; 7                                           ;
 ; Total HSSI RX PCSs              ; 0                                           ;
 ; Total HSSI PMA RX Deserializers ; 0                                           ;
@@ -67,7 +67,7 @@ refer to the applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 12/14/2019 20:14:12 ;
+; Start date & time ; 12/15/2019 17:26:05 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; top                 ;
 +-------------------+---------------------+
@@ -78,7 +78,7 @@ refer to the applicable agreement for further details.
 +--------------------------------------+----------------------------------------+---------------+-------------+----------------+
 ; Assignment Name                      ; Value                                  ; Default Value ; Entity Name ; Section Id     ;
 +--------------------------------------+----------------------------------------+---------------+-------------+----------------+
-; COMPILER_SIGNATURE_ID                ; 134660532891270.157633645210616        ; --            ; --          ; --             ;
+; COMPILER_SIGNATURE_ID                ; 134660532891270.157641276512716        ; --            ; --          ; --             ;
 ; EDA_DESIGN_INSTANCE_NAME             ; NA                                     ; --            ; --          ; tb             ;
 ; EDA_NATIVELINK_SIMULATION_TEST_BENCH ; tb                                     ; --            ; --          ; eda_simulation ;
 ; EDA_OUTPUT_DATA_FORMAT               ; Verilog Hdl                            ; --            ; --          ; eda_simulation ;
@@ -104,12 +104,13 @@ refer to the applicable agreement for further details.
 ; MISC_FILE                            ; fpu_convert_bb.v                       ; --            ; --          ; --             ;
 ; MISC_FILE                            ; fpu_convert_float_integer_inst.v       ; --            ; --          ; --             ;
 ; MISC_FILE                            ; fpu_convert_float_integer_bb.v         ; --            ; --          ; --             ;
-; PARTITION_COLOR                      ; -- (Not supported for targeted family) ; --            ; --          ; Top            ;
-; PARTITION_FITTER_PRESERVATION_LEVEL  ; -- (Not supported for targeted family) ; --            ; --          ; Top            ;
-; PARTITION_NETLIST_TYPE               ; -- (Not supported for targeted family) ; --            ; --          ; Top            ;
+; PARTITION_COLOR                      ; -- (Not supported for targeted family) ; --            ; riscv_core  ; Top            ;
+; PARTITION_FITTER_PRESERVATION_LEVEL  ; -- (Not supported for targeted family) ; --            ; riscv_core  ; Top            ;
+; PARTITION_NETLIST_TYPE               ; -- (Not supported for targeted family) ; --            ; riscv_core  ; Top            ;
 ; POWER_BOARD_THERMAL_MODEL            ; None (CONSERVATIVE)                    ; --            ; --          ; --             ;
 ; POWER_PRESET_COOLING_SOLUTION        ; 23 MM HEAT SINK WITH 200 LFPM AIRFLOW  ; --            ; --          ; --             ;
 ; PROJECT_OUTPUT_DIRECTORY             ; output_files                           ; --            ; --          ; --             ;
+; TOP_LEVEL_ENTITY                     ; riscv_core                             ; top           ; --          ; --             ;
 +--------------------------------------+----------------------------------------+---------------+-------------+----------------+
 
 
@@ -118,8 +119,8 @@ refer to the applicable agreement for further details.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:36     ; 1.0                     ; 4941 MB             ; 00:00:46                           ;
-; Total                ; 00:00:36     ; --                      ; --                  ; 00:00:46                           ;
+; Analysis & Synthesis ; 00:00:36     ; 1.0                     ; 4938 MB             ; 00:00:47                           ;
+; Total                ; 00:00:36     ; --                      ; --                  ; 00:00:47                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

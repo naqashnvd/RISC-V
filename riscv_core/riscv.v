@@ -1,7 +1,7 @@
 
 //`default_nettype none
 
-`timescale 1 ns / 1 ns
+`timescale 1 ps / 1 ps
 
 `include "alu.v"
 `include "aluSource.v"
@@ -17,24 +17,38 @@
 `include "FPU_Controller.v"
 
 
-module top(input [1:0]KEY,output [6:0]HEX0,output [6:0]HEX1,output [6:0]HEX2,output [6:0]HEX3);
-	wire[31:0]dataOut;
+//module top(input [1:0]KEY,output [6:0]HEX0,output [6:0]HEX1,output [6:0]HEX2,output [6:0]HEX3);
+//	wire[31:0]dataOut;
+//	
+//	riscv_core rv32i(KEY[0],KEY[1],dataOut);
+//	
+//	sevSegDec s0(dataOut[3:0],HEX0);
+//	sevSegDec s1(dataOut[7:4],HEX1);
+//	sevSegDec s2(dataOut[11:8],HEX2);
+//	sevSegDec s3(dataOut[15:12],HEX3);
+//
+//endmodule
+
+
+module riscv_core (
+	input clk,
+	input rst_n,
+	//for JTAG UART
+	output av_chipselect,
+	output av_address,
+	output av_read_n,
+	input  [31:0]av_readdata,
+	output av_write_n,
+	output [31:0]av_writedata,
+	input  av_waitrequest //stall the pipeline	
+);
 	
-	riscv_core rv32i(KEY[0],KEY[1],dataOut);
-	
-	sevSegDec s0(dataOut[3:0],HEX0);
-	sevSegDec s1(dataOut[7:4],HEX1);
-	sevSegDec s2(dataOut[11:8],HEX2);
-	sevSegDec s3(dataOut[15:12],HEX3);
-
-endmodule
-
-module riscv_core (input clock,clear,output [31:0]dataOut);
-
+	wire clock = clk;
+	wire clear = rst_n;
 	wire [31:0]dataA,dataB,imemAddr,aluResult,MEM_aluResult;
 	wire [31:0]dataD,dmemOut,pcIn;
-	wire [4:0]Rs1,Rs2,Rd,MEM_Rd;
-	wire [6:0]opcode;
+	wire [4:0] Rs1,Rs2,Rd,MEM_Rd;
+	wire [6:0] opcode;
 	wire [19:0]signals,EX_signals,MEM_signals,WB_signals; 
 	
 		/////////////////////////////////////////CU signals/////////////////////////////////////////////////////////////////////////////////
@@ -60,7 +74,7 @@ module riscv_core (input clock,clear,output [31:0]dataOut);
 	wire [31:0]immGenOut;
 	wire branchFromAlu;
 	wire notStall,branchTaken,flush;
-	wire [1:0]forwardA,forwardB;
+	wire [1:0]forwardA,forwardB,forwardC;
 	wire [31:0]ID_imemAddr,ID_I,I,WB_dmemOut;
 	wire [31:0]EX_imemAddr,EX_dataA,EX_dataB,EX_immGenOut;
 	wire [3:0]EX_func3_7,MEM_func3_7;
@@ -74,14 +88,29 @@ module riscv_core (input clock,clear,output [31:0]dataOut);
 	wire [4:0]ID_funct5;
 	wire [31:0]next_imemAddr,ID_next_imemAddr,EX_next_imemAddr,MEM_next_imemAddr,WB_next_imemAddr;
 	wire fpu_inprogress;
+	wire [4:0]frs3,EX_frs3;
 	
 	assign ID_func3_7 = {ID_I[30],ID_I[14:12]};
 	assign branchTaken = (MEM_branchFromAlu && MEM_signals[7]) || MEM_signals[14];
 	assign next_imemAddr = imemAddr+1;
+	
 	assign ID_funct5=ID_I[31:27];
 	
+	assign frs3 = ID_I[31:27];
 	
-	assign dataOut = dataD;
+	//////////////////////////////////////////////Jtag Uart /////////////////////////////////////////////////////////////////
+	
+	assign av_chipselect = (MEM_aluResult == 32'h100 | MEM_aluResult == 32'h104)?1:0; //Memory map to jtag uart
+	assign av_address = MEM_aluResult[2]; //jtag uart register 1 is mapped to h104
+	assign av_read_n = ~MEM_signals[5];
+	//assign av_readdata =
+	assign av_write_n = ~MEM_signals[6];
+	assign av_writedata = MEM_dataB;
+	
+	//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+	
+	
+	//assign dataOut = dataD;
 	
 	
 	pcIn_MUX	pcIn_MUX(
@@ -92,7 +121,7 @@ module riscv_core (input clock,clear,output [31:0]dataOut);
 
 	register pc(
 		.data(pcIn),
-		.enable(notStall & ~fpu_inprogress),
+		.enable(notStall & ~fpu_inprogress & ~av_waitrequest),
 		.clock(clock),
 		.clear(clear),
 		.out(imemAddr)
@@ -111,7 +140,7 @@ module riscv_core (input clock,clear,output [31:0]dataOut);
 	////////////////////////////////////////////////////////////////IF_ID /////////////////////////////////////////////////////////////////////////
 	register#(.width(96)) IF_ID(
 		.data({imemAddr,I,next_imemAddr}),
-		.enable(notStall & ~fpu_inprogress),
+		.enable(notStall & ~fpu_inprogress & ~av_waitrequest),
 		.clock(clock),
 		.clear(flush),
 		.out({ID_imemAddr,ID_I,ID_next_imemAddr})
@@ -151,15 +180,18 @@ module riscv_core (input clock,clear,output [31:0]dataOut);
 	/////////////////////////////////////////////////////Floating Point Register///////////////////////////////////////////////////////////
 	
 	wire [31:0]EX_f_dataA,EX_f_dataB;
-	regFile float_rf(
+	wire [31:0]EX_datafrs3;
+	float_regFile float_rf(
 		.clock(clock),
 		.regWriteEnable(WB_signals[15]), //Float reg Write
 		.addrA(Rs1),
 		.addrB(Rs2),
+		.addrfrs3(frs3),
 		.addrD(WB_Rd),
 		.dataD(dataD),
 		.dataA(EX_f_dataA),
-		.dataB(EX_f_dataB)
+		.dataB(EX_f_dataB),
+		.datafrs3(EX_datafrs3)
 	);
 
 	assign EX_dataA = (EX_signals[16])? EX_f_dataA : EX_x_dataA;
@@ -172,26 +204,29 @@ module riscv_core (input clock,clear,output [31:0]dataOut);
 		else stallSignals=20'b0;
 	end
 
-	register#(.width(135)) ID_EX(
-		.data({stallSignals,ID_imemAddr,immGenOut,ID_func3_7,Rs1,Rs2,Rd,ID_next_imemAddr}),
-		.enable(~fpu_inprogress),
+	register#(.width(140)) ID_EX(
+		.data({stallSignals,ID_imemAddr,immGenOut,ID_func3_7,Rs1,Rs2,frs3,Rd,ID_next_imemAddr}),
+		.enable(~fpu_inprogress & ~av_waitrequest),
 		.clock(clock),
 		.clear(flush),
-		.out({EX_signals,EX_imemAddr,EX_immGenOut,EX_func3_7,EX_Rs1,EX_Rs2,EX_Rd,EX_next_imemAddr})
+		.out({EX_signals,EX_imemAddr,EX_immGenOut,EX_func3_7,EX_Rs1,EX_Rs2,EX_frs3,EX_Rd,EX_next_imemAddr})
 	);
 
-	wire [31:0]aluA,aluB,forwardB_dataB;
+	wire [31:0]aluA,aluB,forwardB_dataB,fpuC;
 	aluSource aluSource( 
 		.EX_dataA(EX_dataA),
 		.dataD(dataD),
 		.MEM_aluResult(MEM_aluResult),
 		.EX_dataB(EX_dataB),
+		.EX_datafrs3(EX_datafrs3),
 		.EX_immGenOut(EX_immGenOut),
 		.forwardA(forwardA),
 		.forwardB(forwardB),
+		.forwardC(forwardC),
 		.aluSourceSel(EX_signals[2]),
 		.aluA(aluA),
 		.aluB(aluB),
+		.fpuC(fpuC),
 		.forwardB_dataB(forwardB_dataB)
 	);
 
@@ -203,7 +238,6 @@ module riscv_core (input clock,clear,output [31:0]dataOut);
 		.func(EX_func3_7),
 		.aluOp(EX_signals[10:8]),
 		.aluResult(temp_aluResult),
-		//.aluResult(aluResult),
 		.branchFromAlu(branchFromAlu)
 	);
 	
@@ -225,6 +259,7 @@ module riscv_core (input clock,clear,output [31:0]dataOut);
 		 .fpu_sel(EX_signals[18]), // aluResult Sel -> 1 for fpuResult
 		 .dataA(aluA),
 		 .dataB(aluB),
+		 .datafrs3(fpuC),
 		 .func3(EX_func3_7[2:0]),
 		 .fpuOp({EX_signals[19],EX_signals[10:8]}), //{fpuOp,aluOp}
 		 .EX_Rs2_0(EX_Rs2[0]),
@@ -238,7 +273,7 @@ module riscv_core (input clock,clear,output [31:0]dataOut);
 	assign EX_branchAddr = ( $signed(EX_imemAddr)+($signed(EX_immGenOut) >>> 2)); // for word align instruction memory
 	register#(.width(158)) EX_MEM(
 		.data({EX_signals,EX_branchAddr,branchFromAlu,aluResult,forwardB_dataB,EX_Rd,EX_func3_7,EX_next_imemAddr}),
-		.enable(~fpu_inprogress),
+		.enable(~fpu_inprogress & ~av_waitrequest),
 		.clock(clock),
 		.clear(clear),
 		.out({MEM_signals,MEM_branchAddr,MEM_branchFromAlu,MEM_aluResult,MEM_dataB,MEM_Rd,MEM_func3_7,MEM_next_imemAddr})
@@ -246,9 +281,10 @@ module riscv_core (input clock,clear,output [31:0]dataOut);
 
 	//////////////////////////////////////////////////////////// data Ram//////////////////////////////////////////////////////////////////////////////////
 	wire [31:0]temp_dmemOut;
-	DRAM dmem(
+	wire [31:0] memOut_MUX_result;
+	DRAM#(.width(32),.addrWidth(9)) dmem(
 		.DOUT(temp_dmemOut),
-		.ADDR(MEM_aluResult[7:0]),
+		.ADDR(MEM_aluResult[8:0]),
 		.DIN(MEM_dataB),
 		.wren(MEM_signals[6]),
 		.clock(clock),
@@ -259,17 +295,16 @@ module riscv_core (input clock,clear,output [31:0]dataOut);
 	memOut_MUX memOut_MUX(
 		.memOut_sel(MEM_func3_7[2:0]),
 		.in(temp_dmemOut),
-		.out(dmemOut)
+		.out(memOut_MUX_result)
 	);
 	
-
-
-
+	assign dmemOut = (av_chipselect)?av_readdata:memOut_MUX_result; // to read data from jtag Uart
+	
 	////////////////////////////////////////////////////////////MEM_WB//////////////////////////////////////////////////////////////////////////////////////////
 	wire [31:0]WB_branchAddr;
 	register#(.width(153)) MEM_WB(
 		.data({MEM_signals,MEM_aluResult,MEM_Rd,dmemOut,MEM_branchAddr,MEM_next_imemAddr}),
-		.enable(~fpu_inprogress),
+		.enable(~fpu_inprogress & ~av_waitrequest),
 		.clock(clock),
 		.clear(clear),
 		.out({WB_signals,WB_aluResult,WB_Rd,WB_dmemOut,WB_branchAddr,WB_next_imemAddr})
@@ -292,14 +327,18 @@ module riscv_core (input clock,clear,output [31:0]dataOut);
 
 	/////////////////////////////////////////////////////////////Forwarding Unit/////////////////////////////////////////////////////////////////////////
 	forwardingUnit fu(
-		.MEM_RegWrite(MEM_signals[4] | MEM_signals[15]), //temporary fix for float forwarding
-		.WB_RegWrite(WB_signals[4] | WB_signals[15]), // temporary fix for float forwarding
+		.MEM_RegWrite(MEM_signals[4] ), //temporary fix for float forwarding
+		.MEM_f_RegWrite(MEM_signals[15]),
+		.WB_RegWrite(WB_signals[4]), // temporary fix for float forwarding
+		.WB_f_RegWrite(WB_signals[15]),
 		.MEM_Rd(MEM_Rd),
 		.EX_Rs1(EX_Rs1),
 		.EX_Rs2(EX_Rs2),
+		.EX_frs3(EX_frs3),
 		.WB_Rd(WB_Rd),
 		.ForwardA(forwardA),
-		.ForwardB(forwardB)
+		.ForwardB(forwardB),
+		.ForwardC(forwardC)
 	);
 
 	
@@ -333,9 +372,28 @@ endmodule
 
 ////////////////////////////////////////////////////////////////tb/////////////////////////////////////////////////////////////////////////////////
 module tb;
-	reg reset,clk;
-	wire [31:0]dataOut;
-	riscv_core riscv0(clk,reset,dataOut);
+	reg rst_n,clk;
+	reg [31:0]av_readdata;
+	reg av_waitrequest;
+	wire [31:0]av_writedata;
+	wire av_chipselect,av_address,av_read_n,av_write_n;
+	
+	//wire [31:0]dataOut;
+	//riscv_core riscv0(clk,reset,dataOut);
+	
+	riscv_core riscv0 (
+	clk,
+	rst_n,
+	//for JTAG UART
+	av_chipselect,
+	av_address,
+	av_read_n,
+	av_readdata,
+	av_write_n,
+	av_writedata,
+	av_waitrequest 
+	);
+	
 	
 	integer i,j;
 	initial begin
@@ -350,11 +408,11 @@ module tb;
 //			$dumpvars(0, riscv0.float_rf.registers[i]);
 //			end
 
-//		$monitor("%c",riscv0.dmem.MEM[255]);	
+		//$monitor("%c",riscv0.dmem.MEM[256]);	
 		$monitor("%h",riscv0.float_rf.registers[3]);
 
-		#0 reset = 1; clk = 0;
-		#1 reset = 0; #1 reset = 1 ;#1
+		#0 rst_n = 1; clk = 0;av_waitrequest = 0;av_readdata = 31'b0;
+		#1 rst_n = 0; #1 rst_n = 1 ;#1
 		
 		for(j = 0;j < 200;j = j + 1) begin
 			#1 clk = ~clk; #1 clk = ~clk;

@@ -10,6 +10,7 @@ entity FPU is
         fpu_sel         : in     vl_logic;
         dataA           : in     vl_logic_vector;
         dataB           : in     vl_logic_vector;
+        datafrs3        : in     vl_logic_vector;
         func3           : in     vl_logic_vector(2 downto 0);
         fpuOp           : in     vl_logic_vector(3 downto 0);
         EX_Rs2_0        : in     vl_logic;

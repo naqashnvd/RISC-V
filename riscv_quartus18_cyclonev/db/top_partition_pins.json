@@ -4,123 +4,191 @@
 			"name" : "Top",
 			"pins" : [
 				{
-					"name" : "HEX0[0]",
+					"name" : "av_chipselect",
 					"strict" : false
 				},
 				{
-					"name" : "HEX0[1]",
+					"name" : "av_address",
 					"strict" : false
 				},
 				{
-					"name" : "HEX0[2]",
+					"name" : "av_read_n",
 					"strict" : false
 				},
 				{
-					"name" : "HEX0[3]",
+					"name" : "av_write_n",
 					"strict" : false
 				},
 				{
-					"name" : "HEX0[4]",
+					"name" : "av_writedata[0]",
 					"strict" : false
 				},
 				{
-					"name" : "HEX0[5]",
+					"name" : "av_writedata[1]",
 					"strict" : false
 				},
 				{
-					"name" : "HEX0[6]",
+					"name" : "av_writedata[2]",
 					"strict" : false
 				},
 				{
-					"name" : "HEX1[0]",
+					"name" : "av_writedata[3]",
 					"strict" : false
 				},
 				{
-					"name" : "HEX1[1]",
+					"name" : "av_writedata[4]",
 					"strict" : false
 				},
 				{
-					"name" : "HEX1[2]",
+					"name" : "av_writedata[5]",
 					"strict" : false
 				},
 				{
-					"name" : "HEX1[3]",
+					"name" : "av_writedata[6]",
 					"strict" : false
 				},
 				{
-					"name" : "HEX1[4]",
+					"name" : "av_writedata[7]",
 					"strict" : false
 				},
 				{
-					"name" : "HEX1[5]",
+					"name" : "clk",
 					"strict" : false
 				},
 				{
-					"name" : "HEX1[6]",
+					"name" : "rst_n",
 					"strict" : false
 				},
 				{
-					"name" : "HEX2[0]",
+					"name" : "av_waitrequest",
 					"strict" : false
 				},
 				{
-					"name" : "HEX2[1]",
+					"name" : "av_readdata[0]",
 					"strict" : false
 				},
 				{
-					"name" : "HEX2[2]",
+					"name" : "av_readdata[7]",
 					"strict" : false
 				},
 				{
-					"name" : "HEX2[3]",
+					"name" : "av_readdata[4]",
 					"strict" : false
 				},
 				{
-					"name" : "HEX2[4]",
+					"name" : "av_readdata[3]",
 					"strict" : false
 				},
 				{
-					"name" : "HEX2[5]",
+					"name" : "av_readdata[2]",
 					"strict" : false
 				},
 				{
-					"name" : "HEX2[6]",
+					"name" : "av_readdata[5]",
 					"strict" : false
 				},
 				{
-					"name" : "HEX3[0]",
+					"name" : "av_readdata[6]",
 					"strict" : false
 				},
 				{
-					"name" : "HEX3[1]",
+					"name" : "av_readdata[1]",
 					"strict" : false
 				},
 				{
-					"name" : "HEX3[2]",
+					"name" : "av_readdata[9]",
 					"strict" : false
 				},
 				{
-					"name" : "HEX3[3]",
+					"name" : "av_readdata[8]",
 					"strict" : false
 				},
 				{
-					"name" : "HEX3[4]",
+					"name" : "av_readdata[10]",
 					"strict" : false
 				},
 				{
-					"name" : "HEX3[5]",
+					"name" : "av_readdata[11]",
 					"strict" : false
 				},
 				{
-					"name" : "HEX3[6]",
+					"name" : "av_readdata[13]",
 					"strict" : false
 				},
 				{
-					"name" : "KEY[0]",
+					"name" : "av_readdata[12]",
 					"strict" : false
 				},
 				{
-					"name" : "KEY[1]",
+					"name" : "av_readdata[14]",
+					"strict" : false
+				},
+				{
+					"name" : "av_readdata[15]",
+					"strict" : false
+				},
+				{
+					"name" : "av_readdata[17]",
+					"strict" : false
+				},
+				{
+					"name" : "av_readdata[16]",
+					"strict" : false
+				},
+				{
+					"name" : "av_readdata[18]",
+					"strict" : false
+				},
+				{
+					"name" : "av_readdata[19]",
+					"strict" : false
+				},
+				{
+					"name" : "av_readdata[21]",
+					"strict" : false
+				},
+				{
+					"name" : "av_readdata[20]",
+					"strict" : false
+				},
+				{
+					"name" : "av_readdata[22]",
+					"strict" : false
+				},
+				{
+					"name" : "av_readdata[31]",
+					"strict" : false
+				},
+				{
+					"name" : "av_readdata[23]",
+					"strict" : false
+				},
+				{
+					"name" : "av_readdata[25]",
+					"strict" : false
+				},
+				{
+					"name" : "av_readdata[24]",
+					"strict" : false
+				},
+				{
+					"name" : "av_readdata[26]",
+					"strict" : false
+				},
+				{
+					"name" : "av_readdata[27]",
+					"strict" : false
+				},
+				{
+					"name" : "av_readdata[29]",
+					"strict" : false
+				},
+				{
+					"name" : "av_readdata[28]",
+					"strict" : false
+				},
+				{
+					"name" : "av_readdata[30]",
 					"strict" : false
 				}
 			]

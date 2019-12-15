@@ -4,33 +4,39 @@ module FPU#(parameter width = 32)(
  input fpu_sel,
  input [width-1:0]dataA,
  input [width-1:0]dataB,
+ input [width-1:0]datafrs3,
  input [2:0]func3,
  input [3:0]fpuOp,
  input EX_Rs2_0,
  output reg [width-1:0]fpuResult
  );
 
- wire [width-1:0]FADD_SUB_S,FMUL_S,FDIV_S,FSIGNJ_S,FSIGNJN_S,FSIGNJX_S,FMIN_S,FMAX_S;
- wire [width-1:0]FSQRT_S,FLE_S,FLT_S,FEQ_S,FCVT_W_S,FCVT_W_SU,FCVT_S_W,FCVT_S_WU;
+ wire [width-1:0]FMUL_S,FDIV_S,FSIGNJ_S,FSIGNJN_S,FSIGNJX_S,FMIN_S,FMAX_S;
+ wire [width-1:0]FSQRT_S,FLE_S,FLT_S,FEQ_S,FCVT_W_S,FCVT_S_W;
  wire nan_add,overflow_add,underflow_add,zero_add;
  wire nan_mult,overflow_mult,zero_mult,underflow_mult;
  wire division_by_zero,nan_div,overflow_div,underflow_div,zero_div;
  wire nan_sqrt,overflow_sqrt,zero_sqrt;
  wire nan_convert,overflow_convert,underflow_convert;
+  
+ reg add_sub_sel;
+ reg [width-1:0]r4_dataA,r4_dataB;
+ wire [width-1:0]ADD_SUB_result; // for R4 type instructions 
  
  assign FLE_S[31:1] = 31'b0;
  assign FLT_S[31:1] = 31'b0;
  assign FEQ_S[31:1] = 31'b0;
  
+ 
  ///////////////////////////////////////////////////////////// Altera IP's///////////////////////////////////////////////////////////////////////////////
  fpu_add_sub	fpu_add_sub_inst ( // 7 Clock Cycles
-	.add_sub ( fpuOp[0] ),
+	.add_sub ( add_sub_sel),
 	.clock ( clock ),
-	.dataa ( dataA ),
-	.datab ( dataB ),
+	.dataa ( r4_dataA ),
+	.datab ( r4_dataB ),
 	.nan ( nan_add ),
 	.overflow ( overflow_add ),
-	.result ( FADD_SUB_S ),
+	.result ( ADD_SUB_result ),
 	.underflow ( underflow_add ),
 	.zero ( zero_add ),
 	.clk_en ( fpu_sel ),
@@ -105,7 +111,7 @@ module FPU#(parameter width = 32)(
 	.aclr(~fpu_sel)
 	);
 	
-	
+
 	
 	assign FSIGNJ_S	=	{dataB[31],dataA[30:0]};
 	assign FSIGNJN_S	=	{~(dataB[31]),dataA[30:0]};
@@ -115,15 +121,56 @@ module FPU#(parameter width = 32)(
 	assign FMAX_S = (FLE_S)? dataB : dataA;
 	
  /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
- 
+	always@(*)begin
+		case(fpuOp)
+			4'd0: begin
+						add_sub_sel = 0; 
+						r4_dataA = dataA;
+						r4_dataB = dataB;
+					end
+			4'd1:	begin
+						add_sub_sel = 1;
+						r4_dataA = dataA;
+						r4_dataB = dataB;
+					end
+					
+			4'd10:begin
+						add_sub_sel = 1;
+						r4_dataA = FMUL_S;
+						r4_dataB = datafrs3;
+					end
+			4'd11:begin
+						add_sub_sel = 0;
+						r4_dataA = FMUL_S;
+						r4_dataB = datafrs3;
+					end
+			4'd12:begin
+						add_sub_sel = 0;
+						r4_dataA = FMUL_S;
+						r4_dataB = datafrs3;
+					end
+			4'd13:begin
+						add_sub_sel = 1;
+						r4_dataA = FMUL_S;
+						r4_dataB = datafrs3;
+					end
+					
+			default: begin
+							add_sub_sel = 0;
+							r4_dataA = dataA;
+							r4_dataB = dataB;
+						end
+		endcase
+	end
 	
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////	
 	always@(*)begin
 		case(fpuOp)
 			4'b0000:	begin
-							fpuResult = FADD_SUB_S;
+							fpuResult = ADD_SUB_result;
 						end
 			4'b0001:	begin
-							fpuResult = FADD_SUB_S;
+							fpuResult = ADD_SUB_result;
 						end
 			4'b0010:	begin	
 							fpuResult = FMUL_S;
@@ -156,11 +203,23 @@ module FPU#(parameter width = 32)(
 						end
 			4'b1000:	begin	
 							if(~EX_Rs2_0) fpuResult = FCVT_W_S;		
-							else fpuResult = FCVT_W_SU;
+							else fpuResult = FCVT_W_S; //unsigned integer
 						end
 			4'b1001:	begin 
 							if(~EX_Rs2_0) fpuResult = FCVT_S_W;		
-							else fpuResult = FCVT_S_WU;	
+							else fpuResult ={1'b0,FCVT_S_W[30:0]};	//unsigned integer
+						end
+			4'b1010:	begin
+							fpuResult = ADD_SUB_result;
+						end
+			4'b1011:	begin
+							fpuResult = ADD_SUB_result;
+						end
+			4'b1100:	begin
+							fpuResult = {~ADD_SUB_result[31],ADD_SUB_result[30:0]};
+						end
+			4'b1101:	begin
+							fpuResult = {~ADD_SUB_result[31],ADD_SUB_result[30:0]};
 						end
 			default:	begin
 							fpuResult = 32'b0;

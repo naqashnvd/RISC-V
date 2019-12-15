@@ -40,6 +40,19 @@ module fpuController(input clock,
 			4'b1001:	begin 
 							cycles = 5'd6;
 						end
+			4'd10:	begin 
+							cycles = 5'd12;
+						end
+			4'd11:	begin 
+							cycles = 5'd12;
+						end
+			4'd12:	begin 
+							cycles = 5'd12;
+						end
+			4'd13:	begin 
+							cycles = 5'd12;
+						end
+						
 			default:	begin
 							cycles = 5'b0;
 						end

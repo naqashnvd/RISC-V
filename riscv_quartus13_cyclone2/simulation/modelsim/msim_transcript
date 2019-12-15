@@ -10,7 +10,7 @@
 # ** Warning: Copied C:\altera\13.0sp1\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini.
 #          Updated modelsim.ini.
 # 
-# vlog -vlog01compat -work work +incdir+C:/Users/naqas/Desktop/Github/RISC-V/Riscv_Quartus_Project {C:/Users/naqas/Desktop/Github/RISC-V/Riscv_Quartus_Project/fpu_add_sub.v}
+# vlog -vlog01compat -work work +incdir+C:/Users/naqas/Desktop/Github/RISC-V/riscv_quartus13_cyclone2 {C:/Users/naqas/Desktop/Github/RISC-V/riscv_quartus13_cyclone2/fpu_add_sub.v}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 # -- Compiling module fpu_add_sub_altbarrel_shift_h0e
 # -- Compiling module fpu_add_sub_altbarrel_shift_6hb
@@ -37,14 +37,14 @@
 # 
 # Top level modules:
 # 	fpu_add_sub
-# vlog -vlog01compat -work work +incdir+C:/Users/naqas/Desktop/Github/RISC-V/Riscv_Quartus_Project {C:/Users/naqas/Desktop/Github/RISC-V/Riscv_Quartus_Project/fpu_mult.v}
+# vlog -vlog01compat -work work +incdir+C:/Users/naqas/Desktop/Github/RISC-V/riscv_quartus13_cyclone2 {C:/Users/naqas/Desktop/Github/RISC-V/riscv_quartus13_cyclone2/fpu_mult.v}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 # -- Compiling module fpu_mult_altfp_mult_0gr
 # -- Compiling module fpu_mult
 # 
 # Top level modules:
 # 	fpu_mult
-# vlog -vlog01compat -work work +incdir+C:/Users/naqas/Desktop/Github/RISC-V/Riscv_Quartus_Project {C:/Users/naqas/Desktop/Github/RISC-V/Riscv_Quartus_Project/fpu_div.v}
+# vlog -vlog01compat -work work +incdir+C:/Users/naqas/Desktop/Github/RISC-V/riscv_quartus13_cyclone2 {C:/Users/naqas/Desktop/Github/RISC-V/riscv_quartus13_cyclone2/fpu_div.v}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 # -- Compiling module fpu_div_altfp_div_pst_t2j
 # -- Compiling module fpu_div_altfp_div_bnm
@@ -52,14 +52,14 @@
 # 
 # Top level modules:
 # 	fpu_div
-# vlog -vlog01compat -work work +incdir+C:/Users/naqas/Desktop/Github/RISC-V/Riscv_Quartus_Project {C:/Users/naqas/Desktop/Github/RISC-V/Riscv_Quartus_Project/fpu_compare.v}
+# vlog -vlog01compat -work work +incdir+C:/Users/naqas/Desktop/Github/RISC-V/riscv_quartus13_cyclone2 {C:/Users/naqas/Desktop/Github/RISC-V/riscv_quartus13_cyclone2/fpu_compare.v}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 # -- Compiling module fpu_compare_altfp_compare_0uc
 # -- Compiling module fpu_compare
 # 
 # Top level modules:
 # 	fpu_compare
-# vlog -vlog01compat -work work +incdir+C:/Users/naqas/Desktop/Github/RISC-V/Riscv_Quartus_Project {C:/Users/naqas/Desktop/Github/RISC-V/Riscv_Quartus_Project/fpu_sqrt.v}
+# vlog -vlog01compat -work work +incdir+C:/Users/naqas/Desktop/Github/RISC-V/riscv_quartus13_cyclone2 {C:/Users/naqas/Desktop/Github/RISC-V/riscv_quartus13_cyclone2/fpu_sqrt.v}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 # -- Compiling module fpu_sqrt_alt_sqrt_block_kfb
 # -- Compiling module fpu_sqrt_altfp_sqrt_sef
@@ -67,7 +67,7 @@
 # 
 # Top level modules:
 # 	fpu_sqrt
-# vlog -vlog01compat -work work +incdir+C:/Users/naqas/Desktop/Github/RISC-V/Riscv_Quartus_Project {C:/Users/naqas/Desktop/Github/RISC-V/Riscv_Quartus_Project/fpu_convert.v}
+# vlog -vlog01compat -work work +incdir+C:/Users/naqas/Desktop/Github/RISC-V/riscv_quartus13_cyclone2 {C:/Users/naqas/Desktop/Github/RISC-V/riscv_quartus13_cyclone2/fpu_convert.v}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 # -- Compiling module fpu_convert_altbarrel_shift_brf
 # -- Compiling module fpu_convert_altpriority_encoder_3e8
@@ -84,7 +84,7 @@
 # 
 # Top level modules:
 # 	fpu_convert
-# vlog -vlog01compat -work work +incdir+C:/Users/naqas/Desktop/Github/RISC-V/Riscv_Quartus_Project {C:/Users/naqas/Desktop/Github/RISC-V/Riscv_Quartus_Project/fpu_convert_float_integer.v}
+# vlog -vlog01compat -work work +incdir+C:/Users/naqas/Desktop/Github/RISC-V/riscv_quartus13_cyclone2 {C:/Users/naqas/Desktop/Github/RISC-V/riscv_quartus13_cyclone2/fpu_convert_float_integer.v}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 # -- Compiling module fpu_convert_float_integer_altbarrel_shift_grf
 # -- Compiling module fpu_convert_float_integer_altfp_convert_o6q
@@ -100,6 +100,7 @@
 # -- Compiling module forwardingUnit
 # -- Compiling module HDU
 # -- Compiling module immGen
+# -- Compiling module float_regFile
 # -- Compiling module regFile
 # -- Compiling module register
 # -- Compiling module DRAM
@@ -115,16 +116,15 @@
 # -- Compiling module pcIn_MUX
 # -- Compiling module FPU
 # -- Compiling module fpuController
-# -- Compiling module top
 # -- Compiling module riscv_core
 # -- Compiling module sevSegDec
 # -- Compiling module tb
 # 
 # Top level modules:
-# 	top
+# 	sevSegDec
 # 	tb
 # 
-# vlog -vlog01compat -work work +incdir+C:/Users/naqas/Desktop/Github/RISC-V/Riscv_Quartus_Project/../riscv_core {C:/Users/naqas/Desktop/Github/RISC-V/Riscv_Quartus_Project/../riscv_core/riscv.v}
+# vlog -vlog01compat -work work +incdir+C:/Users/naqas/Desktop/Github/RISC-V/riscv_quartus13_cyclone2/../riscv_core {C:/Users/naqas/Desktop/Github/RISC-V/riscv_quartus13_cyclone2/../riscv_core/riscv.v}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 # -- Compiling module alu
 # -- Compiling module aluSource
@@ -132,14 +132,15 @@
 # -- Compiling module forwardingUnit
 # -- Compiling module HDU
 # -- Compiling module immGen
+# -- Compiling module float_regFile
 # -- Compiling module regFile
 # -- Compiling module register
 # -- Compiling module DRAM
-# ** Warning: C:/Users/naqas/Desktop/Github/RISC-V/Riscv_Quartus_Project/../riscv_core/DRAM.v(20): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
+# ** Warning: C:/Users/naqas/Desktop/Github/RISC-V/riscv_quartus13_cyclone2/../riscv_core/DRAM.v(20): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
 # 
-# ** Warning: C:/Users/naqas/Desktop/Github/RISC-V/Riscv_Quartus_Project/../riscv_core/DRAM.v(21): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
+# ** Warning: C:/Users/naqas/Desktop/Github/RISC-V/riscv_quartus13_cyclone2/../riscv_core/DRAM.v(21): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
 # 
-# ** Warning: C:/Users/naqas/Desktop/Github/RISC-V/Riscv_Quartus_Project/../riscv_core/DRAM.v(22): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
+# ** Warning: C:/Users/naqas/Desktop/Github/RISC-V/riscv_quartus13_cyclone2/../riscv_core/DRAM.v(22): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
 # 
 # -- Compiling module IRAM
 # -- Compiling module WB_MUX
@@ -147,13 +148,12 @@
 # -- Compiling module pcIn_MUX
 # -- Compiling module FPU
 # -- Compiling module fpuController
-# -- Compiling module top
 # -- Compiling module riscv_core
 # -- Compiling module sevSegDec
 # -- Compiling module tb
 # 
 # Top level modules:
-# 	top
+# 	sevSegDec
 # 	tb
 # 
 # vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneii_ver -L rtl_work -L work -voptargs="+acc"  tb
@@ -166,6 +166,7 @@
 # Loading work.regFile
 # Loading work.immGen
 # Loading work.controlUnit
+# Loading work.float_regFile
 # Loading work.aluSource
 # Loading work.alu
 # Loading work.fpuController
@@ -229,10 +230,10 @@
 # Loading work.WB_MUX
 # Loading work.HDU
 # Loading work.forwardingUnit
-# ** Warning: (vsim-3016) C:/Users/naqas/Desktop/Github/RISC-V/Riscv_Quartus_Project/fpu_div.v(254): Port type is incompatible with connection (port 'clock0').
+# ** Warning: (vsim-3016) C:/Users/naqas/Desktop/Github/RISC-V/riscv_quartus13_cyclone2/fpu_div.v(254): Port type is incompatible with connection (port 'clock0').
 # 
 #         Region: /tb/riscv0/fpu/fpu_div_inst/fpu_div_altfp_div_bnm_component/altfp_div_pst1/altsyncram3
-# ** Warning: Design size of 64 instances exceeds ModelSim ALTERA recommended capacity.
+# ** Warning: Design size of 65 instances exceeds ModelSim ALTERA recommended capacity.
 # This may because you are loading cell libraries which are not recommended with
 # the ModelSim Altera version. Expect performance to be adversely affected.
 # 

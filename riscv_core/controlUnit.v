@@ -66,13 +66,18 @@ always@(*)begin
 				5'b10100:		signals = 20'b01111000011100000000;	//F_Compare						{fpuOp,aluOp} = 7
 				5'b11000:		signals = 20'b11010000000000010000;	//FCVT.w.s	signed and unsigned	{fpuOp,aluOp} = 8
 				5'b11010:		signals = 20'b11001000000100000000;	//FCVT.s.w signed and unsigned	{fpuOp,aluOp} = 9
-				
 				default signals = 20'h0;
 			endcase
 		end
 //////////////////////////////////////////////// Use ALU ////////////////////////////////////////////////////////////////////////////
 	else if(opcode == `F_LOAD)	signals = 20'b00001000000000101100;
 	else if(opcode == `F_STORE) signals = 20'b00100000000001000101;
+	
+/////////////////////////////////////////////// Use FPU R4 Type //////////////////////////////////////////////////////////////////////
+	else if (opcode == 7'b1000011)	signals = 20'b11111000001000000000; //FMADD.S	{fpuOp,aluOp} = 10
+	else if (opcode == 7'b1000111)	signals = 20'b11111000001100000000; //FMSUB.S	{fpuOp,aluOp} = 11
+	else if (opcode == 7'b1001011)	signals = 20'b11111000010000000000; //FNMSUB.S	{fpuOp,aluOp} = 12
+	else if (opcode == 7'b1001111)	signals = 20'b11111000010100000000; //FNMADD.S	{fpuOp,aluOp} = 13
 	
 	else signals = 20'h0;
 end

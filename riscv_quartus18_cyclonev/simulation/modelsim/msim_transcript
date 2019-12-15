@@ -12,7 +12,7 @@
 # 
 # vlog -vlog01compat -work work +incdir+C:/Users/naqas/Desktop/Github/RISC-V/riscv_quartus18_cyclonev {C:/Users/naqas/Desktop/Github/RISC-V/riscv_quartus18_cyclonev/fpu_add_sub.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 20:15:01 on Dec 14,2019
+# Start time: 17:27:16 on Dec 15,2019
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/naqas/Desktop/Github/RISC-V/riscv_quartus18_cyclonev" C:/Users/naqas/Desktop/Github/RISC-V/riscv_quartus18_cyclonev/fpu_add_sub.v 
 # -- Compiling module fpu_add_sub_altbarrel_shift_ltd
 # -- Compiling module fpu_add_sub_altbarrel_shift_aeb
@@ -39,11 +39,11 @@
 # 
 # Top level modules:
 # 	fpu_add_sub
-# End time: 20:15:01 on Dec 14,2019, Elapsed time: 0:00:00
+# End time: 17:27:16 on Dec 15,2019, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+C:/Users/naqas/Desktop/Github/RISC-V/riscv_quartus18_cyclonev {C:/Users/naqas/Desktop/Github/RISC-V/riscv_quartus18_cyclonev/fpu_div.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 20:15:01 on Dec 14,2019
+# Start time: 17:27:16 on Dec 15,2019
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/naqas/Desktop/Github/RISC-V/riscv_quartus18_cyclonev" C:/Users/naqas/Desktop/Github/RISC-V/riscv_quartus18_cyclonev/fpu_div.v 
 # -- Compiling module fpu_div_altfp_div_pst_10j
 # -- Compiling module fpu_div_altfp_div_fkm
@@ -51,22 +51,22 @@
 # 
 # Top level modules:
 # 	fpu_div
-# End time: 20:15:01 on Dec 14,2019, Elapsed time: 0:00:00
+# End time: 17:27:16 on Dec 15,2019, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+C:/Users/naqas/Desktop/Github/RISC-V/riscv_quartus18_cyclonev {C:/Users/naqas/Desktop/Github/RISC-V/riscv_quartus18_cyclonev/fpu_mult.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 20:15:01 on Dec 14,2019
+# Start time: 17:27:16 on Dec 15,2019
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/naqas/Desktop/Github/RISC-V/riscv_quartus18_cyclonev" C:/Users/naqas/Desktop/Github/RISC-V/riscv_quartus18_cyclonev/fpu_mult.v 
 # -- Compiling module fpu_mult_altfp_mult_4dr
 # -- Compiling module fpu_mult
 # 
 # Top level modules:
 # 	fpu_mult
-# End time: 20:15:01 on Dec 14,2019, Elapsed time: 0:00:00
+# End time: 17:27:17 on Dec 15,2019, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+C:/Users/naqas/Desktop/Github/RISC-V/riscv_quartus18_cyclonev {C:/Users/naqas/Desktop/Github/RISC-V/riscv_quartus18_cyclonev/fpu_sqrt.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 20:15:01 on Dec 14,2019
+# Start time: 17:27:17 on Dec 15,2019
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/naqas/Desktop/Github/RISC-V/riscv_quartus18_cyclonev" C:/Users/naqas/Desktop/Github/RISC-V/riscv_quartus18_cyclonev/fpu_sqrt.v 
 # -- Compiling module fpu_sqrt_alt_sqrt_block_ocb
 # -- Compiling module fpu_sqrt_altfp_sqrt_0cf
@@ -74,22 +74,22 @@
 # 
 # Top level modules:
 # 	fpu_sqrt
-# End time: 20:15:01 on Dec 14,2019, Elapsed time: 0:00:00
+# End time: 17:27:17 on Dec 15,2019, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+C:/Users/naqas/Desktop/Github/RISC-V/riscv_quartus18_cyclonev {C:/Users/naqas/Desktop/Github/RISC-V/riscv_quartus18_cyclonev/fpu_compare.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 20:15:01 on Dec 14,2019
+# Start time: 17:27:17 on Dec 15,2019
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/naqas/Desktop/Github/RISC-V/riscv_quartus18_cyclonev" C:/Users/naqas/Desktop/Github/RISC-V/riscv_quartus18_cyclonev/fpu_compare.v 
 # -- Compiling module fpu_compare_altfp_compare_4rc
 # -- Compiling module fpu_compare
 # 
 # Top level modules:
 # 	fpu_compare
-# End time: 20:15:02 on Dec 14,2019, Elapsed time: 0:00:01
+# End time: 17:27:17 on Dec 15,2019, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+C:/Users/naqas/Desktop/Github/RISC-V/riscv_quartus18_cyclonev {C:/Users/naqas/Desktop/Github/RISC-V/riscv_quartus18_cyclonev/fpu_convert.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 20:15:02 on Dec 14,2019
+# Start time: 17:27:17 on Dec 15,2019
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/naqas/Desktop/Github/RISC-V/riscv_quartus18_cyclonev" C:/Users/naqas/Desktop/Github/RISC-V/riscv_quartus18_cyclonev/fpu_convert.v 
 # -- Compiling module fpu_convert_altbarrel_shift_fof
 # -- Compiling module fpu_convert_altpriority_encoder_3e8
@@ -106,11 +106,11 @@
 # 
 # Top level modules:
 # 	fpu_convert
-# End time: 20:15:02 on Dec 14,2019, Elapsed time: 0:00:00
+# End time: 17:27:17 on Dec 15,2019, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+C:/Users/naqas/Desktop/Github/RISC-V/riscv_quartus18_cyclonev {C:/Users/naqas/Desktop/Github/RISC-V/riscv_quartus18_cyclonev/fpu_convert_float_integer.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 20:15:02 on Dec 14,2019
+# Start time: 17:27:17 on Dec 15,2019
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/naqas/Desktop/Github/RISC-V/riscv_quartus18_cyclonev" C:/Users/naqas/Desktop/Github/RISC-V/riscv_quartus18_cyclonev/fpu_convert_float_integer.v 
 # -- Compiling module fpu_convert_float_integer_altbarrel_shift_kof
 # -- Compiling module fpu_convert_float_integer_altfp_convert_s3q
@@ -118,61 +118,61 @@
 # 
 # Top level modules:
 # 	fpu_convert_float_integer
-# End time: 20:15:02 on Dec 14,2019, Elapsed time: 0:00:00
+# End time: 17:27:17 on Dec 15,2019, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+C:/Users/naqas/Desktop/Github/RISC-V/riscv_quartus18_cyclonev/db {C:/Users/naqas/Desktop/Github/RISC-V/riscv_quartus18_cyclonev/db/mult_6ct.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 20:15:02 on Dec 14,2019
+# Start time: 17:27:18 on Dec 15,2019
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/naqas/Desktop/Github/RISC-V/riscv_quartus18_cyclonev/db" C:/Users/naqas/Desktop/Github/RISC-V/riscv_quartus18_cyclonev/db/mult_6ct.v 
 # -- Compiling module mult_6ct
 # 
 # Top level modules:
 # 	mult_6ct
-# End time: 20:15:02 on Dec 14,2019, Elapsed time: 0:00:00
+# End time: 17:27:18 on Dec 15,2019, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+C:/Users/naqas/Desktop/Github/RISC-V/riscv_quartus18_cyclonev/db {C:/Users/naqas/Desktop/Github/RISC-V/riscv_quartus18_cyclonev/db/mult_k5s.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 20:15:02 on Dec 14,2019
+# Start time: 17:27:18 on Dec 15,2019
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/naqas/Desktop/Github/RISC-V/riscv_quartus18_cyclonev/db" C:/Users/naqas/Desktop/Github/RISC-V/riscv_quartus18_cyclonev/db/mult_k5s.v 
 # -- Compiling module mult_k5s
 # 
 # Top level modules:
 # 	mult_k5s
-# End time: 20:15:02 on Dec 14,2019, Elapsed time: 0:00:00
+# End time: 17:27:18 on Dec 15,2019, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+C:/Users/naqas/Desktop/Github/RISC-V/riscv_quartus18_cyclonev/db {C:/Users/naqas/Desktop/Github/RISC-V/riscv_quartus18_cyclonev/db/mult_i5s.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 20:15:02 on Dec 14,2019
+# Start time: 17:27:18 on Dec 15,2019
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/naqas/Desktop/Github/RISC-V/riscv_quartus18_cyclonev/db" C:/Users/naqas/Desktop/Github/RISC-V/riscv_quartus18_cyclonev/db/mult_i5s.v 
 # -- Compiling module mult_i5s
 # 
 # Top level modules:
 # 	mult_i5s
-# End time: 20:15:03 on Dec 14,2019, Elapsed time: 0:00:01
+# End time: 17:27:18 on Dec 15,2019, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+C:/Users/naqas/Desktop/Github/RISC-V/riscv_quartus18_cyclonev/db {C:/Users/naqas/Desktop/Github/RISC-V/riscv_quartus18_cyclonev/db/mult_r5s.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 20:15:03 on Dec 14,2019
+# Start time: 17:27:18 on Dec 15,2019
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/naqas/Desktop/Github/RISC-V/riscv_quartus18_cyclonev/db" C:/Users/naqas/Desktop/Github/RISC-V/riscv_quartus18_cyclonev/db/mult_r5s.v 
 # -- Compiling module mult_r5s
 # 
 # Top level modules:
 # 	mult_r5s
-# End time: 20:15:03 on Dec 14,2019, Elapsed time: 0:00:00
+# End time: 17:27:18 on Dec 15,2019, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+C:/Users/naqas/Desktop/Github/RISC-V/riscv_quartus18_cyclonev/db {C:/Users/naqas/Desktop/Github/RISC-V/riscv_quartus18_cyclonev/db/mult_p5s.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 20:15:03 on Dec 14,2019
+# Start time: 17:27:18 on Dec 15,2019
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/naqas/Desktop/Github/RISC-V/riscv_quartus18_cyclonev/db" C:/Users/naqas/Desktop/Github/RISC-V/riscv_quartus18_cyclonev/db/mult_p5s.v 
 # -- Compiling module mult_p5s
 # 
 # Top level modules:
 # 	mult_p5s
-# End time: 20:15:03 on Dec 14,2019, Elapsed time: 0:00:00
+# End time: 17:27:18 on Dec 15,2019, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+C:/Users/naqas/Desktop/Github/RISC-V/riscv_core {C:/Users/naqas/Desktop/Github/RISC-V/riscv_core/riscv.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 20:15:03 on Dec 14,2019
+# Start time: 17:27:19 on Dec 15,2019
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/naqas/Desktop/Github/RISC-V/riscv_core" C:/Users/naqas/Desktop/Github/RISC-V/riscv_core/riscv.v 
 # -- Compiling module alu
 # -- Compiling module aluSource
@@ -195,20 +195,19 @@
 # -- Compiling module pcIn_MUX
 # -- Compiling module FPU
 # -- Compiling module fpuController
-# -- Compiling module top
 # -- Compiling module riscv_core
 # -- Compiling module sevSegDec
 # -- Compiling module tb
 # 
 # Top level modules:
-# 	top
+# 	sevSegDec
 # 	tb
-# End time: 20:15:03 on Dec 14,2019, Elapsed time: 0:00:00
+# End time: 17:27:19 on Dec 15,2019, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 3
 # 
 # vlog -vlog01compat -work work +incdir+C:/Users/naqas/Desktop/Github/RISC-V/riscv_quartus18_cyclonev/../riscv_core {C:/Users/naqas/Desktop/Github/RISC-V/riscv_quartus18_cyclonev/../riscv_core/riscv.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 20:15:03 on Dec 14,2019
+# Start time: 17:27:19 on Dec 15,2019
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/naqas/Desktop/Github/RISC-V/riscv_quartus18_cyclonev/../riscv_core" C:/Users/naqas/Desktop/Github/RISC-V/riscv_quartus18_cyclonev/../riscv_core/riscv.v 
 # -- Compiling module alu
 # -- Compiling module aluSource
@@ -231,20 +230,19 @@
 # -- Compiling module pcIn_MUX
 # -- Compiling module FPU
 # -- Compiling module fpuController
-# -- Compiling module top
 # -- Compiling module riscv_core
 # -- Compiling module sevSegDec
 # -- Compiling module tb
 # 
 # Top level modules:
-# 	top
+# 	sevSegDec
 # 	tb
-# End time: 20:15:04 on Dec 14,2019, Elapsed time: 0:00:01
+# End time: 17:27:19 on Dec 15,2019, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 3
 # 
 # vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs="+acc"  tb
 # vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs=""+acc"" tb 
-# Start time: 20:15:04 on Dec 14,2019
+# Start time: 17:27:19 on Dec 15,2019
 # Loading work.tb
 # Loading work.riscv_core
 # Loading work.pcIn_MUX
@@ -328,10 +326,7 @@
 # view signals
 # .main_pane.objects.interior.cs.body.tree
 # run -all
-# 00000000
-# 40533334
-# c00cccce
-# c01ae149
-# c0000000
-# End time: 20:15:13 on Dec 14,2019, Elapsed time: 0:00:09
+# 
+# 1
+# End time: 17:29:29 on Dec 15,2019, Elapsed time: 0:02:10
 # Errors: 0, Warnings: 2

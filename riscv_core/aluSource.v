@@ -1,7 +1,7 @@
-module aluSource( input[31:0]EX_dataA,dataD,MEM_aluResult,EX_dataB,EX_immGenOut,
-input [1:0]forwardA,forwardB,
+module aluSource( input[31:0]EX_dataA,dataD,MEM_aluResult,EX_dataB,EX_datafrs3,EX_immGenOut,
+input [1:0]forwardA,forwardB,forwardC,
 input aluSourceSel,
-output reg [31:0]aluA,aluB,forwardB_dataB
+output reg [31:0]aluA,aluB,fpuC,forwardB_dataB
 );
 
 always@(*)begin
@@ -18,6 +18,15 @@ always@(*)begin
 		2'd2: forwardB_dataB = MEM_aluResult;
 		default: forwardB_dataB = 32'b0;
 	endcase
+	
+	case (forwardC)
+		2'd0: fpuC = EX_datafrs3;
+		2'd1: fpuC = dataD;
+		2'd2: fpuC = MEM_aluResult;
+		default: fpuC = 32'b0;
+	endcase
+	
+	
 	
 	case (aluSourceSel)
 		1'b0: aluB = forwardB_dataB;
