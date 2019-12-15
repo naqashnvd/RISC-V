@@ -1,8 +1,6 @@
 
 //`default_nettype none
 
-`timescale 1 ns / 1 ns
-
 `include "alu.v"
 `include "aluSource.v"
 `include "controlUnit.v"
