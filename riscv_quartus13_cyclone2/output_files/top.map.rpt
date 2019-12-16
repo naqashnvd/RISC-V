@@ -1,5 +1,5 @@
 Analysis & Synthesis report for top
-Mon Dec 16 01:32:48 2019
+Mon Dec 16 01:38:21 2019
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -167,7 +167,7 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Mon Dec 16 01:32:48 2019           ;
+; Analysis & Synthesis Status        ; Successful - Mon Dec 16 01:38:21 2019           ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; top                                             ;
 ; Top-level Entity Name              ; riscv_core                                      ;
@@ -391,7 +391,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ; db/altsyncram_93h1.tdf                                 ; yes             ; Auto-Generated Megafunction                           ; C:/Users/naqas/Desktop/Github/RISC-V/riscv_quartus13_cyclone2/db/altsyncram_93h1.tdf               ;         ;
 ; db/top.ram0_regfile_4c8ea16e.hdl.mif                   ; yes             ; Auto-Generated Auto-Found Memory Initialization File  ; C:/Users/naqas/Desktop/Github/RISC-V/riscv_quartus13_cyclone2/db/top.ram0_regfile_4c8ea16e.hdl.mif ;         ;
 ; db/altsyncram_fv61.tdf                                 ; yes             ; Auto-Generated Megafunction                           ; C:/Users/naqas/Desktop/Github/RISC-V/riscv_quartus13_cyclone2/db/altsyncram_fv61.tdf               ;         ;
-; db/top.ram0_iram_c4ed73f3.hdl.mif                      ; yes             ; Auto-Generated Auto-Found Memory Initialization File  ; C:/Users/naqas/Desktop/Github/RISC-V/riscv_quartus13_cyclone2/db/top.ram0_iram_c4ed73f3.hdl.mif    ;         ;
+; db/top.ram0_IRAM_c4ed73f3.hdl.mif                      ; yes             ; Auto-Generated Auto-Found Memory Initialization File  ; C:/Users/naqas/Desktop/Github/RISC-V/riscv_quartus13_cyclone2/db/top.ram0_IRAM_c4ed73f3.hdl.mif    ;         ;
 ; altshift_taps.tdf                                      ; yes             ; Megafunction                                          ; c:/altera/13.0sp1/quartus/libraries/megafunctions/altshift_taps.tdf                                ;         ;
 ; lpm_counter.inc                                        ; yes             ; Megafunction                                          ; c:/altera/13.0sp1/quartus/libraries/megafunctions/lpm_counter.inc                                  ;         ;
 ; lpm_compare.inc                                        ; yes             ; Megafunction                                          ; c:/altera/13.0sp1/quartus/libraries/megafunctions/lpm_compare.inc                                  ;         ;
@@ -4348,7 +4348,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:15     ;
+; Top            ; 00:00:16     ;
 +----------------+--------------+
 
 
@@ -4358,7 +4358,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Mon Dec 16 01:32:18 2019
+    Info: Processing started: Mon Dec 16 01:37:53 2019
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off top -c top
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (12021): Found 19 design units, including 19 entities, in source file /users/naqas/desktop/github/risc-v/riscv_core/riscv.v
@@ -4440,7 +4440,7 @@ Warning (10230): Verilog HDL assignment warning at riscv.v(103): truncated value
 Info (12128): Elaborating entity "pcIn_MUX" for hierarchy "pcIn_MUX:pcIn_MUX"
 Info (12128): Elaborating entity "register" for hierarchy "register:pc"
 Info (12128): Elaborating entity "IRAM" for hierarchy "IRAM:imem"
-Warning (10850): Verilog HDL warning at IRAM.v(11): number of words (8) in memory file does not match the number of elements in the address range [0:255]
+Warning (10850): Verilog HDL warning at IRAM.v(11): number of words (11) in memory file does not match the number of elements in the address range [0:255]
 Info (12128): Elaborating entity "register" for hierarchy "register:IF_ID"
 Info (12128): Elaborating entity "regFile" for hierarchy "regFile:rf"
 Info (12128): Elaborating entity "immGen" for hierarchy "immGen:immGen"
@@ -5289,6 +5289,8 @@ Info (12133): Instantiated megafunction "IRAM:imem|altsyncram:MEM_rtl_0" with th
     Info (12134): Parameter "INIT_FILE" = "db/top.ram0_IRAM_c4ed73f3.hdl.mif"
 Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_fv61.tdf
     Info (12023): Found entity 1: altsyncram_fv61
+Warning (127007): Memory Initialization File or Hexadecimal (Intel-Format) File "C:/Users/naqas/Desktop/Github/RISC-V/riscv_quartus13_cyclone2/db/top.ram0_IRAM_c4ed73f3.hdl.mif" contains "don't care" values -- overwriting them with 0s
+Warning (127007): Memory Initialization File or Hexadecimal (Intel-Format) File "C:/Users/naqas/Desktop/Github/RISC-V/riscv_quartus13_cyclone2/db/top.ram0_IRAM_c4ed73f3.hdl.mif" contains "don't care" values -- overwriting them with 0s
 Info (12130): Elaborated megafunction instantiation "FPU:fpu|fpu_sqrt:fpu_sqrt_inst|fpu_sqrt_altfp_sqrt_sef:fpu_sqrt_altfp_sqrt_sef_component|altshift_taps:exp_ff20c_rtl_0"
 Info (12133): Instantiated megafunction "FPU:fpu|fpu_sqrt:fpu_sqrt_inst|fpu_sqrt_altfp_sqrt_sef:fpu_sqrt_altfp_sqrt_sef_component|altshift_taps:exp_ff20c_rtl_0" with the following parameter:
     Info (12134): Parameter "NUMBER_OF_TAPS" = "1"
@@ -5345,10 +5347,10 @@ Info (21057): Implemented 5858 device resources after synthesis - the final reso
     Info (21061): Implemented 5470 logic cells
     Info (21064): Implemented 294 RAM segments
     Info (21062): Implemented 23 DSP elements
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 12 warnings
-    Info: Peak virtual memory: 4675 megabytes
-    Info: Processing ended: Mon Dec 16 01:32:48 2019
-    Info: Elapsed time: 00:00:30
-    Info: Total CPU time (on all processors): 00:00:26
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 14 warnings
+    Info: Peak virtual memory: 4676 megabytes
+    Info: Processing ended: Mon Dec 16 01:38:22 2019
+    Info: Elapsed time: 00:00:29
+    Info: Total CPU time (on all processors): 00:00:27
 
 

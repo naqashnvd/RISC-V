@@ -1,7 +1,9 @@
-riscv64-unknown-elf-gcc.exe test.c  -nostdlib -T link_simple.ld -march=rv32if -mabi=ilp32f  -o test.elf
-riscv64-unknown-elf-objdump.exe -D test.elf  > test.txt
-./extract_hex.sh test.elf imem.hex dmem.hex
-riscv64-unknown-elf-objdump.exe -s -j .rodata test.elf | sed '1,4d' > temp_dmem.txt
+riscv64-unknown-elf-gcc test.c  -nostdlib -T link_simple.ld -march=rv32if -mabi=ilp32f  -o test.elf
+riscv64-unknown-elf-objdump -D test.elf  > test.txt
+riscv64-unknown-elf-objdump -d -w test.elf | sed '1,7d' > temp_imem.txt
+riscv64-unknown-elf-objdump -s -j .rodata test.elf | sed '1,4d' > temp_dmem.txt
+
+
 
 
 

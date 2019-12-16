@@ -408,13 +408,13 @@ module tb;
 //			$dumpvars(0, riscv0.float_rf.registers[i]);
 //			end
 
-		//$monitor("%c",riscv0.dmem.MEM[256]);	
-		$monitor("%h",riscv0.float_rf.registers[3]);
+		$monitor("%c",riscv0.dmem.MEM[264]);	
+		//$monitor("%h",riscv0.float_rf.registers[15]);
 
 		#0 rst_n = 1; clk = 0;av_waitrequest = 0;av_readdata = 31'b0;
 		#1 rst_n = 0; #1 rst_n = 1 ;#1
 		
-		for(j = 0;j < 200;j = j + 1) begin
+		for(j = 0;j < 1000;j = j + 1) begin
 			#1 clk = ~clk; #1 clk = ~clk;
 		end
 	end

@@ -6,12 +6,12 @@ ENTRY(_actual_start)
 
 MEMORY 
 {
-	RAM (rwx): ORIGIN = 0x0, LENGTH = 128K
+	RAM (rwx): ORIGIN = 0x0, LENGTH = 512
 }
 
 /* stack pointer is the highest stack address */
 PROVIDE(_stack_pointer = ORIGIN(RAM) + LENGTH(RAM));
-PROVIDE( __global_pointer$ = (4K / 2) );
+PROVIDE( __global_pointer$ = (512 / 2) );
 
 SECTIONS
 {
@@ -24,7 +24,7 @@ SECTIONS
 
 	. = ALIGN(4);
 
-	.data :
+	.rodata :
 	{
 		*(.data)
 		*(.data.*)

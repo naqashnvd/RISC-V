@@ -9,7 +9,7 @@ valu
 Izc:Q>Y=eQnMae4i9X`[i@1
 VhbYQOc`iA7SOAbD@@AeOJ1
 Z1 dC:\Users\naqas\Desktop\Github\RISC-V\riscv_quartus13_cyclone2\simulation\modelsim
-Z2 w1576441965
+Z2 w1576507921
 FC:/Users/naqas/Desktop/Github/RISC-V/riscv_quartus13_cyclone2/../riscv_core/alu.v
 Z3 8C:/Users/naqas/Desktop/Github/RISC-V/riscv_quartus13_cyclone2/../riscv_core/riscv.v
 Z4 FC:/Users/naqas/Desktop/Github/RISC-V/riscv_quartus13_cyclone2/../riscv_core/riscv.v
@@ -18,7 +18,7 @@ Z5 OV;L;10.1d;51
 r1
 !s85 0
 31
-Z6 !s108 1576442004.007000
+Z6 !s108 1576513133.146000
 Z7 !s107 C:/Users/naqas/Desktop/Github/RISC-V/riscv_quartus13_cyclone2/../riscv_core/FPU_Controller.v|C:/Users/naqas/Desktop/Github/RISC-V/riscv_quartus13_cyclone2/../riscv_core/FPU.v|C:/Users/naqas/Desktop/Github/RISC-V/riscv_quartus13_cyclone2/../riscv_core/mux.v|C:/Users/naqas/Desktop/Github/RISC-V/riscv_quartus13_cyclone2/../riscv_core/IRAM.v|C:/Users/naqas/Desktop/Github/RISC-V/riscv_quartus13_cyclone2/../riscv_core/DRAM.v|C:/Users/naqas/Desktop/Github/RISC-V/riscv_quartus13_cyclone2/../riscv_core/regFile.v|C:/Users/naqas/Desktop/Github/RISC-V/riscv_quartus13_cyclone2/../riscv_core/immGen.v|C:/Users/naqas/Desktop/Github/RISC-V/riscv_quartus13_cyclone2/../riscv_core/hdu.v|C:/Users/naqas/Desktop/Github/RISC-V/riscv_quartus13_cyclone2/../riscv_core/forwadingUnit.v|C:/Users/naqas/Desktop/Github/RISC-V/riscv_quartus13_cyclone2/../riscv_core/controlUnit.v|C:/Users/naqas/Desktop/Github/RISC-V/riscv_quartus13_cyclone2/../riscv_core/aluSource.v|C:/Users/naqas/Desktop/Github/RISC-V/riscv_quartus13_cyclone2/../riscv_core/alu.v|C:/Users/naqas/Desktop/Github/RISC-V/riscv_quartus13_cyclone2/../riscv_core/riscv.v|
 Z8 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/naqas/Desktop/Github/RISC-V/riscv_quartus13_cyclone2/../riscv_core|C:/Users/naqas/Desktop/Github/RISC-V/riscv_quartus13_cyclone2/../riscv_core/riscv.v|
 !s101 -O0
@@ -167,7 +167,7 @@ L0 2626
 R5
 r1
 31
-Z15 !s108 1576442000.431000
+Z15 !s108 1576513130.279000
 Z16 !s107 C:/Users/naqas/Desktop/Github/RISC-V/riscv_quartus13_cyclone2/fpu_add_sub.v|
 Z17 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/naqas/Desktop/Github/RISC-V/riscv_quartus13_cyclone2|C:/Users/naqas/Desktop/Github/RISC-V/riscv_quartus13_cyclone2/fpu_add_sub.v|
 R9
@@ -607,7 +607,7 @@ L0 359
 R5
 r1
 31
-Z21 !s108 1576442001.890000
+Z21 !s108 1576513131.461000
 Z22 !s107 C:/Users/naqas/Desktop/Github/RISC-V/riscv_quartus13_cyclone2/fpu_compare.v|
 Z23 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/naqas/Desktop/Github/RISC-V/riscv_quartus13_cyclone2|C:/Users/naqas/Desktop/Github/RISC-V/riscv_quartus13_cyclone2/fpu_compare.v|
 R9
@@ -647,7 +647,7 @@ L0 836
 R5
 r1
 31
-Z26 !s108 1576442002.325000
+Z26 !s108 1576513131.927000
 Z27 !s107 C:/Users/naqas/Desktop/Github/RISC-V/riscv_quartus13_cyclone2/fpu_convert.v|
 Z28 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/naqas/Desktop/Github/RISC-V/riscv_quartus13_cyclone2|C:/Users/naqas/Desktop/Github/RISC-V/riscv_quartus13_cyclone2/fpu_convert.v|
 R9
@@ -887,7 +887,7 @@ L0 947
 R5
 r1
 31
-Z31 !s108 1576442002.888000
+Z31 !s108 1576513132.331000
 Z32 !s107 C:/Users/naqas/Desktop/Github/RISC-V/riscv_quartus13_cyclone2/fpu_convert_float_integer.v|
 Z33 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/naqas/Desktop/Github/RISC-V/riscv_quartus13_cyclone2|C:/Users/naqas/Desktop/Github/RISC-V/riscv_quartus13_cyclone2/fpu_convert_float_integer.v|
 R9
@@ -947,7 +947,7 @@ L0 1098
 R5
 r1
 31
-Z36 !s108 1576442001.665000
+Z36 !s108 1576513131.158000
 Z37 !s107 C:/Users/naqas/Desktop/Github/RISC-V/riscv_quartus13_cyclone2/fpu_div.v|
 Z38 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/naqas/Desktop/Github/RISC-V/riscv_quartus13_cyclone2|C:/Users/naqas/Desktop/Github/RISC-V/riscv_quartus13_cyclone2/fpu_div.v|
 R9
@@ -1007,7 +1007,7 @@ L0 561
 R5
 r1
 31
-Z41 !s108 1576442001.453000
+Z41 !s108 1576513130.955000
 Z42 !s107 C:/Users/naqas/Desktop/Github/RISC-V/riscv_quartus13_cyclone2/fpu_mult.v|
 Z43 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/naqas/Desktop/Github/RISC-V/riscv_quartus13_cyclone2|C:/Users/naqas/Desktop/Github/RISC-V/riscv_quartus13_cyclone2/fpu_mult.v|
 R9
@@ -1047,7 +1047,7 @@ L0 1845
 R5
 r1
 31
-Z46 !s108 1576442002.077000
+Z46 !s108 1576513131.701000
 Z47 !s107 C:/Users/naqas/Desktop/Github/RISC-V/riscv_quartus13_cyclone2/fpu_sqrt.v|
 Z48 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/naqas/Desktop/Github/RISC-V/riscv_quartus13_cyclone2|C:/Users/naqas/Desktop/Github/RISC-V/riscv_quartus13_cyclone2/fpu_sqrt.v|
 R9
@@ -1314,8 +1314,8 @@ R10
 nsev@seg@dec
 vtb
 !i10b 1
-!s100 fc0=cZmEV_Y]n;@1naedO1
-IZSGo@3BZB`39_MUZAo=L03
+!s100 RUR:`6oDTEJ8Qa@g^mZk72
+Ii[OU[bMa]HKjcXH4W8n@=3
 VV@Xn<HnSRM[I5c1?BH]3a3
 R1
 R2
