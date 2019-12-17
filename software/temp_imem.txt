@@ -1,12 +1,22 @@
    0:	fe010113          	addi	sp,sp,-32
    4:	00812e23          	sw	s0,28(sp)
    8:	02010413          	addi	s0,sp,32
-   c:	03002787          	flw	fa5,48(zero) # 30 <_actual_start+0x30>
-  10:	fef42627          	fsw	fa5,-20(s0)
-  14:	03402787          	flw	fa5,52(zero) # 34 <_actual_start+0x34>
-  18:	fef42427          	fsw	fa5,-24(s0)
-  1c:	fec42707          	flw	fa4,-20(s0)
-  20:	fe842787          	flw	fa5,-24(s0)
+   c:	05802787          	flw	fa5,88(zero) # 58 <_actual_start+0x58>
+  10:	fef42427          	fsw	fa5,-24(s0)
+  14:	05c02787          	flw	fa5,92(zero) # 5c <_actual_start+0x5c>
+  18:	fef42227          	fsw	fa5,-28(s0)
+  1c:	fe842707          	flw	fa4,-24(s0)
+  20:	fe442787          	flw	fa5,-28(s0)
   24:	00f777d3          	fadd.s	fa5,fa4,fa5
-  28:	fef42227          	fsw	fa5,-28(s0)
-  2c:	0000006f          	j	2c <_actual_start+0x2c>
+  28:	fef42027          	fsw	fa5,-32(s0)
+  2c:	fe042707          	flw	fa4,-32(s0)
+  30:	fe042787          	flw	fa5,-32(s0)
+  34:	10f777d3          	fmul.s	fa5,fa4,fa5
+  38:	fef42027          	fsw	fa5,-32(s0)
+  3c:	10800793          	li	a5,264
+  40:	fef42623          	sw	a5,-20(s0)
+  44:	fe042787          	flw	fa5,-32(s0)
+  48:	c0079753          	fcvt.w.s	a4,fa5,rtz
+  4c:	fec42783          	lw	a5,-20(s0)
+  50:	00e7a023          	sw	a4,0(a5)
+  54:	0000006f          	j	54 <_actual_start+0x54>

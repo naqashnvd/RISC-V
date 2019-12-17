@@ -1,5 +1,5 @@
 Assembler report for top
-Sun Dec 08 02:37:07 2019
+Tue Dec 17 21:18:11 2019
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -10,8 +10,8 @@ Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edit
   2. Assembler Summary
   3. Assembler Settings
   4. Assembler Generated Files
-  5. Assembler Device Options: C:/Users/naqas/Desktop/Github/RISC-V/Riscv_Quartus_Project/output_files/top.sof
-  6. Assembler Device Options: C:/Users/naqas/Desktop/Github/RISC-V/Riscv_Quartus_Project/output_files/top.pof
+  5. Assembler Device Options: C:/Users/naqas/Desktop/Github/RISC-V/riscv_quartus13_cyclone2/output_files/top.sof
+  6. Assembler Device Options: C:/Users/naqas/Desktop/Github/RISC-V/riscv_quartus13_cyclone2/output_files/top.pof
   7. Assembler Messages
 
 
@@ -38,7 +38,7 @@ applicable agreement for further details.
 +---------------------------------------------------------------+
 ; Assembler Summary                                             ;
 +-----------------------+---------------------------------------+
-; Assembler Status      ; Successful - Sun Dec 08 02:37:07 2019 ;
+; Assembler Status      ; Successful - Tue Dec 17 21:18:11 2019 ;
 ; Revision Name         ; top                                   ;
 ; Top-level Entity Name ; top                                   ;
 ; Family                ; Cyclone II                            ;
@@ -78,37 +78,37 @@ applicable agreement for further details.
 +-----------------------------------------------------------------------------+----------+---------------+
 
 
-+---------------------------------------------------------------------------------+
-; Assembler Generated Files                                                       ;
-+---------------------------------------------------------------------------------+
-; File Name                                                                       ;
-+---------------------------------------------------------------------------------+
-; C:/Users/naqas/Desktop/Github/RISC-V/Riscv_Quartus_Project/output_files/top.sof ;
-; C:/Users/naqas/Desktop/Github/RISC-V/Riscv_Quartus_Project/output_files/top.pof ;
-+---------------------------------------------------------------------------------+
++------------------------------------------------------------------------------------+
+; Assembler Generated Files                                                          ;
++------------------------------------------------------------------------------------+
+; File Name                                                                          ;
++------------------------------------------------------------------------------------+
+; C:/Users/naqas/Desktop/Github/RISC-V/riscv_quartus13_cyclone2/output_files/top.sof ;
+; C:/Users/naqas/Desktop/Github/RISC-V/riscv_quartus13_cyclone2/output_files/top.pof ;
++------------------------------------------------------------------------------------+
 
 
-+-----------------------------------------------------------------------------------------------------------+
-; Assembler Device Options: C:/Users/naqas/Desktop/Github/RISC-V/Riscv_Quartus_Project/output_files/top.sof ;
-+----------------+------------------------------------------------------------------------------------------+
-; Option         ; Setting                                                                                  ;
-+----------------+------------------------------------------------------------------------------------------+
-; Device         ; EP2C20F484C7                                                                             ;
-; JTAG usercode  ; 0x0050B236                                                                               ;
-; Checksum       ; 0x0050B236                                                                               ;
-+----------------+------------------------------------------------------------------------------------------+
++--------------------------------------------------------------------------------------------------------------+
+; Assembler Device Options: C:/Users/naqas/Desktop/Github/RISC-V/riscv_quartus13_cyclone2/output_files/top.sof ;
++----------------+---------------------------------------------------------------------------------------------+
+; Option         ; Setting                                                                                     ;
++----------------+---------------------------------------------------------------------------------------------+
+; Device         ; EP2C20F484C7                                                                                ;
+; JTAG usercode  ; 0x0054506D                                                                                  ;
+; Checksum       ; 0x0054506D                                                                                  ;
++----------------+---------------------------------------------------------------------------------------------+
 
 
-+-----------------------------------------------------------------------------------------------------------+
-; Assembler Device Options: C:/Users/naqas/Desktop/Github/RISC-V/Riscv_Quartus_Project/output_files/top.pof ;
-+--------------------+--------------------------------------------------------------------------------------+
-; Option             ; Setting                                                                              ;
-+--------------------+--------------------------------------------------------------------------------------+
-; Device             ; EPCS16                                                                               ;
-; JTAG usercode      ; 0x00000000                                                                           ;
-; Checksum           ; 0x1D87F002                                                                           ;
-; Compression Ratio  ; 2                                                                                    ;
-+--------------------+--------------------------------------------------------------------------------------+
++--------------------------------------------------------------------------------------------------------------+
+; Assembler Device Options: C:/Users/naqas/Desktop/Github/RISC-V/riscv_quartus13_cyclone2/output_files/top.pof ;
++--------------------+-----------------------------------------------------------------------------------------+
+; Option             ; Setting                                                                                 ;
++--------------------+-----------------------------------------------------------------------------------------+
+; Device             ; EPCS16                                                                                  ;
+; JTAG usercode      ; 0x00000000                                                                              ;
+; Checksum           ; 0x1D83C095                                                                              ;
+; Compression Ratio  ; 2                                                                                       ;
++--------------------+-----------------------------------------------------------------------------------------+
 
 
 +--------------------+
@@ -117,14 +117,14 @@ applicable agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Assembler
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Sun Dec 08 02:37:05 2019
+    Info: Processing started: Tue Dec 17 21:18:10 2019
 Info: Command: quartus_asm --read_settings_files=off --write_settings_files=off top -c top
 Info (115031): Writing out detailed assembly data for power analysis
 Info (115030): Assembler is generating device programming files
 Info: Quartus II 64-Bit Assembler was successful. 0 errors, 0 warnings
-    Info: Peak virtual memory: 4571 megabytes
-    Info: Processing ended: Sun Dec 08 02:37:07 2019
-    Info: Elapsed time: 00:00:02
+    Info: Peak virtual memory: 4581 megabytes
+    Info: Processing ended: Tue Dec 17 21:18:11 2019
+    Info: Elapsed time: 00:00:01
     Info: Total CPU time (on all processors): 00:00:02
 
 

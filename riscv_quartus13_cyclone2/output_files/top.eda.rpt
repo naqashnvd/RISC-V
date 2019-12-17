@@ -1,5 +1,5 @@
 EDA Netlist Writer report for top
-Sun Dec 08 02:37:18 2019
+Tue Dec 17 21:18:22 2019
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -36,7 +36,7 @@ applicable agreement for further details.
 +-------------------------------------------------------------------+
 ; EDA Netlist Writer Summary                                        ;
 +---------------------------+---------------------------------------+
-; EDA Netlist Writer Status ; Successful - Sun Dec 08 02:37:18 2019 ;
+; EDA Netlist Writer Status ; Successful - Tue Dec 17 21:18:22 2019 ;
 ; Revision Name             ; top                                   ;
 ; Top-level Entity Name     ; top                                   ;
 ; Family                    ; Cyclone II                            ;
@@ -66,16 +66,16 @@ applicable agreement for further details.
 +---------------------------------------------------------------------------------------------------+---------------------------+
 
 
-+-----------------------------------------------------------------------------------------------+
-; Simulation Generated Files                                                                    ;
-+-----------------------------------------------------------------------------------------------+
-; Generated Files                                                                               ;
-+-----------------------------------------------------------------------------------------------+
-; C:/Users/naqas/Desktop/Github/RISC-V/Riscv_Quartus_Project/simulation/modelsim/top.vo         ;
-; C:/Users/naqas/Desktop/Github/RISC-V/Riscv_Quartus_Project/simulation/modelsim/top_fast.vo    ;
-; C:/Users/naqas/Desktop/Github/RISC-V/Riscv_Quartus_Project/simulation/modelsim/top_v.sdo      ;
-; C:/Users/naqas/Desktop/Github/RISC-V/Riscv_Quartus_Project/simulation/modelsim/top_v_fast.sdo ;
-+-----------------------------------------------------------------------------------------------+
++--------------------------------------------------------------------------------------------------+
+; Simulation Generated Files                                                                       ;
++--------------------------------------------------------------------------------------------------+
+; Generated Files                                                                                  ;
++--------------------------------------------------------------------------------------------------+
+; C:/Users/naqas/Desktop/Github/RISC-V/riscv_quartus13_cyclone2/simulation/modelsim/top.vo         ;
+; C:/Users/naqas/Desktop/Github/RISC-V/riscv_quartus13_cyclone2/simulation/modelsim/top_fast.vo    ;
+; C:/Users/naqas/Desktop/Github/RISC-V/riscv_quartus13_cyclone2/simulation/modelsim/top_v.sdo      ;
+; C:/Users/naqas/Desktop/Github/RISC-V/riscv_quartus13_cyclone2/simulation/modelsim/top_v_fast.sdo ;
++--------------------------------------------------------------------------------------------------+
 
 
 +-----------------------------+
@@ -84,12 +84,12 @@ applicable agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit EDA Netlist Writer
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Sun Dec 08 02:37:12 2019
+    Info: Processing started: Tue Dec 17 21:18:16 2019
 Info: Command: quartus_eda --read_settings_files=off --write_settings_files=off top -c top
-Info (204026): Generated files "top.vo", "top_fast.vo", "top_v.sdo" and "top_v_fast.sdo" in directory "C:/Users/naqas/Desktop/Github/RISC-V/Riscv_Quartus_Project/simulation/modelsim/" for EDA simulation tool
+Info (204026): Generated files "top.vo", "top_fast.vo", "top_v.sdo" and "top_v_fast.sdo" in directory "C:/Users/naqas/Desktop/Github/RISC-V/riscv_quartus13_cyclone2/simulation/modelsim/" for EDA simulation tool
 Info: Quartus II 64-Bit EDA Netlist Writer was successful. 0 errors, 0 warnings
-    Info: Peak virtual memory: 4583 megabytes
-    Info: Processing ended: Sun Dec 08 02:37:18 2019
+    Info: Peak virtual memory: 4588 megabytes
+    Info: Processing ended: Tue Dec 17 21:18:22 2019
     Info: Elapsed time: 00:00:06
     Info: Total CPU time (on all processors): 00:00:04
 

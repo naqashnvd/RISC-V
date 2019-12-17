@@ -1,7 +1,7 @@
 ###################################################################### IMEM #####################################################################
-file = open ("temp_imem.txt")
+file1 = open ("temp_imem.txt",'r')
 imem_out = ""
-for line in file:
+for line in file1:
     imem_out += line[6]
     imem_out += line[7]
     imem_out += line[8]
@@ -11,14 +11,14 @@ for line in file:
     imem_out += line[12]
     imem_out += line[13]
     imem_out +="\n"
-file.close()
+file1.close()
 
-file = open("dmem.hex",'w')
-file.write(imem_out)
-file.close()
+file1 = open("imem.hex",'w+')
+file1.write(imem_out)
+file1.close()
 
 ###################################################################### DMEM #####################################################################
-file = open ("temp_dmem.txt")
+file = open ("temp_dmem.txt",'r')
 ref = 0
 dmem_out = ""
 for line in file:
@@ -77,7 +77,7 @@ for line in file:
 
 file.close()
 
-file = open("dmem.hex",'w')
+file = open("dmem.hex",'w+')
 file.write(dmem_out)
 file.close()
 ##############################################################################################################################################################################################

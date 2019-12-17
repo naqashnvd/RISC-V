@@ -17,17 +17,21 @@
 `include "FPU_Controller.v"
 
 
-//module top(input [1:0]KEY,output [6:0]HEX0,output [6:0]HEX1,output [6:0]HEX2,output [6:0]HEX3);
-//	wire[31:0]dataOut;
-//	
-//	riscv_core rv32i(KEY[0],KEY[1],dataOut);
-//	
-//	sevSegDec s0(dataOut[3:0],HEX0);
-//	sevSegDec s1(dataOut[7:4],HEX1);
-//	sevSegDec s2(dataOut[11:8],HEX2);
-//	sevSegDec s3(dataOut[15:12],HEX3);
-//
-//endmodule
+module top(input CLOCK_50,input [1:1]KEY,output [6:0]HEX0,output [6:0]HEX1,output [6:0]HEX2,output [6:0]HEX3);
+	wire[31:0]dataOut;
+	
+	riscv_core rv32i(
+	.clk(CLOCK_50),
+	.rst_n(KEY[1]),
+	.dataOut(dataOut)
+	);
+	
+	sevSegDec s0(dataOut[3:0],HEX0);
+	sevSegDec s1(dataOut[7:4],HEX1);
+	sevSegDec s2(dataOut[11:8],HEX2);
+	sevSegDec s3(dataOut[15:12],HEX3);
+
+endmodule
 
 
 module riscv_core (
@@ -40,7 +44,9 @@ module riscv_core (
 	input  [31:0]av_readdata,
 	output av_write_n,
 	output [31:0]av_writedata,
-	input  av_waitrequest //stall the pipeline	
+	input  av_waitrequest, //stall the pipeline	
+	//for demo 
+	output [31:0]dataOut
 );
 	
 	wire clock = clk;
@@ -98,9 +104,19 @@ module riscv_core (
 	
 	assign frs3 = ID_I[31:27];
 	
+	/////////////////////////////////////////////// Register for Demo /////////////////////////////////////////////////////
+	
+	register regOut(
+		.data(MEM_dataB),
+		.enable(av_chipselect),
+		.clock(clock),
+		.clear(clear),
+		.out(dataOut)
+	);
+	
 	//////////////////////////////////////////////Jtag Uart /////////////////////////////////////////////////////////////////
 	
-	assign av_chipselect = (MEM_aluResult == 32'h100 | MEM_aluResult == 32'h104)?1:0; //Memory map to jtag uart
+	assign av_chipselect = (MEM_aluResult == 32'h108 | MEM_aluResult == 32'h10c)?1:0; //Memory map to jtag uart
 	assign av_address = MEM_aluResult[2]; //jtag uart register 1 is mapped to h104
 	assign av_read_n = ~MEM_signals[5];
 	//assign av_readdata =
@@ -108,10 +124,6 @@ module riscv_core (
 	assign av_writedata = MEM_dataB;
 	
 	//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-	
-	
-	//assign dataOut = dataD;
-	
 	
 	pcIn_MUX	pcIn_MUX(
 	.pcIn_sel({MEM_signals[13],branchTaken}),
@@ -375,7 +387,7 @@ module tb;
 	reg rst_n,clk;
 	reg [31:0]av_readdata;
 	reg av_waitrequest;
-	wire [31:0]av_writedata;
+	wire [31:0]av_writedata,dataOut;
 	wire av_chipselect,av_address,av_read_n,av_write_n;
 	
 	//wire [31:0]dataOut;
@@ -391,7 +403,8 @@ module tb;
 	av_readdata,
 	av_write_n,
 	av_writedata,
-	av_waitrequest 
+	av_waitrequest,
+	dataOut
 	);
 	
 	
@@ -414,7 +427,7 @@ module tb;
 		#0 rst_n = 1; clk = 0;av_waitrequest = 0;av_readdata = 31'b0;
 		#1 rst_n = 0; #1 rst_n = 1 ;#1
 		
-		for(j = 0;j < 1000;j = j + 1) begin
+		for(j = 0;j < 100;j = j + 1) begin
 			#1 clk = ~clk; #1 clk = ~clk;
 		end
 	end

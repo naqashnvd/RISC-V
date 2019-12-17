@@ -116,12 +116,13 @@
 # -- Compiling module pcIn_MUX
 # -- Compiling module FPU
 # -- Compiling module fpuController
+# -- Compiling module top
 # -- Compiling module riscv_core
 # -- Compiling module sevSegDec
 # -- Compiling module tb
 # 
 # Top level modules:
-# 	sevSegDec
+# 	top
 # 	tb
 # 
 # vlog -vlog01compat -work work +incdir+C:/Users/naqas/Desktop/Github/RISC-V/riscv_quartus13_cyclone2/../riscv_core {C:/Users/naqas/Desktop/Github/RISC-V/riscv_quartus13_cyclone2/../riscv_core/riscv.v}
@@ -148,20 +149,21 @@
 # -- Compiling module pcIn_MUX
 # -- Compiling module FPU
 # -- Compiling module fpuController
+# -- Compiling module top
 # -- Compiling module riscv_core
 # -- Compiling module sevSegDec
 # -- Compiling module tb
 # 
 # Top level modules:
-# 	sevSegDec
+# 	top
 # 	tb
 # 
 # vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneii_ver -L rtl_work -L work -voptargs="+acc"  tb
 # vsim -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneii_ver -L rtl_work -L work -voptargs=\"+acc\" -t 1ps tb 
 # Loading work.tb
 # Loading work.riscv_core
-# Loading work.pcIn_MUX
 # Loading work.register
+# Loading work.pcIn_MUX
 # Loading work.IRAM
 # Loading work.regFile
 # Loading work.immGen
@@ -244,3 +246,4 @@
 # .main_pane.objects.interior.cs.body.tree
 # run -all
 # 
+# ˆ

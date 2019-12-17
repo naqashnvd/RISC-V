@@ -10,6 +10,7 @@ entity riscv_core is
         av_readdata     : in     vl_logic_vector(31 downto 0);
         av_write_n      : out    vl_logic;
         av_writedata    : out    vl_logic_vector(31 downto 0);
-        av_waitrequest  : in     vl_logic
+        av_waitrequest  : in     vl_logic;
+        dataOut         : out    vl_logic_vector(31 downto 0)
     );
 end riscv_core;
