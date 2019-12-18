@@ -17,7 +17,7 @@
 `include "FPU_Controller.v"
 
 
-module top(input CLOCK_50,input [1:1]KEY,output [6:0]HEX0,output [6:0]HEX1,output [6:0]HEX2,output [6:0]HEX3);
+module top(input CLOCK_50,input [1:1]KEY,input [0:0]SW,output [6:0]HEX0,output [6:0]HEX1,output [6:0]HEX2,output [6:0]HEX3);
 	wire[31:0]dataOut;
 	
 	riscv_core rv32i(
@@ -26,10 +26,12 @@ module top(input CLOCK_50,input [1:1]KEY,output [6:0]HEX0,output [6:0]HEX1,outpu
 	.dataOut(dataOut)
 	);
 	
-	sevSegDec s0(dataOut[3:0],HEX0);
-	sevSegDec s1(dataOut[7:4],HEX1);
-	sevSegDec s2(dataOut[11:8],HEX2);
-	sevSegDec s3(dataOut[15:12],HEX3);
+	wire [15:0]sw_dataOut;
+	assign sw_dataOut = (SW)?dataOut[31:16]:dataOut[15:0]; // SW handles to show upper and lower 16 bits
+	sevSegDec s0(sw_dataOut[3:0],HEX0);
+	sevSegDec s1(sw_dataOut[7:4],HEX1);
+	sevSegDec s2(sw_dataOut[11:8],HEX2);
+	sevSegDec s3(sw_dataOut[15:12],HEX3);
 
 endmodule
 
@@ -339,15 +341,16 @@ module riscv_core (
 
 	/////////////////////////////////////////////////////////////Forwarding Unit/////////////////////////////////////////////////////////////////////////
 	forwardingUnit fu(
-		.MEM_RegWrite(MEM_signals[4] ), //temporary fix for float forwarding
+		.MEM_RegWrite(MEM_signals[4] ),
 		.MEM_f_RegWrite(MEM_signals[15]),
-		.WB_RegWrite(WB_signals[4]), // temporary fix for float forwarding
+		.WB_RegWrite(WB_signals[4]), 
 		.WB_f_RegWrite(WB_signals[15]),
 		.MEM_Rd(MEM_Rd),
 		.EX_Rs1(EX_Rs1),
 		.EX_Rs2(EX_Rs2),
 		.EX_frs3(EX_frs3),
 		.WB_Rd(WB_Rd),
+		.temp_fix(EX_signals[6] | EX_signals[17]), //temperoray fix for fsw
 		.ForwardA(forwardA),
 		.ForwardB(forwardB),
 		.ForwardC(forwardC)
@@ -421,7 +424,7 @@ module tb;
 //			$dumpvars(0, riscv0.float_rf.registers[i]);
 //			end
 
-		$monitor("%c",riscv0.dmem.MEM[264]);	
+		$monitor("%h",riscv0.dmem.MEM[264]);	
 		//$monitor("%h",riscv0.float_rf.registers[15]);
 
 		#0 rst_n = 1; clk = 0;av_waitrequest = 0;av_readdata = 31'b0;

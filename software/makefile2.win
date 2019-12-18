@@ -1,0 +1,2 @@
+mv dmem.hex ../riscv_core/
+mv imem.hex ../riscv_core/

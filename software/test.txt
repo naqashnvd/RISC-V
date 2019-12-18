@@ -8,9 +8,9 @@ Disassembly of section .text:
    0:	fe010113          	addi	sp,sp,-32
    4:	00812e23          	sw	s0,28(sp)
    8:	02010413          	addi	s0,sp,32
-   c:	05802787          	flw	fa5,88(zero) # 58 <_actual_start+0x58>
+   c:	05c02787          	flw	fa5,92(zero) # 5c <_actual_start+0x5c>
   10:	fef42427          	fsw	fa5,-24(s0)
-  14:	05c02787          	flw	fa5,92(zero) # 5c <_actual_start+0x5c>
+  14:	06002787          	flw	fa5,96(zero) # 60 <_actual_start+0x60>
   18:	fef42227          	fsw	fa5,-28(s0)
   1c:	fe842707          	flw	fa4,-24(s0)
   20:	fe442787          	flw	fa5,-28(s0)
@@ -19,22 +19,23 @@ Disassembly of section .text:
   2c:	fe042707          	flw	fa4,-32(s0)
   30:	fe042787          	flw	fa5,-32(s0)
   34:	10f777d3          	fmul.s	fa5,fa4,fa5
-  38:	fef42027          	fsw	fa5,-32(s0)
-  3c:	10800793          	li	a5,264
-  40:	fef42623          	sw	a5,-20(s0)
-  44:	fe042787          	flw	fa5,-32(s0)
-  48:	c0079753          	fcvt.w.s	a4,fa5,rtz
-  4c:	fec42783          	lw	a5,-20(s0)
-  50:	00e7a023          	sw	a4,0(a5)
-  54:	0000006f          	j	54 <_actual_start+0x54>
+  38:	f0000753          	fmv.w.x	fa4,zero
+  3c:	18e7f7d3          	fdiv.s	fa5,fa5,fa4
+  40:	fef42027          	fsw	fa5,-32(s0)
+  44:	10800793          	li	a5,264
+  48:	fef42623          	sw	a5,-20(s0)
+  4c:	fe042787          	flw	fa5,-32(s0)
+  50:	fec42783          	lw	a5,-20(s0)
+  54:	00f7a027          	fsw	fa5,0(a5)
+  58:	0000006f          	j	58 <_actual_start+0x58>
 
 Disassembly of section .rodata:
 
-00000058 <.rodata>:
-  58:	999a                	add	s3,s3,t1
-  5a:	4121                	li	sp,8
-  5c:	51ec                	lw	a1,100(a1)
-  5e:	3fc8                	fld	fa0,184(a5)
+0000005c <.rodata>:
+  5c:	999a                	add	s3,s3,t1
+  5e:	4121                	li	sp,8
+  60:	51ec                	lw	a1,100(a1)
+  62:	3fc8                	fld	fa0,184(a5)
 
 Disassembly of section .comment:
 
