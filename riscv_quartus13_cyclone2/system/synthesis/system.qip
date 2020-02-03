@@ -1,0 +1,59 @@
+set_global_assignment -entity "system" -library "system" -name IP_TOOL_NAME "Qsys"
+set_global_assignment -entity "system" -library "system" -name IP_TOOL_VERSION "13.0sp1"
+set_global_assignment -entity "system" -library "system" -name IP_TOOL_ENV "Qsys"
+set_global_assignment -library "system" -name SOPCINFO_FILE [file join $::quartus(qip_path) "../../system.sopcinfo"]
+set_instance_assignment -entity "system" -library "system" -name SLD_INFO "QSYS_NAME system HAS_SOPCINFO 1 GENERATION_ID 1580755065"
+set_global_assignment -library "system" -name MISC_FILE [file join $::quartus(qip_path) "../../system.cmp"]
+set_global_assignment -name SYNTHESIS_ONLY_QIP ON
+set_global_assignment -library "system" -name MISC_FILE [file join $::quartus(qip_path) "../../system.qsys"]
+
+set_global_assignment -library "system" -name VERILOG_FILE [file join $::quartus(qip_path) "system.v"]
+set_global_assignment -library "system" -name VERILOG_FILE [file join $::quartus(qip_path) "submodules/altera_reset_controller.v"]
+set_global_assignment -library "system" -name VERILOG_FILE [file join $::quartus(qip_path) "submodules/altera_reset_synchronizer.v"]
+set_global_assignment -library "system" -name SDC_FILE [file join $::quartus(qip_path) "submodules/altera_reset_controller.sdc"]
+set_global_assignment -library "system" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "submodules/altera_merlin_slave_translator.sv"]
+set_global_assignment -library "system" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "submodules/altera_merlin_master_translator.sv"]
+set_global_assignment -library "system" -name VERILOG_FILE [file join $::quartus(qip_path) "submodules/system_jtag_uart_0.v"]
+set_global_assignment -library "system" -name QIP_FILE [file join $::quartus(qip_path) "submodules/fpu_add_sub.qip"]
+set_global_assignment -library "system" -name QIP_FILE [file join $::quartus(qip_path) "submodules/fpu_compare.qip"]
+set_global_assignment -library "system" -name QIP_FILE [file join $::quartus(qip_path) "submodules/fpu_convert.qip"]
+set_global_assignment -library "system" -name QIP_FILE [file join $::quartus(qip_path) "submodules/fpu_convert_float_integer.qip"]
+set_global_assignment -library "system" -name SOURCE_FILE [file join $::quartus(qip_path) "submodules/fpu_div.hex"]
+set_global_assignment -library "system" -name QIP_FILE [file join $::quartus(qip_path) "submodules/fpu_div.qip"]
+set_global_assignment -library "system" -name QIP_FILE [file join $::quartus(qip_path) "submodules/fpu_mult.qip"]
+set_global_assignment -library "system" -name QIP_FILE [file join $::quartus(qip_path) "submodules/fpu_sqrt.qip"]
+set_global_assignment -library "system" -name SOURCE_FILE [file join $::quartus(qip_path) "submodules/dmem.hex"]
+set_global_assignment -library "system" -name SOURCE_FILE [file join $::quartus(qip_path) "submodules/imem.hex"]
+set_global_assignment -library "system" -name VERILOG_FILE [file join $::quartus(qip_path) "submodules/riscv.v"]
+set_global_assignment -library "system" -name VERILOG_FILE [file join $::quartus(qip_path) "submodules/alu.v"]
+set_global_assignment -library "system" -name VERILOG_FILE [file join $::quartus(qip_path) "submodules/aluSource.v"]
+set_global_assignment -library "system" -name VERILOG_FILE [file join $::quartus(qip_path) "submodules/controlUnit.v"]
+set_global_assignment -library "system" -name VERILOG_FILE [file join $::quartus(qip_path) "submodules/DRAM.v"]
+set_global_assignment -library "system" -name VERILOG_FILE [file join $::quartus(qip_path) "submodules/forwadingUnit.v"]
+set_global_assignment -library "system" -name VERILOG_FILE [file join $::quartus(qip_path) "submodules/FPU.v"]
+set_global_assignment -library "system" -name VERILOG_FILE [file join $::quartus(qip_path) "submodules/Fpu_Controller.v"]
+set_global_assignment -library "system" -name VERILOG_FILE [file join $::quartus(qip_path) "submodules/hdu.v"]
+set_global_assignment -library "system" -name VERILOG_FILE [file join $::quartus(qip_path) "submodules/immGen.v"]
+set_global_assignment -library "system" -name VERILOG_FILE [file join $::quartus(qip_path) "submodules/IRAM.v"]
+set_global_assignment -library "system" -name VERILOG_FILE [file join $::quartus(qip_path) "submodules/mux.v"]
+set_global_assignment -library "system" -name VERILOG_FILE [file join $::quartus(qip_path) "submodules/regFile.v"]
+set_global_assignment -library "system" -name VERILOG_FILE [file join $::quartus(qip_path) "submodules/fpu_add_sub.v"]
+set_global_assignment -library "system" -name VERILOG_FILE [file join $::quartus(qip_path) "submodules/fpu_compare.v"]
+set_global_assignment -library "system" -name VERILOG_FILE [file join $::quartus(qip_path) "submodules/fpu_convert.v"]
+set_global_assignment -library "system" -name VERILOG_FILE [file join $::quartus(qip_path) "submodules/fpu_convert_float_integer.v"]
+set_global_assignment -library "system" -name VERILOG_FILE [file join $::quartus(qip_path) "submodules/fpu_div.v"]
+set_global_assignment -library "system" -name VERILOG_FILE [file join $::quartus(qip_path) "submodules/fpu_mult.v"]
+set_global_assignment -library "system" -name VERILOG_FILE [file join $::quartus(qip_path) "submodules/fpu_sqrt.v"]
+
+set_global_assignment -entity "altera_reset_controller" -library "system" -name IP_TOOL_NAME "altera_reset_controller"
+set_global_assignment -entity "altera_reset_controller" -library "system" -name IP_TOOL_VERSION "13.0"
+set_global_assignment -entity "altera_reset_controller" -library "system" -name IP_TOOL_ENV "Qsys"
+set_global_assignment -entity "altera_merlin_slave_translator" -library "system" -name IP_TOOL_NAME "altera_merlin_slave_translator"
+set_global_assignment -entity "altera_merlin_slave_translator" -library "system" -name IP_TOOL_VERSION "13.0"
+set_global_assignment -entity "altera_merlin_slave_translator" -library "system" -name IP_TOOL_ENV "Qsys"
+set_global_assignment -entity "altera_merlin_master_translator" -library "system" -name IP_TOOL_NAME "altera_merlin_master_translator"
+set_global_assignment -entity "altera_merlin_master_translator" -library "system" -name IP_TOOL_VERSION "13.0"
+set_global_assignment -entity "altera_merlin_master_translator" -library "system" -name IP_TOOL_ENV "Qsys"
+set_global_assignment -entity "system_jtag_uart_0" -library "system" -name IP_TOOL_NAME "altera_avalon_jtag_uart"
+set_global_assignment -entity "system_jtag_uart_0" -library "system" -name IP_TOOL_VERSION "13.0.1.99.2"
+set_global_assignment -entity "system_jtag_uart_0" -library "system" -name IP_TOOL_ENV "Qsys"

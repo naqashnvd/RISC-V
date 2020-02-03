@@ -8,34 +8,31 @@ Disassembly of section .text:
    0:	fe010113          	addi	sp,sp,-32
    4:	00812e23          	sw	s0,28(sp)
    8:	02010413          	addi	s0,sp,32
-   c:	05c02787          	flw	fa5,92(zero) # 5c <_actual_start+0x5c>
-  10:	fef42427          	fsw	fa5,-24(s0)
-  14:	06002787          	flw	fa5,96(zero) # 60 <_actual_start+0x60>
-  18:	fef42227          	fsw	fa5,-28(s0)
-  1c:	fe842707          	flw	fa4,-24(s0)
-  20:	fe442787          	flw	fa5,-28(s0)
-  24:	00f777d3          	fadd.s	fa5,fa4,fa5
-  28:	fef42027          	fsw	fa5,-32(s0)
-  2c:	fe042707          	flw	fa4,-32(s0)
-  30:	fe042787          	flw	fa5,-32(s0)
-  34:	10f777d3          	fmul.s	fa5,fa4,fa5
-  38:	f0000753          	fmv.w.x	fa4,zero
-  3c:	18e7f7d3          	fdiv.s	fa5,fa5,fa4
-  40:	fef42027          	fsw	fa5,-32(s0)
-  44:	10800793          	li	a5,264
-  48:	fef42623          	sw	a5,-20(s0)
-  4c:	fe042787          	flw	fa5,-32(s0)
-  50:	fec42783          	lw	a5,-20(s0)
-  54:	00f7a027          	fsw	fa5,0(a5)
-  58:	0000006f          	j	58 <_actual_start+0x58>
+   c:	10800793          	li	a5,264
+  10:	fef42423          	sw	a5,-24(s0)
+  14:	04c00793          	li	a5,76
+  18:	fef42623          	sw	a5,-20(s0)
+  1c:	0200006f          	j	3c <_actual_start+0x3c>
+  20:	fec42783          	lw	a5,-20(s0)
+  24:	0007c703          	lbu	a4,0(a5)
+  28:	fe842783          	lw	a5,-24(s0)
+  2c:	00e78023          	sb	a4,0(a5)
+  30:	fec42783          	lw	a5,-20(s0)
+  34:	00178793          	addi	a5,a5,1
+  38:	fef42623          	sw	a5,-20(s0)
+  3c:	fec42783          	lw	a5,-20(s0)
+  40:	0007c783          	lbu	a5,0(a5)
+  44:	fc079ee3          	bnez	a5,20 <_actual_start+0x20>
+  48:	0000006f          	j	48 <_actual_start+0x48>
 
 Disassembly of section .rodata:
 
-0000005c <.rodata>:
-  5c:	999a                	add	s3,s3,t1
-  5e:	4121                	li	sp,8
-  60:	51ec                	lw	a1,100(a1)
-  62:	3fc8                	fld	fa0,184(a5)
+0000004c <.rodata>:
+  4c:	4548                	lw	a0,12(a0)
+  4e:	4c4c                	lw	a1,28(s0)
+  50:	4f57204f          	fnmadd.q	ft0,fa4,fs5,fs1,rdn
+  54:	4c52                	lw	s8,20(sp)
+  56:	0044                	addi	s1,sp,4
 
 Disassembly of section .comment:
 

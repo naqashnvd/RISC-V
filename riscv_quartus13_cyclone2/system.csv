@@ -1,0 +1,57 @@
+# system info system on 2020.02.03.23:37:44
+system_info:
+name,value
+DEVICE,EP2C20F484C7
+DEVICE_FAMILY,Cyclone II
+GENERATION_ID,1580755063
+#
+#
+# Files generated for system on 2020.02.03.23:37:44
+files:
+filepath,kind,attributes,module,is_top
+system/simulation/system.v,VERILOG,,system,true
+system/simulation/submodules/fpu_add_sub.qip,OTHER,,riscv_core,false
+system/simulation/submodules/fpu_compare.qip,OTHER,,riscv_core,false
+system/simulation/submodules/fpu_convert.qip,OTHER,,riscv_core,false
+system/simulation/submodules/fpu_convert_float_integer.qip,OTHER,,riscv_core,false
+system/simulation/submodules/fpu_div.hex,HEX,,riscv_core,false
+system/simulation/submodules/fpu_div.qip,OTHER,,riscv_core,false
+system/simulation/submodules/fpu_mult.qip,OTHER,,riscv_core,false
+system/simulation/submodules/fpu_sqrt.qip,OTHER,,riscv_core,false
+system/simulation/submodules/dmem.hex,HEX,,riscv_core,false
+system/simulation/submodules/imem.hex,HEX,,riscv_core,false
+system/simulation/submodules/riscv.v,VERILOG,,riscv_core,false
+system/simulation/submodules/alu.v,VERILOG,,riscv_core,false
+system/simulation/submodules/aluSource.v,VERILOG,,riscv_core,false
+system/simulation/submodules/controlUnit.v,VERILOG,,riscv_core,false
+system/simulation/submodules/DRAM.v,VERILOG,,riscv_core,false
+system/simulation/submodules/forwadingUnit.v,VERILOG,,riscv_core,false
+system/simulation/submodules/FPU.v,VERILOG,,riscv_core,false
+system/simulation/submodules/Fpu_Controller.v,VERILOG,,riscv_core,false
+system/simulation/submodules/hdu.v,VERILOG,,riscv_core,false
+system/simulation/submodules/immGen.v,VERILOG,,riscv_core,false
+system/simulation/submodules/IRAM.v,VERILOG,,riscv_core,false
+system/simulation/submodules/mux.v,VERILOG,,riscv_core,false
+system/simulation/submodules/regFile.v,VERILOG,,riscv_core,false
+system/simulation/submodules/fpu_add_sub.v,VERILOG,,riscv_core,false
+system/simulation/submodules/fpu_compare.v,VERILOG,,riscv_core,false
+system/simulation/submodules/fpu_convert.v,VERILOG,,riscv_core,false
+system/simulation/submodules/fpu_convert_float_integer.v,VERILOG,,riscv_core,false
+system/simulation/submodules/fpu_div.v,VERILOG,,riscv_core,false
+system/simulation/submodules/fpu_mult.v,VERILOG,,riscv_core,false
+system/simulation/submodules/fpu_sqrt.v,VERILOG,,riscv_core,false
+system/simulation/submodules/system_jtag_uart_0.v,VERILOG,,system_jtag_uart_0,false
+system/simulation/submodules/altera_merlin_master_translator.sv,SYSTEM_VERILOG,,altera_merlin_master_translator,false
+system/simulation/submodules/altera_merlin_slave_translator.sv,SYSTEM_VERILOG,,altera_merlin_slave_translator,false
+system/simulation/submodules/altera_reset_controller.v,VERILOG,,altera_reset_controller,false
+system/simulation/submodules/altera_reset_synchronizer.v,VERILOG,,altera_reset_controller,false
+system/simulation/submodules/altera_reset_controller.sdc,SDC,,altera_reset_controller,false
+#
+# Map from instance-path to kind of module
+instances:
+instancePath,module
+system.riscv_core_0,riscv_core
+system.jtag_uart_0,system_jtag_uart_0
+system.riscv_core_0_avalon_master_translator,altera_merlin_master_translator
+system.jtag_uart_0_avalon_jtag_slave_translator,altera_merlin_slave_translator
+system.rst_controller,altera_reset_controller

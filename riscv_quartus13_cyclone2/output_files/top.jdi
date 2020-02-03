@@ -1,8 +1,78 @@
 <sld_project_info>
   <project>
-    <hash md5_digest_80b="b756363dcbaffea139e1"/>
+    <hash md5_digest_80b="82c56355ae790fc27609"/>
   </project>
   <file_info>
     <file device="EP2C20F484C7" path="top.sof" usercode="0xFFFFFFFF"/>
   </file_info>
+  <hub_info hub_ir_width="4" ir_width="1" node_addr_width="1" node_count="1"/>
+  <node_info>
+    <node hpath="system:u0|system_jtag_uart_0:jtag_uart_0|alt_jtag_atlantic:system_jtag_uart_0_alt_jtag_atlantic" instance_id="0" mfg_id="110" node_id="128" sld_node_info="0xC006E00" version="1">
+      <parameters>
+        <parameter name="INSTANCE_ID" type="dec" value="0"/>
+        <parameter name="SLD_NODE_INFO" type="ubin" value="00001100000000000110111000000000"/>
+        <parameter name="SLD_AUTO_INSTANCE_INDEX" type="string" value="YES"/>
+        <parameter name="LOG2_TXFIFO_DEPTH" type="dec" value="6"/>
+        <parameter name="LOG2_RXFIFO_DEPTH" type="dec" value="6"/>
+        <parameter name="RESERVED" type="dec" value="0"/>
+        <parameter name="DATA_WIDTH" type="dec" value="8"/>
+        <parameter name="NODE_IR_WIDTH" type="dec" value="1"/>
+        <parameter name="SCAN_LENGTH" type="dec" value="11"/>
+      </parameters>
+      <inputs>
+        <port name="clk" source="system:u0|system_jtag_uart_0:jtag_uart_0|clk"/>
+        <port name="rst_n" source="system:u0|system_jtag_uart_0:jtag_uart_0|rst_n"/>
+        <port name="r_val" source="system:u0|system_jtag_uart_0:jtag_uart_0|r_val"/>
+        <port name="r_dat[0]" source="system:u0|system_jtag_uart_0:jtag_uart_0|system_jtag_uart_0_scfifo_w:the_system_jtag_uart_0_scfifo_w|r_dat[0]"/>
+        <port name="r_dat[1]" source="system:u0|system_jtag_uart_0:jtag_uart_0|system_jtag_uart_0_scfifo_w:the_system_jtag_uart_0_scfifo_w|r_dat[1]"/>
+        <port name="r_dat[2]" source="system:u0|system_jtag_uart_0:jtag_uart_0|system_jtag_uart_0_scfifo_w:the_system_jtag_uart_0_scfifo_w|r_dat[2]"/>
+        <port name="r_dat[3]" source="system:u0|system_jtag_uart_0:jtag_uart_0|system_jtag_uart_0_scfifo_w:the_system_jtag_uart_0_scfifo_w|r_dat[3]"/>
+        <port name="r_dat[4]" source="system:u0|system_jtag_uart_0:jtag_uart_0|system_jtag_uart_0_scfifo_w:the_system_jtag_uart_0_scfifo_w|r_dat[4]"/>
+        <port name="r_dat[5]" source="system:u0|system_jtag_uart_0:jtag_uart_0|system_jtag_uart_0_scfifo_w:the_system_jtag_uart_0_scfifo_w|r_dat[5]"/>
+        <port name="r_dat[6]" source="system:u0|system_jtag_uart_0:jtag_uart_0|system_jtag_uart_0_scfifo_w:the_system_jtag_uart_0_scfifo_w|r_dat[6]"/>
+        <port name="r_dat[7]" source="system:u0|system_jtag_uart_0:jtag_uart_0|system_jtag_uart_0_scfifo_w:the_system_jtag_uart_0_scfifo_w|r_dat[7]"/>
+        <port name="t_dav" source="system:u0|system_jtag_uart_0:jtag_uart_0|t_dav"/>
+        <port name="jtag.bp.u0_jtag_uart_0_system_jtag_uart_0_alt_jtag_atlantic_raw_tck" source="jtag.bp.u0_jtag_uart_0_system_jtag_uart_0_alt_jtag_atlantic_raw_tck"/>
+        <port name="jtag.bp.u0_jtag_uart_0_system_jtag_uart_0_alt_jtag_atlantic_tck" source="jtag.bp.u0_jtag_uart_0_system_jtag_uart_0_alt_jtag_atlantic_tck"/>
+        <port name="jtag.bp.u0_jtag_uart_0_system_jtag_uart_0_alt_jtag_atlantic_tdi" source="jtag.bp.u0_jtag_uart_0_system_jtag_uart_0_alt_jtag_atlantic_tdi"/>
+        <port name="jtag.bp.u0_jtag_uart_0_system_jtag_uart_0_alt_jtag_atlantic_rti" source="jtag.bp.u0_jtag_uart_0_system_jtag_uart_0_alt_jtag_atlantic_rti"/>
+        <port name="jtag.bp.u0_jtag_uart_0_system_jtag_uart_0_alt_jtag_atlantic_shift" source="jtag.bp.u0_jtag_uart_0_system_jtag_uart_0_alt_jtag_atlantic_shift"/>
+        <port name="jtag.bp.u0_jtag_uart_0_system_jtag_uart_0_alt_jtag_atlantic_update" source="jtag.bp.u0_jtag_uart_0_system_jtag_uart_0_alt_jtag_atlantic_update"/>
+        <port name="jtag.bp.u0_jtag_uart_0_system_jtag_uart_0_alt_jtag_atlantic_usr1" source="jtag.bp.u0_jtag_uart_0_system_jtag_uart_0_alt_jtag_atlantic_usr1"/>
+        <port name="jtag.bp.u0_jtag_uart_0_system_jtag_uart_0_alt_jtag_atlantic_clr" source="jtag.bp.u0_jtag_uart_0_system_jtag_uart_0_alt_jtag_atlantic_clr"/>
+        <port name="jtag.bp.u0_jtag_uart_0_system_jtag_uart_0_alt_jtag_atlantic_ena" source="jtag.bp.u0_jtag_uart_0_system_jtag_uart_0_alt_jtag_atlantic_ena"/>
+        <port name="jtag.bp.u0_jtag_uart_0_system_jtag_uart_0_alt_jtag_atlantic_ir_in_0_" source="jtag.bp.u0_jtag_uart_0_system_jtag_uart_0_alt_jtag_atlantic_ir_in_0_"/>
+        <port name="jtag.bp.u0_jtag_uart_0_system_jtag_uart_0_alt_jtag_atlantic_jtag_state_cdr" source="jtag.bp.u0_jtag_uart_0_system_jtag_uart_0_alt_jtag_atlantic_jtag_state_cdr"/>
+        <port name="jtag.bp.u0_jtag_uart_0_system_jtag_uart_0_alt_jtag_atlantic_jtag_state_sdr" source="jtag.bp.u0_jtag_uart_0_system_jtag_uart_0_alt_jtag_atlantic_jtag_state_sdr"/>
+        <port name="jtag.bp.u0_jtag_uart_0_system_jtag_uart_0_alt_jtag_atlantic_jtag_state_udr" source="jtag.bp.u0_jtag_uart_0_system_jtag_uart_0_alt_jtag_atlantic_jtag_state_udr"/>
+      </inputs>
+      <outputs>
+        <port name="r_ena"/>
+        <port name="r_ena"/>
+        <port name="t_ena"/>
+        <port name="t_ena"/>
+        <port name="t_dat[0]"/>
+        <port name="t_dat[1]"/>
+        <port name="t_dat[2]"/>
+        <port name="t_dat[3]"/>
+        <port name="t_dat[4]"/>
+        <port name="t_dat[5]"/>
+        <port name="t_dat[6]"/>
+        <port name="t_dat[7]"/>
+        <port name="t_pause"/>
+        <port name="t_pause"/>
+        <port name="jtag.bp.u0_jtag_uart_0_system_jtag_uart_0_alt_jtag_atlantic_tdo"/>
+        <port name="jtag.bp.u0_jtag_uart_0_system_jtag_uart_0_alt_jtag_atlantic_irq"/>
+        <port name="jtag.bp.u0_jtag_uart_0_system_jtag_uart_0_alt_jtag_atlantic_ir_out_0_"/>
+      </outputs>
+    </node>
+  </node_info>
+  <sld_infos>
+    <sld_info hpath="system:u0" name="u0">
+      <assignment_values>
+        <assignment_value text="QSYS_NAME system HAS_SOPCINFO 1 GENERATION_ID 1580755065"/>
+      </assignment_values>
+      <parameters/>
+    </sld_info>
+  </sld_infos>
 </sld_project_info>

@@ -1,0 +1,70 @@
+/*
+WARNING: Do NOT edit the input and output ports in this file in a text
+editor if you plan to continue editing the block that represents it in
+the Block Editor! File corruption is VERY likely to occur.
+*/
+/*
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+*/
+(header "symbol" (version "1.1"))
+(symbol
+	(rect 0 0 288 184)
+	(text "system" (rect 123 -1 153 11)(font "Arial" (font_size 10)))
+	(text "inst" (rect 8 168 20 180)(font "Arial" ))
+	(port
+		(pt 0 112)
+		(input)
+		(text "clk_0_clk" (rect 0 0 37 12)(font "Arial" (font_size 8)))
+		(text "clk_0_clk" (rect 4 101 58 112)(font "Arial" (font_size 8)))
+		(line (pt 0 112)(pt 112 112)(line_width 1))
+	)
+	(port
+		(pt 0 152)
+		(input)
+		(text "reset_0_reset_n" (rect 0 0 67 12)(font "Arial" (font_size 8)))
+		(text "reset_0_reset_n" (rect 4 141 94 152)(font "Arial" (font_size 8)))
+		(line (pt 0 152)(pt 112 152)(line_width 1))
+	)
+	(port
+		(pt 0 72)
+		(output)
+		(text "dataout_export[31..0]" (rect 0 0 82 12)(font "Arial" (font_size 8)))
+		(text "dataout_export[31..0]" (rect 4 61 130 72)(font "Arial" (font_size 8)))
+		(line (pt 0 72)(pt 112 72)(line_width 3))
+	)
+	(drawing
+		(text "dataout" (rect 70 43 182 99)(font "Arial" (color 128 0 0)(font_size 9)))
+		(text "export" (rect 117 67 270 144)(font "Arial" (color 0 0 0)))
+		(text "clk_0" (rect 82 83 194 179)(font "Arial" (color 128 0 0)(font_size 9)))
+		(text "clk" (rect 117 107 252 224)(font "Arial" (color 0 0 0)))
+		(text "reset_0" (rect 68 123 178 259)(font "Arial" (color 128 0 0)(font_size 9)))
+		(text "reset_n" (rect 117 147 276 304)(font "Arial" (color 0 0 0)))
+		(text " system " (rect 253 168 554 346)(font "Arial" ))
+		(line (pt 113 52)(pt 113 76)(line_width 1))
+		(line (pt 114 52)(pt 114 76)(line_width 1))
+		(line (pt 113 92)(pt 113 116)(line_width 1))
+		(line (pt 114 92)(pt 114 116)(line_width 1))
+		(line (pt 113 132)(pt 113 156)(line_width 1))
+		(line (pt 114 132)(pt 114 156)(line_width 1))
+		(line (pt 112 32)(pt 176 32)(line_width 1))
+		(line (pt 176 32)(pt 176 168)(line_width 1))
+		(line (pt 112 168)(pt 176 168)(line_width 1))
+		(line (pt 112 32)(pt 112 168)(line_width 1))
+		(line (pt 0 0)(pt 288 0)(line_width 1))
+		(line (pt 288 0)(pt 288 184)(line_width 1))
+		(line (pt 0 184)(pt 288 184)(line_width 1))
+		(line (pt 0 0)(pt 0 184)(line_width 1))
+	)
+)

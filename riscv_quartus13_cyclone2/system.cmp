@@ -1,0 +1,8 @@
+	component system is
+		port (
+			dataout_export  : out std_logic_vector(31 downto 0);        -- export
+			clk_0_clk       : in  std_logic                     := 'X'; -- clk
+			reset_0_reset_n : in  std_logic                     := 'X'  -- reset_n
+		);
+	end component system;
+

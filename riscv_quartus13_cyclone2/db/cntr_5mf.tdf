@@ -54,8 +54,8 @@ VARIABLE
 			LUT_MASK = "5A90",
 			SUM_LUTC_INPUT = "cin"
 		);
-	counter_reg_bit4a[3..0] : cycloneii_lcell_ff;
-	cmpr5 : cmpr_8cc;
+	counter_reg_bit6a[3..0] : cycloneii_lcell_ff;
+	cmpr7 : cmpr_8cc;
 	aclr_actual	: WIRE;
 	cnt_en	: NODE;
 	compare_result	: WIRE;
@@ -74,20 +74,20 @@ VARIABLE
 
 BEGIN 
 	counter_comb_bita[3..0].cin = ( counter_comb_bita[2..0].cout, external_cin);
-	counter_comb_bita[3..0].dataa = ( counter_reg_bit4a[3..0].regout);
+	counter_comb_bita[3..0].dataa = ( counter_reg_bit6a[3..0].regout);
 	counter_comb_bita[3..0].datab = ( updown_dir, updown_dir, updown_dir, updown_dir);
 	counter_comb_bita[3..0].datad = ( B"1", B"1", B"1", B"1");
-	counter_reg_bit4a[].aclr = aclr_actual;
-	counter_reg_bit4a[].clk = clock;
-	counter_reg_bit4a[].datain = ( counter_comb_bita[3..0].combout);
-	counter_reg_bit4a[].ena = (clk_en & (((sclr # sset) # sload) # cnt_en));
-	counter_reg_bit4a[].sdata = ((! sclr) & ((sset & s_val[]) # ((! sset) & ((sload & data[]) # (((! sload) & modulus_bus[]) & (! updown_dir))))));
-	counter_reg_bit4a[].sload = (((sclr # sset) # sload) # modulus_trigger);
-	cmpr5.dataa[] = safe_q[];
-	cmpr5.datab[] = modulus_bus[];
+	counter_reg_bit6a[].aclr = aclr_actual;
+	counter_reg_bit6a[].clk = clock;
+	counter_reg_bit6a[].datain = ( counter_comb_bita[3..0].combout);
+	counter_reg_bit6a[].ena = (clk_en & (((sclr # sset) # sload) # cnt_en));
+	counter_reg_bit6a[].sdata = ((! sclr) & ((sset & s_val[]) # ((! sset) & ((sload & data[]) # (((! sload) & modulus_bus[]) & (! updown_dir))))));
+	counter_reg_bit6a[].sload = (((sclr # sset) # sload) # modulus_trigger);
+	cmpr7.dataa[] = safe_q[];
+	cmpr7.datab[] = modulus_bus[];
 	aclr_actual = B"0";
 	cnt_en = VCC;
-	compare_result = cmpr5.aeb;
+	compare_result = cmpr7.aeb;
 	cout_actual = (counter_comb_bita[3].cout # (time_to_clear & updown_dir));
 	data[] = GND;
 	external_cin = B"1";
@@ -95,7 +95,7 @@ BEGIN
 	modulus_trigger = cout_actual;
 	q[] = safe_q[];
 	s_val[] = B"1111";
-	safe_q[] = counter_reg_bit4a[].regout;
+	safe_q[] = counter_reg_bit6a[].regout;
 	sclr = GND;
 	sload = GND;
 	sset = GND;

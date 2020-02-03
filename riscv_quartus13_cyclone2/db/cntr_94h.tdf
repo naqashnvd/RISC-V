@@ -44,7 +44,7 @@ VARIABLE
 			LUT_MASK = "5A60",
 			SUM_LUTC_INPUT = "cin"
 		);
-	counter_reg_bit6a[1..0] : cycloneii_lcell_ff;
+	counter_reg_bit7a[1..0] : cycloneii_lcell_ff;
 	a_val[1..0]	: WIRE;
 	aclr_actual	: WIRE;
 	cout_actual	: WIRE;
@@ -60,22 +60,22 @@ VARIABLE
 
 BEGIN 
 	counter_comb_bita[1..0].cin = ( counter_comb_bita[0].cout, external_cin);
-	counter_comb_bita[1..0].dataa = ( counter_reg_bit6a[1..0].regout);
+	counter_comb_bita[1..0].dataa = ( counter_reg_bit7a[1..0].regout);
 	counter_comb_bita[1..0].datab = ( updown_dir, updown_dir);
 	counter_comb_bita[1..0].datad = ( B"1", B"1");
-	counter_reg_bit6a[].aclr = aclr_actual;
-	counter_reg_bit6a[].clk = clock;
-	counter_reg_bit6a[].datain = ( counter_comb_bita[1..0].combout);
-	counter_reg_bit6a[].ena = (clk_en & (((cnt_en # sclr) # sset) # sload));
-	counter_reg_bit6a[].sdata = (a_val[] $ ((! sclr) & ((sset & s_val[]) # ((! sset) & data[]))));
-	counter_reg_bit6a[].sload = ((sclr # sset) # sload);
+	counter_reg_bit7a[].aclr = aclr_actual;
+	counter_reg_bit7a[].clk = clock;
+	counter_reg_bit7a[].datain = ( counter_comb_bita[1..0].combout);
+	counter_reg_bit7a[].ena = (clk_en & (((cnt_en # sclr) # sset) # sload));
+	counter_reg_bit7a[].sdata = (a_val[] $ ((! sclr) & ((sset & s_val[]) # ((! sset) & data[]))));
+	counter_reg_bit7a[].sload = ((sclr # sset) # sload);
 	a_val[] = B"10";
 	aclr_actual = aset;
 	cout = cout_actual;
 	cout_actual = (counter_comb_bita[1].cout # (time_to_clear & updown_dir));
 	data[] = GND;
 	external_cin = B"1";
-	pre_hazard[] = counter_reg_bit6a[].regout;
+	pre_hazard[] = counter_reg_bit7a[].regout;
 	s_val[] = B"11";
 	sclr = GND;
 	sload = GND;

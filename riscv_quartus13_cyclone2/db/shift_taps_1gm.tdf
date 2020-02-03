@@ -26,7 +26,7 @@ RETURNS ( q[1..0]);
 FUNCTION cntr_74h (aset, clk_en, clock, cnt_en)
 RETURNS ( cout);
 
---synthesis_resources = lut 1 M4K 2 reg 4 
+--synthesis_resources = lut 3 M4K 2 reg 6 
 SUBDESIGN shift_taps_1gm
 ( 
 	aclr	:	input;
