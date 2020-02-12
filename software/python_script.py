@@ -2,6 +2,10 @@
 file1 = open ("temp_imem.txt",'r')
 imem_out = ""
 for line in file1:
+    if(line == "\n"):
+        continue
+    if(">:" in line):
+        continue
     imem_out += line[6]
     imem_out += line[7]
     imem_out += line[8]

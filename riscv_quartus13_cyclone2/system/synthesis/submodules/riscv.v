@@ -150,9 +150,9 @@ module riscv_core (
 
 	assign flush = clear&~branchTaken;
 
-	IRAM#(32,8) imem(
+	IRAM#(.width(32),.addrWidth(9)) imem(
 		.DOUT(I),
-		.ADDR(imemAddr[7:0]),
+		.ADDR(imemAddr[8:0]),
 		.DIN(32'b0),
 		.wren(1'b0),
 		.clock(clock)
@@ -303,9 +303,9 @@ module riscv_core (
 	//////////////////////////////////////////////////////////// data Ram//////////////////////////////////////////////////////////////////////////////////
 	wire [31:0]temp_dmemOut;
 	wire [31:0] memOut_MUX_result;
-	DRAM#(.width(32),.addrWidth(9)) dmem(
+	DRAM#(.width(32),.addrWidth(12)) dmem(
 		.DOUT(temp_dmemOut),
-		.ADDR(MEM_aluResult[8:0]),
+		.ADDR(MEM_aluResult[11:0]),
 		.DIN(MEM_dataB),
 		.wren(MEM_signals[6]),
 		.clock(clock),
@@ -357,7 +357,8 @@ module riscv_core (
 		.EX_Rs2(EX_Rs2),
 		.EX_frs3(EX_frs3),
 		.WB_Rd(WB_Rd),
-		.temp_fix(EX_signals[6] | EX_signals[17]), //temperoray fix for fsw
+	//	.temp_fix(EX_signals[6] | EX_signals[17]), //temperoray fix for fsw
+		.temp_fix(EX_signals[17]),
 		.ForwardA(forwardA),
 		.ForwardB(forwardB),
 		.ForwardC(forwardC)

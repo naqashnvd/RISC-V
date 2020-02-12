@@ -10,12 +10,6 @@
 # ** Warning: Copied C:\altera\13.0sp1\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini.
 #          Updated modelsim.ini.
 # 
-# vlog -vlog01compat -work work +incdir+C:/Users/naqas/Desktop/Github/RISC-V1/riscv_quartus13_cyclone2/system/synthesis {C:/Users/naqas/Desktop/Github/RISC-V1/riscv_quartus13_cyclone2/system/synthesis/system.v}
-# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
-# -- Compiling module system
-# 
-# Top level modules:
-# 	system
 # vlog -vlog01compat -work work +incdir+C:/Users/naqas/Desktop/Github/RISC-V1/riscv_quartus13_cyclone2/system/synthesis/submodules {C:/Users/naqas/Desktop/Github/RISC-V1/riscv_quartus13_cyclone2/system/synthesis/submodules/fpu_add_sub.v}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 # -- Compiling module fpu_add_sub_altbarrel_shift_h0e
@@ -98,25 +92,17 @@
 # 
 # Top level modules:
 # 	fpu_sqrt
-# vlog -vlog01compat -work work +incdir+C:/Users/naqas/Desktop/Github/RISC-V1/riscv_quartus13_cyclone2/system/synthesis {C:/Users/naqas/Desktop/Github/RISC-V1/riscv_quartus13_cyclone2/system/synthesis/system.v}
-# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
-# -- Compiling module system
-# 
-# Top level modules:
-# 	system
-# vlog -vlog01compat -work work +incdir+C:/Users/naqas/Desktop/Github/RISC-V1/riscv_quartus13_cyclone2 {C:/Users/naqas/Desktop/Github/RISC-V1/riscv_quartus13_cyclone2/top.v}
-# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
-# -- Compiling module top
-# -- Compiling module tb
-# 
-# Top level modules:
-# 	top
-# 	tb
 # vlib system
 # ** Warning: (vlib-34) Library already exists at "system".
 # 
 # vmap system system
 # Modifying modelsim.ini
+# vlog -vlog01compat -work system +incdir+C:/Users/naqas/Desktop/Github/RISC-V1/riscv_quartus13_cyclone2/system/synthesis {C:/Users/naqas/Desktop/Github/RISC-V1/riscv_quartus13_cyclone2/system/synthesis/system.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module system
+# 
+# Top level modules:
+# 	system
 # vlog -vlog01compat -work system +incdir+C:/Users/naqas/Desktop/Github/RISC-V1/riscv_quartus13_cyclone2/system/synthesis/submodules {C:/Users/naqas/Desktop/Github/RISC-V1/riscv_quartus13_cyclone2/system/synthesis/submodules/altera_reset_controller.v}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 # -- Compiling module altera_reset_controller
@@ -139,88 +125,6 @@
 # 
 # Top level modules:
 # 	system_jtag_uart_0
-# vlog -vlog01compat -work work +incdir+C:/Users/naqas/Desktop/Github/RISC-V1/riscv_quartus13_cyclone2/system/synthesis/submodules {C:/Users/naqas/Desktop/Github/RISC-V1/riscv_quartus13_cyclone2/system/synthesis/submodules/fpu_add_sub.v}
-# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
-# -- Compiling module fpu_add_sub_altbarrel_shift_h0e
-# -- Compiling module fpu_add_sub_altbarrel_shift_6hb
-# -- Compiling module fpu_add_sub_altpriority_encoder_3v7
-# -- Compiling module fpu_add_sub_altpriority_encoder_3e8
-# -- Compiling module fpu_add_sub_altpriority_encoder_6v7
-# -- Compiling module fpu_add_sub_altpriority_encoder_6e8
-# -- Compiling module fpu_add_sub_altpriority_encoder_bv7
-# -- Compiling module fpu_add_sub_altpriority_encoder_be8
-# -- Compiling module fpu_add_sub_altpriority_encoder_r08
-# -- Compiling module fpu_add_sub_altpriority_encoder_rf8
-# -- Compiling module fpu_add_sub_altpriority_encoder_qb6
-# -- Compiling module fpu_add_sub_altpriority_encoder_nh8
-# -- Compiling module fpu_add_sub_altpriority_encoder_qh8
-# -- Compiling module fpu_add_sub_altpriority_encoder_vh8
-# -- Compiling module fpu_add_sub_altpriority_encoder_fj8
-# -- Compiling module fpu_add_sub_altpriority_encoder_n28
-# -- Compiling module fpu_add_sub_altpriority_encoder_q28
-# -- Compiling module fpu_add_sub_altpriority_encoder_v28
-# -- Compiling module fpu_add_sub_altpriority_encoder_f48
-# -- Compiling module fpu_add_sub_altpriority_encoder_e48
-# -- Compiling module fpu_add_sub_altfp_add_sub_vtn
-# -- Compiling module fpu_add_sub
-# 
-# Top level modules:
-# 	fpu_add_sub
-# vlog -vlog01compat -work work +incdir+C:/Users/naqas/Desktop/Github/RISC-V1/riscv_quartus13_cyclone2/system/synthesis/submodules {C:/Users/naqas/Desktop/Github/RISC-V1/riscv_quartus13_cyclone2/system/synthesis/submodules/fpu_compare.v}
-# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
-# -- Compiling module fpu_compare_altfp_compare_0uc
-# -- Compiling module fpu_compare
-# 
-# Top level modules:
-# 	fpu_compare
-# vlog -vlog01compat -work work +incdir+C:/Users/naqas/Desktop/Github/RISC-V1/riscv_quartus13_cyclone2/system/synthesis/submodules {C:/Users/naqas/Desktop/Github/RISC-V1/riscv_quartus13_cyclone2/system/synthesis/submodules/fpu_convert.v}
-# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
-# -- Compiling module fpu_convert_altbarrel_shift_brf
-# -- Compiling module fpu_convert_altpriority_encoder_3e8
-# -- Compiling module fpu_convert_altpriority_encoder_6e8
-# -- Compiling module fpu_convert_altpriority_encoder_be8
-# -- Compiling module fpu_convert_altpriority_encoder_rf8
-# -- Compiling module fpu_convert_altpriority_encoder_3v7
-# -- Compiling module fpu_convert_altpriority_encoder_6v7
-# -- Compiling module fpu_convert_altpriority_encoder_bv7
-# -- Compiling module fpu_convert_altpriority_encoder_r08
-# -- Compiling module fpu_convert_altpriority_encoder_qb6
-# -- Compiling module fpu_convert_altfp_convert_hvn
-# -- Compiling module fpu_convert
-# 
-# Top level modules:
-# 	fpu_convert
-# vlog -vlog01compat -work work +incdir+C:/Users/naqas/Desktop/Github/RISC-V1/riscv_quartus13_cyclone2/system/synthesis/submodules {C:/Users/naqas/Desktop/Github/RISC-V1/riscv_quartus13_cyclone2/system/synthesis/submodules/fpu_convert_float_integer.v}
-# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
-# -- Compiling module fpu_convert_float_integer_altbarrel_shift_grf
-# -- Compiling module fpu_convert_float_integer_altfp_convert_o6q
-# -- Compiling module fpu_convert_float_integer
-# 
-# Top level modules:
-# 	fpu_convert_float_integer
-# vlog -vlog01compat -work work +incdir+C:/Users/naqas/Desktop/Github/RISC-V1/riscv_quartus13_cyclone2/system/synthesis/submodules {C:/Users/naqas/Desktop/Github/RISC-V1/riscv_quartus13_cyclone2/system/synthesis/submodules/fpu_div.v}
-# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
-# -- Compiling module fpu_div_altfp_div_pst_t2j
-# -- Compiling module fpu_div_altfp_div_bnm
-# -- Compiling module fpu_div
-# 
-# Top level modules:
-# 	fpu_div
-# vlog -vlog01compat -work work +incdir+C:/Users/naqas/Desktop/Github/RISC-V1/riscv_quartus13_cyclone2/system/synthesis/submodules {C:/Users/naqas/Desktop/Github/RISC-V1/riscv_quartus13_cyclone2/system/synthesis/submodules/fpu_mult.v}
-# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
-# -- Compiling module fpu_mult_altfp_mult_0gr
-# -- Compiling module fpu_mult
-# 
-# Top level modules:
-# 	fpu_mult
-# vlog -vlog01compat -work work +incdir+C:/Users/naqas/Desktop/Github/RISC-V1/riscv_quartus13_cyclone2/system/synthesis/submodules {C:/Users/naqas/Desktop/Github/RISC-V1/riscv_quartus13_cyclone2/system/synthesis/submodules/fpu_sqrt.v}
-# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
-# -- Compiling module fpu_sqrt_alt_sqrt_block_kfb
-# -- Compiling module fpu_sqrt_altfp_sqrt_sef
-# -- Compiling module fpu_sqrt
-# 
-# Top level modules:
-# 	fpu_sqrt
 # vlog -vlog01compat -work system +incdir+C:/Users/naqas/Desktop/Github/RISC-V1/riscv_quartus13_cyclone2/system/synthesis/submodules {C:/Users/naqas/Desktop/Github/RISC-V1/riscv_quartus13_cyclone2/system/synthesis/submodules/riscv.v}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 # -- Compiling module riscv_core
@@ -248,18 +152,6 @@
 # 
 # Top level modules:
 # 	controlUnit
-# vlog -vlog01compat -work system +incdir+C:/Users/naqas/Desktop/Github/RISC-V1/riscv_quartus13_cyclone2/system/synthesis/submodules {C:/Users/naqas/Desktop/Github/RISC-V1/riscv_quartus13_cyclone2/system/synthesis/submodules/DRAM.v}
-# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
-# -- Compiling module DRAM
-# ** Warning: C:/Users/naqas/Desktop/Github/RISC-V1/riscv_quartus13_cyclone2/system/synthesis/submodules/DRAM.v(20): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
-# 
-# ** Warning: C:/Users/naqas/Desktop/Github/RISC-V1/riscv_quartus13_cyclone2/system/synthesis/submodules/DRAM.v(21): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
-# 
-# ** Warning: C:/Users/naqas/Desktop/Github/RISC-V1/riscv_quartus13_cyclone2/system/synthesis/submodules/DRAM.v(22): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
-# 
-# 
-# Top level modules:
-# 	DRAM
 # vlog -vlog01compat -work system +incdir+C:/Users/naqas/Desktop/Github/RISC-V1/riscv_quartus13_cyclone2/system/synthesis/submodules {C:/Users/naqas/Desktop/Github/RISC-V1/riscv_quartus13_cyclone2/system/synthesis/submodules/forwadingUnit.v}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 # -- Compiling module forwardingUnit
@@ -290,12 +182,6 @@
 # 
 # Top level modules:
 # 	immGen
-# vlog -vlog01compat -work system +incdir+C:/Users/naqas/Desktop/Github/RISC-V1/riscv_quartus13_cyclone2/system/synthesis/submodules {C:/Users/naqas/Desktop/Github/RISC-V1/riscv_quartus13_cyclone2/system/synthesis/submodules/IRAM.v}
-# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
-# -- Compiling module IRAM
-# 
-# Top level modules:
-# 	IRAM
 # vlog -vlog01compat -work system +incdir+C:/Users/naqas/Desktop/Github/RISC-V1/riscv_quartus13_cyclone2/system/synthesis/submodules {C:/Users/naqas/Desktop/Github/RISC-V1/riscv_quartus13_cyclone2/system/synthesis/submodules/mux.v}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 # -- Compiling module WB_MUX
@@ -316,6 +202,114 @@
 # 	float_regFile
 # 	regFile
 # 	register
+# vlog -vlog01compat -work work +incdir+C:/Users/naqas/Desktop/Github/RISC-V1/riscv_quartus13_cyclone2/system/synthesis/submodules {C:/Users/naqas/Desktop/Github/RISC-V1/riscv_quartus13_cyclone2/system/synthesis/submodules/fpu_add_sub.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module fpu_add_sub_altbarrel_shift_h0e
+# -- Compiling module fpu_add_sub_altbarrel_shift_6hb
+# -- Compiling module fpu_add_sub_altpriority_encoder_3v7
+# -- Compiling module fpu_add_sub_altpriority_encoder_3e8
+# -- Compiling module fpu_add_sub_altpriority_encoder_6v7
+# -- Compiling module fpu_add_sub_altpriority_encoder_6e8
+# -- Compiling module fpu_add_sub_altpriority_encoder_bv7
+# -- Compiling module fpu_add_sub_altpriority_encoder_be8
+# -- Compiling module fpu_add_sub_altpriority_encoder_r08
+# -- Compiling module fpu_add_sub_altpriority_encoder_rf8
+# -- Compiling module fpu_add_sub_altpriority_encoder_qb6
+# -- Compiling module fpu_add_sub_altpriority_encoder_nh8
+# -- Compiling module fpu_add_sub_altpriority_encoder_qh8
+# -- Compiling module fpu_add_sub_altpriority_encoder_vh8
+# -- Compiling module fpu_add_sub_altpriority_encoder_fj8
+# -- Compiling module fpu_add_sub_altpriority_encoder_n28
+# -- Compiling module fpu_add_sub_altpriority_encoder_q28
+# -- Compiling module fpu_add_sub_altpriority_encoder_v28
+# -- Compiling module fpu_add_sub_altpriority_encoder_f48
+# -- Compiling module fpu_add_sub_altpriority_encoder_e48
+# -- Compiling module fpu_add_sub_altfp_add_sub_vtn
+# -- Compiling module fpu_add_sub
+# 
+# Top level modules:
+# 	fpu_add_sub
+# vlog -vlog01compat -work work +incdir+C:/Users/naqas/Desktop/Github/RISC-V1/riscv_quartus13_cyclone2/system/synthesis/submodules {C:/Users/naqas/Desktop/Github/RISC-V1/riscv_quartus13_cyclone2/system/synthesis/submodules/fpu_compare.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module fpu_compare_altfp_compare_0uc
+# -- Compiling module fpu_compare
+# 
+# Top level modules:
+# 	fpu_compare
+# vlog -vlog01compat -work work +incdir+C:/Users/naqas/Desktop/Github/RISC-V1/riscv_quartus13_cyclone2/system/synthesis/submodules {C:/Users/naqas/Desktop/Github/RISC-V1/riscv_quartus13_cyclone2/system/synthesis/submodules/fpu_convert.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module fpu_convert_altbarrel_shift_brf
+# -- Compiling module fpu_convert_altpriority_encoder_3e8
+# -- Compiling module fpu_convert_altpriority_encoder_6e8
+# -- Compiling module fpu_convert_altpriority_encoder_be8
+# -- Compiling module fpu_convert_altpriority_encoder_rf8
+# -- Compiling module fpu_convert_altpriority_encoder_3v7
+# -- Compiling module fpu_convert_altpriority_encoder_6v7
+# -- Compiling module fpu_convert_altpriority_encoder_bv7
+# -- Compiling module fpu_convert_altpriority_encoder_r08
+# -- Compiling module fpu_convert_altpriority_encoder_qb6
+# -- Compiling module fpu_convert_altfp_convert_hvn
+# -- Compiling module fpu_convert
+# 
+# Top level modules:
+# 	fpu_convert
+# vlog -vlog01compat -work work +incdir+C:/Users/naqas/Desktop/Github/RISC-V1/riscv_quartus13_cyclone2/system/synthesis/submodules {C:/Users/naqas/Desktop/Github/RISC-V1/riscv_quartus13_cyclone2/system/synthesis/submodules/fpu_convert_float_integer.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module fpu_convert_float_integer_altbarrel_shift_grf
+# -- Compiling module fpu_convert_float_integer_altfp_convert_o6q
+# -- Compiling module fpu_convert_float_integer
+# 
+# Top level modules:
+# 	fpu_convert_float_integer
+# vlog -vlog01compat -work work +incdir+C:/Users/naqas/Desktop/Github/RISC-V1/riscv_quartus13_cyclone2/system/synthesis/submodules {C:/Users/naqas/Desktop/Github/RISC-V1/riscv_quartus13_cyclone2/system/synthesis/submodules/fpu_div.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module fpu_div_altfp_div_pst_t2j
+# -- Compiling module fpu_div_altfp_div_bnm
+# -- Compiling module fpu_div
+# 
+# Top level modules:
+# 	fpu_div
+# vlog -vlog01compat -work work +incdir+C:/Users/naqas/Desktop/Github/RISC-V1/riscv_quartus13_cyclone2/system/synthesis/submodules {C:/Users/naqas/Desktop/Github/RISC-V1/riscv_quartus13_cyclone2/system/synthesis/submodules/fpu_mult.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module fpu_mult_altfp_mult_0gr
+# -- Compiling module fpu_mult
+# 
+# Top level modules:
+# 	fpu_mult
+# vlog -vlog01compat -work work +incdir+C:/Users/naqas/Desktop/Github/RISC-V1/riscv_quartus13_cyclone2/system/synthesis/submodules {C:/Users/naqas/Desktop/Github/RISC-V1/riscv_quartus13_cyclone2/system/synthesis/submodules/fpu_sqrt.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module fpu_sqrt_alt_sqrt_block_kfb
+# -- Compiling module fpu_sqrt_altfp_sqrt_sef
+# -- Compiling module fpu_sqrt
+# 
+# Top level modules:
+# 	fpu_sqrt
+# vlog -vlog01compat -work system +incdir+C:/Users/naqas/Desktop/Github/RISC-V1/riscv_quartus13_cyclone2/system/synthesis/submodules {C:/Users/naqas/Desktop/Github/RISC-V1/riscv_quartus13_cyclone2/system/synthesis/submodules/DRAM.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module DRAM
+# ** Warning: C:/Users/naqas/Desktop/Github/RISC-V1/riscv_quartus13_cyclone2/system/synthesis/submodules/DRAM.v(20): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
+# 
+# ** Warning: C:/Users/naqas/Desktop/Github/RISC-V1/riscv_quartus13_cyclone2/system/synthesis/submodules/DRAM.v(21): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
+# 
+# ** Warning: C:/Users/naqas/Desktop/Github/RISC-V1/riscv_quartus13_cyclone2/system/synthesis/submodules/DRAM.v(22): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
+# 
+# 
+# Top level modules:
+# 	DRAM
+# vlog -vlog01compat -work system +incdir+C:/Users/naqas/Desktop/Github/RISC-V1/riscv_quartus13_cyclone2/system/synthesis/submodules {C:/Users/naqas/Desktop/Github/RISC-V1/riscv_quartus13_cyclone2/system/synthesis/submodules/IRAM.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module IRAM
+# 
+# Top level modules:
+# 	IRAM
+# vlog -vlog01compat -work work +incdir+C:/Users/naqas/Desktop/Github/RISC-V1/riscv_quartus13_cyclone2 {C:/Users/naqas/Desktop/Github/RISC-V1/riscv_quartus13_cyclone2/top.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module top
+# -- Compiling module tb
+# 
+# Top level modules:
+# 	top
+# 	tb
 # vlog -sv -work system +incdir+C:/Users/naqas/Desktop/Github/RISC-V1/riscv_quartus13_cyclone2/system/synthesis/submodules {C:/Users/naqas/Desktop/Github/RISC-V1/riscv_quartus13_cyclone2/system/synthesis/submodules/altera_merlin_slave_translator.sv}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 # -- Compiling module altera_merlin_slave_translator
@@ -341,7 +335,7 @@
 # vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneii_ver -L rtl_work -L work -L system -voptargs="+acc"  tb
 # vsim -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneii_ver -L rtl_work -L work -L system -voptargs=\"+acc\" -t 1ps tb 
 # Loading work.tb
-# Loading work.system
+# Loading system.system
 # Loading system.riscv_core
 # Loading system.register
 # Loading system.pcIn_MUX
@@ -438,30 +432,2640 @@
 # the ModelSim Altera version. Expect performance to be adversely affected.
 # 
 # add wave *
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+# 
+#           File in use by: naqas  Hostname: NIKU  ProcessID: 79728
+# 
+#           Attempting to use alternate WLF file "./wlft6rsq7a".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+# 
+#           Using alternate file: ./wlft6rsq7a
+# 
 # view structure
 # .main_pane.structure.interior.cs.body.struct
 # view signals
 # .main_pane.objects.interior.cs.body.tree
 # run -all
-# xxxxxxxx
-# 00000048
-# H                   0: tb.u0.riscv_core_0_avalon_master_translator: Error: Input controls/data changed while av_waitrequest is asserted.
-# av_address      00000108 --> ffffffec
+# 00000000
+# 000000cc
+# Ì                7000: tb.u0.riscv_core_0_avalon_master_translator: Error: Input controls/data changed while av_waitrequest is asserted.
+# av_address      00000108 --> ffffff0c
 # av_byteenable   f --> f
 # av_burstcount   1 --> 1
-# av_writedata    00000000 --> 00000048
+# av_writedata    ffffff20 --> 000000cc
 # av_writeresponserequest 0 --> 0
 # av_write        1 --> 0
 # av_read         0 --> 0
 # av_lock         0 --> 0
 # av_chipselect   0 --> 0
 # av_debugaccess  0 --> 0 
-# 00000045
-# E                   0: tb.u0.riscv_core_0_avalon_master_translator: Error: Input controls/data changed while av_waitrequest is asserted.
-# av_address      00000108 --> ffffffec
+# 000000xx
+#                 7000: tb.u0.riscv_core_0_avalon_master_translator: Error: Input controls/data changed while av_waitrequest is asserted.
+# av_address      00000108 --> ffffff0c
 # av_byteenable   f --> f
 # av_burstcount   1 --> 1
-# av_writedata    00000048 --> 00000045
+# av_writedata    000000cc --> 000000xx
+# av_writeresponserequest 0 --> 0
+# av_write        1 --> 0
+# av_read         0 --> 0
+# av_lock         0 --> 0
+# av_chipselect   0 --> 0
+# av_debugaccess  0 --> 0 
+#                 7000: tb.u0.riscv_core_0_avalon_master_translator: Error: Input controls/data changed while av_waitrequest is asserted.
+# av_address      00000108 --> ffffff0c
+# av_byteenable   f --> f
+# av_burstcount   1 --> 1
+# av_writedata    000000xx --> 000000xx
+# av_writeresponserequest 0 --> 0
+# av_write        1 --> 0
+# av_read         0 --> 0
+# av_lock         0 --> 0
+# av_chipselect   0 --> 0
+# av_debugaccess  0 --> 0 
+#                 7000: tb.u0.riscv_core_0_avalon_master_translator: Error: Input controls/data changed while av_waitrequest is asserted.
+# av_address      00000108 --> 00000000
+# av_byteenable   f --> f
+# av_burstcount   1 --> 1
+# av_writedata    000000xx --> 000000xx
+# av_writeresponserequest 0 --> 0
+# av_write        1 --> 0
+# av_read         0 --> 0
+# av_lock         0 --> 0
+# av_chipselect   0 --> 0
+# av_debugaccess  0 --> 0 
+# 0000004f
+# O                7000: tb.u0.riscv_core_0_avalon_master_translator: Error: Input controls/data changed while av_waitrequest is asserted.
+# av_address      00000108 --> ffffff0c
+# av_byteenable   f --> f
+# av_burstcount   1 --> 1
+# av_writedata    ffffff20 --> 0000004f
+# av_writeresponserequest 0 --> 0
+# av_write        1 --> 0
+# av_read         0 --> 0
+# av_lock         0 --> 0
+# av_chipselect   0 --> 0
+# av_debugaccess  0 --> 0 
+# 000000xx
+#                 7000: tb.u0.riscv_core_0_avalon_master_translator: Error: Input controls/data changed while av_waitrequest is asserted.
+# av_address      00000108 --> ffffff0c
+# av_byteenable   f --> f
+# av_burstcount   1 --> 1
+# av_writedata    0000004f --> 000000xx
+# av_writeresponserequest 0 --> 0
+# av_write        1 --> 0
+# av_read         0 --> 0
+# av_lock         0 --> 0
+# av_chipselect   0 --> 0
+# av_debugaccess  0 --> 0 
+#                 7000: tb.u0.riscv_core_0_avalon_master_translator: Error: Input controls/data changed while av_waitrequest is asserted.
+# av_address      00000108 --> ffffff0c
+# av_byteenable   f --> f
+# av_burstcount   1 --> 1
+# av_writedata    000000xx --> 000000xx
+# av_writeresponserequest 0 --> 0
+# av_write        1 --> 0
+# av_read         0 --> 0
+# av_lock         0 --> 0
+# av_chipselect   0 --> 0
+# av_debugaccess  0 --> 0 
+#                 7000: tb.u0.riscv_core_0_avalon_master_translator: Error: Input controls/data changed while av_waitrequest is asserted.
+# av_address      00000108 --> 00000000
+# av_byteenable   f --> f
+# av_burstcount   1 --> 1
+# av_writedata    000000xx --> 000000xx
+# av_writeresponserequest 0 --> 0
+# av_write        1 --> 0
+# av_read         0 --> 0
+# av_lock         0 --> 0
+# av_chipselect   0 --> 0
+# av_debugaccess  0 --> 0 
+# 00000042
+# B                7000: tb.u0.riscv_core_0_avalon_master_translator: Error: Input controls/data changed while av_waitrequest is asserted.
+# av_address      00000108 --> ffffff0c
+# av_byteenable   f --> f
+# av_burstcount   1 --> 1
+# av_writedata    ffffff20 --> 00000042
+# av_writeresponserequest 0 --> 0
+# av_write        1 --> 0
+# av_read         0 --> 0
+# av_lock         0 --> 0
+# av_chipselect   0 --> 0
+# av_debugaccess  0 --> 0 
+# 000000xx
+#                 7000: tb.u0.riscv_core_0_avalon_master_translator: Error: Input controls/data changed while av_waitrequest is asserted.
+# av_address      00000108 --> ffffff0c
+# av_byteenable   f --> f
+# av_burstcount   1 --> 1
+# av_writedata    00000042 --> 000000xx
+# av_writeresponserequest 0 --> 0
+# av_write        1 --> 0
+# av_read         0 --> 0
+# av_lock         0 --> 0
+# av_chipselect   0 --> 0
+# av_debugaccess  0 --> 0 
+#                 7000: tb.u0.riscv_core_0_avalon_master_translator: Error: Input controls/data changed while av_waitrequest is asserted.
+# av_address      00000108 --> ffffff0c
+# av_byteenable   f --> f
+# av_burstcount   1 --> 1
+# av_writedata    000000xx --> 000000xx
+# av_writeresponserequest 0 --> 0
+# av_write        1 --> 0
+# av_read         0 --> 0
+# av_lock         0 --> 0
+# av_chipselect   0 --> 0
+# av_debugaccess  0 --> 0 
+#                 7000: tb.u0.riscv_core_0_avalon_master_translator: Error: Input controls/data changed while av_waitrequest is asserted.
+# av_address      00000108 --> 00000000
+# av_byteenable   f --> f
+# av_burstcount   1 --> 1
+# av_writedata    000000xx --> 000000xx
+# av_writeresponserequest 0 --> 0
+# av_write        1 --> 0
+# av_read         0 --> 0
+# av_lock         0 --> 0
+# av_chipselect   0 --> 0
+# av_debugaccess  0 --> 0 
+# 000000e0
+# à                7000: tb.u0.riscv_core_0_avalon_master_translator: Error: Input controls/data changed while av_waitrequest is asserted.
+# av_address      00000108 --> ffffff0c
+# av_byteenable   f --> f
+# av_burstcount   1 --> 1
+# av_writedata    ffffff20 --> 000000e0
+# av_writeresponserequest 0 --> 0
+# av_write        1 --> 0
+# av_read         0 --> 0
+# av_lock         0 --> 0
+# av_chipselect   0 --> 0
+# av_debugaccess  0 --> 0 
+# 000000xx
+#                 7000: tb.u0.riscv_core_0_avalon_master_translator: Error: Input controls/data changed while av_waitrequest is asserted.
+# av_address      00000108 --> ffffff0c
+# av_byteenable   f --> f
+# av_burstcount   1 --> 1
+# av_writedata    000000e0 --> 000000xx
+# av_writeresponserequest 0 --> 0
+# av_write        1 --> 0
+# av_read         0 --> 0
+# av_lock         0 --> 0
+# av_chipselect   0 --> 0
+# av_debugaccess  0 --> 0 
+#                 7000: tb.u0.riscv_core_0_avalon_master_translator: Error: Input controls/data changed while av_waitrequest is asserted.
+# av_address      00000108 --> ffffff0c
+# av_byteenable   f --> f
+# av_burstcount   1 --> 1
+# av_writedata    000000xx --> 000000xx
+# av_writeresponserequest 0 --> 0
+# av_write        1 --> 0
+# av_read         0 --> 0
+# av_lock         0 --> 0
+# av_chipselect   0 --> 0
+# av_debugaccess  0 --> 0 
+#                 7000: tb.u0.riscv_core_0_avalon_master_translator: Error: Input controls/data changed while av_waitrequest is asserted.
+# av_address      00000108 --> 00000000
+# av_byteenable   f --> f
+# av_burstcount   1 --> 1
+# av_writedata    000000xx --> 000000xx
+# av_writeresponserequest 0 --> 0
+# av_write        1 --> 0
+# av_read         0 --> 0
+# av_lock         0 --> 0
+# av_chipselect   0 --> 0
+# av_debugaccess  0 --> 0 
+# 0000008e
+# Ž                7000: tb.u0.riscv_core_0_avalon_master_translator: Error: Input controls/data changed while av_waitrequest is asserted.
+# av_address      00000108 --> ffffff0c
+# av_byteenable   f --> f
+# av_burstcount   1 --> 1
+# av_writedata    ffffff20 --> 0000008e
+# av_writeresponserequest 0 --> 0
+# av_write        1 --> 0
+# av_read         0 --> 0
+# av_lock         0 --> 0
+# av_chipselect   0 --> 0
+# av_debugaccess  0 --> 0 
+# 000000xx
+#                 7000: tb.u0.riscv_core_0_avalon_master_translator: Error: Input controls/data changed while av_waitrequest is asserted.
+# av_address      00000108 --> ffffff0c
+# av_byteenable   f --> f
+# av_burstcount   1 --> 1
+# av_writedata    0000008e --> 000000xx
+# av_writeresponserequest 0 --> 0
+# av_write        1 --> 0
+# av_read         0 --> 0
+# av_lock         0 --> 0
+# av_chipselect   0 --> 0
+# av_debugaccess  0 --> 0 
+#                 7000: tb.u0.riscv_core_0_avalon_master_translator: Error: Input controls/data changed while av_waitrequest is asserted.
+# av_address      00000108 --> ffffff0c
+# av_byteenable   f --> f
+# av_burstcount   1 --> 1
+# av_writedata    000000xx --> 000000xx
+# av_writeresponserequest 0 --> 0
+# av_write        1 --> 0
+# av_read         0 --> 0
+# av_lock         0 --> 0
+# av_chipselect   0 --> 0
+# av_debugaccess  0 --> 0 
+#                 7000: tb.u0.riscv_core_0_avalon_master_translator: Error: Input controls/data changed while av_waitrequest is asserted.
+# av_address      00000108 --> 00000000
+# av_byteenable   f --> f
+# av_burstcount   1 --> 1
+# av_writedata    000000xx --> 000000xx
+# av_writeresponserequest 0 --> 0
+# av_write        1 --> 0
+# av_read         0 --> 0
+# av_lock         0 --> 0
+# av_chipselect   0 --> 0
+# av_debugaccess  0 --> 0 
+# 000000c6
+# Æ                7000: tb.u0.riscv_core_0_avalon_master_translator: Error: Input controls/data changed while av_waitrequest is asserted.
+# av_address      00000108 --> ffffff0c
+# av_byteenable   f --> f
+# av_burstcount   1 --> 1
+# av_writedata    ffffff20 --> 000000c6
+# av_writeresponserequest 0 --> 0
+# av_write        1 --> 0
+# av_read         0 --> 0
+# av_lock         0 --> 0
+# av_chipselect   0 --> 0
+# av_debugaccess  0 --> 0 
+# 000000xx
+#                 7000: tb.u0.riscv_core_0_avalon_master_translator: Error: Input controls/data changed while av_waitrequest is asserted.
+# av_address      00000108 --> ffffff0c
+# av_byteenable   f --> f
+# av_burstcount   1 --> 1
+# av_writedata    000000c6 --> 000000xx
+# av_writeresponserequest 0 --> 0
+# av_write        1 --> 0
+# av_read         0 --> 0
+# av_lock         0 --> 0
+# av_chipselect   0 --> 0
+# av_debugaccess  0 --> 0 
+#                 7000: tb.u0.riscv_core_0_avalon_master_translator: Error: Input controls/data changed while av_waitrequest is asserted.
+# av_address      00000108 --> ffffff0c
+# av_byteenable   f --> f
+# av_burstcount   1 --> 1
+# av_writedata    000000xx --> 000000xx
+# av_writeresponserequest 0 --> 0
+# av_write        1 --> 0
+# av_read         0 --> 0
+# av_lock         0 --> 0
+# av_chipselect   0 --> 0
+# av_debugaccess  0 --> 0 
+#                 7000: tb.u0.riscv_core_0_avalon_master_translator: Error: Input controls/data changed while av_waitrequest is asserted.
+# av_address      00000108 --> 00000000
+# av_byteenable   f --> f
+# av_burstcount   1 --> 1
+# av_writedata    000000xx --> 000000xx
+# av_writeresponserequest 0 --> 0
+# av_write        1 --> 0
+# av_read         0 --> 0
+# av_lock         0 --> 0
+# av_chipselect   0 --> 0
+# av_debugaccess  0 --> 0 
+# 000000da
+# Ú                7000: tb.u0.riscv_core_0_avalon_master_translator: Error: Input controls/data changed while av_waitrequest is asserted.
+# av_address      00000108 --> ffffff0c
+# av_byteenable   f --> f
+# av_burstcount   1 --> 1
+# av_writedata    ffffff20 --> 000000da
+# av_writeresponserequest 0 --> 0
+# av_write        1 --> 0
+# av_read         0 --> 0
+# av_lock         0 --> 0
+# av_chipselect   0 --> 0
+# av_debugaccess  0 --> 0 
+# 000000xx
+#                 7000: tb.u0.riscv_core_0_avalon_master_translator: Error: Input controls/data changed while av_waitrequest is asserted.
+# av_address      00000108 --> ffffff0c
+# av_byteenable   f --> f
+# av_burstcount   1 --> 1
+# av_writedata    000000da --> 000000xx
+# av_writeresponserequest 0 --> 0
+# av_write        1 --> 0
+# av_read         0 --> 0
+# av_lock         0 --> 0
+# av_chipselect   0 --> 0
+# av_debugaccess  0 --> 0 
+#                 7000: tb.u0.riscv_core_0_avalon_master_translator: Error: Input controls/data changed while av_waitrequest is asserted.
+# av_address      00000108 --> ffffff0c
+# av_byteenable   f --> f
+# av_burstcount   1 --> 1
+# av_writedata    000000xx --> 000000xx
+# av_writeresponserequest 0 --> 0
+# av_write        1 --> 0
+# av_read         0 --> 0
+# av_lock         0 --> 0
+# av_chipselect   0 --> 0
+# av_debugaccess  0 --> 0 
+#                 7000: tb.u0.riscv_core_0_avalon_master_translator: Error: Input controls/data changed while av_waitrequest is asserted.
+# av_address      00000108 --> 00000000
+# av_byteenable   f --> f
+# av_burstcount   1 --> 1
+# av_writedata    000000xx --> 000000xx
+# av_writeresponserequest 0 --> 0
+# av_write        1 --> 0
+# av_read         0 --> 0
+# av_lock         0 --> 0
+# av_chipselect   0 --> 0
+# av_debugaccess  0 --> 0 
+# 00000017
+#                 8000: tb.u0.riscv_core_0_avalon_master_translator: Error: Input controls/data changed while av_waitrequest is asserted.
+# av_address      00000108 --> ffffff0c
+# av_byteenable   f --> f
+# av_burstcount   1 --> 1
+# av_writedata    ffffff20 --> 00000017
+# av_writeresponserequest 0 --> 0
+# av_write        1 --> 0
+# av_read         0 --> 0
+# av_lock         0 --> 0
+# av_chipselect   0 --> 0
+# av_debugaccess  0 --> 0 
+# 000000xx
+#                 8000: tb.u0.riscv_core_0_avalon_master_translator: Error: Input controls/data changed while av_waitrequest is asserted.
+# av_address      00000108 --> ffffff0c
+# av_byteenable   f --> f
+# av_burstcount   1 --> 1
+# av_writedata    00000017 --> 000000xx
+# av_writeresponserequest 0 --> 0
+# av_write        1 --> 0
+# av_read         0 --> 0
+# av_lock         0 --> 0
+# av_chipselect   0 --> 0
+# av_debugaccess  0 --> 0 
+#                 8000: tb.u0.riscv_core_0_avalon_master_translator: Error: Input controls/data changed while av_waitrequest is asserted.
+# av_address      00000108 --> ffffff0c
+# av_byteenable   f --> f
+# av_burstcount   1 --> 1
+# av_writedata    000000xx --> 000000xx
+# av_writeresponserequest 0 --> 0
+# av_write        1 --> 0
+# av_read         0 --> 0
+# av_lock         0 --> 0
+# av_chipselect   0 --> 0
+# av_debugaccess  0 --> 0 
+#                 8000: tb.u0.riscv_core_0_avalon_master_translator: Error: Input controls/data changed while av_waitrequest is asserted.
+# av_address      00000108 --> 00000000
+# av_byteenable   f --> f
+# av_burstcount   1 --> 1
+# av_writedata    000000xx --> 000000xx
+# av_writeresponserequest 0 --> 0
+# av_write        1 --> 0
+# av_read         0 --> 0
+# av_lock         0 --> 0
+# av_chipselect   0 --> 0
+# av_debugaccess  0 --> 0 
+# 000000c3
+# Ã                8000: tb.u0.riscv_core_0_avalon_master_translator: Error: Input controls/data changed while av_waitrequest is asserted.
+# av_address      00000108 --> ffffff0c
+# av_byteenable   f --> f
+# av_burstcount   1 --> 1
+# av_writedata    ffffff20 --> 000000c3
+# av_writeresponserequest 0 --> 0
+# av_write        1 --> 0
+# av_read         0 --> 0
+# av_lock         0 --> 0
+# av_chipselect   0 --> 0
+# av_debugaccess  0 --> 0 
+# 000000xx
+#                 8000: tb.u0.riscv_core_0_avalon_master_translator: Error: Input controls/data changed while av_waitrequest is asserted.
+# av_address      00000108 --> ffffff0c
+# av_byteenable   f --> f
+# av_burstcount   1 --> 1
+# av_writedata    000000c3 --> 000000xx
+# av_writeresponserequest 0 --> 0
+# av_write        1 --> 0
+# av_read         0 --> 0
+# av_lock         0 --> 0
+# av_chipselect   0 --> 0
+# av_debugaccess  0 --> 0 
+#                 8000: tb.u0.riscv_core_0_avalon_master_translator: Error: Input controls/data changed while av_waitrequest is asserted.
+# av_address      00000108 --> ffffff0c
+# av_byteenable   f --> f
+# av_burstcount   1 --> 1
+# av_writedata    000000xx --> 000000xx
+# av_writeresponserequest 0 --> 0
+# av_write        1 --> 0
+# av_read         0 --> 0
+# av_lock         0 --> 0
+# av_chipselect   0 --> 0
+# av_debugaccess  0 --> 0 
+#                 8000: tb.u0.riscv_core_0_avalon_master_translator: Error: Input controls/data changed while av_waitrequest is asserted.
+# av_address      00000108 --> 00000000
+# av_byteenable   f --> f
+# av_burstcount   1 --> 1
+# av_writedata    000000xx --> 000000xx
+# av_writeresponserequest 0 --> 0
+# av_write        1 --> 0
+# av_read         0 --> 0
+# av_lock         0 --> 0
+# av_chipselect   0 --> 0
+# av_debugaccess  0 --> 0 
+# 00000004
+#                 8000: tb.u0.riscv_core_0_avalon_master_translator: Error: Input controls/data changed while av_waitrequest is asserted.
+# av_address      00000108 --> 00000000
+# av_byteenable   f --> f
+# av_burstcount   1 --> 1
+# av_writedata    00000000 --> 00000004
+# av_writeresponserequest 0 --> 0
+# av_write        1 --> 0
+# av_read         0 --> 0
+# av_lock         0 --> 0
+# av_chipselect   0 --> 0
+# av_debugaccess  0 --> 0 
+do top_run_msim_rtl_verilog.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Modifying modelsim.ini
+# 
+# vlog -vlog01compat -work work +incdir+C:/Users/naqas/Desktop/Github/RISC-V1/riscv_quartus13_cyclone2/system/synthesis/submodules {C:/Users/naqas/Desktop/Github/RISC-V1/riscv_quartus13_cyclone2/system/synthesis/submodules/fpu_add_sub.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module fpu_add_sub_altbarrel_shift_h0e
+# -- Compiling module fpu_add_sub_altbarrel_shift_6hb
+# -- Compiling module fpu_add_sub_altpriority_encoder_3v7
+# -- Compiling module fpu_add_sub_altpriority_encoder_3e8
+# -- Compiling module fpu_add_sub_altpriority_encoder_6v7
+# -- Compiling module fpu_add_sub_altpriority_encoder_6e8
+# -- Compiling module fpu_add_sub_altpriority_encoder_bv7
+# -- Compiling module fpu_add_sub_altpriority_encoder_be8
+# -- Compiling module fpu_add_sub_altpriority_encoder_r08
+# -- Compiling module fpu_add_sub_altpriority_encoder_rf8
+# -- Compiling module fpu_add_sub_altpriority_encoder_qb6
+# -- Compiling module fpu_add_sub_altpriority_encoder_nh8
+# -- Compiling module fpu_add_sub_altpriority_encoder_qh8
+# -- Compiling module fpu_add_sub_altpriority_encoder_vh8
+# -- Compiling module fpu_add_sub_altpriority_encoder_fj8
+# -- Compiling module fpu_add_sub_altpriority_encoder_n28
+# -- Compiling module fpu_add_sub_altpriority_encoder_q28
+# -- Compiling module fpu_add_sub_altpriority_encoder_v28
+# -- Compiling module fpu_add_sub_altpriority_encoder_f48
+# -- Compiling module fpu_add_sub_altpriority_encoder_e48
+# -- Compiling module fpu_add_sub_altfp_add_sub_vtn
+# -- Compiling module fpu_add_sub
+# 
+# Top level modules:
+# 	fpu_add_sub
+# vlog -vlog01compat -work work +incdir+C:/Users/naqas/Desktop/Github/RISC-V1/riscv_quartus13_cyclone2/system/synthesis/submodules {C:/Users/naqas/Desktop/Github/RISC-V1/riscv_quartus13_cyclone2/system/synthesis/submodules/fpu_compare.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module fpu_compare_altfp_compare_0uc
+# -- Compiling module fpu_compare
+# 
+# Top level modules:
+# 	fpu_compare
+# vlog -vlog01compat -work work +incdir+C:/Users/naqas/Desktop/Github/RISC-V1/riscv_quartus13_cyclone2/system/synthesis/submodules {C:/Users/naqas/Desktop/Github/RISC-V1/riscv_quartus13_cyclone2/system/synthesis/submodules/fpu_convert.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module fpu_convert_altbarrel_shift_brf
+# -- Compiling module fpu_convert_altpriority_encoder_3e8
+# -- Compiling module fpu_convert_altpriority_encoder_6e8
+# -- Compiling module fpu_convert_altpriority_encoder_be8
+# -- Compiling module fpu_convert_altpriority_encoder_rf8
+# -- Compiling module fpu_convert_altpriority_encoder_3v7
+# -- Compiling module fpu_convert_altpriority_encoder_6v7
+# -- Compiling module fpu_convert_altpriority_encoder_bv7
+# -- Compiling module fpu_convert_altpriority_encoder_r08
+# -- Compiling module fpu_convert_altpriority_encoder_qb6
+# -- Compiling module fpu_convert_altfp_convert_hvn
+# -- Compiling module fpu_convert
+# 
+# Top level modules:
+# 	fpu_convert
+# vlog -vlog01compat -work work +incdir+C:/Users/naqas/Desktop/Github/RISC-V1/riscv_quartus13_cyclone2/system/synthesis/submodules {C:/Users/naqas/Desktop/Github/RISC-V1/riscv_quartus13_cyclone2/system/synthesis/submodules/fpu_convert_float_integer.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module fpu_convert_float_integer_altbarrel_shift_grf
+# -- Compiling module fpu_convert_float_integer_altfp_convert_o6q
+# -- Compiling module fpu_convert_float_integer
+# 
+# Top level modules:
+# 	fpu_convert_float_integer
+# vlog -vlog01compat -work work +incdir+C:/Users/naqas/Desktop/Github/RISC-V1/riscv_quartus13_cyclone2/system/synthesis/submodules {C:/Users/naqas/Desktop/Github/RISC-V1/riscv_quartus13_cyclone2/system/synthesis/submodules/fpu_div.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module fpu_div_altfp_div_pst_t2j
+# -- Compiling module fpu_div_altfp_div_bnm
+# -- Compiling module fpu_div
+# 
+# Top level modules:
+# 	fpu_div
+# vlog -vlog01compat -work work +incdir+C:/Users/naqas/Desktop/Github/RISC-V1/riscv_quartus13_cyclone2/system/synthesis/submodules {C:/Users/naqas/Desktop/Github/RISC-V1/riscv_quartus13_cyclone2/system/synthesis/submodules/fpu_mult.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module fpu_mult_altfp_mult_0gr
+# -- Compiling module fpu_mult
+# 
+# Top level modules:
+# 	fpu_mult
+# vlog -vlog01compat -work work +incdir+C:/Users/naqas/Desktop/Github/RISC-V1/riscv_quartus13_cyclone2/system/synthesis/submodules {C:/Users/naqas/Desktop/Github/RISC-V1/riscv_quartus13_cyclone2/system/synthesis/submodules/fpu_sqrt.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module fpu_sqrt_alt_sqrt_block_kfb
+# -- Compiling module fpu_sqrt_altfp_sqrt_sef
+# -- Compiling module fpu_sqrt
+# 
+# Top level modules:
+# 	fpu_sqrt
+# vlib system
+# ** Warning: (vlib-34) Library already exists at "system".
+# 
+# vmap system system
+# Modifying modelsim.ini
+# vlog -vlog01compat -work system +incdir+C:/Users/naqas/Desktop/Github/RISC-V1/riscv_quartus13_cyclone2/system/synthesis {C:/Users/naqas/Desktop/Github/RISC-V1/riscv_quartus13_cyclone2/system/synthesis/system.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module system
+# 
+# Top level modules:
+# 	system
+# vlog -vlog01compat -work system +incdir+C:/Users/naqas/Desktop/Github/RISC-V1/riscv_quartus13_cyclone2/system/synthesis/submodules {C:/Users/naqas/Desktop/Github/RISC-V1/riscv_quartus13_cyclone2/system/synthesis/submodules/altera_reset_controller.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module altera_reset_controller
+# 
+# Top level modules:
+# 	altera_reset_controller
+# vlog -vlog01compat -work system +incdir+C:/Users/naqas/Desktop/Github/RISC-V1/riscv_quartus13_cyclone2/system/synthesis/submodules {C:/Users/naqas/Desktop/Github/RISC-V1/riscv_quartus13_cyclone2/system/synthesis/submodules/altera_reset_synchronizer.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module altera_reset_synchronizer
+# 
+# Top level modules:
+# 	altera_reset_synchronizer
+# vlog -vlog01compat -work system +incdir+C:/Users/naqas/Desktop/Github/RISC-V1/riscv_quartus13_cyclone2/system/synthesis/submodules {C:/Users/naqas/Desktop/Github/RISC-V1/riscv_quartus13_cyclone2/system/synthesis/submodules/system_jtag_uart_0.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module system_jtag_uart_0_sim_scfifo_w
+# -- Compiling module system_jtag_uart_0_scfifo_w
+# -- Compiling module system_jtag_uart_0_sim_scfifo_r
+# -- Compiling module system_jtag_uart_0_scfifo_r
+# -- Compiling module system_jtag_uart_0
+# 
+# Top level modules:
+# 	system_jtag_uart_0
+# vlog -vlog01compat -work system +incdir+C:/Users/naqas/Desktop/Github/RISC-V1/riscv_quartus13_cyclone2/system/synthesis/submodules {C:/Users/naqas/Desktop/Github/RISC-V1/riscv_quartus13_cyclone2/system/synthesis/submodules/riscv.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module riscv_core
+# -- Compiling module sevSegDec
+# -- Compiling module tb
+# 
+# Top level modules:
+# 	sevSegDec
+# 	tb
+# vlog -vlog01compat -work system +incdir+C:/Users/naqas/Desktop/Github/RISC-V1/riscv_quartus13_cyclone2/system/synthesis/submodules {C:/Users/naqas/Desktop/Github/RISC-V1/riscv_quartus13_cyclone2/system/synthesis/submodules/alu.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module alu
+# 
+# Top level modules:
+# 	alu
+# vlog -vlog01compat -work system +incdir+C:/Users/naqas/Desktop/Github/RISC-V1/riscv_quartus13_cyclone2/system/synthesis/submodules {C:/Users/naqas/Desktop/Github/RISC-V1/riscv_quartus13_cyclone2/system/synthesis/submodules/aluSource.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module aluSource
+# 
+# Top level modules:
+# 	aluSource
+# vlog -vlog01compat -work system +incdir+C:/Users/naqas/Desktop/Github/RISC-V1/riscv_quartus13_cyclone2/system/synthesis/submodules {C:/Users/naqas/Desktop/Github/RISC-V1/riscv_quartus13_cyclone2/system/synthesis/submodules/controlUnit.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module controlUnit
+# 
+# Top level modules:
+# 	controlUnit
+# vlog -vlog01compat -work system +incdir+C:/Users/naqas/Desktop/Github/RISC-V1/riscv_quartus13_cyclone2/system/synthesis/submodules {C:/Users/naqas/Desktop/Github/RISC-V1/riscv_quartus13_cyclone2/system/synthesis/submodules/forwadingUnit.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module forwardingUnit
+# 
+# Top level modules:
+# 	forwardingUnit
+# vlog -vlog01compat -work system +incdir+C:/Users/naqas/Desktop/Github/RISC-V1/riscv_quartus13_cyclone2/system/synthesis/submodules {C:/Users/naqas/Desktop/Github/RISC-V1/riscv_quartus13_cyclone2/system/synthesis/submodules/FPU.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module FPU
+# 
+# Top level modules:
+# 	FPU
+# vlog -vlog01compat -work system +incdir+C:/Users/naqas/Desktop/Github/RISC-V1/riscv_quartus13_cyclone2/system/synthesis/submodules {C:/Users/naqas/Desktop/Github/RISC-V1/riscv_quartus13_cyclone2/system/synthesis/submodules/Fpu_Controller.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module fpuController
+# 
+# Top level modules:
+# 	fpuController
+# vlog -vlog01compat -work system +incdir+C:/Users/naqas/Desktop/Github/RISC-V1/riscv_quartus13_cyclone2/system/synthesis/submodules {C:/Users/naqas/Desktop/Github/RISC-V1/riscv_quartus13_cyclone2/system/synthesis/submodules/hdu.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module HDU
+# 
+# Top level modules:
+# 	HDU
+# vlog -vlog01compat -work system +incdir+C:/Users/naqas/Desktop/Github/RISC-V1/riscv_quartus13_cyclone2/system/synthesis/submodules {C:/Users/naqas/Desktop/Github/RISC-V1/riscv_quartus13_cyclone2/system/synthesis/submodules/immGen.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module immGen
+# 
+# Top level modules:
+# 	immGen
+# vlog -vlog01compat -work system +incdir+C:/Users/naqas/Desktop/Github/RISC-V1/riscv_quartus13_cyclone2/system/synthesis/submodules {C:/Users/naqas/Desktop/Github/RISC-V1/riscv_quartus13_cyclone2/system/synthesis/submodules/mux.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module WB_MUX
+# -- Compiling module memOut_MUX
+# -- Compiling module pcIn_MUX
+# 
+# Top level modules:
+# 	WB_MUX
+# 	memOut_MUX
+# 	pcIn_MUX
+# vlog -vlog01compat -work system +incdir+C:/Users/naqas/Desktop/Github/RISC-V1/riscv_quartus13_cyclone2/system/synthesis/submodules {C:/Users/naqas/Desktop/Github/RISC-V1/riscv_quartus13_cyclone2/system/synthesis/submodules/regFile.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module float_regFile
+# -- Compiling module regFile
+# -- Compiling module register
+# 
+# Top level modules:
+# 	float_regFile
+# 	regFile
+# 	register
+# vlog -vlog01compat -work work +incdir+C:/Users/naqas/Desktop/Github/RISC-V1/riscv_quartus13_cyclone2/system/synthesis/submodules {C:/Users/naqas/Desktop/Github/RISC-V1/riscv_quartus13_cyclone2/system/synthesis/submodules/fpu_add_sub.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module fpu_add_sub_altbarrel_shift_h0e
+# -- Compiling module fpu_add_sub_altbarrel_shift_6hb
+# -- Compiling module fpu_add_sub_altpriority_encoder_3v7
+# -- Compiling module fpu_add_sub_altpriority_encoder_3e8
+# -- Compiling module fpu_add_sub_altpriority_encoder_6v7
+# -- Compiling module fpu_add_sub_altpriority_encoder_6e8
+# -- Compiling module fpu_add_sub_altpriority_encoder_bv7
+# -- Compiling module fpu_add_sub_altpriority_encoder_be8
+# -- Compiling module fpu_add_sub_altpriority_encoder_r08
+# -- Compiling module fpu_add_sub_altpriority_encoder_rf8
+# -- Compiling module fpu_add_sub_altpriority_encoder_qb6
+# -- Compiling module fpu_add_sub_altpriority_encoder_nh8
+# -- Compiling module fpu_add_sub_altpriority_encoder_qh8
+# -- Compiling module fpu_add_sub_altpriority_encoder_vh8
+# -- Compiling module fpu_add_sub_altpriority_encoder_fj8
+# -- Compiling module fpu_add_sub_altpriority_encoder_n28
+# -- Compiling module fpu_add_sub_altpriority_encoder_q28
+# -- Compiling module fpu_add_sub_altpriority_encoder_v28
+# -- Compiling module fpu_add_sub_altpriority_encoder_f48
+# -- Compiling module fpu_add_sub_altpriority_encoder_e48
+# -- Compiling module fpu_add_sub_altfp_add_sub_vtn
+# -- Compiling module fpu_add_sub
+# 
+# Top level modules:
+# 	fpu_add_sub
+# vlog -vlog01compat -work work +incdir+C:/Users/naqas/Desktop/Github/RISC-V1/riscv_quartus13_cyclone2/system/synthesis/submodules {C:/Users/naqas/Desktop/Github/RISC-V1/riscv_quartus13_cyclone2/system/synthesis/submodules/fpu_compare.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module fpu_compare_altfp_compare_0uc
+# -- Compiling module fpu_compare
+# 
+# Top level modules:
+# 	fpu_compare
+# vlog -vlog01compat -work work +incdir+C:/Users/naqas/Desktop/Github/RISC-V1/riscv_quartus13_cyclone2/system/synthesis/submodules {C:/Users/naqas/Desktop/Github/RISC-V1/riscv_quartus13_cyclone2/system/synthesis/submodules/fpu_convert.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module fpu_convert_altbarrel_shift_brf
+# -- Compiling module fpu_convert_altpriority_encoder_3e8
+# -- Compiling module fpu_convert_altpriority_encoder_6e8
+# -- Compiling module fpu_convert_altpriority_encoder_be8
+# -- Compiling module fpu_convert_altpriority_encoder_rf8
+# -- Compiling module fpu_convert_altpriority_encoder_3v7
+# -- Compiling module fpu_convert_altpriority_encoder_6v7
+# -- Compiling module fpu_convert_altpriority_encoder_bv7
+# -- Compiling module fpu_convert_altpriority_encoder_r08
+# -- Compiling module fpu_convert_altpriority_encoder_qb6
+# -- Compiling module fpu_convert_altfp_convert_hvn
+# -- Compiling module fpu_convert
+# 
+# Top level modules:
+# 	fpu_convert
+# vlog -vlog01compat -work work +incdir+C:/Users/naqas/Desktop/Github/RISC-V1/riscv_quartus13_cyclone2/system/synthesis/submodules {C:/Users/naqas/Desktop/Github/RISC-V1/riscv_quartus13_cyclone2/system/synthesis/submodules/fpu_convert_float_integer.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module fpu_convert_float_integer_altbarrel_shift_grf
+# -- Compiling module fpu_convert_float_integer_altfp_convert_o6q
+# -- Compiling module fpu_convert_float_integer
+# 
+# Top level modules:
+# 	fpu_convert_float_integer
+# vlog -vlog01compat -work work +incdir+C:/Users/naqas/Desktop/Github/RISC-V1/riscv_quartus13_cyclone2/system/synthesis/submodules {C:/Users/naqas/Desktop/Github/RISC-V1/riscv_quartus13_cyclone2/system/synthesis/submodules/fpu_div.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module fpu_div_altfp_div_pst_t2j
+# -- Compiling module fpu_div_altfp_div_bnm
+# -- Compiling module fpu_div
+# 
+# Top level modules:
+# 	fpu_div
+# vlog -vlog01compat -work work +incdir+C:/Users/naqas/Desktop/Github/RISC-V1/riscv_quartus13_cyclone2/system/synthesis/submodules {C:/Users/naqas/Desktop/Github/RISC-V1/riscv_quartus13_cyclone2/system/synthesis/submodules/fpu_mult.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module fpu_mult_altfp_mult_0gr
+# -- Compiling module fpu_mult
+# 
+# Top level modules:
+# 	fpu_mult
+# vlog -vlog01compat -work work +incdir+C:/Users/naqas/Desktop/Github/RISC-V1/riscv_quartus13_cyclone2/system/synthesis/submodules {C:/Users/naqas/Desktop/Github/RISC-V1/riscv_quartus13_cyclone2/system/synthesis/submodules/fpu_sqrt.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module fpu_sqrt_alt_sqrt_block_kfb
+# -- Compiling module fpu_sqrt_altfp_sqrt_sef
+# -- Compiling module fpu_sqrt
+# 
+# Top level modules:
+# 	fpu_sqrt
+# vlog -vlog01compat -work system +incdir+C:/Users/naqas/Desktop/Github/RISC-V1/riscv_quartus13_cyclone2/system/synthesis/submodules {C:/Users/naqas/Desktop/Github/RISC-V1/riscv_quartus13_cyclone2/system/synthesis/submodules/DRAM.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module DRAM
+# ** Warning: C:/Users/naqas/Desktop/Github/RISC-V1/riscv_quartus13_cyclone2/system/synthesis/submodules/DRAM.v(20): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
+# 
+# ** Warning: C:/Users/naqas/Desktop/Github/RISC-V1/riscv_quartus13_cyclone2/system/synthesis/submodules/DRAM.v(21): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
+# 
+# ** Warning: C:/Users/naqas/Desktop/Github/RISC-V1/riscv_quartus13_cyclone2/system/synthesis/submodules/DRAM.v(22): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
+# 
+# 
+# Top level modules:
+# 	DRAM
+# vlog -vlog01compat -work system +incdir+C:/Users/naqas/Desktop/Github/RISC-V1/riscv_quartus13_cyclone2/system/synthesis/submodules {C:/Users/naqas/Desktop/Github/RISC-V1/riscv_quartus13_cyclone2/system/synthesis/submodules/IRAM.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module IRAM
+# 
+# Top level modules:
+# 	IRAM
+# vlog -vlog01compat -work work +incdir+C:/Users/naqas/Desktop/Github/RISC-V1/riscv_quartus13_cyclone2 {C:/Users/naqas/Desktop/Github/RISC-V1/riscv_quartus13_cyclone2/top.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module top
+# -- Compiling module tb
+# 
+# Top level modules:
+# 	top
+# 	tb
+# vlog -sv -work system +incdir+C:/Users/naqas/Desktop/Github/RISC-V1/riscv_quartus13_cyclone2/system/synthesis/submodules {C:/Users/naqas/Desktop/Github/RISC-V1/riscv_quartus13_cyclone2/system/synthesis/submodules/altera_merlin_slave_translator.sv}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module altera_merlin_slave_translator
+# 
+# Top level modules:
+# 	altera_merlin_slave_translator
+# vlog -sv -work system +incdir+C:/Users/naqas/Desktop/Github/RISC-V1/riscv_quartus13_cyclone2/system/synthesis/submodules {C:/Users/naqas/Desktop/Github/RISC-V1/riscv_quartus13_cyclone2/system/synthesis/submodules/altera_merlin_master_translator.sv}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module altera_merlin_master_translator
+# 
+# Top level modules:
+# 	altera_merlin_master_translator
+# 
+# vlog -vlog01compat -work work +incdir+C:/Users/naqas/Desktop/Github/RISC-V1/riscv_quartus13_cyclone2 {C:/Users/naqas/Desktop/Github/RISC-V1/riscv_quartus13_cyclone2/top.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module top
+# -- Compiling module tb
+# 
+# Top level modules:
+# 	top
+# 	tb
+# 
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneii_ver -L rtl_work -L work -L system -voptargs="+acc"  tb
+# vsim -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneii_ver -L rtl_work -L work -L system -voptargs=\"+acc\" -t 1ps tb 
+# Loading work.tb
+# Loading system.system
+# Loading system.riscv_core
+# Loading system.register
+# Loading system.pcIn_MUX
+# Loading system.IRAM
+# Loading system.regFile
+# Loading system.immGen
+# Loading system.controlUnit
+# Loading system.float_regFile
+# Loading system.aluSource
+# Loading system.alu
+# Loading system.fpuController
+# Loading system.FPU
+# Loading work.fpu_add_sub
+# Loading work.fpu_add_sub_altfp_add_sub_vtn
+# Loading work.fpu_add_sub_altbarrel_shift_h0e
+# Loading work.fpu_add_sub_altbarrel_shift_6hb
+# Loading work.fpu_add_sub_altpriority_encoder_qb6
+# Loading work.fpu_add_sub_altpriority_encoder_r08
+# Loading work.fpu_add_sub_altpriority_encoder_bv7
+# Loading work.fpu_add_sub_altpriority_encoder_6v7
+# Loading work.fpu_add_sub_altpriority_encoder_3v7
+# Loading work.fpu_add_sub_altpriority_encoder_3e8
+# Loading work.fpu_add_sub_altpriority_encoder_6e8
+# Loading work.fpu_add_sub_altpriority_encoder_be8
+# Loading work.fpu_add_sub_altpriority_encoder_rf8
+# Loading work.fpu_add_sub_altpriority_encoder_e48
+# Loading work.fpu_add_sub_altpriority_encoder_fj8
+# Loading work.fpu_add_sub_altpriority_encoder_vh8
+# Loading work.fpu_add_sub_altpriority_encoder_qh8
+# Loading work.fpu_add_sub_altpriority_encoder_nh8
+# Loading work.fpu_add_sub_altpriority_encoder_f48
+# Loading work.fpu_add_sub_altpriority_encoder_v28
+# Loading work.fpu_add_sub_altpriority_encoder_q28
+# Loading work.fpu_add_sub_altpriority_encoder_n28
+# Loading lpm_ver.lpm_add_sub
+# Loading lpm_ver.lpm_compare
+# Loading work.fpu_mult
+# Loading work.fpu_mult_altfp_mult_0gr
+# Loading lpm_ver.lpm_mult
+# Loading lpm_ver.LPM_HINT_EVALUATION
+# Loading work.fpu_div
+# Loading work.fpu_div_altfp_div_bnm
+# Loading work.fpu_div_altfp_div_pst_t2j
+# Loading altera_mf_ver.altsyncram
+# Loading altera_mf_ver.ALTERA_DEVICE_FAMILIES
+# Loading altera_mf_ver.ALTERA_MF_MEMORY_INITIALIZATION
+# Loading work.fpu_compare
+# Loading work.fpu_compare_altfp_compare_0uc
+# Loading work.fpu_sqrt
+# Loading work.fpu_sqrt_altfp_sqrt_sef
+# Loading work.fpu_sqrt_alt_sqrt_block_kfb
+# Loading work.fpu_convert
+# Loading work.fpu_convert_altfp_convert_hvn
+# Loading work.fpu_convert_altbarrel_shift_brf
+# Loading work.fpu_convert_altpriority_encoder_qb6
+# Loading work.fpu_convert_altpriority_encoder_rf8
+# Loading work.fpu_convert_altpriority_encoder_be8
+# Loading work.fpu_convert_altpriority_encoder_6e8
+# Loading work.fpu_convert_altpriority_encoder_3e8
+# Loading work.fpu_convert_altpriority_encoder_r08
+# Loading work.fpu_convert_altpriority_encoder_bv7
+# Loading work.fpu_convert_altpriority_encoder_6v7
+# Loading work.fpu_convert_altpriority_encoder_3v7
+# Loading work.fpu_convert_float_integer
+# Loading work.fpu_convert_float_integer_altfp_convert_o6q
+# Loading work.fpu_convert_float_integer_altbarrel_shift_grf
+# Loading system.DRAM
+# Loading system.memOut_MUX
+# Loading system.WB_MUX
+# Loading system.HDU
+# Loading system.forwardingUnit
+# Loading system.system_jtag_uart_0
+# Loading system.system_jtag_uart_0_scfifo_w
+# Loading system.system_jtag_uart_0_sim_scfifo_w
+# Loading system.system_jtag_uart_0_scfifo_r
+# Loading system.system_jtag_uart_0_sim_scfifo_r
+# Loading sv_std.std
+# Loading system.altera_merlin_master_translator
+# Loading system.altera_merlin_slave_translator
+# Loading system.altera_reset_controller
+# Loading system.altera_reset_synchronizer
+# ** Warning: (vsim-3016) C:/Users/naqas/Desktop/Github/RISC-V1/riscv_quartus13_cyclone2/system/synthesis/submodules/fpu_div.v(254): Port type is incompatible with connection (port 'clock0').
+# 
+#         Region: /tb/u0/riscv_core_0/fpu/fpu_div_inst/fpu_div_altfp_div_bnm_component/altfp_div_pst1/altsyncram3
+# ** Warning: (vsim-3017) C:/Users/naqas/Desktop/Github/RISC-V1/riscv_quartus13_cyclone2/system/synthesis/system.v(61): [TFMPC] - Too few port connections. Expected 12, found 10.
+# 
+#         Region: /tb/u0/jtag_uart_0
+# ** Warning: (vsim-3722) C:/Users/naqas/Desktop/Github/RISC-V1/riscv_quartus13_cyclone2/system/synthesis/system.v(61): [TFMPC] - Missing connection for port 'dataavailable'.
+# 
+# ** Warning: (vsim-3722) C:/Users/naqas/Desktop/Github/RISC-V1/riscv_quartus13_cyclone2/system/synthesis/system.v(61): [TFMPC] - Missing connection for port 'readyfordata'.
+# 
+# ** Warning: Design size of 75 instances exceeds ModelSim ALTERA recommended capacity.
+# This may because you are loading cell libraries which are not recommended with
+# the ModelSim Altera version. Expect performance to be adversely affected.
+# 
+# add wave *
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+# 
+#           File in use by: naqas  Hostname: NIKU  ProcessID: 79728
+# 
+#           Attempting to use alternate WLF file "./wlfti84zy9".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+# 
+#           Using alternate file: ./wlfti84zy9
+# 
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# run -all
+# 00000000
+# 000000cc
+# Ì                7000: tb.u0.riscv_core_0_avalon_master_translator: Error: Input controls/data changed while av_waitrequest is asserted.
+# av_address      00000108 --> ffffff0c
+# av_byteenable   f --> f
+# av_burstcount   1 --> 1
+# av_writedata    ffffff20 --> 000000cc
+# av_writeresponserequest 0 --> 0
+# av_write        1 --> 0
+# av_read         0 --> 0
+# av_lock         0 --> 0
+# av_chipselect   0 --> 0
+# av_debugaccess  0 --> 0 
+# 000000xx
+#                 7000: tb.u0.riscv_core_0_avalon_master_translator: Error: Input controls/data changed while av_waitrequest is asserted.
+# av_address      00000108 --> ffffff0c
+# av_byteenable   f --> f
+# av_burstcount   1 --> 1
+# av_writedata    000000cc --> 000000xx
+# av_writeresponserequest 0 --> 0
+# av_write        1 --> 0
+# av_read         0 --> 0
+# av_lock         0 --> 0
+# av_chipselect   0 --> 0
+# av_debugaccess  0 --> 0 
+#                 7000: tb.u0.riscv_core_0_avalon_master_translator: Error: Input controls/data changed while av_waitrequest is asserted.
+# av_address      00000108 --> ffffff0c
+# av_byteenable   f --> f
+# av_burstcount   1 --> 1
+# av_writedata    000000xx --> 000000xx
+# av_writeresponserequest 0 --> 0
+# av_write        1 --> 0
+# av_read         0 --> 0
+# av_lock         0 --> 0
+# av_chipselect   0 --> 0
+# av_debugaccess  0 --> 0 
+#                 7000: tb.u0.riscv_core_0_avalon_master_translator: Error: Input controls/data changed while av_waitrequest is asserted.
+# av_address      00000108 --> 00000000
+# av_byteenable   f --> f
+# av_burstcount   1 --> 1
+# av_writedata    000000xx --> 000000xx
+# av_writeresponserequest 0 --> 0
+# av_write        1 --> 0
+# av_read         0 --> 0
+# av_lock         0 --> 0
+# av_chipselect   0 --> 0
+# av_debugaccess  0 --> 0 
+# 0000004f
+# O                7000: tb.u0.riscv_core_0_avalon_master_translator: Error: Input controls/data changed while av_waitrequest is asserted.
+# av_address      00000108 --> ffffff0c
+# av_byteenable   f --> f
+# av_burstcount   1 --> 1
+# av_writedata    ffffff20 --> 0000004f
+# av_writeresponserequest 0 --> 0
+# av_write        1 --> 0
+# av_read         0 --> 0
+# av_lock         0 --> 0
+# av_chipselect   0 --> 0
+# av_debugaccess  0 --> 0 
+# 000000xx
+#                 7000: tb.u0.riscv_core_0_avalon_master_translator: Error: Input controls/data changed while av_waitrequest is asserted.
+# av_address      00000108 --> ffffff0c
+# av_byteenable   f --> f
+# av_burstcount   1 --> 1
+# av_writedata    0000004f --> 000000xx
+# av_writeresponserequest 0 --> 0
+# av_write        1 --> 0
+# av_read         0 --> 0
+# av_lock         0 --> 0
+# av_chipselect   0 --> 0
+# av_debugaccess  0 --> 0 
+#                 7000: tb.u0.riscv_core_0_avalon_master_translator: Error: Input controls/data changed while av_waitrequest is asserted.
+# av_address      00000108 --> ffffff0c
+# av_byteenable   f --> f
+# av_burstcount   1 --> 1
+# av_writedata    000000xx --> 000000xx
+# av_writeresponserequest 0 --> 0
+# av_write        1 --> 0
+# av_read         0 --> 0
+# av_lock         0 --> 0
+# av_chipselect   0 --> 0
+# av_debugaccess  0 --> 0 
+#                 7000: tb.u0.riscv_core_0_avalon_master_translator: Error: Input controls/data changed while av_waitrequest is asserted.
+# av_address      00000108 --> 00000000
+# av_byteenable   f --> f
+# av_burstcount   1 --> 1
+# av_writedata    000000xx --> 000000xx
+# av_writeresponserequest 0 --> 0
+# av_write        1 --> 0
+# av_read         0 --> 0
+# av_lock         0 --> 0
+# av_chipselect   0 --> 0
+# av_debugaccess  0 --> 0 
+# 00000042
+# B                7000: tb.u0.riscv_core_0_avalon_master_translator: Error: Input controls/data changed while av_waitrequest is asserted.
+# av_address      00000108 --> ffffff0c
+# av_byteenable   f --> f
+# av_burstcount   1 --> 1
+# av_writedata    ffffff20 --> 00000042
+# av_writeresponserequest 0 --> 0
+# av_write        1 --> 0
+# av_read         0 --> 0
+# av_lock         0 --> 0
+# av_chipselect   0 --> 0
+# av_debugaccess  0 --> 0 
+# 000000xx
+#                 7000: tb.u0.riscv_core_0_avalon_master_translator: Error: Input controls/data changed while av_waitrequest is asserted.
+# av_address      00000108 --> ffffff0c
+# av_byteenable   f --> f
+# av_burstcount   1 --> 1
+# av_writedata    00000042 --> 000000xx
+# av_writeresponserequest 0 --> 0
+# av_write        1 --> 0
+# av_read         0 --> 0
+# av_lock         0 --> 0
+# av_chipselect   0 --> 0
+# av_debugaccess  0 --> 0 
+#                 7000: tb.u0.riscv_core_0_avalon_master_translator: Error: Input controls/data changed while av_waitrequest is asserted.
+# av_address      00000108 --> ffffff0c
+# av_byteenable   f --> f
+# av_burstcount   1 --> 1
+# av_writedata    000000xx --> 000000xx
+# av_writeresponserequest 0 --> 0
+# av_write        1 --> 0
+# av_read         0 --> 0
+# av_lock         0 --> 0
+# av_chipselect   0 --> 0
+# av_debugaccess  0 --> 0 
+#                 7000: tb.u0.riscv_core_0_avalon_master_translator: Error: Input controls/data changed while av_waitrequest is asserted.
+# av_address      00000108 --> 00000000
+# av_byteenable   f --> f
+# av_burstcount   1 --> 1
+# av_writedata    000000xx --> 000000xx
+# av_writeresponserequest 0 --> 0
+# av_write        1 --> 0
+# av_read         0 --> 0
+# av_lock         0 --> 0
+# av_chipselect   0 --> 0
+# av_debugaccess  0 --> 0 
+# 000000e0
+# à                7000: tb.u0.riscv_core_0_avalon_master_translator: Error: Input controls/data changed while av_waitrequest is asserted.
+# av_address      00000108 --> ffffff0c
+# av_byteenable   f --> f
+# av_burstcount   1 --> 1
+# av_writedata    ffffff20 --> 000000e0
+# av_writeresponserequest 0 --> 0
+# av_write        1 --> 0
+# av_read         0 --> 0
+# av_lock         0 --> 0
+# av_chipselect   0 --> 0
+# av_debugaccess  0 --> 0 
+# 000000xx
+#                 7000: tb.u0.riscv_core_0_avalon_master_translator: Error: Input controls/data changed while av_waitrequest is asserted.
+# av_address      00000108 --> ffffff0c
+# av_byteenable   f --> f
+# av_burstcount   1 --> 1
+# av_writedata    000000e0 --> 000000xx
+# av_writeresponserequest 0 --> 0
+# av_write        1 --> 0
+# av_read         0 --> 0
+# av_lock         0 --> 0
+# av_chipselect   0 --> 0
+# av_debugaccess  0 --> 0 
+#                 7000: tb.u0.riscv_core_0_avalon_master_translator: Error: Input controls/data changed while av_waitrequest is asserted.
+# av_address      00000108 --> ffffff0c
+# av_byteenable   f --> f
+# av_burstcount   1 --> 1
+# av_writedata    000000xx --> 000000xx
+# av_writeresponserequest 0 --> 0
+# av_write        1 --> 0
+# av_read         0 --> 0
+# av_lock         0 --> 0
+# av_chipselect   0 --> 0
+# av_debugaccess  0 --> 0 
+#                 7000: tb.u0.riscv_core_0_avalon_master_translator: Error: Input controls/data changed while av_waitrequest is asserted.
+# av_address      00000108 --> 00000000
+# av_byteenable   f --> f
+# av_burstcount   1 --> 1
+# av_writedata    000000xx --> 000000xx
+# av_writeresponserequest 0 --> 0
+# av_write        1 --> 0
+# av_read         0 --> 0
+# av_lock         0 --> 0
+# av_chipselect   0 --> 0
+# av_debugaccess  0 --> 0 
+# 0000008e
+# Ž                7000: tb.u0.riscv_core_0_avalon_master_translator: Error: Input controls/data changed while av_waitrequest is asserted.
+# av_address      00000108 --> ffffff0c
+# av_byteenable   f --> f
+# av_burstcount   1 --> 1
+# av_writedata    ffffff20 --> 0000008e
+# av_writeresponserequest 0 --> 0
+# av_write        1 --> 0
+# av_read         0 --> 0
+# av_lock         0 --> 0
+# av_chipselect   0 --> 0
+# av_debugaccess  0 --> 0 
+# 000000xx
+#                 7000: tb.u0.riscv_core_0_avalon_master_translator: Error: Input controls/data changed while av_waitrequest is asserted.
+# av_address      00000108 --> ffffff0c
+# av_byteenable   f --> f
+# av_burstcount   1 --> 1
+# av_writedata    0000008e --> 000000xx
+# av_writeresponserequest 0 --> 0
+# av_write        1 --> 0
+# av_read         0 --> 0
+# av_lock         0 --> 0
+# av_chipselect   0 --> 0
+# av_debugaccess  0 --> 0 
+#                 7000: tb.u0.riscv_core_0_avalon_master_translator: Error: Input controls/data changed while av_waitrequest is asserted.
+# av_address      00000108 --> ffffff0c
+# av_byteenable   f --> f
+# av_burstcount   1 --> 1
+# av_writedata    000000xx --> 000000xx
+# av_writeresponserequest 0 --> 0
+# av_write        1 --> 0
+# av_read         0 --> 0
+# av_lock         0 --> 0
+# av_chipselect   0 --> 0
+# av_debugaccess  0 --> 0 
+#                 7000: tb.u0.riscv_core_0_avalon_master_translator: Error: Input controls/data changed while av_waitrequest is asserted.
+# av_address      00000108 --> 00000000
+# av_byteenable   f --> f
+# av_burstcount   1 --> 1
+# av_writedata    000000xx --> 000000xx
+# av_writeresponserequest 0 --> 0
+# av_write        1 --> 0
+# av_read         0 --> 0
+# av_lock         0 --> 0
+# av_chipselect   0 --> 0
+# av_debugaccess  0 --> 0 
+# 000000c6
+# Æ                7000: tb.u0.riscv_core_0_avalon_master_translator: Error: Input controls/data changed while av_waitrequest is asserted.
+# av_address      00000108 --> ffffff0c
+# av_byteenable   f --> f
+# av_burstcount   1 --> 1
+# av_writedata    ffffff20 --> 000000c6
+# av_writeresponserequest 0 --> 0
+# av_write        1 --> 0
+# av_read         0 --> 0
+# av_lock         0 --> 0
+# av_chipselect   0 --> 0
+# av_debugaccess  0 --> 0 
+# 000000xx
+#                 7000: tb.u0.riscv_core_0_avalon_master_translator: Error: Input controls/data changed while av_waitrequest is asserted.
+# av_address      00000108 --> ffffff0c
+# av_byteenable   f --> f
+# av_burstcount   1 --> 1
+# av_writedata    000000c6 --> 000000xx
+# av_writeresponserequest 0 --> 0
+# av_write        1 --> 0
+# av_read         0 --> 0
+# av_lock         0 --> 0
+# av_chipselect   0 --> 0
+# av_debugaccess  0 --> 0 
+#                 7000: tb.u0.riscv_core_0_avalon_master_translator: Error: Input controls/data changed while av_waitrequest is asserted.
+# av_address      00000108 --> ffffff0c
+# av_byteenable   f --> f
+# av_burstcount   1 --> 1
+# av_writedata    000000xx --> 000000xx
+# av_writeresponserequest 0 --> 0
+# av_write        1 --> 0
+# av_read         0 --> 0
+# av_lock         0 --> 0
+# av_chipselect   0 --> 0
+# av_debugaccess  0 --> 0 
+#                 7000: tb.u0.riscv_core_0_avalon_master_translator: Error: Input controls/data changed while av_waitrequest is asserted.
+# av_address      00000108 --> 00000000
+# av_byteenable   f --> f
+# av_burstcount   1 --> 1
+# av_writedata    000000xx --> 000000xx
+# av_writeresponserequest 0 --> 0
+# av_write        1 --> 0
+# av_read         0 --> 0
+# av_lock         0 --> 0
+# av_chipselect   0 --> 0
+# av_debugaccess  0 --> 0 
+# 000000da
+# Ú                7000: tb.u0.riscv_core_0_avalon_master_translator: Error: Input controls/data changed while av_waitrequest is asserted.
+# av_address      00000108 --> ffffff0c
+# av_byteenable   f --> f
+# av_burstcount   1 --> 1
+# av_writedata    ffffff20 --> 000000da
+# av_writeresponserequest 0 --> 0
+# av_write        1 --> 0
+# av_read         0 --> 0
+# av_lock         0 --> 0
+# av_chipselect   0 --> 0
+# av_debugaccess  0 --> 0 
+# 000000xx
+#                 8000: tb.u0.riscv_core_0_avalon_master_translator: Error: Input controls/data changed while av_waitrequest is asserted.
+# av_address      00000108 --> ffffff0c
+# av_byteenable   f --> f
+# av_burstcount   1 --> 1
+# av_writedata    000000da --> 000000xx
+# av_writeresponserequest 0 --> 0
+# av_write        1 --> 0
+# av_read         0 --> 0
+# av_lock         0 --> 0
+# av_chipselect   0 --> 0
+# av_debugaccess  0 --> 0 
+#                 8000: tb.u0.riscv_core_0_avalon_master_translator: Error: Input controls/data changed while av_waitrequest is asserted.
+# av_address      00000108 --> ffffff0c
+# av_byteenable   f --> f
+# av_burstcount   1 --> 1
+# av_writedata    000000xx --> 000000xx
+# av_writeresponserequest 0 --> 0
+# av_write        1 --> 0
+# av_read         0 --> 0
+# av_lock         0 --> 0
+# av_chipselect   0 --> 0
+# av_debugaccess  0 --> 0 
+#                 8000: tb.u0.riscv_core_0_avalon_master_translator: Error: Input controls/data changed while av_waitrequest is asserted.
+# av_address      00000108 --> 00000000
+# av_byteenable   f --> f
+# av_burstcount   1 --> 1
+# av_writedata    000000xx --> 000000xx
+# av_writeresponserequest 0 --> 0
+# av_write        1 --> 0
+# av_read         0 --> 0
+# av_lock         0 --> 0
+# av_chipselect   0 --> 0
+# av_debugaccess  0 --> 0 
+# 00000017
+#                 8000: tb.u0.riscv_core_0_avalon_master_translator: Error: Input controls/data changed while av_waitrequest is asserted.
+# av_address      00000108 --> ffffff0c
+# av_byteenable   f --> f
+# av_burstcount   1 --> 1
+# av_writedata    ffffff20 --> 00000017
+# av_writeresponserequest 0 --> 0
+# av_write        1 --> 0
+# av_read         0 --> 0
+# av_lock         0 --> 0
+# av_chipselect   0 --> 0
+# av_debugaccess  0 --> 0 
+# 000000xx
+#                 8000: tb.u0.riscv_core_0_avalon_master_translator: Error: Input controls/data changed while av_waitrequest is asserted.
+# av_address      00000108 --> ffffff0c
+# av_byteenable   f --> f
+# av_burstcount   1 --> 1
+# av_writedata    00000017 --> 000000xx
+# av_writeresponserequest 0 --> 0
+# av_write        1 --> 0
+# av_read         0 --> 0
+# av_lock         0 --> 0
+# av_chipselect   0 --> 0
+# av_debugaccess  0 --> 0 
+#                 8000: tb.u0.riscv_core_0_avalon_master_translator: Error: Input controls/data changed while av_waitrequest is asserted.
+# av_address      00000108 --> ffffff0c
+# av_byteenable   f --> f
+# av_burstcount   1 --> 1
+# av_writedata    000000xx --> 000000xx
+# av_writeresponserequest 0 --> 0
+# av_write        1 --> 0
+# av_read         0 --> 0
+# av_lock         0 --> 0
+# av_chipselect   0 --> 0
+# av_debugaccess  0 --> 0 
+#                 8000: tb.u0.riscv_core_0_avalon_master_translator: Error: Input controls/data changed while av_waitrequest is asserted.
+# av_address      00000108 --> 00000000
+# av_byteenable   f --> f
+# av_burstcount   1 --> 1
+# av_writedata    000000xx --> 000000xx
+# av_writeresponserequest 0 --> 0
+# av_write        1 --> 0
+# av_read         0 --> 0
+# av_lock         0 --> 0
+# av_chipselect   0 --> 0
+# av_debugaccess  0 --> 0 
+# 000000c3
+# Ã                8000: tb.u0.riscv_core_0_avalon_master_translator: Error: Input controls/data changed while av_waitrequest is asserted.
+# av_address      00000108 --> ffffff0c
+# av_byteenable   f --> f
+# av_burstcount   1 --> 1
+# av_writedata    ffffff20 --> 000000c3
+# av_writeresponserequest 0 --> 0
+# av_write        1 --> 0
+# av_read         0 --> 0
+# av_lock         0 --> 0
+# av_chipselect   0 --> 0
+# av_debugaccess  0 --> 0 
+# 000000xx
+#                 8000: tb.u0.riscv_core_0_avalon_master_translator: Error: Input controls/data changed while av_waitrequest is asserted.
+# av_address      00000108 --> ffffff0c
+# av_byteenable   f --> f
+# av_burstcount   1 --> 1
+# av_writedata    000000c3 --> 000000xx
+# av_writeresponserequest 0 --> 0
+# av_write        1 --> 0
+# av_read         0 --> 0
+# av_lock         0 --> 0
+# av_chipselect   0 --> 0
+# av_debugaccess  0 --> 0 
+#                 8000: tb.u0.riscv_core_0_avalon_master_translator: Error: Input controls/data changed while av_waitrequest is asserted.
+# av_address      00000108 --> ffffff0c
+# av_byteenable   f --> f
+# av_burstcount   1 --> 1
+# av_writedata    000000xx --> 000000xx
+# av_writeresponserequest 0 --> 0
+# av_write        1 --> 0
+# av_read         0 --> 0
+# av_lock         0 --> 0
+# av_chipselect   0 --> 0
+# av_debugaccess  0 --> 0 
+#                 8000: tb.u0.riscv_core_0_avalon_master_translator: Error: Input controls/data changed while av_waitrequest is asserted.
+# av_address      00000108 --> 00000000
+# av_byteenable   f --> f
+# av_burstcount   1 --> 1
+# av_writedata    000000xx --> 000000xx
+# av_writeresponserequest 0 --> 0
+# av_write        1 --> 0
+# av_read         0 --> 0
+# av_lock         0 --> 0
+# av_chipselect   0 --> 0
+# av_debugaccess  0 --> 0 
+# 00000004
+#                 8000: tb.u0.riscv_core_0_avalon_master_translator: Error: Input controls/data changed while av_waitrequest is asserted.
+# av_address      00000108 --> 00000000
+# av_byteenable   f --> f
+# av_burstcount   1 --> 1
+# av_writedata    00000000 --> 00000004
+# av_writeresponserequest 0 --> 0
+# av_write        1 --> 0
+# av_read         0 --> 0
+# av_lock         0 --> 0
+# av_chipselect   0 --> 0
+# av_debugaccess  0 --> 0 
+do top_run_msim_rtl_verilog.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Modifying modelsim.ini
+# 
+# vlog -vlog01compat -work work +incdir+C:/Users/naqas/Desktop/Github/RISC-V1/riscv_quartus13_cyclone2/system/synthesis/submodules {C:/Users/naqas/Desktop/Github/RISC-V1/riscv_quartus13_cyclone2/system/synthesis/submodules/fpu_add_sub.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module fpu_add_sub_altbarrel_shift_h0e
+# -- Compiling module fpu_add_sub_altbarrel_shift_6hb
+# -- Compiling module fpu_add_sub_altpriority_encoder_3v7
+# -- Compiling module fpu_add_sub_altpriority_encoder_3e8
+# -- Compiling module fpu_add_sub_altpriority_encoder_6v7
+# -- Compiling module fpu_add_sub_altpriority_encoder_6e8
+# -- Compiling module fpu_add_sub_altpriority_encoder_bv7
+# -- Compiling module fpu_add_sub_altpriority_encoder_be8
+# -- Compiling module fpu_add_sub_altpriority_encoder_r08
+# -- Compiling module fpu_add_sub_altpriority_encoder_rf8
+# -- Compiling module fpu_add_sub_altpriority_encoder_qb6
+# -- Compiling module fpu_add_sub_altpriority_encoder_nh8
+# -- Compiling module fpu_add_sub_altpriority_encoder_qh8
+# -- Compiling module fpu_add_sub_altpriority_encoder_vh8
+# -- Compiling module fpu_add_sub_altpriority_encoder_fj8
+# -- Compiling module fpu_add_sub_altpriority_encoder_n28
+# -- Compiling module fpu_add_sub_altpriority_encoder_q28
+# -- Compiling module fpu_add_sub_altpriority_encoder_v28
+# -- Compiling module fpu_add_sub_altpriority_encoder_f48
+# -- Compiling module fpu_add_sub_altpriority_encoder_e48
+# -- Compiling module fpu_add_sub_altfp_add_sub_vtn
+# -- Compiling module fpu_add_sub
+# 
+# Top level modules:
+# 	fpu_add_sub
+# vlog -vlog01compat -work work +incdir+C:/Users/naqas/Desktop/Github/RISC-V1/riscv_quartus13_cyclone2/system/synthesis/submodules {C:/Users/naqas/Desktop/Github/RISC-V1/riscv_quartus13_cyclone2/system/synthesis/submodules/fpu_compare.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module fpu_compare_altfp_compare_0uc
+# -- Compiling module fpu_compare
+# 
+# Top level modules:
+# 	fpu_compare
+# vlog -vlog01compat -work work +incdir+C:/Users/naqas/Desktop/Github/RISC-V1/riscv_quartus13_cyclone2/system/synthesis/submodules {C:/Users/naqas/Desktop/Github/RISC-V1/riscv_quartus13_cyclone2/system/synthesis/submodules/fpu_convert.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module fpu_convert_altbarrel_shift_brf
+# -- Compiling module fpu_convert_altpriority_encoder_3e8
+# -- Compiling module fpu_convert_altpriority_encoder_6e8
+# -- Compiling module fpu_convert_altpriority_encoder_be8
+# -- Compiling module fpu_convert_altpriority_encoder_rf8
+# -- Compiling module fpu_convert_altpriority_encoder_3v7
+# -- Compiling module fpu_convert_altpriority_encoder_6v7
+# -- Compiling module fpu_convert_altpriority_encoder_bv7
+# -- Compiling module fpu_convert_altpriority_encoder_r08
+# -- Compiling module fpu_convert_altpriority_encoder_qb6
+# -- Compiling module fpu_convert_altfp_convert_hvn
+# -- Compiling module fpu_convert
+# 
+# Top level modules:
+# 	fpu_convert
+# vlog -vlog01compat -work work +incdir+C:/Users/naqas/Desktop/Github/RISC-V1/riscv_quartus13_cyclone2/system/synthesis/submodules {C:/Users/naqas/Desktop/Github/RISC-V1/riscv_quartus13_cyclone2/system/synthesis/submodules/fpu_convert_float_integer.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module fpu_convert_float_integer_altbarrel_shift_grf
+# -- Compiling module fpu_convert_float_integer_altfp_convert_o6q
+# -- Compiling module fpu_convert_float_integer
+# 
+# Top level modules:
+# 	fpu_convert_float_integer
+# vlog -vlog01compat -work work +incdir+C:/Users/naqas/Desktop/Github/RISC-V1/riscv_quartus13_cyclone2/system/synthesis/submodules {C:/Users/naqas/Desktop/Github/RISC-V1/riscv_quartus13_cyclone2/system/synthesis/submodules/fpu_div.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module fpu_div_altfp_div_pst_t2j
+# -- Compiling module fpu_div_altfp_div_bnm
+# -- Compiling module fpu_div
+# 
+# Top level modules:
+# 	fpu_div
+# vlog -vlog01compat -work work +incdir+C:/Users/naqas/Desktop/Github/RISC-V1/riscv_quartus13_cyclone2/system/synthesis/submodules {C:/Users/naqas/Desktop/Github/RISC-V1/riscv_quartus13_cyclone2/system/synthesis/submodules/fpu_mult.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module fpu_mult_altfp_mult_0gr
+# -- Compiling module fpu_mult
+# 
+# Top level modules:
+# 	fpu_mult
+# vlog -vlog01compat -work work +incdir+C:/Users/naqas/Desktop/Github/RISC-V1/riscv_quartus13_cyclone2/system/synthesis/submodules {C:/Users/naqas/Desktop/Github/RISC-V1/riscv_quartus13_cyclone2/system/synthesis/submodules/fpu_sqrt.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module fpu_sqrt_alt_sqrt_block_kfb
+# -- Compiling module fpu_sqrt_altfp_sqrt_sef
+# -- Compiling module fpu_sqrt
+# 
+# Top level modules:
+# 	fpu_sqrt
+# vlib system
+# ** Warning: (vlib-34) Library already exists at "system".
+# 
+# vmap system system
+# Modifying modelsim.ini
+# vlog -vlog01compat -work system +incdir+C:/Users/naqas/Desktop/Github/RISC-V1/riscv_quartus13_cyclone2/system/synthesis {C:/Users/naqas/Desktop/Github/RISC-V1/riscv_quartus13_cyclone2/system/synthesis/system.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module system
+# 
+# Top level modules:
+# 	system
+# vlog -vlog01compat -work system +incdir+C:/Users/naqas/Desktop/Github/RISC-V1/riscv_quartus13_cyclone2/system/synthesis/submodules {C:/Users/naqas/Desktop/Github/RISC-V1/riscv_quartus13_cyclone2/system/synthesis/submodules/altera_reset_controller.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module altera_reset_controller
+# 
+# Top level modules:
+# 	altera_reset_controller
+# vlog -vlog01compat -work system +incdir+C:/Users/naqas/Desktop/Github/RISC-V1/riscv_quartus13_cyclone2/system/synthesis/submodules {C:/Users/naqas/Desktop/Github/RISC-V1/riscv_quartus13_cyclone2/system/synthesis/submodules/altera_reset_synchronizer.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module altera_reset_synchronizer
+# 
+# Top level modules:
+# 	altera_reset_synchronizer
+# vlog -vlog01compat -work system +incdir+C:/Users/naqas/Desktop/Github/RISC-V1/riscv_quartus13_cyclone2/system/synthesis/submodules {C:/Users/naqas/Desktop/Github/RISC-V1/riscv_quartus13_cyclone2/system/synthesis/submodules/system_jtag_uart_0.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module system_jtag_uart_0_sim_scfifo_w
+# -- Compiling module system_jtag_uart_0_scfifo_w
+# -- Compiling module system_jtag_uart_0_sim_scfifo_r
+# -- Compiling module system_jtag_uart_0_scfifo_r
+# -- Compiling module system_jtag_uart_0
+# 
+# Top level modules:
+# 	system_jtag_uart_0
+# vlog -vlog01compat -work system +incdir+C:/Users/naqas/Desktop/Github/RISC-V1/riscv_quartus13_cyclone2/system/synthesis/submodules {C:/Users/naqas/Desktop/Github/RISC-V1/riscv_quartus13_cyclone2/system/synthesis/submodules/riscv.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module riscv_core
+# -- Compiling module sevSegDec
+# -- Compiling module tb
+# 
+# Top level modules:
+# 	sevSegDec
+# 	tb
+# vlog -vlog01compat -work system +incdir+C:/Users/naqas/Desktop/Github/RISC-V1/riscv_quartus13_cyclone2/system/synthesis/submodules {C:/Users/naqas/Desktop/Github/RISC-V1/riscv_quartus13_cyclone2/system/synthesis/submodules/alu.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module alu
+# 
+# Top level modules:
+# 	alu
+# vlog -vlog01compat -work system +incdir+C:/Users/naqas/Desktop/Github/RISC-V1/riscv_quartus13_cyclone2/system/synthesis/submodules {C:/Users/naqas/Desktop/Github/RISC-V1/riscv_quartus13_cyclone2/system/synthesis/submodules/aluSource.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module aluSource
+# 
+# Top level modules:
+# 	aluSource
+# vlog -vlog01compat -work system +incdir+C:/Users/naqas/Desktop/Github/RISC-V1/riscv_quartus13_cyclone2/system/synthesis/submodules {C:/Users/naqas/Desktop/Github/RISC-V1/riscv_quartus13_cyclone2/system/synthesis/submodules/controlUnit.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module controlUnit
+# 
+# Top level modules:
+# 	controlUnit
+# vlog -vlog01compat -work system +incdir+C:/Users/naqas/Desktop/Github/RISC-V1/riscv_quartus13_cyclone2/system/synthesis/submodules {C:/Users/naqas/Desktop/Github/RISC-V1/riscv_quartus13_cyclone2/system/synthesis/submodules/forwadingUnit.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module forwardingUnit
+# 
+# Top level modules:
+# 	forwardingUnit
+# vlog -vlog01compat -work system +incdir+C:/Users/naqas/Desktop/Github/RISC-V1/riscv_quartus13_cyclone2/system/synthesis/submodules {C:/Users/naqas/Desktop/Github/RISC-V1/riscv_quartus13_cyclone2/system/synthesis/submodules/FPU.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module FPU
+# 
+# Top level modules:
+# 	FPU
+# vlog -vlog01compat -work system +incdir+C:/Users/naqas/Desktop/Github/RISC-V1/riscv_quartus13_cyclone2/system/synthesis/submodules {C:/Users/naqas/Desktop/Github/RISC-V1/riscv_quartus13_cyclone2/system/synthesis/submodules/Fpu_Controller.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module fpuController
+# 
+# Top level modules:
+# 	fpuController
+# vlog -vlog01compat -work system +incdir+C:/Users/naqas/Desktop/Github/RISC-V1/riscv_quartus13_cyclone2/system/synthesis/submodules {C:/Users/naqas/Desktop/Github/RISC-V1/riscv_quartus13_cyclone2/system/synthesis/submodules/hdu.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module HDU
+# 
+# Top level modules:
+# 	HDU
+# vlog -vlog01compat -work system +incdir+C:/Users/naqas/Desktop/Github/RISC-V1/riscv_quartus13_cyclone2/system/synthesis/submodules {C:/Users/naqas/Desktop/Github/RISC-V1/riscv_quartus13_cyclone2/system/synthesis/submodules/immGen.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module immGen
+# 
+# Top level modules:
+# 	immGen
+# vlog -vlog01compat -work system +incdir+C:/Users/naqas/Desktop/Github/RISC-V1/riscv_quartus13_cyclone2/system/synthesis/submodules {C:/Users/naqas/Desktop/Github/RISC-V1/riscv_quartus13_cyclone2/system/synthesis/submodules/mux.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module WB_MUX
+# -- Compiling module memOut_MUX
+# -- Compiling module pcIn_MUX
+# 
+# Top level modules:
+# 	WB_MUX
+# 	memOut_MUX
+# 	pcIn_MUX
+# vlog -vlog01compat -work system +incdir+C:/Users/naqas/Desktop/Github/RISC-V1/riscv_quartus13_cyclone2/system/synthesis/submodules {C:/Users/naqas/Desktop/Github/RISC-V1/riscv_quartus13_cyclone2/system/synthesis/submodules/regFile.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module float_regFile
+# -- Compiling module regFile
+# -- Compiling module register
+# 
+# Top level modules:
+# 	float_regFile
+# 	regFile
+# 	register
+# vlog -vlog01compat -work work +incdir+C:/Users/naqas/Desktop/Github/RISC-V1/riscv_quartus13_cyclone2/system/synthesis/submodules {C:/Users/naqas/Desktop/Github/RISC-V1/riscv_quartus13_cyclone2/system/synthesis/submodules/fpu_add_sub.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module fpu_add_sub_altbarrel_shift_h0e
+# -- Compiling module fpu_add_sub_altbarrel_shift_6hb
+# -- Compiling module fpu_add_sub_altpriority_encoder_3v7
+# -- Compiling module fpu_add_sub_altpriority_encoder_3e8
+# -- Compiling module fpu_add_sub_altpriority_encoder_6v7
+# -- Compiling module fpu_add_sub_altpriority_encoder_6e8
+# -- Compiling module fpu_add_sub_altpriority_encoder_bv7
+# -- Compiling module fpu_add_sub_altpriority_encoder_be8
+# -- Compiling module fpu_add_sub_altpriority_encoder_r08
+# -- Compiling module fpu_add_sub_altpriority_encoder_rf8
+# -- Compiling module fpu_add_sub_altpriority_encoder_qb6
+# -- Compiling module fpu_add_sub_altpriority_encoder_nh8
+# -- Compiling module fpu_add_sub_altpriority_encoder_qh8
+# -- Compiling module fpu_add_sub_altpriority_encoder_vh8
+# -- Compiling module fpu_add_sub_altpriority_encoder_fj8
+# -- Compiling module fpu_add_sub_altpriority_encoder_n28
+# -- Compiling module fpu_add_sub_altpriority_encoder_q28
+# -- Compiling module fpu_add_sub_altpriority_encoder_v28
+# -- Compiling module fpu_add_sub_altpriority_encoder_f48
+# -- Compiling module fpu_add_sub_altpriority_encoder_e48
+# -- Compiling module fpu_add_sub_altfp_add_sub_vtn
+# -- Compiling module fpu_add_sub
+# 
+# Top level modules:
+# 	fpu_add_sub
+# vlog -vlog01compat -work work +incdir+C:/Users/naqas/Desktop/Github/RISC-V1/riscv_quartus13_cyclone2/system/synthesis/submodules {C:/Users/naqas/Desktop/Github/RISC-V1/riscv_quartus13_cyclone2/system/synthesis/submodules/fpu_compare.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module fpu_compare_altfp_compare_0uc
+# -- Compiling module fpu_compare
+# 
+# Top level modules:
+# 	fpu_compare
+# vlog -vlog01compat -work work +incdir+C:/Users/naqas/Desktop/Github/RISC-V1/riscv_quartus13_cyclone2/system/synthesis/submodules {C:/Users/naqas/Desktop/Github/RISC-V1/riscv_quartus13_cyclone2/system/synthesis/submodules/fpu_convert.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module fpu_convert_altbarrel_shift_brf
+# -- Compiling module fpu_convert_altpriority_encoder_3e8
+# -- Compiling module fpu_convert_altpriority_encoder_6e8
+# -- Compiling module fpu_convert_altpriority_encoder_be8
+# -- Compiling module fpu_convert_altpriority_encoder_rf8
+# -- Compiling module fpu_convert_altpriority_encoder_3v7
+# -- Compiling module fpu_convert_altpriority_encoder_6v7
+# -- Compiling module fpu_convert_altpriority_encoder_bv7
+# -- Compiling module fpu_convert_altpriority_encoder_r08
+# -- Compiling module fpu_convert_altpriority_encoder_qb6
+# -- Compiling module fpu_convert_altfp_convert_hvn
+# -- Compiling module fpu_convert
+# 
+# Top level modules:
+# 	fpu_convert
+# vlog -vlog01compat -work work +incdir+C:/Users/naqas/Desktop/Github/RISC-V1/riscv_quartus13_cyclone2/system/synthesis/submodules {C:/Users/naqas/Desktop/Github/RISC-V1/riscv_quartus13_cyclone2/system/synthesis/submodules/fpu_convert_float_integer.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module fpu_convert_float_integer_altbarrel_shift_grf
+# -- Compiling module fpu_convert_float_integer_altfp_convert_o6q
+# -- Compiling module fpu_convert_float_integer
+# 
+# Top level modules:
+# 	fpu_convert_float_integer
+# vlog -vlog01compat -work work +incdir+C:/Users/naqas/Desktop/Github/RISC-V1/riscv_quartus13_cyclone2/system/synthesis/submodules {C:/Users/naqas/Desktop/Github/RISC-V1/riscv_quartus13_cyclone2/system/synthesis/submodules/fpu_div.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module fpu_div_altfp_div_pst_t2j
+# -- Compiling module fpu_div_altfp_div_bnm
+# -- Compiling module fpu_div
+# 
+# Top level modules:
+# 	fpu_div
+# vlog -vlog01compat -work work +incdir+C:/Users/naqas/Desktop/Github/RISC-V1/riscv_quartus13_cyclone2/system/synthesis/submodules {C:/Users/naqas/Desktop/Github/RISC-V1/riscv_quartus13_cyclone2/system/synthesis/submodules/fpu_mult.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module fpu_mult_altfp_mult_0gr
+# -- Compiling module fpu_mult
+# 
+# Top level modules:
+# 	fpu_mult
+# vlog -vlog01compat -work work +incdir+C:/Users/naqas/Desktop/Github/RISC-V1/riscv_quartus13_cyclone2/system/synthesis/submodules {C:/Users/naqas/Desktop/Github/RISC-V1/riscv_quartus13_cyclone2/system/synthesis/submodules/fpu_sqrt.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module fpu_sqrt_alt_sqrt_block_kfb
+# -- Compiling module fpu_sqrt_altfp_sqrt_sef
+# -- Compiling module fpu_sqrt
+# 
+# Top level modules:
+# 	fpu_sqrt
+# vlog -vlog01compat -work system +incdir+C:/Users/naqas/Desktop/Github/RISC-V1/riscv_quartus13_cyclone2/system/synthesis/submodules {C:/Users/naqas/Desktop/Github/RISC-V1/riscv_quartus13_cyclone2/system/synthesis/submodules/DRAM.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module DRAM
+# ** Warning: C:/Users/naqas/Desktop/Github/RISC-V1/riscv_quartus13_cyclone2/system/synthesis/submodules/DRAM.v(20): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
+# 
+# ** Warning: C:/Users/naqas/Desktop/Github/RISC-V1/riscv_quartus13_cyclone2/system/synthesis/submodules/DRAM.v(21): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
+# 
+# ** Warning: C:/Users/naqas/Desktop/Github/RISC-V1/riscv_quartus13_cyclone2/system/synthesis/submodules/DRAM.v(22): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
+# 
+# 
+# Top level modules:
+# 	DRAM
+# vlog -vlog01compat -work system +incdir+C:/Users/naqas/Desktop/Github/RISC-V1/riscv_quartus13_cyclone2/system/synthesis/submodules {C:/Users/naqas/Desktop/Github/RISC-V1/riscv_quartus13_cyclone2/system/synthesis/submodules/IRAM.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module IRAM
+# 
+# Top level modules:
+# 	IRAM
+# vlog -vlog01compat -work work +incdir+C:/Users/naqas/Desktop/Github/RISC-V1/riscv_quartus13_cyclone2 {C:/Users/naqas/Desktop/Github/RISC-V1/riscv_quartus13_cyclone2/top.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module top
+# -- Compiling module tb
+# 
+# Top level modules:
+# 	top
+# 	tb
+# vlog -sv -work system +incdir+C:/Users/naqas/Desktop/Github/RISC-V1/riscv_quartus13_cyclone2/system/synthesis/submodules {C:/Users/naqas/Desktop/Github/RISC-V1/riscv_quartus13_cyclone2/system/synthesis/submodules/altera_merlin_slave_translator.sv}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module altera_merlin_slave_translator
+# 
+# Top level modules:
+# 	altera_merlin_slave_translator
+# vlog -sv -work system +incdir+C:/Users/naqas/Desktop/Github/RISC-V1/riscv_quartus13_cyclone2/system/synthesis/submodules {C:/Users/naqas/Desktop/Github/RISC-V1/riscv_quartus13_cyclone2/system/synthesis/submodules/altera_merlin_master_translator.sv}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module altera_merlin_master_translator
+# 
+# Top level modules:
+# 	altera_merlin_master_translator
+# 
+# vlog -vlog01compat -work work +incdir+C:/Users/naqas/Desktop/Github/RISC-V1/riscv_quartus13_cyclone2 {C:/Users/naqas/Desktop/Github/RISC-V1/riscv_quartus13_cyclone2/top.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module top
+# -- Compiling module tb
+# 
+# Top level modules:
+# 	top
+# 	tb
+# 
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneii_ver -L rtl_work -L work -L system -voptargs="+acc"  tb
+# vsim -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneii_ver -L rtl_work -L work -L system -voptargs=\"+acc\" -t 1ps tb 
+# Loading work.tb
+# Loading system.system
+# Loading system.riscv_core
+# Loading system.register
+# Loading system.pcIn_MUX
+# Loading system.IRAM
+# Loading system.regFile
+# Loading system.immGen
+# Loading system.controlUnit
+# Loading system.float_regFile
+# Loading system.aluSource
+# Loading system.alu
+# Loading system.fpuController
+# Loading system.FPU
+# Loading work.fpu_add_sub
+# Loading work.fpu_add_sub_altfp_add_sub_vtn
+# Loading work.fpu_add_sub_altbarrel_shift_h0e
+# Loading work.fpu_add_sub_altbarrel_shift_6hb
+# Loading work.fpu_add_sub_altpriority_encoder_qb6
+# Loading work.fpu_add_sub_altpriority_encoder_r08
+# Loading work.fpu_add_sub_altpriority_encoder_bv7
+# Loading work.fpu_add_sub_altpriority_encoder_6v7
+# Loading work.fpu_add_sub_altpriority_encoder_3v7
+# Loading work.fpu_add_sub_altpriority_encoder_3e8
+# Loading work.fpu_add_sub_altpriority_encoder_6e8
+# Loading work.fpu_add_sub_altpriority_encoder_be8
+# Loading work.fpu_add_sub_altpriority_encoder_rf8
+# Loading work.fpu_add_sub_altpriority_encoder_e48
+# Loading work.fpu_add_sub_altpriority_encoder_fj8
+# Loading work.fpu_add_sub_altpriority_encoder_vh8
+# Loading work.fpu_add_sub_altpriority_encoder_qh8
+# Loading work.fpu_add_sub_altpriority_encoder_nh8
+# Loading work.fpu_add_sub_altpriority_encoder_f48
+# Loading work.fpu_add_sub_altpriority_encoder_v28
+# Loading work.fpu_add_sub_altpriority_encoder_q28
+# Loading work.fpu_add_sub_altpriority_encoder_n28
+# Loading lpm_ver.lpm_add_sub
+# Loading lpm_ver.lpm_compare
+# Loading work.fpu_mult
+# Loading work.fpu_mult_altfp_mult_0gr
+# Loading lpm_ver.lpm_mult
+# Loading lpm_ver.LPM_HINT_EVALUATION
+# Loading work.fpu_div
+# Loading work.fpu_div_altfp_div_bnm
+# Loading work.fpu_div_altfp_div_pst_t2j
+# Loading altera_mf_ver.altsyncram
+# Loading altera_mf_ver.ALTERA_DEVICE_FAMILIES
+# Loading altera_mf_ver.ALTERA_MF_MEMORY_INITIALIZATION
+# Loading work.fpu_compare
+# Loading work.fpu_compare_altfp_compare_0uc
+# Loading work.fpu_sqrt
+# Loading work.fpu_sqrt_altfp_sqrt_sef
+# Loading work.fpu_sqrt_alt_sqrt_block_kfb
+# Loading work.fpu_convert
+# Loading work.fpu_convert_altfp_convert_hvn
+# Loading work.fpu_convert_altbarrel_shift_brf
+# Loading work.fpu_convert_altpriority_encoder_qb6
+# Loading work.fpu_convert_altpriority_encoder_rf8
+# Loading work.fpu_convert_altpriority_encoder_be8
+# Loading work.fpu_convert_altpriority_encoder_6e8
+# Loading work.fpu_convert_altpriority_encoder_3e8
+# Loading work.fpu_convert_altpriority_encoder_r08
+# Loading work.fpu_convert_altpriority_encoder_bv7
+# Loading work.fpu_convert_altpriority_encoder_6v7
+# Loading work.fpu_convert_altpriority_encoder_3v7
+# Loading work.fpu_convert_float_integer
+# Loading work.fpu_convert_float_integer_altfp_convert_o6q
+# Loading work.fpu_convert_float_integer_altbarrel_shift_grf
+# Loading system.DRAM
+# Loading system.memOut_MUX
+# Loading system.WB_MUX
+# Loading system.HDU
+# Loading system.forwardingUnit
+# Loading system.system_jtag_uart_0
+# Loading system.system_jtag_uart_0_scfifo_w
+# Loading system.system_jtag_uart_0_sim_scfifo_w
+# Loading system.system_jtag_uart_0_scfifo_r
+# Loading system.system_jtag_uart_0_sim_scfifo_r
+# Loading sv_std.std
+# Loading system.altera_merlin_master_translator
+# Loading system.altera_merlin_slave_translator
+# Loading system.altera_reset_controller
+# Loading system.altera_reset_synchronizer
+# ** Warning: (vsim-3016) C:/Users/naqas/Desktop/Github/RISC-V1/riscv_quartus13_cyclone2/system/synthesis/submodules/fpu_div.v(254): Port type is incompatible with connection (port 'clock0').
+# 
+#         Region: /tb/u0/riscv_core_0/fpu/fpu_div_inst/fpu_div_altfp_div_bnm_component/altfp_div_pst1/altsyncram3
+# ** Warning: (vsim-3017) C:/Users/naqas/Desktop/Github/RISC-V1/riscv_quartus13_cyclone2/system/synthesis/system.v(61): [TFMPC] - Too few port connections. Expected 12, found 10.
+# 
+#         Region: /tb/u0/jtag_uart_0
+# ** Warning: (vsim-3722) C:/Users/naqas/Desktop/Github/RISC-V1/riscv_quartus13_cyclone2/system/synthesis/system.v(61): [TFMPC] - Missing connection for port 'dataavailable'.
+# 
+# ** Warning: (vsim-3722) C:/Users/naqas/Desktop/Github/RISC-V1/riscv_quartus13_cyclone2/system/synthesis/system.v(61): [TFMPC] - Missing connection for port 'readyfordata'.
+# 
+# ** Warning: Design size of 75 instances exceeds ModelSim ALTERA recommended capacity.
+# This may because you are loading cell libraries which are not recommended with
+# the ModelSim Altera version. Expect performance to be adversely affected.
+# 
+# add wave *
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+# 
+#           File in use by: naqas  Hostname: NIKU  ProcessID: 79728
+# 
+#           Attempting to use alternate WLF file "./wlftdqvt71".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+# 
+#           Using alternate file: ./wlftdqvt71
+# 
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# run -all
+# 00000000
+# 000000cc
+# Ì                7000: tb.u0.riscv_core_0_avalon_master_translator: Error: Input controls/data changed while av_waitrequest is asserted.
+# av_address      00000108 --> ffffff0c
+# av_byteenable   f --> f
+# av_burstcount   1 --> 1
+# av_writedata    ffffff20 --> 000000cc
+# av_writeresponserequest 0 --> 0
+# av_write        1 --> 0
+# av_read         0 --> 0
+# av_lock         0 --> 0
+# av_chipselect   0 --> 0
+# av_debugaccess  0 --> 0 
+# 000000xx
+#                 7000: tb.u0.riscv_core_0_avalon_master_translator: Error: Input controls/data changed while av_waitrequest is asserted.
+# av_address      00000108 --> ffffff0c
+# av_byteenable   f --> f
+# av_burstcount   1 --> 1
+# av_writedata    000000cc --> 000000xx
+# av_writeresponserequest 0 --> 0
+# av_write        1 --> 0
+# av_read         0 --> 0
+# av_lock         0 --> 0
+# av_chipselect   0 --> 0
+# av_debugaccess  0 --> 0 
+#                 7000: tb.u0.riscv_core_0_avalon_master_translator: Error: Input controls/data changed while av_waitrequest is asserted.
+# av_address      00000108 --> ffffff0c
+# av_byteenable   f --> f
+# av_burstcount   1 --> 1
+# av_writedata    000000xx --> 000000xx
+# av_writeresponserequest 0 --> 0
+# av_write        1 --> 0
+# av_read         0 --> 0
+# av_lock         0 --> 0
+# av_chipselect   0 --> 0
+# av_debugaccess  0 --> 0 
+#                 7000: tb.u0.riscv_core_0_avalon_master_translator: Error: Input controls/data changed while av_waitrequest is asserted.
+# av_address      00000108 --> 00000000
+# av_byteenable   f --> f
+# av_burstcount   1 --> 1
+# av_writedata    000000xx --> 000000xx
+# av_writeresponserequest 0 --> 0
+# av_write        1 --> 0
+# av_read         0 --> 0
+# av_lock         0 --> 0
+# av_chipselect   0 --> 0
+# av_debugaccess  0 --> 0 
+# 0000004f
+# O                7000: tb.u0.riscv_core_0_avalon_master_translator: Error: Input controls/data changed while av_waitrequest is asserted.
+# av_address      00000108 --> ffffff0c
+# av_byteenable   f --> f
+# av_burstcount   1 --> 1
+# av_writedata    ffffff20 --> 0000004f
+# av_writeresponserequest 0 --> 0
+# av_write        1 --> 0
+# av_read         0 --> 0
+# av_lock         0 --> 0
+# av_chipselect   0 --> 0
+# av_debugaccess  0 --> 0 
+# 000000xx
+#                 7000: tb.u0.riscv_core_0_avalon_master_translator: Error: Input controls/data changed while av_waitrequest is asserted.
+# av_address      00000108 --> ffffff0c
+# av_byteenable   f --> f
+# av_burstcount   1 --> 1
+# av_writedata    0000004f --> 000000xx
+# av_writeresponserequest 0 --> 0
+# av_write        1 --> 0
+# av_read         0 --> 0
+# av_lock         0 --> 0
+# av_chipselect   0 --> 0
+# av_debugaccess  0 --> 0 
+#                 7000: tb.u0.riscv_core_0_avalon_master_translator: Error: Input controls/data changed while av_waitrequest is asserted.
+# av_address      00000108 --> ffffff0c
+# av_byteenable   f --> f
+# av_burstcount   1 --> 1
+# av_writedata    000000xx --> 000000xx
+# av_writeresponserequest 0 --> 0
+# av_write        1 --> 0
+# av_read         0 --> 0
+# av_lock         0 --> 0
+# av_chipselect   0 --> 0
+# av_debugaccess  0 --> 0 
+#                 7000: tb.u0.riscv_core_0_avalon_master_translator: Error: Input controls/data changed while av_waitrequest is asserted.
+# av_address      00000108 --> 00000000
+# av_byteenable   f --> f
+# av_burstcount   1 --> 1
+# av_writedata    000000xx --> 000000xx
+# av_writeresponserequest 0 --> 0
+# av_write        1 --> 0
+# av_read         0 --> 0
+# av_lock         0 --> 0
+# av_chipselect   0 --> 0
+# av_debugaccess  0 --> 0 
+# 00000042
+# B                7000: tb.u0.riscv_core_0_avalon_master_translator: Error: Input controls/data changed while av_waitrequest is asserted.
+# av_address      00000108 --> ffffff0c
+# av_byteenable   f --> f
+# av_burstcount   1 --> 1
+# av_writedata    ffffff20 --> 00000042
+# av_writeresponserequest 0 --> 0
+# av_write        1 --> 0
+# av_read         0 --> 0
+# av_lock         0 --> 0
+# av_chipselect   0 --> 0
+# av_debugaccess  0 --> 0 
+# 000000xx
+#                 7000: tb.u0.riscv_core_0_avalon_master_translator: Error: Input controls/data changed while av_waitrequest is asserted.
+# av_address      00000108 --> ffffff0c
+# av_byteenable   f --> f
+# av_burstcount   1 --> 1
+# av_writedata    00000042 --> 000000xx
+# av_writeresponserequest 0 --> 0
+# av_write        1 --> 0
+# av_read         0 --> 0
+# av_lock         0 --> 0
+# av_chipselect   0 --> 0
+# av_debugaccess  0 --> 0 
+#                 7000: tb.u0.riscv_core_0_avalon_master_translator: Error: Input controls/data changed while av_waitrequest is asserted.
+# av_address      00000108 --> ffffff0c
+# av_byteenable   f --> f
+# av_burstcount   1 --> 1
+# av_writedata    000000xx --> 000000xx
+# av_writeresponserequest 0 --> 0
+# av_write        1 --> 0
+# av_read         0 --> 0
+# av_lock         0 --> 0
+# av_chipselect   0 --> 0
+# av_debugaccess  0 --> 0 
+#                 7000: tb.u0.riscv_core_0_avalon_master_translator: Error: Input controls/data changed while av_waitrequest is asserted.
+# av_address      00000108 --> 00000000
+# av_byteenable   f --> f
+# av_burstcount   1 --> 1
+# av_writedata    000000xx --> 000000xx
+# av_writeresponserequest 0 --> 0
+# av_write        1 --> 0
+# av_read         0 --> 0
+# av_lock         0 --> 0
+# av_chipselect   0 --> 0
+# av_debugaccess  0 --> 0 
+# 000000e0
+# à                7000: tb.u0.riscv_core_0_avalon_master_translator: Error: Input controls/data changed while av_waitrequest is asserted.
+# av_address      00000108 --> ffffff0c
+# av_byteenable   f --> f
+# av_burstcount   1 --> 1
+# av_writedata    ffffff20 --> 000000e0
+# av_writeresponserequest 0 --> 0
+# av_write        1 --> 0
+# av_read         0 --> 0
+# av_lock         0 --> 0
+# av_chipselect   0 --> 0
+# av_debugaccess  0 --> 0 
+# 000000xx
+#                 7000: tb.u0.riscv_core_0_avalon_master_translator: Error: Input controls/data changed while av_waitrequest is asserted.
+# av_address      00000108 --> ffffff0c
+# av_byteenable   f --> f
+# av_burstcount   1 --> 1
+# av_writedata    000000e0 --> 000000xx
+# av_writeresponserequest 0 --> 0
+# av_write        1 --> 0
+# av_read         0 --> 0
+# av_lock         0 --> 0
+# av_chipselect   0 --> 0
+# av_debugaccess  0 --> 0 
+#                 7000: tb.u0.riscv_core_0_avalon_master_translator: Error: Input controls/data changed while av_waitrequest is asserted.
+# av_address      00000108 --> ffffff0c
+# av_byteenable   f --> f
+# av_burstcount   1 --> 1
+# av_writedata    000000xx --> 000000xx
+# av_writeresponserequest 0 --> 0
+# av_write        1 --> 0
+# av_read         0 --> 0
+# av_lock         0 --> 0
+# av_chipselect   0 --> 0
+# av_debugaccess  0 --> 0 
+#                 7000: tb.u0.riscv_core_0_avalon_master_translator: Error: Input controls/data changed while av_waitrequest is asserted.
+# av_address      00000108 --> 00000000
+# av_byteenable   f --> f
+# av_burstcount   1 --> 1
+# av_writedata    000000xx --> 000000xx
+# av_writeresponserequest 0 --> 0
+# av_write        1 --> 0
+# av_read         0 --> 0
+# av_lock         0 --> 0
+# av_chipselect   0 --> 0
+# av_debugaccess  0 --> 0 
+# 0000008e
+# Ž                7000: tb.u0.riscv_core_0_avalon_master_translator: Error: Input controls/data changed while av_waitrequest is asserted.
+# av_address      00000108 --> ffffff0c
+# av_byteenable   f --> f
+# av_burstcount   1 --> 1
+# av_writedata    ffffff20 --> 0000008e
+# av_writeresponserequest 0 --> 0
+# av_write        1 --> 0
+# av_read         0 --> 0
+# av_lock         0 --> 0
+# av_chipselect   0 --> 0
+# av_debugaccess  0 --> 0 
+# 000000xx
+#                 7000: tb.u0.riscv_core_0_avalon_master_translator: Error: Input controls/data changed while av_waitrequest is asserted.
+# av_address      00000108 --> ffffff0c
+# av_byteenable   f --> f
+# av_burstcount   1 --> 1
+# av_writedata    0000008e --> 000000xx
+# av_writeresponserequest 0 --> 0
+# av_write        1 --> 0
+# av_read         0 --> 0
+# av_lock         0 --> 0
+# av_chipselect   0 --> 0
+# av_debugaccess  0 --> 0 
+#                 7000: tb.u0.riscv_core_0_avalon_master_translator: Error: Input controls/data changed while av_waitrequest is asserted.
+# av_address      00000108 --> ffffff0c
+# av_byteenable   f --> f
+# av_burstcount   1 --> 1
+# av_writedata    000000xx --> 000000xx
+# av_writeresponserequest 0 --> 0
+# av_write        1 --> 0
+# av_read         0 --> 0
+# av_lock         0 --> 0
+# av_chipselect   0 --> 0
+# av_debugaccess  0 --> 0 
+#                 7000: tb.u0.riscv_core_0_avalon_master_translator: Error: Input controls/data changed while av_waitrequest is asserted.
+# av_address      00000108 --> 00000000
+# av_byteenable   f --> f
+# av_burstcount   1 --> 1
+# av_writedata    000000xx --> 000000xx
+# av_writeresponserequest 0 --> 0
+# av_write        1 --> 0
+# av_read         0 --> 0
+# av_lock         0 --> 0
+# av_chipselect   0 --> 0
+# av_debugaccess  0 --> 0 
+# 000000c6
+# Æ                7000: tb.u0.riscv_core_0_avalon_master_translator: Error: Input controls/data changed while av_waitrequest is asserted.
+# av_address      00000108 --> ffffff0c
+# av_byteenable   f --> f
+# av_burstcount   1 --> 1
+# av_writedata    ffffff20 --> 000000c6
+# av_writeresponserequest 0 --> 0
+# av_write        1 --> 0
+# av_read         0 --> 0
+# av_lock         0 --> 0
+# av_chipselect   0 --> 0
+# av_debugaccess  0 --> 0 
+# 000000xx
+#                 7000: tb.u0.riscv_core_0_avalon_master_translator: Error: Input controls/data changed while av_waitrequest is asserted.
+# av_address      00000108 --> ffffff0c
+# av_byteenable   f --> f
+# av_burstcount   1 --> 1
+# av_writedata    000000c6 --> 000000xx
+# av_writeresponserequest 0 --> 0
+# av_write        1 --> 0
+# av_read         0 --> 0
+# av_lock         0 --> 0
+# av_chipselect   0 --> 0
+# av_debugaccess  0 --> 0 
+#                 7000: tb.u0.riscv_core_0_avalon_master_translator: Error: Input controls/data changed while av_waitrequest is asserted.
+# av_address      00000108 --> ffffff0c
+# av_byteenable   f --> f
+# av_burstcount   1 --> 1
+# av_writedata    000000xx --> 000000xx
+# av_writeresponserequest 0 --> 0
+# av_write        1 --> 0
+# av_read         0 --> 0
+# av_lock         0 --> 0
+# av_chipselect   0 --> 0
+# av_debugaccess  0 --> 0 
+#                 7000: tb.u0.riscv_core_0_avalon_master_translator: Error: Input controls/data changed while av_waitrequest is asserted.
+# av_address      00000108 --> 00000000
+# av_byteenable   f --> f
+# av_burstcount   1 --> 1
+# av_writedata    000000xx --> 000000xx
+# av_writeresponserequest 0 --> 0
+# av_write        1 --> 0
+# av_read         0 --> 0
+# av_lock         0 --> 0
+# av_chipselect   0 --> 0
+# av_debugaccess  0 --> 0 
+# 000000da
+# Ú                7000: tb.u0.riscv_core_0_avalon_master_translator: Error: Input controls/data changed while av_waitrequest is asserted.
+# av_address      00000108 --> ffffff0c
+# av_byteenable   f --> f
+# av_burstcount   1 --> 1
+# av_writedata    ffffff20 --> 000000da
+# av_writeresponserequest 0 --> 0
+# av_write        1 --> 0
+# av_read         0 --> 0
+# av_lock         0 --> 0
+# av_chipselect   0 --> 0
+# av_debugaccess  0 --> 0 
+# 000000xx
+#                 7000: tb.u0.riscv_core_0_avalon_master_translator: Error: Input controls/data changed while av_waitrequest is asserted.
+# av_address      00000108 --> ffffff0c
+# av_byteenable   f --> f
+# av_burstcount   1 --> 1
+# av_writedata    000000da --> 000000xx
+# av_writeresponserequest 0 --> 0
+# av_write        1 --> 0
+# av_read         0 --> 0
+# av_lock         0 --> 0
+# av_chipselect   0 --> 0
+# av_debugaccess  0 --> 0 
+#                 7000: tb.u0.riscv_core_0_avalon_master_translator: Error: Input controls/data changed while av_waitrequest is asserted.
+# av_address      00000108 --> ffffff0c
+# av_byteenable   f --> f
+# av_burstcount   1 --> 1
+# av_writedata    000000xx --> 000000xx
+# av_writeresponserequest 0 --> 0
+# av_write        1 --> 0
+# av_read         0 --> 0
+# av_lock         0 --> 0
+# av_chipselect   0 --> 0
+# av_debugaccess  0 --> 0 
+#                 7000: tb.u0.riscv_core_0_avalon_master_translator: Error: Input controls/data changed while av_waitrequest is asserted.
+# av_address      00000108 --> 00000000
+# av_byteenable   f --> f
+# av_burstcount   1 --> 1
+# av_writedata    000000xx --> 000000xx
+# av_writeresponserequest 0 --> 0
+# av_write        1 --> 0
+# av_read         0 --> 0
+# av_lock         0 --> 0
+# av_chipselect   0 --> 0
+# av_debugaccess  0 --> 0 
+# 00000017
+#                 8000: tb.u0.riscv_core_0_avalon_master_translator: Error: Input controls/data changed while av_waitrequest is asserted.
+# av_address      00000108 --> ffffff0c
+# av_byteenable   f --> f
+# av_burstcount   1 --> 1
+# av_writedata    ffffff20 --> 00000017
+# av_writeresponserequest 0 --> 0
+# av_write        1 --> 0
+# av_read         0 --> 0
+# av_lock         0 --> 0
+# av_chipselect   0 --> 0
+# av_debugaccess  0 --> 0 
+# 000000xx
+#                 8000: tb.u0.riscv_core_0_avalon_master_translator: Error: Input controls/data changed while av_waitrequest is asserted.
+# av_address      00000108 --> ffffff0c
+# av_byteenable   f --> f
+# av_burstcount   1 --> 1
+# av_writedata    00000017 --> 000000xx
+# av_writeresponserequest 0 --> 0
+# av_write        1 --> 0
+# av_read         0 --> 0
+# av_lock         0 --> 0
+# av_chipselect   0 --> 0
+# av_debugaccess  0 --> 0 
+#                 8000: tb.u0.riscv_core_0_avalon_master_translator: Error: Input controls/data changed while av_waitrequest is asserted.
+# av_address      00000108 --> ffffff0c
+# av_byteenable   f --> f
+# av_burstcount   1 --> 1
+# av_writedata    000000xx --> 000000xx
+# av_writeresponserequest 0 --> 0
+# av_write        1 --> 0
+# av_read         0 --> 0
+# av_lock         0 --> 0
+# av_chipselect   0 --> 0
+# av_debugaccess  0 --> 0 
+#                 8000: tb.u0.riscv_core_0_avalon_master_translator: Error: Input controls/data changed while av_waitrequest is asserted.
+# av_address      00000108 --> 00000000
+# av_byteenable   f --> f
+# av_burstcount   1 --> 1
+# av_writedata    000000xx --> 000000xx
+# av_writeresponserequest 0 --> 0
+# av_write        1 --> 0
+# av_read         0 --> 0
+# av_lock         0 --> 0
+# av_chipselect   0 --> 0
+# av_debugaccess  0 --> 0 
+# 000000c3
+# Ã                8000: tb.u0.riscv_core_0_avalon_master_translator: Error: Input controls/data changed while av_waitrequest is asserted.
+# av_address      00000108 --> ffffff0c
+# av_byteenable   f --> f
+# av_burstcount   1 --> 1
+# av_writedata    ffffff20 --> 000000c3
+# av_writeresponserequest 0 --> 0
+# av_write        1 --> 0
+# av_read         0 --> 0
+# av_lock         0 --> 0
+# av_chipselect   0 --> 0
+# av_debugaccess  0 --> 0 
+# 000000xx
+#                 8000: tb.u0.riscv_core_0_avalon_master_translator: Error: Input controls/data changed while av_waitrequest is asserted.
+# av_address      00000108 --> ffffff0c
+# av_byteenable   f --> f
+# av_burstcount   1 --> 1
+# av_writedata    000000c3 --> 000000xx
+# av_writeresponserequest 0 --> 0
+# av_write        1 --> 0
+# av_read         0 --> 0
+# av_lock         0 --> 0
+# av_chipselect   0 --> 0
+# av_debugaccess  0 --> 0 
+#                 8000: tb.u0.riscv_core_0_avalon_master_translator: Error: Input controls/data changed while av_waitrequest is asserted.
+# av_address      00000108 --> ffffff0c
+# av_byteenable   f --> f
+# av_burstcount   1 --> 1
+# av_writedata    000000xx --> 000000xx
+# av_writeresponserequest 0 --> 0
+# av_write        1 --> 0
+# av_read         0 --> 0
+# av_lock         0 --> 0
+# av_chipselect   0 --> 0
+# av_debugaccess  0 --> 0 
+#                 8000: tb.u0.riscv_core_0_avalon_master_translator: Error: Input controls/data changed while av_waitrequest is asserted.
+# av_address      00000108 --> 00000000
+# av_byteenable   f --> f
+# av_burstcount   1 --> 1
+# av_writedata    000000xx --> 000000xx
+# av_writeresponserequest 0 --> 0
+# av_write        1 --> 0
+# av_read         0 --> 0
+# av_lock         0 --> 0
+# av_chipselect   0 --> 0
+# av_debugaccess  0 --> 0 
+# 00000004
+#                 8000: tb.u0.riscv_core_0_avalon_master_translator: Error: Input controls/data changed while av_waitrequest is asserted.
+# av_address      00000108 --> 00000000
+# av_byteenable   f --> f
+# av_burstcount   1 --> 1
+# av_writedata    00000000 --> 00000004
+# av_writeresponserequest 0 --> 0
+# av_write        1 --> 0
+# av_read         0 --> 0
+# av_lock         0 --> 0
+# av_chipselect   0 --> 0
+# av_debugaccess  0 --> 0 
+do top_run_msim_rtl_verilog.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Modifying modelsim.ini
+# 
+# vlog -vlog01compat -work work +incdir+C:/Users/naqas/Desktop/Github/RISC-V1/riscv_quartus13_cyclone2/system/synthesis/submodules {C:/Users/naqas/Desktop/Github/RISC-V1/riscv_quartus13_cyclone2/system/synthesis/submodules/fpu_add_sub.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module fpu_add_sub_altbarrel_shift_h0e
+# -- Compiling module fpu_add_sub_altbarrel_shift_6hb
+# -- Compiling module fpu_add_sub_altpriority_encoder_3v7
+# -- Compiling module fpu_add_sub_altpriority_encoder_3e8
+# -- Compiling module fpu_add_sub_altpriority_encoder_6v7
+# -- Compiling module fpu_add_sub_altpriority_encoder_6e8
+# -- Compiling module fpu_add_sub_altpriority_encoder_bv7
+# -- Compiling module fpu_add_sub_altpriority_encoder_be8
+# -- Compiling module fpu_add_sub_altpriority_encoder_r08
+# -- Compiling module fpu_add_sub_altpriority_encoder_rf8
+# -- Compiling module fpu_add_sub_altpriority_encoder_qb6
+# -- Compiling module fpu_add_sub_altpriority_encoder_nh8
+# -- Compiling module fpu_add_sub_altpriority_encoder_qh8
+# -- Compiling module fpu_add_sub_altpriority_encoder_vh8
+# -- Compiling module fpu_add_sub_altpriority_encoder_fj8
+# -- Compiling module fpu_add_sub_altpriority_encoder_n28
+# -- Compiling module fpu_add_sub_altpriority_encoder_q28
+# -- Compiling module fpu_add_sub_altpriority_encoder_v28
+# -- Compiling module fpu_add_sub_altpriority_encoder_f48
+# -- Compiling module fpu_add_sub_altpriority_encoder_e48
+# -- Compiling module fpu_add_sub_altfp_add_sub_vtn
+# -- Compiling module fpu_add_sub
+# 
+# Top level modules:
+# 	fpu_add_sub
+# vlog -vlog01compat -work work +incdir+C:/Users/naqas/Desktop/Github/RISC-V1/riscv_quartus13_cyclone2/system/synthesis/submodules {C:/Users/naqas/Desktop/Github/RISC-V1/riscv_quartus13_cyclone2/system/synthesis/submodules/fpu_compare.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module fpu_compare_altfp_compare_0uc
+# -- Compiling module fpu_compare
+# 
+# Top level modules:
+# 	fpu_compare
+# vlog -vlog01compat -work work +incdir+C:/Users/naqas/Desktop/Github/RISC-V1/riscv_quartus13_cyclone2/system/synthesis/submodules {C:/Users/naqas/Desktop/Github/RISC-V1/riscv_quartus13_cyclone2/system/synthesis/submodules/fpu_convert.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module fpu_convert_altbarrel_shift_brf
+# -- Compiling module fpu_convert_altpriority_encoder_3e8
+# -- Compiling module fpu_convert_altpriority_encoder_6e8
+# -- Compiling module fpu_convert_altpriority_encoder_be8
+# -- Compiling module fpu_convert_altpriority_encoder_rf8
+# -- Compiling module fpu_convert_altpriority_encoder_3v7
+# -- Compiling module fpu_convert_altpriority_encoder_6v7
+# -- Compiling module fpu_convert_altpriority_encoder_bv7
+# -- Compiling module fpu_convert_altpriority_encoder_r08
+# -- Compiling module fpu_convert_altpriority_encoder_qb6
+# -- Compiling module fpu_convert_altfp_convert_hvn
+# -- Compiling module fpu_convert
+# 
+# Top level modules:
+# 	fpu_convert
+# vlog -vlog01compat -work work +incdir+C:/Users/naqas/Desktop/Github/RISC-V1/riscv_quartus13_cyclone2/system/synthesis/submodules {C:/Users/naqas/Desktop/Github/RISC-V1/riscv_quartus13_cyclone2/system/synthesis/submodules/fpu_convert_float_integer.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module fpu_convert_float_integer_altbarrel_shift_grf
+# -- Compiling module fpu_convert_float_integer_altfp_convert_o6q
+# -- Compiling module fpu_convert_float_integer
+# 
+# Top level modules:
+# 	fpu_convert_float_integer
+# vlog -vlog01compat -work work +incdir+C:/Users/naqas/Desktop/Github/RISC-V1/riscv_quartus13_cyclone2/system/synthesis/submodules {C:/Users/naqas/Desktop/Github/RISC-V1/riscv_quartus13_cyclone2/system/synthesis/submodules/fpu_div.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module fpu_div_altfp_div_pst_t2j
+# -- Compiling module fpu_div_altfp_div_bnm
+# -- Compiling module fpu_div
+# 
+# Top level modules:
+# 	fpu_div
+# vlog -vlog01compat -work work +incdir+C:/Users/naqas/Desktop/Github/RISC-V1/riscv_quartus13_cyclone2/system/synthesis/submodules {C:/Users/naqas/Desktop/Github/RISC-V1/riscv_quartus13_cyclone2/system/synthesis/submodules/fpu_mult.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module fpu_mult_altfp_mult_0gr
+# -- Compiling module fpu_mult
+# 
+# Top level modules:
+# 	fpu_mult
+# vlog -vlog01compat -work work +incdir+C:/Users/naqas/Desktop/Github/RISC-V1/riscv_quartus13_cyclone2/system/synthesis/submodules {C:/Users/naqas/Desktop/Github/RISC-V1/riscv_quartus13_cyclone2/system/synthesis/submodules/fpu_sqrt.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module fpu_sqrt_alt_sqrt_block_kfb
+# -- Compiling module fpu_sqrt_altfp_sqrt_sef
+# -- Compiling module fpu_sqrt
+# 
+# Top level modules:
+# 	fpu_sqrt
+# vlib system
+# ** Warning: (vlib-34) Library already exists at "system".
+# 
+# vmap system system
+# Modifying modelsim.ini
+# vlog -vlog01compat -work system +incdir+C:/Users/naqas/Desktop/Github/RISC-V1/riscv_quartus13_cyclone2/system/synthesis {C:/Users/naqas/Desktop/Github/RISC-V1/riscv_quartus13_cyclone2/system/synthesis/system.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module system
+# 
+# Top level modules:
+# 	system
+# vlog -vlog01compat -work system +incdir+C:/Users/naqas/Desktop/Github/RISC-V1/riscv_quartus13_cyclone2/system/synthesis/submodules {C:/Users/naqas/Desktop/Github/RISC-V1/riscv_quartus13_cyclone2/system/synthesis/submodules/altera_reset_controller.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module altera_reset_controller
+# 
+# Top level modules:
+# 	altera_reset_controller
+# vlog -vlog01compat -work system +incdir+C:/Users/naqas/Desktop/Github/RISC-V1/riscv_quartus13_cyclone2/system/synthesis/submodules {C:/Users/naqas/Desktop/Github/RISC-V1/riscv_quartus13_cyclone2/system/synthesis/submodules/altera_reset_synchronizer.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module altera_reset_synchronizer
+# 
+# Top level modules:
+# 	altera_reset_synchronizer
+# vlog -vlog01compat -work system +incdir+C:/Users/naqas/Desktop/Github/RISC-V1/riscv_quartus13_cyclone2/system/synthesis/submodules {C:/Users/naqas/Desktop/Github/RISC-V1/riscv_quartus13_cyclone2/system/synthesis/submodules/system_jtag_uart_0.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module system_jtag_uart_0_sim_scfifo_w
+# -- Compiling module system_jtag_uart_0_scfifo_w
+# -- Compiling module system_jtag_uart_0_sim_scfifo_r
+# -- Compiling module system_jtag_uart_0_scfifo_r
+# -- Compiling module system_jtag_uart_0
+# 
+# Top level modules:
+# 	system_jtag_uart_0
+# vlog -vlog01compat -work system +incdir+C:/Users/naqas/Desktop/Github/RISC-V1/riscv_quartus13_cyclone2/system/synthesis/submodules {C:/Users/naqas/Desktop/Github/RISC-V1/riscv_quartus13_cyclone2/system/synthesis/submodules/riscv.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module riscv_core
+# -- Compiling module sevSegDec
+# -- Compiling module tb
+# 
+# Top level modules:
+# 	sevSegDec
+# 	tb
+# vlog -vlog01compat -work system +incdir+C:/Users/naqas/Desktop/Github/RISC-V1/riscv_quartus13_cyclone2/system/synthesis/submodules {C:/Users/naqas/Desktop/Github/RISC-V1/riscv_quartus13_cyclone2/system/synthesis/submodules/alu.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module alu
+# 
+# Top level modules:
+# 	alu
+# vlog -vlog01compat -work system +incdir+C:/Users/naqas/Desktop/Github/RISC-V1/riscv_quartus13_cyclone2/system/synthesis/submodules {C:/Users/naqas/Desktop/Github/RISC-V1/riscv_quartus13_cyclone2/system/synthesis/submodules/aluSource.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module aluSource
+# 
+# Top level modules:
+# 	aluSource
+# vlog -vlog01compat -work system +incdir+C:/Users/naqas/Desktop/Github/RISC-V1/riscv_quartus13_cyclone2/system/synthesis/submodules {C:/Users/naqas/Desktop/Github/RISC-V1/riscv_quartus13_cyclone2/system/synthesis/submodules/controlUnit.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module controlUnit
+# 
+# Top level modules:
+# 	controlUnit
+# vlog -vlog01compat -work system +incdir+C:/Users/naqas/Desktop/Github/RISC-V1/riscv_quartus13_cyclone2/system/synthesis/submodules {C:/Users/naqas/Desktop/Github/RISC-V1/riscv_quartus13_cyclone2/system/synthesis/submodules/forwadingUnit.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module forwardingUnit
+# 
+# Top level modules:
+# 	forwardingUnit
+# vlog -vlog01compat -work system +incdir+C:/Users/naqas/Desktop/Github/RISC-V1/riscv_quartus13_cyclone2/system/synthesis/submodules {C:/Users/naqas/Desktop/Github/RISC-V1/riscv_quartus13_cyclone2/system/synthesis/submodules/FPU.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module FPU
+# 
+# Top level modules:
+# 	FPU
+# vlog -vlog01compat -work system +incdir+C:/Users/naqas/Desktop/Github/RISC-V1/riscv_quartus13_cyclone2/system/synthesis/submodules {C:/Users/naqas/Desktop/Github/RISC-V1/riscv_quartus13_cyclone2/system/synthesis/submodules/Fpu_Controller.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module fpuController
+# 
+# Top level modules:
+# 	fpuController
+# vlog -vlog01compat -work system +incdir+C:/Users/naqas/Desktop/Github/RISC-V1/riscv_quartus13_cyclone2/system/synthesis/submodules {C:/Users/naqas/Desktop/Github/RISC-V1/riscv_quartus13_cyclone2/system/synthesis/submodules/hdu.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module HDU
+# 
+# Top level modules:
+# 	HDU
+# vlog -vlog01compat -work system +incdir+C:/Users/naqas/Desktop/Github/RISC-V1/riscv_quartus13_cyclone2/system/synthesis/submodules {C:/Users/naqas/Desktop/Github/RISC-V1/riscv_quartus13_cyclone2/system/synthesis/submodules/immGen.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module immGen
+# 
+# Top level modules:
+# 	immGen
+# vlog -vlog01compat -work system +incdir+C:/Users/naqas/Desktop/Github/RISC-V1/riscv_quartus13_cyclone2/system/synthesis/submodules {C:/Users/naqas/Desktop/Github/RISC-V1/riscv_quartus13_cyclone2/system/synthesis/submodules/mux.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module WB_MUX
+# -- Compiling module memOut_MUX
+# -- Compiling module pcIn_MUX
+# 
+# Top level modules:
+# 	WB_MUX
+# 	memOut_MUX
+# 	pcIn_MUX
+# vlog -vlog01compat -work system +incdir+C:/Users/naqas/Desktop/Github/RISC-V1/riscv_quartus13_cyclone2/system/synthesis/submodules {C:/Users/naqas/Desktop/Github/RISC-V1/riscv_quartus13_cyclone2/system/synthesis/submodules/regFile.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module float_regFile
+# -- Compiling module regFile
+# -- Compiling module register
+# 
+# Top level modules:
+# 	float_regFile
+# 	regFile
+# 	register
+# vlog -vlog01compat -work work +incdir+C:/Users/naqas/Desktop/Github/RISC-V1/riscv_quartus13_cyclone2/system/synthesis/submodules {C:/Users/naqas/Desktop/Github/RISC-V1/riscv_quartus13_cyclone2/system/synthesis/submodules/fpu_add_sub.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module fpu_add_sub_altbarrel_shift_h0e
+# -- Compiling module fpu_add_sub_altbarrel_shift_6hb
+# -- Compiling module fpu_add_sub_altpriority_encoder_3v7
+# -- Compiling module fpu_add_sub_altpriority_encoder_3e8
+# -- Compiling module fpu_add_sub_altpriority_encoder_6v7
+# -- Compiling module fpu_add_sub_altpriority_encoder_6e8
+# -- Compiling module fpu_add_sub_altpriority_encoder_bv7
+# -- Compiling module fpu_add_sub_altpriority_encoder_be8
+# -- Compiling module fpu_add_sub_altpriority_encoder_r08
+# -- Compiling module fpu_add_sub_altpriority_encoder_rf8
+# -- Compiling module fpu_add_sub_altpriority_encoder_qb6
+# -- Compiling module fpu_add_sub_altpriority_encoder_nh8
+# -- Compiling module fpu_add_sub_altpriority_encoder_qh8
+# -- Compiling module fpu_add_sub_altpriority_encoder_vh8
+# -- Compiling module fpu_add_sub_altpriority_encoder_fj8
+# -- Compiling module fpu_add_sub_altpriority_encoder_n28
+# -- Compiling module fpu_add_sub_altpriority_encoder_q28
+# -- Compiling module fpu_add_sub_altpriority_encoder_v28
+# -- Compiling module fpu_add_sub_altpriority_encoder_f48
+# -- Compiling module fpu_add_sub_altpriority_encoder_e48
+# -- Compiling module fpu_add_sub_altfp_add_sub_vtn
+# -- Compiling module fpu_add_sub
+# 
+# Top level modules:
+# 	fpu_add_sub
+# vlog -vlog01compat -work work +incdir+C:/Users/naqas/Desktop/Github/RISC-V1/riscv_quartus13_cyclone2/system/synthesis/submodules {C:/Users/naqas/Desktop/Github/RISC-V1/riscv_quartus13_cyclone2/system/synthesis/submodules/fpu_compare.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module fpu_compare_altfp_compare_0uc
+# -- Compiling module fpu_compare
+# 
+# Top level modules:
+# 	fpu_compare
+# vlog -vlog01compat -work work +incdir+C:/Users/naqas/Desktop/Github/RISC-V1/riscv_quartus13_cyclone2/system/synthesis/submodules {C:/Users/naqas/Desktop/Github/RISC-V1/riscv_quartus13_cyclone2/system/synthesis/submodules/fpu_convert.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module fpu_convert_altbarrel_shift_brf
+# -- Compiling module fpu_convert_altpriority_encoder_3e8
+# -- Compiling module fpu_convert_altpriority_encoder_6e8
+# -- Compiling module fpu_convert_altpriority_encoder_be8
+# -- Compiling module fpu_convert_altpriority_encoder_rf8
+# -- Compiling module fpu_convert_altpriority_encoder_3v7
+# -- Compiling module fpu_convert_altpriority_encoder_6v7
+# -- Compiling module fpu_convert_altpriority_encoder_bv7
+# -- Compiling module fpu_convert_altpriority_encoder_r08
+# -- Compiling module fpu_convert_altpriority_encoder_qb6
+# -- Compiling module fpu_convert_altfp_convert_hvn
+# -- Compiling module fpu_convert
+# 
+# Top level modules:
+# 	fpu_convert
+# vlog -vlog01compat -work work +incdir+C:/Users/naqas/Desktop/Github/RISC-V1/riscv_quartus13_cyclone2/system/synthesis/submodules {C:/Users/naqas/Desktop/Github/RISC-V1/riscv_quartus13_cyclone2/system/synthesis/submodules/fpu_convert_float_integer.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module fpu_convert_float_integer_altbarrel_shift_grf
+# -- Compiling module fpu_convert_float_integer_altfp_convert_o6q
+# -- Compiling module fpu_convert_float_integer
+# 
+# Top level modules:
+# 	fpu_convert_float_integer
+# vlog -vlog01compat -work work +incdir+C:/Users/naqas/Desktop/Github/RISC-V1/riscv_quartus13_cyclone2/system/synthesis/submodules {C:/Users/naqas/Desktop/Github/RISC-V1/riscv_quartus13_cyclone2/system/synthesis/submodules/fpu_div.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module fpu_div_altfp_div_pst_t2j
+# -- Compiling module fpu_div_altfp_div_bnm
+# -- Compiling module fpu_div
+# 
+# Top level modules:
+# 	fpu_div
+# vlog -vlog01compat -work work +incdir+C:/Users/naqas/Desktop/Github/RISC-V1/riscv_quartus13_cyclone2/system/synthesis/submodules {C:/Users/naqas/Desktop/Github/RISC-V1/riscv_quartus13_cyclone2/system/synthesis/submodules/fpu_mult.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module fpu_mult_altfp_mult_0gr
+# -- Compiling module fpu_mult
+# 
+# Top level modules:
+# 	fpu_mult
+# vlog -vlog01compat -work work +incdir+C:/Users/naqas/Desktop/Github/RISC-V1/riscv_quartus13_cyclone2/system/synthesis/submodules {C:/Users/naqas/Desktop/Github/RISC-V1/riscv_quartus13_cyclone2/system/synthesis/submodules/fpu_sqrt.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module fpu_sqrt_alt_sqrt_block_kfb
+# -- Compiling module fpu_sqrt_altfp_sqrt_sef
+# -- Compiling module fpu_sqrt
+# 
+# Top level modules:
+# 	fpu_sqrt
+# vlog -vlog01compat -work system +incdir+C:/Users/naqas/Desktop/Github/RISC-V1/riscv_quartus13_cyclone2/system/synthesis/submodules {C:/Users/naqas/Desktop/Github/RISC-V1/riscv_quartus13_cyclone2/system/synthesis/submodules/DRAM.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module DRAM
+# ** Warning: C:/Users/naqas/Desktop/Github/RISC-V1/riscv_quartus13_cyclone2/system/synthesis/submodules/DRAM.v(20): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
+# 
+# ** Warning: C:/Users/naqas/Desktop/Github/RISC-V1/riscv_quartus13_cyclone2/system/synthesis/submodules/DRAM.v(21): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
+# 
+# ** Warning: C:/Users/naqas/Desktop/Github/RISC-V1/riscv_quartus13_cyclone2/system/synthesis/submodules/DRAM.v(22): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
+# 
+# 
+# Top level modules:
+# 	DRAM
+# vlog -vlog01compat -work system +incdir+C:/Users/naqas/Desktop/Github/RISC-V1/riscv_quartus13_cyclone2/system/synthesis/submodules {C:/Users/naqas/Desktop/Github/RISC-V1/riscv_quartus13_cyclone2/system/synthesis/submodules/IRAM.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module IRAM
+# 
+# Top level modules:
+# 	IRAM
+# vlog -vlog01compat -work work +incdir+C:/Users/naqas/Desktop/Github/RISC-V1/riscv_quartus13_cyclone2 {C:/Users/naqas/Desktop/Github/RISC-V1/riscv_quartus13_cyclone2/top.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module top
+# -- Compiling module tb
+# 
+# Top level modules:
+# 	top
+# 	tb
+# vlog -sv -work system +incdir+C:/Users/naqas/Desktop/Github/RISC-V1/riscv_quartus13_cyclone2/system/synthesis/submodules {C:/Users/naqas/Desktop/Github/RISC-V1/riscv_quartus13_cyclone2/system/synthesis/submodules/altera_merlin_slave_translator.sv}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module altera_merlin_slave_translator
+# 
+# Top level modules:
+# 	altera_merlin_slave_translator
+# vlog -sv -work system +incdir+C:/Users/naqas/Desktop/Github/RISC-V1/riscv_quartus13_cyclone2/system/synthesis/submodules {C:/Users/naqas/Desktop/Github/RISC-V1/riscv_quartus13_cyclone2/system/synthesis/submodules/altera_merlin_master_translator.sv}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module altera_merlin_master_translator
+# 
+# Top level modules:
+# 	altera_merlin_master_translator
+# 
+# vlog -vlog01compat -work work +incdir+C:/Users/naqas/Desktop/Github/RISC-V1/riscv_quartus13_cyclone2 {C:/Users/naqas/Desktop/Github/RISC-V1/riscv_quartus13_cyclone2/top.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module top
+# -- Compiling module tb
+# 
+# Top level modules:
+# 	top
+# 	tb
+# 
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneii_ver -L rtl_work -L work -L system -voptargs="+acc"  tb
+# vsim -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneii_ver -L rtl_work -L work -L system -voptargs=\"+acc\" -t 1ps tb 
+# Loading work.tb
+# Loading system.system
+# Loading system.riscv_core
+# Loading system.register
+# Loading system.pcIn_MUX
+# Loading system.IRAM
+# Loading system.regFile
+# Loading system.immGen
+# Loading system.controlUnit
+# Loading system.float_regFile
+# Loading system.aluSource
+# Loading system.alu
+# Loading system.fpuController
+# Loading system.FPU
+# Loading work.fpu_add_sub
+# Loading work.fpu_add_sub_altfp_add_sub_vtn
+# Loading work.fpu_add_sub_altbarrel_shift_h0e
+# Loading work.fpu_add_sub_altbarrel_shift_6hb
+# Loading work.fpu_add_sub_altpriority_encoder_qb6
+# Loading work.fpu_add_sub_altpriority_encoder_r08
+# Loading work.fpu_add_sub_altpriority_encoder_bv7
+# Loading work.fpu_add_sub_altpriority_encoder_6v7
+# Loading work.fpu_add_sub_altpriority_encoder_3v7
+# Loading work.fpu_add_sub_altpriority_encoder_3e8
+# Loading work.fpu_add_sub_altpriority_encoder_6e8
+# Loading work.fpu_add_sub_altpriority_encoder_be8
+# Loading work.fpu_add_sub_altpriority_encoder_rf8
+# Loading work.fpu_add_sub_altpriority_encoder_e48
+# Loading work.fpu_add_sub_altpriority_encoder_fj8
+# Loading work.fpu_add_sub_altpriority_encoder_vh8
+# Loading work.fpu_add_sub_altpriority_encoder_qh8
+# Loading work.fpu_add_sub_altpriority_encoder_nh8
+# Loading work.fpu_add_sub_altpriority_encoder_f48
+# Loading work.fpu_add_sub_altpriority_encoder_v28
+# Loading work.fpu_add_sub_altpriority_encoder_q28
+# Loading work.fpu_add_sub_altpriority_encoder_n28
+# Loading lpm_ver.lpm_add_sub
+# Loading lpm_ver.lpm_compare
+# Loading work.fpu_mult
+# Loading work.fpu_mult_altfp_mult_0gr
+# Loading lpm_ver.lpm_mult
+# Loading lpm_ver.LPM_HINT_EVALUATION
+# Loading work.fpu_div
+# Loading work.fpu_div_altfp_div_bnm
+# Loading work.fpu_div_altfp_div_pst_t2j
+# Loading altera_mf_ver.altsyncram
+# Loading altera_mf_ver.ALTERA_DEVICE_FAMILIES
+# Loading altera_mf_ver.ALTERA_MF_MEMORY_INITIALIZATION
+# Loading work.fpu_compare
+# Loading work.fpu_compare_altfp_compare_0uc
+# Loading work.fpu_sqrt
+# Loading work.fpu_sqrt_altfp_sqrt_sef
+# Loading work.fpu_sqrt_alt_sqrt_block_kfb
+# Loading work.fpu_convert
+# Loading work.fpu_convert_altfp_convert_hvn
+# Loading work.fpu_convert_altbarrel_shift_brf
+# Loading work.fpu_convert_altpriority_encoder_qb6
+# Loading work.fpu_convert_altpriority_encoder_rf8
+# Loading work.fpu_convert_altpriority_encoder_be8
+# Loading work.fpu_convert_altpriority_encoder_6e8
+# Loading work.fpu_convert_altpriority_encoder_3e8
+# Loading work.fpu_convert_altpriority_encoder_r08
+# Loading work.fpu_convert_altpriority_encoder_bv7
+# Loading work.fpu_convert_altpriority_encoder_6v7
+# Loading work.fpu_convert_altpriority_encoder_3v7
+# Loading work.fpu_convert_float_integer
+# Loading work.fpu_convert_float_integer_altfp_convert_o6q
+# Loading work.fpu_convert_float_integer_altbarrel_shift_grf
+# Loading system.DRAM
+# Loading system.memOut_MUX
+# Loading system.WB_MUX
+# Loading system.HDU
+# Loading system.forwardingUnit
+# Loading system.system_jtag_uart_0
+# Loading system.system_jtag_uart_0_scfifo_w
+# Loading system.system_jtag_uart_0_sim_scfifo_w
+# Loading system.system_jtag_uart_0_scfifo_r
+# Loading system.system_jtag_uart_0_sim_scfifo_r
+# Loading sv_std.std
+# Loading system.altera_merlin_master_translator
+# Loading system.altera_merlin_slave_translator
+# Loading system.altera_reset_controller
+# Loading system.altera_reset_synchronizer
+# ** Warning: (vsim-3016) C:/Users/naqas/Desktop/Github/RISC-V1/riscv_quartus13_cyclone2/system/synthesis/submodules/fpu_div.v(254): Port type is incompatible with connection (port 'clock0').
+# 
+#         Region: /tb/u0/riscv_core_0/fpu/fpu_div_inst/fpu_div_altfp_div_bnm_component/altfp_div_pst1/altsyncram3
+# ** Warning: (vsim-3017) C:/Users/naqas/Desktop/Github/RISC-V1/riscv_quartus13_cyclone2/system/synthesis/system.v(61): [TFMPC] - Too few port connections. Expected 12, found 10.
+# 
+#         Region: /tb/u0/jtag_uart_0
+# ** Warning: (vsim-3722) C:/Users/naqas/Desktop/Github/RISC-V1/riscv_quartus13_cyclone2/system/synthesis/system.v(61): [TFMPC] - Missing connection for port 'dataavailable'.
+# 
+# ** Warning: (vsim-3722) C:/Users/naqas/Desktop/Github/RISC-V1/riscv_quartus13_cyclone2/system/synthesis/system.v(61): [TFMPC] - Missing connection for port 'readyfordata'.
+# 
+# ** Warning: Design size of 75 instances exceeds ModelSim ALTERA recommended capacity.
+# This may because you are loading cell libraries which are not recommended with
+# the ModelSim Altera version. Expect performance to be adversely affected.
+# 
+# add wave *
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+# 
+#           File in use by: naqas  Hostname: NIKU  ProcessID: 79728
+# 
+#           Attempting to use alternate WLF file "./wlftvg0xb6".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+# 
+#           Using alternate file: ./wlftvg0xb6
+# 
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# run -all
+# 00000000
+# 00000041
+# A                7000: tb.u0.riscv_core_0_avalon_master_translator: Error: Input controls/data changed while av_waitrequest is asserted.
+# av_address      00000108 --> ffffff08
+# av_byteenable   f --> f
+# av_burstcount   1 --> 1
+# av_writedata    ffffff20 --> 00000041
 # av_writeresponserequest 0 --> 0
 # av_write        1 --> 0
 # av_read         0 --> 0
@@ -469,22 +3073,428 @@
 # av_chipselect   0 --> 0
 # av_debugaccess  0 --> 0 
 # 0000004c
-# L                   0: tb.u0.riscv_core_0_avalon_master_translator: Error: Input controls/data changed while av_waitrequest is asserted.
-# av_address      00000108 --> ffffffec
+# L                7000: tb.u0.riscv_core_0_avalon_master_translator: Error: Input controls/data changed while av_waitrequest is asserted.
+# av_address      00000108 --> ffffff08
 # av_byteenable   f --> f
 # av_burstcount   1 --> 1
-# av_writedata    00000045 --> 0000004c
+# av_writedata    ffffff20 --> 0000004c
 # av_writeresponserequest 0 --> 0
 # av_write        1 --> 0
 # av_read         0 --> 0
 # av_lock         0 --> 0
 # av_chipselect   0 --> 0
 # av_debugaccess  0 --> 0 
-# L                   0: tb.u0.riscv_core_0_avalon_master_translator: Error: Input controls/data changed while av_waitrequest is asserted.
-# av_address      00000108 --> ffffffec
+# 000000cc
+# Ì                7000: tb.u0.riscv_core_0_avalon_master_translator: Error: Input controls/data changed while av_waitrequest is asserted.
+# av_address      00000108 --> ffffff08
 # av_byteenable   f --> f
 # av_burstcount   1 --> 1
-# av_writedata    0000004c --> 0000004c
+# av_writedata    ffffff20 --> 000000cc
+# av_writeresponserequest 0 --> 0
+# av_write        1 --> 0
+# av_read         0 --> 0
+# av_lock         0 --> 0
+# av_chipselect   0 --> 0
+# av_debugaccess  0 --> 0 
+# Ì                7000: tb.u0.riscv_core_0_avalon_master_translator: Error: Input controls/data changed while av_waitrequest is asserted.
+# av_address      00000108 --> ffffff08
+# av_byteenable   f --> f
+# av_burstcount   1 --> 1
+# av_writedata    ffffff20 --> 000000cc
+# av_writeresponserequest 0 --> 0
+# av_write        1 --> 0
+# av_read         0 --> 0
+# av_lock         0 --> 0
+# av_chipselect   0 --> 0
+# av_debugaccess  0 --> 0 
+# 00000042
+# B                7000: tb.u0.riscv_core_0_avalon_master_translator: Error: Input controls/data changed while av_waitrequest is asserted.
+# av_address      00000108 --> ffffff08
+# av_byteenable   f --> f
+# av_burstcount   1 --> 1
+# av_writedata    ffffff20 --> 00000042
+# av_writeresponserequest 0 --> 0
+# av_write        1 --> 0
+# av_read         0 --> 0
+# av_lock         0 --> 0
+# av_chipselect   0 --> 0
+# av_debugaccess  0 --> 0 
+# 0000007f
+#                 7000: tb.u0.riscv_core_0_avalon_master_translator: Error: Input controls/data changed while av_waitrequest is asserted.
+# av_address      00000108 --> ffffff08
+# av_byteenable   f --> f
+# av_burstcount   1 --> 1
+# av_writedata    ffffff20 --> 0000007f
+# av_writeresponserequest 0 --> 0
+# av_write        1 --> 0
+# av_read         0 --> 0
+# av_lock         0 --> 0
+# av_chipselect   0 --> 0
+# av_debugaccess  0 --> 0 
+# 0000001e
+#                 7000: tb.u0.riscv_core_0_avalon_master_translator: Error: Input controls/data changed while av_waitrequest is asserted.
+# av_address      00000108 --> ffffff08
+# av_byteenable   f --> f
+# av_burstcount   1 --> 1
+# av_writedata    ffffff20 --> 0000001e
+# av_writeresponserequest 0 --> 0
+# av_write        1 --> 0
+# av_read         0 --> 0
+# av_lock         0 --> 0
+# av_chipselect   0 --> 0
+# av_debugaccess  0 --> 0 
+# 0000004f
+# O                7000: tb.u0.riscv_core_0_avalon_master_translator: Error: Input controls/data changed while av_waitrequest is asserted.
+# av_address      00000108 --> ffffff08
+# av_byteenable   f --> f
+# av_burstcount   1 --> 1
+# av_writedata    ffffff20 --> 0000004f
+# av_writeresponserequest 0 --> 0
+# av_write        1 --> 0
+# av_read         0 --> 0
+# av_lock         0 --> 0
+# av_chipselect   0 --> 0
+# av_debugaccess  0 --> 0 
+# 00000042
+# B                8000: tb.u0.riscv_core_0_avalon_master_translator: Error: Input controls/data changed while av_waitrequest is asserted.
+# av_address      00000108 --> ffffff08
+# av_byteenable   f --> f
+# av_burstcount   1 --> 1
+# av_writedata    ffffff20 --> 00000042
+# av_writeresponserequest 0 --> 0
+# av_write        1 --> 0
+# av_read         0 --> 0
+# av_lock         0 --> 0
+# av_chipselect   0 --> 0
+# av_debugaccess  0 --> 0 
+# 0000009f
+# Ÿ                8000: tb.u0.riscv_core_0_avalon_master_translator: Error: Input controls/data changed while av_waitrequest is asserted.
+# av_address      00000108 --> ffffff08
+# av_byteenable   f --> f
+# av_burstcount   1 --> 1
+# av_writedata    ffffff20 --> 0000009f
+# av_writeresponserequest 0 --> 0
+# av_write        1 --> 0
+# av_read         0 --> 0
+# av_lock         0 --> 0
+# av_chipselect   0 --> 0
+# av_debugaccess  0 --> 0 
+# 000000be
+# ¾                8000: tb.u0.riscv_core_0_avalon_master_translator: Error: Input controls/data changed while av_waitrequest is asserted.
+# av_address      00000108 --> ffffff08
+# av_byteenable   f --> f
+# av_burstcount   1 --> 1
+# av_writedata    ffffff20 --> 000000be
+# av_writeresponserequest 0 --> 0
+# av_write        1 --> 0
+# av_read         0 --> 0
+# av_lock         0 --> 0
+# av_chipselect   0 --> 0
+# av_debugaccess  0 --> 0 
+# 00000042
+# B                8000: tb.u0.riscv_core_0_avalon_master_translator: Error: Input controls/data changed while av_waitrequest is asserted.
+# av_address      00000108 --> ffffff08
+# av_byteenable   f --> f
+# av_burstcount   1 --> 1
+# av_writedata    ffffff20 --> 00000042
+# av_writeresponserequest 0 --> 0
+# av_write        1 --> 0
+# av_read         0 --> 0
+# av_lock         0 --> 0
+# av_chipselect   0 --> 0
+# av_debugaccess  0 --> 0 
+# B                8000: tb.u0.riscv_core_0_avalon_master_translator: Error: Input controls/data changed while av_waitrequest is asserted.
+# av_address      00000108 --> ffffff08
+# av_byteenable   f --> f
+# av_burstcount   1 --> 1
+# av_writedata    ffffff20 --> 00000042
+# av_writeresponserequest 0 --> 0
+# av_write        1 --> 0
+# av_read         0 --> 0
+# av_lock         0 --> 0
+# av_chipselect   0 --> 0
+# av_debugaccess  0 --> 0 
+# 000000e6
+# æ                8000: tb.u0.riscv_core_0_avalon_master_translator: Error: Input controls/data changed while av_waitrequest is asserted.
+# av_address      00000108 --> ffffff08
+# av_byteenable   f --> f
+# av_burstcount   1 --> 1
+# av_writedata    ffffff20 --> 000000e6
+# av_writeresponserequest 0 --> 0
+# av_write        1 --> 0
+# av_read         0 --> 0
+# av_lock         0 --> 0
+# av_chipselect   0 --> 0
+# av_debugaccess  0 --> 0 
+# 0000009c
+# œ                8000: tb.u0.riscv_core_0_avalon_master_translator: Error: Input controls/data changed while av_waitrequest is asserted.
+# av_address      00000108 --> ffffff08
+# av_byteenable   f --> f
+# av_burstcount   1 --> 1
+# av_writedata    ffffff20 --> 0000009c
+# av_writeresponserequest 0 --> 0
+# av_write        1 --> 0
+# av_read         0 --> 0
+# av_lock         0 --> 0
+# av_chipselect   0 --> 0
+# av_debugaccess  0 --> 0 
+# 000000e0
+# à                8000: tb.u0.riscv_core_0_avalon_master_translator: Error: Input controls/data changed while av_waitrequest is asserted.
+# av_address      00000108 --> ffffff08
+# av_byteenable   f --> f
+# av_burstcount   1 --> 1
+# av_writedata    ffffff20 --> 000000e0
+# av_writeresponserequest 0 --> 0
+# av_write        1 --> 0
+# av_read         0 --> 0
+# av_lock         0 --> 0
+# av_chipselect   0 --> 0
+# av_debugaccess  0 --> 0 
+# 00000043
+# C                9000: tb.u0.riscv_core_0_avalon_master_translator: Error: Input controls/data changed while av_waitrequest is asserted.
+# av_address      00000108 --> ffffff08
+# av_byteenable   f --> f
+# av_burstcount   1 --> 1
+# av_writedata    ffffff20 --> 00000043
+# av_writeresponserequest 0 --> 0
+# av_write        1 --> 0
+# av_read         0 --> 0
+# av_lock         0 --> 0
+# av_chipselect   0 --> 0
+# av_debugaccess  0 --> 0 
+# 00000000
+#                 9000: tb.u0.riscv_core_0_avalon_master_translator: Error: Input controls/data changed while av_waitrequest is asserted.
+# av_address      00000108 --> ffffff08
+# av_byteenable   f --> f
+# av_burstcount   1 --> 1
+# av_writedata    ffffff20 --> 00000000
+# av_writeresponserequest 0 --> 0
+# av_write        1 --> 0
+# av_read         0 --> 0
+# av_lock         0 --> 0
+# av_chipselect   0 --> 0
+# av_debugaccess  0 --> 0 
+# 00000077
+# w                9000: tb.u0.riscv_core_0_avalon_master_translator: Error: Input controls/data changed while av_waitrequest is asserted.
+# av_address      00000108 --> ffffff08
+# av_byteenable   f --> f
+# av_burstcount   1 --> 1
+# av_writedata    ffffff20 --> 00000077
+# av_writeresponserequest 0 --> 0
+# av_write        1 --> 0
+# av_read         0 --> 0
+# av_lock         0 --> 0
+# av_chipselect   0 --> 0
+# av_debugaccess  0 --> 0 
+# 0000008e
+# Ž                9000: tb.u0.riscv_core_0_avalon_master_translator: Error: Input controls/data changed while av_waitrequest is asserted.
+# av_address      00000108 --> ffffff08
+# av_byteenable   f --> f
+# av_burstcount   1 --> 1
+# av_writedata    ffffff20 --> 0000008e
+# av_writeresponserequest 0 --> 0
+# av_write        1 --> 0
+# av_read         0 --> 0
+# av_lock         0 --> 0
+# av_chipselect   0 --> 0
+# av_debugaccess  0 --> 0 
+# 00000042
+# B                9000: tb.u0.riscv_core_0_avalon_master_translator: Error: Input controls/data changed while av_waitrequest is asserted.
+# av_address      00000108 --> ffffff08
+# av_byteenable   f --> f
+# av_burstcount   1 --> 1
+# av_writedata    ffffff20 --> 00000042
+# av_writeresponserequest 0 --> 0
+# av_write        1 --> 0
+# av_read         0 --> 0
+# av_lock         0 --> 0
+# av_chipselect   0 --> 0
+# av_debugaccess  0 --> 0 
+# 000000d1
+# Ñ                9000: tb.u0.riscv_core_0_avalon_master_translator: Error: Input controls/data changed while av_waitrequest is asserted.
+# av_address      00000108 --> ffffff08
+# av_byteenable   f --> f
+# av_burstcount   1 --> 1
+# av_writedata    ffffff20 --> 000000d1
+# av_writeresponserequest 0 --> 0
+# av_write        1 --> 0
+# av_read         0 --> 0
+# av_lock         0 --> 0
+# av_chipselect   0 --> 0
+# av_debugaccess  0 --> 0 
+# 000000fe
+# þ                9000: tb.u0.riscv_core_0_avalon_master_translator: Error: Input controls/data changed while av_waitrequest is asserted.
+# av_address      00000108 --> ffffff08
+# av_byteenable   f --> f
+# av_burstcount   1 --> 1
+# av_writedata    ffffff20 --> 000000fe
+# av_writeresponserequest 0 --> 0
+# av_write        1 --> 0
+# av_read         0 --> 0
+# av_lock         0 --> 0
+# av_chipselect   0 --> 0
+# av_debugaccess  0 --> 0 
+# 000000c6
+# Æ                9000: tb.u0.riscv_core_0_avalon_master_translator: Error: Input controls/data changed while av_waitrequest is asserted.
+# av_address      00000108 --> ffffff08
+# av_byteenable   f --> f
+# av_burstcount   1 --> 1
+# av_writedata    ffffff20 --> 000000c6
+# av_writeresponserequest 0 --> 0
+# av_write        1 --> 0
+# av_read         0 --> 0
+# av_lock         0 --> 0
+# av_chipselect   0 --> 0
+# av_debugaccess  0 --> 0 
+# 00000042
+# B               10000: tb.u0.riscv_core_0_avalon_master_translator: Error: Input controls/data changed while av_waitrequest is asserted.
+# av_address      00000108 --> ffffff08
+# av_byteenable   f --> f
+# av_burstcount   1 --> 1
+# av_writedata    ffffff20 --> 00000042
+# av_writeresponserequest 0 --> 0
+# av_write        1 --> 0
+# av_read         0 --> 0
+# av_lock         0 --> 0
+# av_chipselect   0 --> 0
+# av_debugaccess  0 --> 0 
+# 00000098
+# ˜               10000: tb.u0.riscv_core_0_avalon_master_translator: Error: Input controls/data changed while av_waitrequest is asserted.
+# av_address      00000108 --> ffffff08
+# av_byteenable   f --> f
+# av_burstcount   1 --> 1
+# av_writedata    ffffff20 --> 00000098
+# av_writeresponserequest 0 --> 0
+# av_write        1 --> 0
+# av_read         0 --> 0
+# av_lock         0 --> 0
+# av_chipselect   0 --> 0
+# av_debugaccess  0 --> 0 
+# 0000008e
+# Ž               10000: tb.u0.riscv_core_0_avalon_master_translator: Error: Input controls/data changed while av_waitrequest is asserted.
+# av_address      00000108 --> ffffff08
+# av_byteenable   f --> f
+# av_burstcount   1 --> 1
+# av_writedata    ffffff20 --> 0000008e
+# av_writeresponserequest 0 --> 0
+# av_write        1 --> 0
+# av_read         0 --> 0
+# av_lock         0 --> 0
+# av_chipselect   0 --> 0
+# av_debugaccess  0 --> 0 
+# 000000da
+# Ú               10000: tb.u0.riscv_core_0_avalon_master_translator: Error: Input controls/data changed while av_waitrequest is asserted.
+# av_address      00000108 --> ffffff08
+# av_byteenable   f --> f
+# av_burstcount   1 --> 1
+# av_writedata    ffffff20 --> 000000da
+# av_writeresponserequest 0 --> 0
+# av_write        1 --> 0
+# av_read         0 --> 0
+# av_lock         0 --> 0
+# av_chipselect   0 --> 0
+# av_debugaccess  0 --> 0 
+# 00000041
+# A               10000: tb.u0.riscv_core_0_avalon_master_translator: Error: Input controls/data changed while av_waitrequest is asserted.
+# av_address      00000108 --> ffffff08
+# av_byteenable   f --> f
+# av_burstcount   1 --> 1
+# av_writedata    ffffff20 --> 00000041
+# av_writeresponserequest 0 --> 0
+# av_write        1 --> 0
+# av_read         0 --> 0
+# av_lock         0 --> 0
+# av_chipselect   0 --> 0
+# av_debugaccess  0 --> 0 
+# 000000f7
+# ÷               10000: tb.u0.riscv_core_0_avalon_master_translator: Error: Input controls/data changed while av_waitrequest is asserted.
+# av_address      00000108 --> ffffff08
+# av_byteenable   f --> f
+# av_burstcount   1 --> 1
+# av_writedata    ffffff20 --> 000000f7
+# av_writeresponserequest 0 --> 0
+# av_write        1 --> 0
+# av_read         0 --> 0
+# av_lock         0 --> 0
+# av_chipselect   0 --> 0
+# av_debugaccess  0 --> 0 
+# 000000d9
+# Ù               10000: tb.u0.riscv_core_0_avalon_master_translator: Error: Input controls/data changed while av_waitrequest is asserted.
+# av_address      00000108 --> ffffff08
+# av_byteenable   f --> f
+# av_burstcount   1 --> 1
+# av_writedata    ffffff20 --> 000000d9
+# av_writeresponserequest 0 --> 0
+# av_write        1 --> 0
+# av_read         0 --> 0
+# av_lock         0 --> 0
+# av_chipselect   0 --> 0
+# av_debugaccess  0 --> 0 
+# 00000017
+#                10000: tb.u0.riscv_core_0_avalon_master_translator: Error: Input controls/data changed while av_waitrequest is asserted.
+# av_address      00000108 --> ffffff08
+# av_byteenable   f --> f
+# av_burstcount   1 --> 1
+# av_writedata    ffffff20 --> 00000017
+# av_writeresponserequest 0 --> 0
+# av_write        1 --> 0
+# av_read         0 --> 0
+# av_lock         0 --> 0
+# av_chipselect   0 --> 0
+# av_debugaccess  0 --> 0 
+# 00000041
+# A               10000: tb.u0.riscv_core_0_avalon_master_translator: Error: Input controls/data changed while av_waitrequest is asserted.
+# av_address      00000108 --> ffffff08
+# av_byteenable   f --> f
+# av_burstcount   1 --> 1
+# av_writedata    ffffff20 --> 00000041
+# av_writeresponserequest 0 --> 0
+# av_write        1 --> 0
+# av_read         0 --> 0
+# av_lock         0 --> 0
+# av_chipselect   0 --> 0
+# av_debugaccess  0 --> 0 
+# 000000f5
+# õ               10000: tb.u0.riscv_core_0_avalon_master_translator: Error: Input controls/data changed while av_waitrequest is asserted.
+# av_address      00000108 --> ffffff08
+# av_byteenable   f --> f
+# av_burstcount   1 --> 1
+# av_writedata    ffffff20 --> 000000f5
+# av_writeresponserequest 0 --> 0
+# av_write        1 --> 0
+# av_read         0 --> 0
+# av_lock         0 --> 0
+# av_chipselect   0 --> 0
+# av_debugaccess  0 --> 0 
+# õ               11000: tb.u0.riscv_core_0_avalon_master_translator: Error: Input controls/data changed while av_waitrequest is asserted.
+# av_address      00000108 --> ffffff08
+# av_byteenable   f --> f
+# av_burstcount   1 --> 1
+# av_writedata    ffffff20 --> 000000f5
+# av_writeresponserequest 0 --> 0
+# av_write        1 --> 0
+# av_read         0 --> 0
+# av_lock         0 --> 0
+# av_chipselect   0 --> 0
+# av_debugaccess  0 --> 0 
+# 000000c3
+# Ã               11000: tb.u0.riscv_core_0_avalon_master_translator: Error: Input controls/data changed while av_waitrequest is asserted.
+# av_address      00000108 --> ffffff08
+# av_byteenable   f --> f
+# av_burstcount   1 --> 1
+# av_writedata    ffffff20 --> 000000c3
+# av_writeresponserequest 0 --> 0
+# av_write        1 --> 0
+# av_read         0 --> 0
+# av_lock         0 --> 0
+# av_chipselect   0 --> 0
+# av_debugaccess  0 --> 0 
+# 00000004
+#                11000: tb.u0.riscv_core_0_avalon_master_translator: Error: Input controls/data changed while av_waitrequest is asserted.
+# av_address      00000108 --> 00000000
+# av_byteenable   f --> f
+# av_burstcount   1 --> 1
+# av_writedata    00000000 --> 00000004
 # av_writeresponserequest 0 --> 0
 # av_write        1 --> 0
 # av_read         0 --> 0

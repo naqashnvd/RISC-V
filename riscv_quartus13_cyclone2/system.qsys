@@ -59,7 +59,7 @@
  <parameter name="projectName" value="top.qpf" />
  <parameter name="sopcBorderPoints" value="false" />
  <parameter name="systemHash" value="1" />
- <parameter name="timeStamp" value="1580726714019" />
+ <parameter name="timeStamp" value="1581516479537" />
  <parameter name="useTestBenchNamingPattern" value="false" />
  <instanceScript></instanceScript>
  <interface
@@ -70,7 +70,7 @@
  <interface name="clk_0" internal="clk_0.clk_in" type="clock" dir="end" />
  <interface name="reset_0" internal="clk_0.clk_in_reset" type="reset" dir="end" />
  <module kind="riscv_core" version="1.0" enabled="1" name="riscv_core_0">
-  <parameter name="AUTO_CLOCK_CLOCK_RATE" value="50000000" />
+  <parameter name="AUTO_CLOCK_CLOCK_RATE" value="24000000" />
  </module>
  <module
    kind="altera_avalon_jtag_uart"
@@ -91,7 +91,7 @@
   <parameter name="avalonSpec" value="2.0" />
  </module>
  <module kind="clock_source" version="13.0" enabled="1" name="clk_0">
-  <parameter name="clockFrequency" value="50000000" />
+  <parameter name="clockFrequency" value="24000000" />
   <parameter name="clockFrequencyKnown" value="true" />
   <parameter name="inputClockFrequency" value="0" />
   <parameter name="resetSynchronousEdges" value="NONE" />

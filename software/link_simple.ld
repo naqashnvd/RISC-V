@@ -2,16 +2,16 @@
 	simple link script for risac
 */
 
-ENTRY(_actual_start)
+ENTRY(_start)
 
 MEMORY 
 {
-	RAM (rwx): ORIGIN = 0x0, LENGTH = 512
+	RAM (rwx): ORIGIN = 0x0, LENGTH = 4K
 }
 
 /* stack pointer is the highest stack address */
 PROVIDE(_stack_pointer = ORIGIN(RAM) + LENGTH(RAM));
-PROVIDE( __global_pointer$ = (512 / 2) );
+PROVIDE( __global_pointer$ = (4K / 2) );
 
 SECTIONS
 {

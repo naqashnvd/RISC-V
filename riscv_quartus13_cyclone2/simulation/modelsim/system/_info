@@ -12,7 +12,7 @@ Z4 V0KIH7<bW[IFhHJBzB4US?0
 Z5 !s105 altera_merlin_master_translator_sv_unit
 S1
 Z6 dC:\Users\naqas\Desktop\Github\RISC-V1\riscv_quartus13_cyclone2\simulation\modelsim
-Z7 w1580754584
+Z7 w1581543291
 Z8 8C:/Users/naqas/Desktop/Github/RISC-V1/riscv_quartus13_cyclone2/system/synthesis/submodules/altera_merlin_master_translator.sv
 Z9 FC:/Users/naqas/Desktop/Github/RISC-V1/riscv_quartus13_cyclone2/system/synthesis/submodules/altera_merlin_master_translator.sv
 L0 30
@@ -20,7 +20,7 @@ Z10 OV;L;10.1d;51
 r1
 !s85 0
 31
-!s108 1580754726.845000
+!s108 1581543701.531000
 !s107 C:/Users/naqas/Desktop/Github/RISC-V1/riscv_quartus13_cyclone2/system/synthesis/submodules/altera_merlin_master_translator.sv|
 Z11 !s90 -reportprogress|300|-sv|-work|system|+incdir+C:/Users/naqas/Desktop/Github/RISC-V1/riscv_quartus13_cyclone2/system/synthesis/submodules|C:/Users/naqas/Desktop/Github/RISC-V1/riscv_quartus13_cyclone2/system/synthesis/submodules/altera_merlin_master_translator.sv|
 !s101 -O0
@@ -46,7 +46,7 @@ R12
 R13
 !i10b 1
 !s85 0
-Z21 !s108 1580754726.728000
+Z21 !s108 1581543701.433000
 Z22 !s107 C:/Users/naqas/Desktop/Github/RISC-V1/riscv_quartus13_cyclone2/system/synthesis/submodules/altera_merlin_slave_translator.sv|
 !s101 -O0
 valtera_reset_controller
@@ -64,7 +64,7 @@ r1
 Z28 !s90 -reportprogress|300|-vlog01compat|-work|system|+incdir+C:/Users/naqas/Desktop/Github/RISC-V1/riscv_quartus13_cyclone2/system/synthesis/submodules|C:/Users/naqas/Desktop/Github/RISC-V1/riscv_quartus13_cyclone2/system/synthesis/submodules/altera_reset_controller.v|
 Z29 o-vlog01compat -work system -O0
 Z30 !s92 -vlog01compat -work system +incdir+C:/Users/naqas/Desktop/Github/RISC-V1/riscv_quartus13_cyclone2/system/synthesis/submodules -O0
-Z31 !s108 1580754722.261000
+Z31 !s108 1581543697.886000
 Z32 !s107 C:/Users/naqas/Desktop/Github/RISC-V1/riscv_quartus13_cyclone2/system/synthesis/submodules/altera_reset_controller.v|
 !i10b 1
 !s85 0
@@ -84,7 +84,7 @@ r1
 Z38 !s90 -reportprogress|300|-vlog01compat|-work|system|+incdir+C:/Users/naqas/Desktop/Github/RISC-V1/riscv_quartus13_cyclone2/system/synthesis/submodules|C:/Users/naqas/Desktop/Github/RISC-V1/riscv_quartus13_cyclone2/system/synthesis/submodules/altera_reset_synchronizer.v|
 R29
 R30
-Z39 !s108 1580754722.391000
+Z39 !s108 1581543697.977000
 Z40 !s107 C:/Users/naqas/Desktop/Github/RISC-V1/riscv_quartus13_cyclone2/system/synthesis/submodules/altera_reset_synchronizer.v|
 !i10b 1
 !s85 0
@@ -104,7 +104,7 @@ r1
 Z46 !s90 -reportprogress|300|-vlog01compat|-work|system|+incdir+C:/Users/naqas/Desktop/Github/RISC-V1/riscv_quartus13_cyclone2/system/synthesis/submodules|C:/Users/naqas/Desktop/Github/RISC-V1/riscv_quartus13_cyclone2/system/synthesis/submodules/alu.v|
 R29
 R30
-Z47 !s108 1580754725.014000
+Z47 !s108 1581543698.387000
 Z48 !s107 C:/Users/naqas/Desktop/Github/RISC-V1/riscv_quartus13_cyclone2/system/synthesis/submodules/alu.v|
 !i10b 1
 !s85 0
@@ -125,7 +125,7 @@ Z54 !s90 -reportprogress|300|-vlog01compat|-work|system|+incdir+C:/Users/naqas/D
 R29
 R30
 Z55 nalu@source
-Z56 !s108 1580754725.164000
+Z56 !s108 1581543698.472000
 Z57 !s107 C:/Users/naqas/Desktop/Github/RISC-V1/riscv_quartus13_cyclone2/system/synthesis/submodules/aluSource.v|
 !i10b 1
 !s85 0
@@ -146,7 +146,7 @@ Z63 !s90 -reportprogress|300|-vlog01compat|-work|system|+incdir+C:/Users/naqas/D
 R29
 R30
 Z64 ncontrol@unit
-Z65 !s108 1580754725.315000
+Z65 !s108 1581543698.564000
 Z66 !s107 C:/Users/naqas/Desktop/Github/RISC-V1/riscv_quartus13_cyclone2/system/synthesis/submodules/controlUnit.v|
 !i10b 1
 !s85 0
@@ -167,7 +167,7 @@ Z72 !s90 -reportprogress|300|-vlog01compat|-work|system|+incdir+C:/Users/naqas/D
 R29
 R30
 Z73 n@d@r@a@m
-Z74 !s108 1580754725.418000
+Z74 !s108 1581543701.080000
 Z75 !s107 C:/Users/naqas/Desktop/Github/RISC-V1/riscv_quartus13_cyclone2/system/synthesis/submodules/DRAM.v|
 !i10b 1
 !s85 0
@@ -184,7 +184,7 @@ L0 2
 R10
 r1
 31
-Z81 !s108 1580754726.525000
+Z81 !s108 1581543699.224000
 Z82 !s107 C:/Users/naqas/Desktop/Github/RISC-V1/riscv_quartus13_cyclone2/system/synthesis/submodules/regFile.v|
 Z83 !s90 -reportprogress|300|-vlog01compat|-work|system|+incdir+C:/Users/naqas/Desktop/Github/RISC-V1/riscv_quartus13_cyclone2/system/synthesis/submodules|C:/Users/naqas/Desktop/Github/RISC-V1/riscv_quartus13_cyclone2/system/synthesis/submodules/regFile.v|
 R29
@@ -194,8 +194,8 @@ Z84 nfloat_reg@file
 !s85 0
 !s101 -O0
 vforwardingUnit
-Z85 !s100 1]:@937=ck`^NZm09QNW91
-Z86 I@=P13jWTgTeQO89Ml_oa:0
+Z85 !s100 :CQOL]1J8R1XoPWZ[JYKJ1
+Z86 I:LQJV>d5oo@`3eCj=5PRQ1
 Z87 V8cIPc1FJ5gz<`3aQQm15a2
 R6
 R7
@@ -209,7 +209,7 @@ Z90 !s90 -reportprogress|300|-vlog01compat|-work|system|+incdir+C:/Users/naqas/D
 R29
 R30
 Z91 nforwarding@unit
-Z92 !s108 1580754725.517000
+Z92 !s108 1581543698.651000
 Z93 !s107 C:/Users/naqas/Desktop/Github/RISC-V1/riscv_quartus13_cyclone2/system/synthesis/submodules/forwadingUnit.v|
 !i10b 1
 !s85 0
@@ -230,7 +230,7 @@ Z99 !s90 -reportprogress|300|-vlog01compat|-work|system|+incdir+C:/Users/naqas/D
 R29
 R30
 Z100 n@f@p@u
-Z101 !s108 1580754725.614000
+Z101 !s108 1581543698.743000
 Z102 !s107 C:/Users/naqas/Desktop/Github/RISC-V1/riscv_quartus13_cyclone2/system/synthesis/submodules/FPU.v|
 !i10b 1
 !s85 0
@@ -251,7 +251,7 @@ Z108 !s90 -reportprogress|300|-vlog01compat|-work|system|+incdir+C:/Users/naqas/
 R29
 R30
 Z109 nfpu@controller
-Z110 !s108 1580754725.719000
+Z110 !s108 1581543698.835000
 Z111 !s107 C:/Users/naqas/Desktop/Github/RISC-V1/riscv_quartus13_cyclone2/system/synthesis/submodules/Fpu_Controller.v|
 !i10b 1
 !s85 0
@@ -272,7 +272,7 @@ Z117 !s90 -reportprogress|300|-vlog01compat|-work|system|+incdir+C:/Users/naqas/
 R29
 R30
 Z118 n@h@d@u
-Z119 !s108 1580754725.865000
+Z119 !s108 1581543698.925000
 Z120 !s107 C:/Users/naqas/Desktop/Github/RISC-V1/riscv_quartus13_cyclone2/system/synthesis/submodules/hdu.v|
 !i10b 1
 !s85 0
@@ -293,7 +293,7 @@ Z126 !s90 -reportprogress|300|-vlog01compat|-work|system|+incdir+C:/Users/naqas/
 R29
 R30
 Z127 nimm@gen
-Z128 !s108 1580754726.093000
+Z128 !s108 1581543699.008000
 Z129 !s107 C:/Users/naqas/Desktop/Github/RISC-V1/riscv_quartus13_cyclone2/system/synthesis/submodules/immGen.v|
 !i10b 1
 !s85 0
@@ -314,7 +314,7 @@ Z135 !s90 -reportprogress|300|-vlog01compat|-work|system|+incdir+C:/Users/naqas/
 R29
 R30
 Z136 n@i@r@a@m
-Z137 !s108 1580754726.229000
+Z137 !s108 1581543701.231000
 Z138 !s107 C:/Users/naqas/Desktop/Github/RISC-V1/riscv_quartus13_cyclone2/system/synthesis/submodules/IRAM.v|
 !i10b 1
 !s85 0
@@ -331,7 +331,7 @@ L0 22
 R10
 r1
 31
-Z144 !s108 1580754726.328000
+Z144 !s108 1581543699.088000
 Z145 !s107 C:/Users/naqas/Desktop/Github/RISC-V1/riscv_quartus13_cyclone2/system/synthesis/submodules/mux.v|
 Z146 !s90 -reportprogress|300|-vlog01compat|-work|system|+incdir+C:/Users/naqas/Desktop/Github/RISC-V1/riscv_quartus13_cyclone2/system/synthesis/submodules|C:/Users/naqas/Desktop/Github/RISC-V1/riscv_quartus13_cyclone2/system/synthesis/submodules/mux.v|
 R29
@@ -341,8 +341,8 @@ Z147 nmem@out_@m@u@x
 !s85 0
 !s101 -O0
 vpcIn_MUX
-Z148 !s100 g3E1LmFL^W^T7kUkoKk9L1
-Z149 IFN^Al7K8BdjIG:c5;b0aF0
+Z148 !s100 9Y4X0df]lPj6]LaS:C?dO3
+Z149 IXfnRa<:3cZ1>iS[c406Ga3
 Z150 V9EGf8Bz=JmBH1lXTdDTO[1
 R6
 R7
@@ -403,8 +403,8 @@ R30
 !s85 0
 !s101 -O0
 vriscv_core
-Z159 !s100 X<1^FcdWL_QlCfo2jLG4:3
-Z160 ILA5Ij2]a3<F9Wldi97dKB1
+Z159 !s100 0ZcmQfE>no9QcnY^oomAG2
+Z160 IQdi<2J<D@e<RkOV8iInCM1
 Z161 VESLRGkhGbAo?LIf36l;F@0
 R6
 R7
@@ -414,7 +414,7 @@ L0 39
 R10
 r1
 31
-Z164 !s108 1580754724.836000
+Z164 !s108 1581543698.244000
 Z165 !s107 C:/Users/naqas/Desktop/Github/RISC-V1/riscv_quartus13_cyclone2/system/synthesis/submodules/riscv.v|
 Z166 !s90 -reportprogress|300|-vlog01compat|-work|system|+incdir+C:/Users/naqas/Desktop/Github/RISC-V1/riscv_quartus13_cyclone2/system/synthesis/submodules|C:/Users/naqas/Desktop/Github/RISC-V1/riscv_quartus13_cyclone2/system/synthesis/submodules/riscv.v|
 R29
@@ -423,14 +423,14 @@ R30
 !s85 0
 !s101 -O0
 vsevSegDec
-Z167 !s100 B?X82IX8EEDPbofEz4fNR3
-Z168 IF=WTCln:>V4zQe_YOlEiV3
+Z167 !s100 ^Nh4bm9f68maI<W^@cn3X0
+Z168 IOX_D5]DOb:I3TmLboPQNe1
 Z169 VRNz:_ccl7VcbgWlETYXGB3
 R6
 R7
 R162
 R163
-Z170 L0 370
+Z170 L0 371
 R10
 r1
 31
@@ -443,115 +443,135 @@ Z171 nsev@seg@dec
 !i10b 1
 !s85 0
 !s101 -O0
-vsystem_jtag_uart_0
-Z172 !s100 Pb<THlOI<SV9YzJScD3^W3
-Z173 I;GRlRDa5XN?aARS]1lh:T1
-Z174 V7M^eRL@W]>i<;co?kQ]=X3
+vsystem
+Z172 !s100 1DG=jRYMRM8Bjb<TZCLn10
+Z173 I;glji<SE8WZ8Zl`7lbLP33
+Z174 VmYIDcNiKk8;W7UzOOj4Bm2
 R6
 R7
-Z175 8C:/Users/naqas/Desktop/Github/RISC-V1/riscv_quartus13_cyclone2/system/synthesis/submodules/system_jtag_uart_0.v
-Z176 FC:/Users/naqas/Desktop/Github/RISC-V1/riscv_quartus13_cyclone2/system/synthesis/submodules/system_jtag_uart_0.v
-Z177 L0 327
+Z175 8C:/Users/naqas/Desktop/Github/RISC-V1/riscv_quartus13_cyclone2/system/synthesis/system.v
+Z176 FC:/Users/naqas/Desktop/Github/RISC-V1/riscv_quartus13_cyclone2/system/synthesis/system.v
+L0 6
 R10
 r1
 31
-Z178 !s108 1580754722.551000
-Z179 !s107 C:/Users/naqas/Desktop/Github/RISC-V1/riscv_quartus13_cyclone2/system/synthesis/submodules/system_jtag_uart_0.v|
-Z180 !s90 -reportprogress|300|-vlog01compat|-work|system|+incdir+C:/Users/naqas/Desktop/Github/RISC-V1/riscv_quartus13_cyclone2/system/synthesis/submodules|C:/Users/naqas/Desktop/Github/RISC-V1/riscv_quartus13_cyclone2/system/synthesis/submodules/system_jtag_uart_0.v|
+Z177 !s90 -reportprogress|300|-vlog01compat|-work|system|+incdir+C:/Users/naqas/Desktop/Github/RISC-V1/riscv_quartus13_cyclone2/system/synthesis|C:/Users/naqas/Desktop/Github/RISC-V1/riscv_quartus13_cyclone2/system/synthesis/system.v|
+R29
+Z178 !s92 -vlog01compat -work system +incdir+C:/Users/naqas/Desktop/Github/RISC-V1/riscv_quartus13_cyclone2/system/synthesis -O0
+Z179 !s108 1581543697.794000
+Z180 !s107 C:/Users/naqas/Desktop/Github/RISC-V1/riscv_quartus13_cyclone2/system/synthesis/system.v|
+!i10b 1
+!s85 0
+!s101 -O0
+vsystem_jtag_uart_0
+Z181 !s100 Pb<THlOI<SV9YzJScD3^W3
+Z182 I;GRlRDa5XN?aARS]1lh:T1
+Z183 V7M^eRL@W]>i<;co?kQ]=X3
+R6
+R7
+Z184 8C:/Users/naqas/Desktop/Github/RISC-V1/riscv_quartus13_cyclone2/system/synthesis/submodules/system_jtag_uart_0.v
+Z185 FC:/Users/naqas/Desktop/Github/RISC-V1/riscv_quartus13_cyclone2/system/synthesis/submodules/system_jtag_uart_0.v
+Z186 L0 327
+R10
+r1
+31
+Z187 !s108 1581543698.060000
+Z188 !s107 C:/Users/naqas/Desktop/Github/RISC-V1/riscv_quartus13_cyclone2/system/synthesis/submodules/system_jtag_uart_0.v|
+Z189 !s90 -reportprogress|300|-vlog01compat|-work|system|+incdir+C:/Users/naqas/Desktop/Github/RISC-V1/riscv_quartus13_cyclone2/system/synthesis/submodules|C:/Users/naqas/Desktop/Github/RISC-V1/riscv_quartus13_cyclone2/system/synthesis/submodules/system_jtag_uart_0.v|
 R29
 R30
 !i10b 1
 !s85 0
 !s101 -O0
 vsystem_jtag_uart_0_scfifo_r
-Z181 !s100 UD=nc]nRJSl5P5SbZ`@_I0
-Z182 I=@G[9e>H]T@;RFfmSiHD63
-Z183 VMb_3@cNcRCX2n4`1d_MkS2
+Z190 !s100 UD=nc]nRJSl5P5SbZ`@_I0
+Z191 I=@G[9e>H]T@;RFfmSiHD63
+Z192 VMb_3@cNcRCX2n4`1d_MkS2
 R6
 R7
-R175
-R176
-Z184 L0 240
+R184
+R185
+Z193 L0 240
 R10
 r1
 31
-R178
-R179
-R180
+R187
+R188
+R189
 R29
 R30
 !i10b 1
 !s85 0
 !s101 -O0
 vsystem_jtag_uart_0_scfifo_w
-Z185 !s100 [Pka2AL]ljGL4JOXMzjAY1
-Z186 ImUTQ^g4oV`1jTd5i_4VIg1
-Z187 V0X6LI[ccEz<j]Ii`:;7]f0
+Z194 !s100 [Pka2AL]ljGL4JOXMzjAY1
+Z195 ImUTQ^g4oV`1jTd5i_4VIg1
+Z196 V0X6LI[ccEz<j]Ii`:;7]f0
 R6
 R7
-R175
-R176
+R184
+R185
 L0 77
 R10
 r1
 31
-R178
-R179
-R180
+R187
+R188
+R189
 R29
 R30
 !i10b 1
 !s85 0
 !s101 -O0
 vsystem_jtag_uart_0_sim_scfifo_r
-Z188 !s100 N4bgj0]8>mL?A@hA6=Z6g3
-Z189 IHF3>UXb3>7<Vj1WLIlj;S2
-Z190 VmGNPXP4UiCG<z=CLY1g;n1
+Z197 !s100 N4bgj0]8>mL?A@hA6=Z6g3
+Z198 IHF3>UXb3>7<Vj1WLIlj;S2
+Z199 VmGNPXP4UiCG<z=CLY1g;n1
 R6
 R7
-R175
-R176
-Z191 L0 162
+R184
+R185
+Z200 L0 162
 R10
 r1
 31
-R178
-R179
-R180
+R187
+R188
+R189
 R29
 R30
 !i10b 1
 !s85 0
 !s101 -O0
 vsystem_jtag_uart_0_sim_scfifo_w
-Z192 !s100 k0e^;Me6O`2[<Mo8WN2;a1
-Z193 I4J4OMcAE85F<oi9f^FNV71
-Z194 V14XTETa?9jGdTjT9VFCHn2
+Z201 !s100 k0e^;Me6O`2[<Mo8WN2;a1
+Z202 I4J4OMcAE85F<oi9f^FNV71
+Z203 V14XTETa?9jGdTjT9VFCHn2
 R6
 R7
-R175
-R176
+R184
+R185
 L0 21
 R10
 r1
 31
-R178
-R179
-R180
+R187
+R188
+R189
 R29
 R30
 !i10b 1
 !s85 0
 !s101 -O0
 vtb
-Z195 !s100 zjNW[^m<=BezJU=BAhX@m1
-Z196 I_H0Cc@Ao2oUhfZfN]CjJl2
-Z197 VV@Xn<HnSRM[I5c1?BH]3a3
+Z204 !s100 njk<1;R_6Ef9LkNY@SYVY0
+Z205 II685P0T`z]5NV_LLTaIz=2
+Z206 VV@Xn<HnSRM[I5c1?BH]3a3
 R6
 R7
 R162
 R163
-Z198 L0 396
+Z207 L0 397
 R10
 r1
 31
@@ -564,9 +584,9 @@ R30
 !s85 0
 !s101 -O0
 vWB_MUX
-Z199 !s100 D<39XOTM]XL_7o?e?MaQM2
-Z200 I950Un`Ko5[UilKOXl03Fe3
-Z201 VQI3P^NG19]dN31N>6SicY0
+Z208 !s100 D<39XOTM]XL_7o?e?MaQM2
+Z209 I950Un`Ko5[UilKOXl03Fe3
+Z210 VQI3P^NG19]dN31N>6SicY0
 R6
 R7
 R142
@@ -580,7 +600,7 @@ R145
 R146
 R29
 R30
-Z202 n@w@b_@m@u@x
+Z211 n@w@b_@m@u@x
 !i10b 1
 !s85 0
 !s101 -O0

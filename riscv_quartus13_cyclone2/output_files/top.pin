@@ -332,7 +332,7 @@ GND                          : K19       : gnd    :                   :         
 GND*                         : K20       :        :                   :         : 5         :                
 GND*                         : K21       :        :                   :         : 5         :                
 GND*                         : K22       :        :                   :         : 5         :                
-CLOCK_50                     : L1        : input  : 3.3-V LVTTL       :         : 2         : Y              
+CLOCK_24                     : L1        : input  : 3.3-V LVTTL       :         : 2         : N              
 GND+                         : L2        :        :                   :         : 2         :                
 VCCIO2                       : L3        : power  :                   : 3.3V    : 2         :                
 nCONFIG                      : L4        :        :                   :         : 2         :                

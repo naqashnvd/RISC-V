@@ -1,9 +1,9 @@
-module top(input CLOCK_50,input [1:1]KEY,input [0:0]SW,output [6:0]HEX0,output [6:0]HEX1,output [6:0]HEX2,output [6:0]HEX3);
+module top(input CLOCK_24,input [1:1]KEY,input [0:0]SW,output [6:0]HEX0,output [6:0]HEX1,output [6:0]HEX2,output [6:0]HEX3);
 	wire[31:0]dataOut;
 	
 	  system u0 (
         .dataout_export  (dataOut),  // dataout.export
-        .clk_0_clk       (CLOCK_50),       //   clk_0.clk
+        .clk_0_clk       (CLOCK_24),       //   clk_0.clk
         .reset_0_reset_n (KEY[1])  // reset_0.reset_n
     );
 	
@@ -34,12 +34,13 @@ module tb;
 		$dumpfile("test.vcd");
 		$dumpvars(0, tb);
 		
+		$monitor("%h",u0.riscv_core_0.dmem.MEM[1000]);
 		$monitor("%h",u0.riscv_core_0.dmem.MEM[264]);
 
 		#0 rst_n = 1; clk = 0;
 		#1 rst_n = 0; #1 rst_n = 1 ;#1
 		
-		for(j = 0;j < 100;j = j + 1) begin
+		for(j = 0;j < 10000;j = j + 1) begin
 			#1 clk = ~clk; #1 clk = ~clk;
 		end
 	end
