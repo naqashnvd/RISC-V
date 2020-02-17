@@ -10,16 +10,16 @@ for line in f:
         continue
     if(">:" in line):
         continue
-
+    temp = line.find(':')
     instruction = ""
-    instruction += line[6]
-    instruction += line[7]
-    instruction += line[8]
-    instruction += line[9]
-    instruction += line[10]
-    instruction += line[11]
-    instruction += line[12]
-    instruction += line[13]
+    instruction += line[temp + 2]
+    instruction += line[temp + 3]
+    instruction += line[temp + 4]
+    instruction += line[temp + 5]
+    instruction += line[temp + 6]
+    instruction += line[temp + 7]
+    instruction += line[temp + 8]
+    instruction += line[temp + 9]
 
     imem_out += instruction + "\n"
     imem_out_mif += str(count) + " : " + instruction + ";\n" 
