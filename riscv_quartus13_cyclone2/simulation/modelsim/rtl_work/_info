@@ -7,14 +7,14 @@ vfpu_add_sub
 IV_H<09[L330oAGZOJH4E50
 V^U4T8`TR>`[OK`_JG]d7o1
 Z1 dC:\Users\naqas\Desktop\Github\RISC-V1\riscv_quartus13_cyclone2\simulation\modelsim
-Z2 w1581543291
+Z2 w1581543825
 Z3 8C:/Users/naqas/Desktop/Github/RISC-V1/riscv_quartus13_cyclone2/system/synthesis/submodules/fpu_add_sub.v
 Z4 FC:/Users/naqas/Desktop/Github/RISC-V1/riscv_quartus13_cyclone2/system/synthesis/submodules/fpu_add_sub.v
 L0 2626
 Z5 OV;L;10.1d;51
 r1
 31
-Z6 !s108 1581543699.379000
+Z6 !s108 1581937021.128000
 Z7 !s107 C:/Users/naqas/Desktop/Github/RISC-V1/riscv_quartus13_cyclone2/system/synthesis/submodules/fpu_add_sub.v|
 Z8 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/naqas/Desktop/Github/RISC-V1/riscv_quartus13_cyclone2/system/synthesis/submodules|C:/Users/naqas/Desktop/Github/RISC-V1/riscv_quartus13_cyclone2/system/synthesis/submodules/fpu_add_sub.v|
 Z9 o-vlog01compat -work work -O0
@@ -454,7 +454,7 @@ L0 359
 R5
 r1
 31
-Z13 !s108 1581543699.965000
+Z13 !s108 1581937021.807000
 Z14 !s107 C:/Users/naqas/Desktop/Github/RISC-V1/riscv_quartus13_cyclone2/system/synthesis/submodules/fpu_compare.v|
 Z15 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/naqas/Desktop/Github/RISC-V1/riscv_quartus13_cyclone2/system/synthesis/submodules|C:/Users/naqas/Desktop/Github/RISC-V1/riscv_quartus13_cyclone2/system/synthesis/submodules/fpu_compare.v|
 R9
@@ -494,7 +494,7 @@ L0 836
 R5
 r1
 31
-Z18 !s108 1581543700.088000
+Z18 !s108 1581937021.966000
 Z19 !s107 C:/Users/naqas/Desktop/Github/RISC-V1/riscv_quartus13_cyclone2/system/synthesis/submodules/fpu_convert.v|
 Z20 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/naqas/Desktop/Github/RISC-V1/riscv_quartus13_cyclone2/system/synthesis/submodules|C:/Users/naqas/Desktop/Github/RISC-V1/riscv_quartus13_cyclone2/system/synthesis/submodules/fpu_convert.v|
 R9
@@ -734,7 +734,7 @@ L0 947
 R5
 r1
 31
-Z23 !s108 1581543700.425000
+Z23 !s108 1581937022.347000
 Z24 !s107 C:/Users/naqas/Desktop/Github/RISC-V1/riscv_quartus13_cyclone2/system/synthesis/submodules/fpu_convert_float_integer.v|
 Z25 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/naqas/Desktop/Github/RISC-V1/riscv_quartus13_cyclone2/system/synthesis/submodules|C:/Users/naqas/Desktop/Github/RISC-V1/riscv_quartus13_cyclone2/system/synthesis/submodules/fpu_convert_float_integer.v|
 R9
@@ -794,7 +794,7 @@ L0 1098
 R5
 r1
 31
-Z28 !s108 1581543700.614000
+Z28 !s108 1581937022.549000
 Z29 !s107 C:/Users/naqas/Desktop/Github/RISC-V1/riscv_quartus13_cyclone2/system/synthesis/submodules/fpu_div.v|
 Z30 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/naqas/Desktop/Github/RISC-V1/riscv_quartus13_cyclone2/system/synthesis/submodules|C:/Users/naqas/Desktop/Github/RISC-V1/riscv_quartus13_cyclone2/system/synthesis/submodules/fpu_div.v|
 R9
@@ -854,7 +854,7 @@ L0 561
 R5
 r1
 31
-Z33 !s108 1581543700.792000
+Z33 !s108 1581937022.742000
 Z34 !s107 C:/Users/naqas/Desktop/Github/RISC-V1/riscv_quartus13_cyclone2/system/synthesis/submodules/fpu_mult.v|
 Z35 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/naqas/Desktop/Github/RISC-V1/riscv_quartus13_cyclone2/system/synthesis/submodules|C:/Users/naqas/Desktop/Github/RISC-V1/riscv_quartus13_cyclone2/system/synthesis/submodules/fpu_mult.v|
 R9
@@ -894,7 +894,7 @@ L0 1845
 R5
 r1
 31
-Z38 !s108 1581543700.915000
+Z38 !s108 1581937022.911000
 Z39 !s107 C:/Users/naqas/Desktop/Github/RISC-V1/riscv_quartus13_cyclone2/system/synthesis/submodules/fpu_sqrt.v|
 Z40 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/naqas/Desktop/Github/RISC-V1/riscv_quartus13_cyclone2/system/synthesis/submodules|C:/Users/naqas/Desktop/Github/RISC-V1/riscv_quartus13_cyclone2/system/synthesis/submodules/fpu_sqrt.v|
 R9
@@ -957,7 +957,7 @@ R5
 r1
 !s85 0
 31
-Z44 !s108 1581543701.628000
+Z44 !s108 1581937023.956000
 Z45 !s107 C:/Users/naqas/Desktop/Github/RISC-V1/riscv_quartus13_cyclone2/top.v|
 Z46 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/naqas/Desktop/Github/RISC-V1/riscv_quartus13_cyclone2|C:/Users/naqas/Desktop/Github/RISC-V1/riscv_quartus13_cyclone2/top.v|
 !s101 -O0

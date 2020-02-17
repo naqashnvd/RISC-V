@@ -1,0 +1,92 @@
+MIF/HEX Update report for top
+Mon Feb 17 18:19:08 2020
+Quartus II 32-bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. MIF/HEX Update Summary
+  3. MIF/HEX Update Processed Files
+  4. MIF/HEX Update Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++---------------------------------------------------------------+
+; MIF/HEX Update Summary                                        ;
++-----------------------+---------------------------------------+
+; MIF/HEX Update Status ; Successful - Mon Feb 17 18:19:08 2020 ;
+; Revision Name         ; top                                   ;
+; Top-level Entity Name ; top                                   ;
+; Family                ; Cyclone II                            ;
+; Device                ; EP2C20F484C7                          ;
++-----------------------+---------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------+
+; MIF/HEX Update Processed Files                                                                      ;
++-----------------------------------------------------------------------------------------------------+
+; File Name                                                                                           ;
++-----------------------------------------------------------------------------------------------------+
+; C:/Users/naqas/Desktop/Github/RISC-V1/riscv_quartus13_cyclone2/db/top.ram0_DRAM_df80aefc.hdl.mif    ;
+; C:/Users/naqas/Desktop/Github/RISC-V1/riscv_quartus13_cyclone2/db/top.ram0_IRAM_c4ed6c1d.hdl.mif    ;
+; C:/Users/naqas/Desktop/Github/RISC-V1/riscv_quartus13_cyclone2/db/top.ram0_regfile_4c8ea16e.hdl.mif ;
+; C:/Users/naqas/Desktop/Github/RISC-V1/riscv_quartus13_cyclone2/fpu_div.hex                          ;
++-----------------------------------------------------------------------------------------------------+
+
+
++-------------------------+
+; MIF/HEX Update Messages ;
++-------------------------+
+Info: *******************************************************************
+Info: Running Quartus II 32-bit MIF/HEX Update
+    Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+    Info: Copyright (C) 1991-2013 Altera Corporation. All rights reserved.
+    Info: Your use of Altera Corporation's design tools, logic functions 
+    Info: and other software and tools, and its AMPP partner logic 
+    Info: functions, and any output files from any of the foregoing 
+    Info: (including device programming or simulation files), and any 
+    Info: associated documentation or information are expressly subject 
+    Info: to the terms and conditions of the Altera Program License 
+    Info: Subscription Agreement, Altera MegaCore Function License 
+    Info: Agreement, or other applicable license agreement, including, 
+    Info: without limitation, that your use is for the sole purpose of 
+    Info: programming logic devices manufactured by Altera and sold by 
+    Info: Altera or its authorized distributors.  Please refer to the 
+    Info: applicable agreement for further details.
+    Info: Processing started: Mon Feb 17 18:19:06 2020
+Info: Command: quartus_cdb --update_mif top
+Warning (39023): Can't find Memory Initialization File imem.hex -- skipped updates for this file
+Warning (39023): Can't find Memory Initialization File dmem.hex -- skipped updates for this file
+Info (39024): Processed the following Memory Initialization File(s)
+    Info (39025): Processed Memory Initialization File C:/Users/naqas/Desktop/Github/RISC-V1/riscv_quartus13_cyclone2/db/top.ram0_DRAM_df80aefc.hdl.mif
+    Info (39025): Processed Memory Initialization File C:/Users/naqas/Desktop/Github/RISC-V1/riscv_quartus13_cyclone2/db/top.ram0_IRAM_c4ed6c1d.hdl.mif
+    Info (39025): Processed Memory Initialization File C:/Users/naqas/Desktop/Github/RISC-V1/riscv_quartus13_cyclone2/db/top.ram0_regfile_4c8ea16e.hdl.mif
+    Info (39025): Processed Memory Initialization File C:/Users/naqas/Desktop/Github/RISC-V1/riscv_quartus13_cyclone2/fpu_div.hex
+Info: Quartus II 32-bit MIF/HEX Update was successful. 0 errors, 2 warnings
+    Info: Peak virtual memory: 395 megabytes
+    Info: Processing ended: Mon Feb 17 18:19:08 2020
+    Info: Elapsed time: 00:00:02
+    Info: Total CPU time (on all processors): 00:00:02
+
+

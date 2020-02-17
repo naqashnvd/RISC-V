@@ -1,12 +1,12 @@
-# system info system on 2020.02.13.02:43:43
+# system info system on 2020.02.17.16:10:57
 system_info:
 name,value
 DEVICE,EP2C20F484C7
 DEVICE_FAMILY,Cyclone II
-GENERATION_ID,1581543822
+GENERATION_ID,1581937856
 #
 #
-# Files generated for system on 2020.02.13.02:43:43
+# Files generated for system on 2020.02.17.16:10:57
 files:
 filepath,kind,attributes,module,is_top
 system/simulation/system.v,VERILOG,,system,true

@@ -34,6 +34,11 @@ void _start()
             y[i]=y[i]+(x[j]*h[i-j]);
         }
     }
+    string_uart("The Answer is :");
+    //New Line
+    int NL = 10;
+    volatile int *ptr  = (volatile int*)0x108; 
+	*ptr =  NL;
     //displaying the o/p
    for(int i=0;i<lenC;i++){
 		float_uart(y[i]);
@@ -41,8 +46,7 @@ void _start()
     
     //End of transmission
     int EOT = 04;
-    volatile int *ptr  = (volatile int*)0x108; 
-	*ptr =  EOT;
+    *ptr =  EOT;
    
      while(1);
 }

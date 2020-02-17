@@ -1,5 +1,5 @@
 Analysis & Synthesis report for top
-Thu Feb 13 02:44:23 2020
+Mon Feb 17 16:12:32 2020
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -177,7 +177,7 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Thu Feb 13 02:44:23 2020           ;
+; Analysis & Synthesis Status        ; Successful - Mon Feb 17 16:12:32 2020           ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; top                                             ;
 ; Top-level Entity Name              ; top                                             ;
@@ -202,8 +202,8 @@ applicable agreement for further details.
 ; Device                                                                     ; EP2C20F484C7       ;                    ;
 ; Top-level entity name                                                      ; top                ; top                ;
 ; Family name                                                                ; Cyclone II         ; Cyclone V          ;
+; Use smart compilation                                                      ; On                 ; Off                ;
 ; Optimization Technique                                                     ; Speed              ; Balanced           ;
-; Use smart compilation                                                      ; Off                ; Off                ;
 ; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On                 ; On                 ;
 ; Enable compact report table                                                ; Off                ; Off                ;
 ; Restructure Multiplexers                                                   ; Auto               ; Auto               ;
@@ -428,11 +428,11 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ; sld_jtag_hub.vhd                                               ; yes             ; Encrypted Megafunction                                ; c:/altera/13.0sp1/quartus/libraries/megafunctions/sld_jtag_hub.vhd                                                            ;         ;
 ; sld_rom_sr.vhd                                                 ; yes             ; Encrypted Megafunction                                ; c:/altera/13.0sp1/quartus/libraries/megafunctions/sld_rom_sr.vhd                                                              ;         ;
 ; db/altsyncram_9jg1.tdf                                         ; yes             ; Auto-Generated Megafunction                           ; C:/Users/naqas/Desktop/Github/RISC-V1/riscv_quartus13_cyclone2/db/altsyncram_9jg1.tdf                                         ;         ;
-; db/top.ram0_dram_df80aefc.hdl.mif                              ; yes             ; Auto-Generated Auto-Found Memory Initialization File  ; C:/Users/naqas/Desktop/Github/RISC-V1/riscv_quartus13_cyclone2/db/top.ram0_dram_df80aefc.hdl.mif                              ;         ;
+; db/top.ram0_DRAM_df80aefc.hdl.mif                              ; yes             ; Auto-Generated Auto-Found Memory Initialization File  ; C:/Users/naqas/Desktop/Github/RISC-V1/riscv_quartus13_cyclone2/db/top.ram0_DRAM_df80aefc.hdl.mif                              ;         ;
 ; db/altsyncram_93h1.tdf                                         ; yes             ; Auto-Generated Megafunction                           ; C:/Users/naqas/Desktop/Github/RISC-V1/riscv_quartus13_cyclone2/db/altsyncram_93h1.tdf                                         ;         ;
 ; db/top.ram0_regfile_4c8ea16e.hdl.mif                           ; yes             ; Auto-Generated Auto-Found Memory Initialization File  ; C:/Users/naqas/Desktop/Github/RISC-V1/riscv_quartus13_cyclone2/db/top.ram0_regfile_4c8ea16e.hdl.mif                           ;         ;
 ; db/altsyncram_m071.tdf                                         ; yes             ; Auto-Generated Megafunction                           ; C:/Users/naqas/Desktop/Github/RISC-V1/riscv_quartus13_cyclone2/db/altsyncram_m071.tdf                                         ;         ;
-; db/top.ram0_iram_c4ed6c1d.hdl.mif                              ; yes             ; Auto-Generated Auto-Found Memory Initialization File  ; C:/Users/naqas/Desktop/Github/RISC-V1/riscv_quartus13_cyclone2/db/top.ram0_iram_c4ed6c1d.hdl.mif                              ;         ;
+; db/top.ram0_IRAM_c4ed6c1d.hdl.mif                              ; yes             ; Auto-Generated Auto-Found Memory Initialization File  ; C:/Users/naqas/Desktop/Github/RISC-V1/riscv_quartus13_cyclone2/db/top.ram0_IRAM_c4ed6c1d.hdl.mif                              ;         ;
 +----------------------------------------------------------------+-----------------+-------------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------+---------+
 
 
@@ -445,8 +445,8 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ;                                             ;          ;
 ; Total combinational functions               ; 4829     ;
 ; Logic element usage by number of LUT inputs ;          ;
-;     -- 4 input functions                    ; 2028     ;
-;     -- 3 input functions                    ; 1814     ;
+;     -- 4 input functions                    ; 2025     ;
+;     -- 3 input functions                    ; 1817     ;
 ;     -- <=2 input functions                  ; 987      ;
 ;                                             ;          ;
 ; Logic elements by mode                      ;          ;
@@ -462,7 +462,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ; Embedded Multiplier 9-bit elements          ; 23       ;
 ; Maximum fan-out node                        ; CLOCK_24 ;
 ; Maximum fan-out                             ; 2866     ;
-; Total fan-out                               ; 28478    ;
+; Total fan-out                               ; 28475    ;
 ; Average fan-out                             ; 3.63     ;
 +---------------------------------------------+----------+
 
@@ -1192,7 +1192,7 @@ Note: number of Embedded Multiplier Blocks used is only available after a succes
 ; 4:1                ; 5 bits    ; 10 LEs        ; 5 LEs                ; 5 LEs                  ; Yes        ; |top|sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|mixer_addr_reg[4]                                                                                                                                                                                                      ;
 ; 5:1                ; 5 bits    ; 15 LEs        ; 5 LEs                ; 10 LEs                 ; Yes        ; |top|sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|sld_rom_sr:hub_info_reg|word_counter[1]                                                                                                                                                                                ;
 ; 6:1                ; 3 bits    ; 12 LEs        ; 3 LEs                ; 9 LEs                  ; Yes        ; |top|sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|irsr_reg[2]                                                                                                                                                                                                            ;
-; 34:1               ; 4 bits    ; 88 LEs        ; 56 LEs               ; 32 LEs                 ; Yes        ; |top|sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|design_hash_reg[3]                                                                                                                                                                                                     ;
+; 34:1               ; 4 bits    ; 88 LEs        ; 60 LEs               ; 28 LEs                 ; Yes        ; |top|sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|design_hash_reg[3]                                                                                                                                                                                                     ;
 ; 20:1               ; 4 bits    ; 52 LEs        ; 32 LEs               ; 20 LEs                 ; Yes        ; |top|sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|sld_rom_sr:hub_info_reg|WORD_SR[1]                                                                                                                                                                                     ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
@@ -4529,7 +4529,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +------------------+--------------+
 ; Partition Name   ; Elapsed Time ;
 +------------------+--------------+
-; Top              ; 00:00:15     ;
+; Top              ; 00:00:16     ;
 ; sld_hub:auto_hub ; 00:00:00     ;
 +------------------+--------------+
 
@@ -4540,7 +4540,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Thu Feb 13 02:43:52 2020
+    Info: Processing started: Mon Feb 17 16:12:00 2020
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off top -c top
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (12021): Found 1 design units, including 1 entities, in source file system/synthesis/system.v
@@ -4709,7 +4709,7 @@ Warning (10230): Verilog HDL assignment warning at riscv.v(122): truncated value
 Info (12128): Elaborating entity "register" for hierarchy "system:u0|riscv_core:riscv_core_0|register:regOut"
 Info (12128): Elaborating entity "pcIn_MUX" for hierarchy "system:u0|riscv_core:riscv_core_0|pcIn_MUX:pcIn_MUX"
 Info (12128): Elaborating entity "IRAM" for hierarchy "system:u0|riscv_core:riscv_core_0|IRAM:imem"
-Warning (10850): Verilog HDL warning at IRAM.v(11): number of words (254) in memory file does not match the number of elements in the address range [0:511]
+Warning (10850): Verilog HDL warning at IRAM.v(11): number of words (81) in memory file does not match the number of elements in the address range [0:511]
 Info (12128): Elaborating entity "register" for hierarchy "system:u0|riscv_core:riscv_core_0|register:IF_ID"
 Info (12128): Elaborating entity "regFile" for hierarchy "system:u0|riscv_core:riscv_core_0|regFile:rf"
 Info (12128): Elaborating entity "immGen" for hierarchy "system:u0|riscv_core:riscv_core_0|immGen:immGen"
@@ -5372,7 +5372,7 @@ Info (12021): Found 1 design units, including 1 entities, in source file db/cmpr
 Info (12128): Elaborating entity "cmpr_ehg" for hierarchy "system:u0|riscv_core:riscv_core_0|FPU:fpu|fpu_convert_float_integer:fpu_convert_float_integer_inst|fpu_convert_float_integer_altfp_convert_o6q:fpu_convert_float_integer_altfp_convert_o6q_component|lpm_compare:max_shift_compare|cmpr_ehg:auto_generated"
 Info (12128): Elaborating entity "register" for hierarchy "system:u0|riscv_core:riscv_core_0|register:EX_MEM"
 Info (12128): Elaborating entity "DRAM" for hierarchy "system:u0|riscv_core:riscv_core_0|DRAM:dmem"
-Warning (10850): Verilog HDL warning at DRAM.v(13): number of words (1056) in memory file does not match the number of elements in the address range [0:4095]
+Warning (10850): Verilog HDL warning at DRAM.v(13): number of words (336) in memory file does not match the number of elements in the address range [0:4095]
 Info (12128): Elaborating entity "memOut_MUX" for hierarchy "system:u0|riscv_core:riscv_core_0|memOut_MUX:memOut_MUX"
 Info (12128): Elaborating entity "register" for hierarchy "system:u0|riscv_core:riscv_core_0|register:MEM_WB"
 Info (12128): Elaborating entity "WB_MUX" for hierarchy "system:u0|riscv_core:riscv_core_0|WB_MUX:WB_MUX"
@@ -5522,6 +5522,8 @@ Info (12133): Instantiated megafunction "system:u0|riscv_core:riscv_core_0|DRAM:
     Info (12134): Parameter "INIT_FILE" = "db/top.ram0_DRAM_df80aefc.hdl.mif"
 Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_9jg1.tdf
     Info (12023): Found entity 1: altsyncram_9jg1
+Warning (127007): Memory Initialization File or Hexadecimal (Intel-Format) File "C:/Users/naqas/Desktop/Github/RISC-V1/riscv_quartus13_cyclone2/db/top.ram0_DRAM_df80aefc.hdl.mif" contains "don't care" values -- overwriting them with 0s
+Warning (127007): Memory Initialization File or Hexadecimal (Intel-Format) File "C:/Users/naqas/Desktop/Github/RISC-V1/riscv_quartus13_cyclone2/db/top.ram0_DRAM_df80aefc.hdl.mif" contains "don't care" values -- overwriting them with 0s
 Info (12130): Elaborated megafunction instantiation "system:u0|riscv_core:riscv_core_0|regFile:rf|altsyncram:registers_rtl_0"
 Info (12133): Instantiated megafunction "system:u0|riscv_core:riscv_core_0|regFile:rf|altsyncram:registers_rtl_0" with the following parameter:
     Info (12134): Parameter "OPERATION_MODE" = "DUAL_PORT"
@@ -5555,6 +5557,8 @@ Info (12133): Instantiated megafunction "system:u0|riscv_core:riscv_core_0|IRAM:
     Info (12134): Parameter "INIT_FILE" = "db/top.ram0_IRAM_c4ed6c1d.hdl.mif"
 Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_m071.tdf
     Info (12023): Found entity 1: altsyncram_m071
+Warning (127007): Memory Initialization File or Hexadecimal (Intel-Format) File "C:/Users/naqas/Desktop/Github/RISC-V1/riscv_quartus13_cyclone2/db/top.ram0_IRAM_c4ed6c1d.hdl.mif" contains "don't care" values -- overwriting them with 0s
+Warning (127007): Memory Initialization File or Hexadecimal (Intel-Format) File "C:/Users/naqas/Desktop/Github/RISC-V1/riscv_quartus13_cyclone2/db/top.ram0_IRAM_c4ed6c1d.hdl.mif" contains "don't care" values -- overwriting them with 0s
 Warning (12069): Ignored assignment(s) for "CLOCK_24[0]" because "CLOCK_24" is not a bus or array
 Warning (12069): Ignored assignment(s) for "CLOCK_24[1]" because "CLOCK_24" is not a bus or array
 Warning (12241): 2 hierarchies have connectivity warnings - see the Connectivity Checks report folder
@@ -5573,10 +5577,10 @@ Info (21057): Implemented 6564 device resources after synthesis - the final reso
     Info (21061): Implemented 6264 logic cells
     Info (21064): Implemented 241 RAM segments
     Info (21062): Implemented 23 DSP elements
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 24 warnings
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 28 warnings
     Info: Peak virtual memory: 4738 megabytes
-    Info: Processing ended: Thu Feb 13 02:44:23 2020
-    Info: Elapsed time: 00:00:31
+    Info: Processing ended: Mon Feb 17 16:12:32 2020
+    Info: Elapsed time: 00:00:32
     Info: Total CPU time (on all processors): 00:00:30
 
 
