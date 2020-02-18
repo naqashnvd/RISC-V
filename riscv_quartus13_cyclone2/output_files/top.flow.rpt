@@ -1,5 +1,5 @@
 Flow report for top
-Tue Feb 18 22:13:08 2020
+Wed Feb 19 01:31:57 2020
 Quartus II 32-bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -40,7 +40,7 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Flow Summary                                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Flow Status                        ; Successful - Tue Feb 18 22:13:08 2020           ;
+; Flow Status                        ; Successful - Wed Feb 19 01:31:57 2020           ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; top                                             ;
 ; Top-level Entity Name              ; top                                             ;
@@ -276,7 +276,29 @@ applicable agreement for further details.
 ; Assembler                 ; 00:00:03     ; 1.0                     ; 379 MB              ; 00:00:02                           ;
 ; MIF/HEX Update            ; 00:00:02     ; 1.0                     ; 395 MB              ; 00:00:01                           ;
 ; Assembler                 ; 00:00:02     ; 1.0                     ; 379 MB              ; 00:00:02                           ;
-; Total                     ; 00:04:57     ; --                      ; --                  ; 00:04:27                           ;
+; MIF/HEX Update            ; 00:00:02     ; 1.0                     ; 399 MB              ; 00:00:02                           ;
+; Assembler                 ; 00:00:03     ; 1.0                     ; 379 MB              ; 00:00:02                           ;
+; MIF/HEX Update            ; 00:00:03     ; 1.0                     ; 395 MB              ; 00:00:02                           ;
+; Assembler                 ; 00:00:03     ; 1.0                     ; 379 MB              ; 00:00:02                           ;
+; MIF/HEX Update            ; 00:00:01     ; 1.0                     ; 395 MB              ; 00:00:02                           ;
+; Assembler                 ; 00:00:02     ; 1.0                     ; 379 MB              ; 00:00:02                           ;
+; MIF/HEX Update            ; 00:00:01     ; 1.0                     ; 395 MB              ; 00:00:02                           ;
+; Assembler                 ; 00:00:03     ; 1.0                     ; 379 MB              ; 00:00:02                           ;
+; MIF/HEX Update            ; 00:00:02     ; 1.0                     ; 395 MB              ; 00:00:02                           ;
+; Assembler                 ; 00:00:02     ; 1.0                     ; 379 MB              ; 00:00:02                           ;
+; MIF/HEX Update            ; 00:00:01     ; 1.0                     ; 399 MB              ; 00:00:02                           ;
+; Assembler                 ; 00:00:02     ; 1.0                     ; 379 MB              ; 00:00:02                           ;
+; MIF/HEX Update            ; 00:00:01     ; 1.0                     ; 399 MB              ; 00:00:02                           ;
+; Assembler                 ; 00:00:02     ; 1.0                     ; 379 MB              ; 00:00:02                           ;
+; MIF/HEX Update            ; 00:00:02     ; 1.0                     ; 399 MB              ; 00:00:02                           ;
+; Assembler                 ; 00:00:02     ; 1.0                     ; 379 MB              ; 00:00:02                           ;
+; MIF/HEX Update            ; 00:00:01     ; 1.0                     ; 399 MB              ; 00:00:01                           ;
+; Assembler                 ; 00:00:02     ; 1.0                     ; 379 MB              ; 00:00:02                           ;
+; MIF/HEX Update            ; 00:00:02     ; 1.0                     ; 395 MB              ; 00:00:02                           ;
+; Assembler                 ; 00:00:03     ; 1.0                     ; 379 MB              ; 00:00:02                           ;
+; MIF/HEX Update            ; 00:00:01     ; 1.0                     ; 395 MB              ; 00:00:01                           ;
+; Assembler                 ; 00:00:02     ; 1.0                     ; 379 MB              ; 00:00:02                           ;
+; Total                     ; 00:05:40     ; --                      ; --                  ; 00:05:09                           ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
@@ -402,6 +424,28 @@ applicable agreement for further details.
 ; Assembler                 ; Niku             ; Windows 7 ; 6.2        ; x86_64         ;
 ; MIF/HEX Update            ; Niku             ; Windows 7 ; 6.2        ; x86_64         ;
 ; Assembler                 ; Niku             ; Windows 7 ; 6.2        ; x86_64         ;
+; MIF/HEX Update            ; Niku             ; Windows 7 ; 6.2        ; x86_64         ;
+; Assembler                 ; Niku             ; Windows 7 ; 6.2        ; x86_64         ;
+; MIF/HEX Update            ; Niku             ; Windows 7 ; 6.2        ; x86_64         ;
+; Assembler                 ; Niku             ; Windows 7 ; 6.2        ; x86_64         ;
+; MIF/HEX Update            ; Niku             ; Windows 7 ; 6.2        ; x86_64         ;
+; Assembler                 ; Niku             ; Windows 7 ; 6.2        ; x86_64         ;
+; MIF/HEX Update            ; Niku             ; Windows 7 ; 6.2        ; x86_64         ;
+; Assembler                 ; Niku             ; Windows 7 ; 6.2        ; x86_64         ;
+; MIF/HEX Update            ; Niku             ; Windows 7 ; 6.2        ; x86_64         ;
+; Assembler                 ; Niku             ; Windows 7 ; 6.2        ; x86_64         ;
+; MIF/HEX Update            ; Niku             ; Windows 7 ; 6.2        ; x86_64         ;
+; Assembler                 ; Niku             ; Windows 7 ; 6.2        ; x86_64         ;
+; MIF/HEX Update            ; Niku             ; Windows 7 ; 6.2        ; x86_64         ;
+; Assembler                 ; Niku             ; Windows 7 ; 6.2        ; x86_64         ;
+; MIF/HEX Update            ; Niku             ; Windows 7 ; 6.2        ; x86_64         ;
+; Assembler                 ; Niku             ; Windows 7 ; 6.2        ; x86_64         ;
+; MIF/HEX Update            ; Niku             ; Windows 7 ; 6.2        ; x86_64         ;
+; Assembler                 ; Niku             ; Windows 7 ; 6.2        ; x86_64         ;
+; MIF/HEX Update            ; Niku             ; Windows 7 ; 6.2        ; x86_64         ;
+; Assembler                 ; Niku             ; Windows 7 ; 6.2        ; x86_64         ;
+; MIF/HEX Update            ; Niku             ; Windows 7 ; 6.2        ; x86_64         ;
+; Assembler                 ; Niku             ; Windows 7 ; 6.2        ; x86_64         ;
 +---------------------------+------------------+-----------+------------+----------------+
 
 
@@ -423,6 +467,28 @@ quartus_asm --read_settings_files=on --write_settings_files=off top -c top
 quartus_cdb top -c top --update_mif
 quartus_cdb top -c top --update_mif
 quartus_asm --read_settings_files=on --write_settings_files=off top -c top
+quartus_cdb --update_mif top
+quartus_asm top
+quartus_cdb --update_mif top
+quartus_asm top
+quartus_cdb --update_mif top
+quartus_asm top
+quartus_cdb --update_mif top
+quartus_asm top
+quartus_cdb --update_mif top
+quartus_asm top
+quartus_cdb --update_mif top
+quartus_asm top
+quartus_cdb --update_mif top
+quartus_asm top
+quartus_cdb --update_mif top
+quartus_asm top
+quartus_cdb --update_mif top
+quartus_asm top
+quartus_cdb --update_mif top
+quartus_asm top
+quartus_cdb --update_mif top
+quartus_asm top
 quartus_cdb --update_mif top
 quartus_asm top
 quartus_cdb --update_mif top

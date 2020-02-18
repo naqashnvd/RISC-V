@@ -13,8 +13,8 @@ void _start()
     volatile int m=5;
     volatile int n=5;
     volatile int lenC = m+n-1;
-    volatile float x_in[5]={5.24,53.6,8.251,8.69,7.12};
-    volatile float h_in[5]={0,1,2,3,5};
+    volatile float x_in[5]={-5.24,53.6,8.251,-8.69,7.12};
+    volatile float h_in[5]={0,1,2,3,-5};
    
     //padding of zeors
     for(int i=0;i<=lenC;i++){
@@ -58,6 +58,10 @@ void _start()
 
 
 void float_uart(float f){
+    if(f < 0){
+        string_uart("-");
+        f = -f;
+    }
 	char str[5];
 	int i1 = (int)f;
  	float f2 = (f - i1);
@@ -65,7 +69,7 @@ void float_uart(float f){
 		i1--;
 		f2 = (f - i1);
 	 }
-	int i2 = (int)(f2 * 100);
+	int i2 = (int)(f2 * 10);
 	int_string(str,i1);
 	if(str[0] == '\0'){
 	    string_uart("0");
@@ -95,7 +99,7 @@ int mod(int a,int b){ // a % b
     }
     return a;
 }
-int divd(int a,int b){ // a % b
+int divd(int a,int b){ // a / b
     int count = 0;
     while (a>=b){
         a-=b;
