@@ -20,7 +20,7 @@ SECTIONS
 		*(.text.init)
 		*(.text)
 		*(.text.*)
-	} > RAM
+	} 
 
 	. = ALIGN(4);
 
